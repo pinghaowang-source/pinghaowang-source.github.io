@@ -1,0 +1,249 @@
+.regional-footprint {
+  background: #071a31;
+  color: #fff;
+}
+
+.about-hero-mark {
+  overflow: hidden;
+  background: #fff;
+  border-color: #dce5ed;
+  box-shadow: 0 28px 70px #020b1540;
+}
+
+.about-hero-mark img {
+  display: block;
+  width: 78%;
+  height: 78%;
+  object-fit: contain;
+}
+
+.about-hero-mark img + small {
+  margin-top: 12px;
+  color: #405168;
+  font-weight: 700;
+}
+
+.regional-footprint .eyebrow {
+  color: var(--mint);
+}
+
+.regional-footprint .section-intro {
+  color: #aebfce;
+}
+
+.regional-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(280px, .55fr);
+  gap: 16px;
+}
+
+.map-panel {
+  position: relative;
+  min-height: 520px;
+  border: 1px solid #28445f;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #0a2139;
+  background-image:
+    linear-gradient(#75d8c210 1px, transparent 1px),
+    linear-gradient(90deg, #75d8c210 1px, transparent 1px),
+    radial-gradient(circle at 68% 48%, #0e7b7a36, transparent 30%);
+  background-size: 52px 52px, 52px 52px, 100% 100%;
+}
+
+.map-panel::after {
+  content: "";
+  position: absolute;
+  inset: 18px;
+  border: 1px solid #ffffff0d;
+  border-radius: 13px;
+  pointer-events: none;
+}
+
+.map-region {
+  position: absolute;
+  left: 28px;
+  top: 24px;
+  color: #93acbd;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+}
+
+.map-coordinate {
+  position: absolute;
+  right: 25px;
+  color: #7791a5;
+  font: 10px/1 monospace;
+}
+
+.map-coordinate-top { top: 27px; }
+.map-coordinate-bottom { bottom: 25px; }
+
+.map-landmass {
+  position: absolute;
+  display: block;
+  background: #b8d8d00b;
+  border: 1px solid #7cd7c128;
+}
+
+.map-landmass.north {
+  left: 39%;
+  top: 10%;
+  width: 48%;
+  height: 50%;
+  clip-path: polygon(9% 27%, 30% 6%, 63% 8%, 92% 31%, 79% 56%, 95% 76%, 69% 95%, 44% 78%, 17% 87%, 0 54%);
+}
+
+.map-landmass.south {
+  left: 48%;
+  top: 57%;
+  width: 31%;
+  height: 34%;
+  clip-path: polygon(19% 0, 50% 13%, 78% 8%, 100% 36%, 75% 50%, 68% 100%, 41% 81%, 23% 91%, 0 57%);
+}
+
+.map-route {
+  position: absolute;
+  display: block;
+  height: 1px;
+  transform-origin: left center;
+  background: linear-gradient(90deg, #68e8c2, #68e8c211);
+  box-shadow: 0 0 8px #68e8c266;
+}
+
+.route-one { left: 57%; top: 32%; width: 19%; transform: rotate(42deg); }
+.route-two { left: 69%; top: 48%; width: 7%; transform: rotate(18deg); }
+.route-three { left: 73%; top: 52%; width: 31%; transform: rotate(113deg); }
+
+.map-node {
+  position: absolute;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #eaf8f5;
+  white-space: nowrap;
+}
+
+.map-node > span {
+  width: 11px;
+  height: 11px;
+  border: 2px solid #8ff3d5;
+  border-radius: 50%;
+  background: #0a2139;
+  box-shadow: 0 0 0 6px #68e8c218, 0 0 20px #68e8c288;
+}
+
+.map-node b { font-size: 12px; }
+
+.map-node small {
+  padding: 3px 5px;
+  border-radius: 4px;
+  background: var(--mint);
+  color: #062118;
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: .08em;
+}
+
+.map-node.primary > span {
+  width: 14px;
+  height: 14px;
+  background: var(--mint);
+  box-shadow: 0 0 0 8px #68e8c225, 0 0 28px #68e8c2aa;
+}
+
+.map-node.wuhan { left: 56%; top: 28%; }
+.map-node.shenzhen { left: 68%; top: 45%; }
+.map-node.hongkong { left: 75%; top: 51%; }
+.map-node.kualalumpur { left: 59%; top: 77%; }
+
+.office-list {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.office-card {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  border: 1px solid #28445f;
+  border-radius: 16px;
+  padding: 20px;
+  background: #0a2139;
+}
+
+.office-card > span {
+  width: 42px;
+  height: 42px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  border: 1px solid #3f607b;
+  border-radius: 50%;
+  color: #8fa9bb;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .08em;
+}
+
+.office-card.primary {
+  border-color: #68e8c260;
+  background: linear-gradient(135deg, #0b2d42, #0a2139);
+}
+
+.office-card.primary > span {
+  color: #08271f;
+  background: var(--mint);
+  border-color: var(--mint);
+}
+
+.office-card.rnd-office {
+  border-color: #4d9bf060;
+  background: linear-gradient(135deg, #0a2946, #0a2139);
+}
+
+.office-card.rnd-office > span {
+  color: #dcebff;
+  border-color: #4d9bf0;
+  background: #116fd2;
+}
+
+.office-card h3 {
+  font-size: 18px;
+  margin: 0 0 5px;
+}
+
+.office-card p {
+  color: #9db0c0;
+  font-size: 12px;
+  margin: 0;
+}
+
+@media (max-width: 780px) {
+  .regional-layout { grid-template-columns: 1fr; }
+  .map-panel { min-height: 430px; }
+  .map-region { left: 20px; }
+  .map-node b { font-size: 10px; }
+  .map-node.wuhan { left: 45%; }
+  .map-node.shenzhen { left: 57%; }
+  .map-node.hongkong { left: 67%; }
+  .map-node.kualalumpur { left: 45%; }
+  .route-one { left: 47%; width: 25%; }
+  .route-two { left: 59%; width: 10%; }
+  .route-three { left: 67%; width: 38%; }
+  .office-list { grid-template-columns: 1fr 1fr; grid-template-rows: none; }
+  .office-card { padding: 16px; gap: 12px; }
+}
+
+@media (max-width: 480px) {
+  .office-list { grid-template-columns: 1fr; }
+  .map-panel { min-height: 390px; }
+  .map-node { gap: 6px; }
+  .map-node b { font-size: 9px; }
+  .map-node.hongkong { left: 63%; top: 54%; }
+  .map-node.kualalumpur { left: 38%; top: 79%; }
+}
