@@ -73,6 +73,7 @@
       categoryKey: 'specialtyEyebrow',
       summaryKey: 'breastAiDesc',
       images: ['assets/products/visual-mammography.webp'],
+      focusImage: 'assets/products/focus-breast-ai.jpg',
       tags: [{key:'breastXray'},{key:'nmpaApproved'},{text:'BI-RADS'}],
       accent: '#ff9fc3',
       glow: '#e9578f35',
@@ -230,6 +231,7 @@
       categoryKey: 'specialtyEyebrow',
       summaryKey: 'cardiovascularAiDesc',
       images: ['assets/products/visual-cardiovascular-analysis.webp'],
+      focusImage: 'assets/products/focus-cardiovascular-ai.jpg',
       tags: [{key:'coronaryCTA'},{text:'CT-FFR'},{key:'calciumScoring'}],
       accent: '#ff9d7d',
       glow: '#ef6a4538',
@@ -387,6 +389,7 @@
       categoryKey: 'specialtyEyebrow',
       summaryKey: 'headNeckAiDesc',
       images: ['assets/products/visual-head-neck-vascular.webp'],
+      focusImage: 'assets/products/focus-head-neck-ai.jpg',
       tags: [{key:'headNeckCTA'},{key:'aneurysmDetection'},{key:'perfusionAnalysis'}],
       accent: '#b7a6ff',
       glow: '#725ae83b',
@@ -544,6 +547,7 @@
       categoryKey: 'devicesEyebrow',
       summaryKey: 'boneAgeDesc',
       images: ['assets/products/visual-bone-age-device.webp','assets/products/visual-bone-age-analysis.webp'],
+      focusImage: 'assets/products/focus-bone-age-analyser.jpg',
       tags: [{key:'nmpaApproved'}],
       accent: '#7ee7ff',
       glow: '#27bfe53d',
@@ -701,6 +705,7 @@
       categoryKey: 'devicesEyebrow',
       summaryKey: 'boneDensityDesc',
       images: ['assets/products/visual-bone-density-device.webp','assets/products/visual-bone-density-analysis.webp'],
+      focusImage: 'assets/products/focus-bone-density-analyser.jpg',
       tags: [{key:'boneDensityMeasurement'},{key:'exemptionFiling'},{key:'structuredReport'}],
       accent: '#85d9ff',
       glow: '#4698ed36',
@@ -858,6 +863,7 @@
       categoryKey: 'screeningDiagnosis',
       summaryKey: 'ctLungDesc',
       images: ['assets/products/visual-ct-lung.webp'],
+      focusImage: 'assets/products/focus-ct-lung.jpg',
       tags: [{key:'chestCT'},{key:'ceMarked'},{key:'fdaCleared'},{key:'nmpaApproved'},{key:'ukcaMarked'}],
       accent: '#6ce6d0',
       glow: '#22d6b33c',
@@ -1015,6 +1021,7 @@
       categoryKey: 'screeningDiagnosis',
       summaryKey: 'drChestDesc',
       images: ['assets/products/visual-dr-chest.webp'],
+      focusImage: 'assets/products/focus-dr-chest.jpg',
       tags: [{key:'chestXray'},{key:'ceMarked'},{key:'ukcaMarked'}],
       accent: '#74c7ff',
       glow: '#268edc3c',
@@ -1172,6 +1179,7 @@
       categoryKey: 'interventionTreatment',
       summaryKey: 'thoraxDesc',
       images: ['assets/products/visual-thorax-planning.webp'],
+      focusImage: 'assets/products/focus-thorax-planning.jpg',
       tags: [{key:'chestCT'},{key:'reconstruction'},{key:'preoperativePlanning'}],
       accent: '#ffd166',
       glow: '#eebd3b36',
@@ -1329,6 +1337,7 @@
       categoryKey: 'rehabProsthetics',
       summaryKey: 'prostheticDesc',
       images: ['assets/products/visual-prosthetic-hand.webp'],
+      focusImage: 'assets/products/focus-prosthetic-hand.jpg',
       tags: [{key:'fda510k'},{key:'fdaClassI'},{key:'qualityReport'}],
       accent: '#ffb45f',
       glow: '#ec8e3038',
@@ -1543,10 +1552,14 @@
     document.querySelector('#capability-intro').textContent=detail.capIntro;
     renderCards('#capability-grid',detail.caps,([heading,text],index)=>`
       <article>
-        <b>${String(index+1).padStart(2,'0')}</b>
-        <span aria-hidden="true"></span>
-        <h3>${escapeHtml(heading)}</h3>
-        <p>${escapeHtml(text)}</p>
+        <div class="capability-visual capability-visual-${index}" role="img" aria-label="${escapeHtml(heading)}">
+          <img src="${escapeHtml(product.focusImage)}" alt="" loading="lazy">
+        </div>
+        <div class="capability-copy">
+          <b>${String(index+1).padStart(2,'0')}</b>
+          <h3>${escapeHtml(heading)}</h3>
+          <p>${escapeHtml(text)}</p>
+        </div>
       </article>
     `);
 
