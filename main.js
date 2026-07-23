@@ -115,11 +115,11 @@ Object.assign(copy['zh-tw'],{technologyPoint1:'研發方向涵蓋知識圖譜、
 Object.assign(copy.ms,{technologyPoint1:'Penyelidikan dan pembangunan merangkumi graf pengetahuan, ejen AI, manusia digital, OCR, pembelajaran bersekutu dan aplikasi model besar, termasuk dalam penjagaan kesihatan.'});
 Object.assign(copy.th,{technologyPoint1:'งานวิจัยและพัฒนาครอบคลุมกราฟความรู้ AI Agent มนุษย์ดิจิทัล OCR การเรียนรู้แบบสหพันธ์ และการประยุกต์ใช้โมเดลขนาดใหญ่ รวมถึงด้านการดูแลสุขภาพ'});
 
-Object.assign(copy.en,{conceptVisualNotice:'Original conceptual visual created for SCOVION. Not a manufacturer-supplied product image.'});
-Object.assign(copy['zh-cn'],{conceptVisualNotice:'SCOVION原创概念视觉，不是厂商提供的产品原图。'});
-Object.assign(copy['zh-tw'],{conceptVisualNotice:'SCOVION原創概念視覺，不是廠商提供的產品原圖。'});
-Object.assign(copy.ms,{conceptVisualNotice:'Visual konsep asli yang dicipta untuk SCOVION. Bukan imej produk yang dibekalkan pengeluar.'});
-Object.assign(copy.th,{conceptVisualNotice:'ภาพแนวคิดต้นฉบับที่สร้างขึ้นสำหรับ SCOVION ไม่ใช่ภาพผลิตภัณฑ์จากผู้ผลิต'});
+Object.assign(copy.en,{conceptVisualNotice:'Image for reference only.'});
+Object.assign(copy['zh-cn'],{conceptVisualNotice:'图像仅供参考。'});
+Object.assign(copy['zh-tw'],{conceptVisualNotice:'圖像僅供參考。'});
+Object.assign(copy.ms,{conceptVisualNotice:'Imej untuk rujukan sahaja.'});
+Object.assign(copy.th,{conceptVisualNotice:'ภาพใช้เพื่อการอ้างอิงเท่านั้น'});
 
 const languages=[['en','English'],['zh-cn','简体中文'],['zh-tw','繁體中文'],['ms','Bahasa Melayu'],['th','ไทย']];
 const languageAliases={zh:'zh-tw'};

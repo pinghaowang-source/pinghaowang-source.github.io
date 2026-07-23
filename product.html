@@ -6,7 +6,7 @@
   <meta name="description" content="Explore the capabilities, workflow and deployment considerations of a SCOVION AI Healthcare solution.">
   <title>AI Healthcare Product — SCOVION</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="product-detail.css?v=1.0.0">
+  <link rel="stylesheet" href="product-detail.css?v=1.1.0">
 </head>
 <body class="product-detail-page">
   <header class="container nav">
@@ -40,17 +40,18 @@
           </div>
           <div>
             <div id="product-gallery" class="detail-gallery"></div>
-            <p class="visual-origin"><span aria-hidden="true">◎</span><span data-product-ui="visualNotice">Original conceptual visual created for SCOVION. Not a manufacturer-supplied product image.</span></p>
+            <p class="visual-origin" data-product-ui="visualNotice">Image for reference only.</p>
           </div>
         </div>
         <div id="product-tags" class="detail-tags"></div>
+        <div id="product-facts" class="detail-facts"></div>
       </div>
     </section>
 
     <section id="capabilities" class="container detail-section">
       <div class="detail-heading">
-        <div><div class="eyebrow" data-product-ui="capabilityEyebrow">Product capabilities</div><h2 data-product-ui="capabilityHeading">What the solution is designed to support</h2></div>
-        <p data-product-ui="capabilityIntro">The capabilities below describe intended workflow functions. They are not clinical performance claims or substitutes for product-specific instructions for use.</p>
+        <div><div class="eyebrow" data-product-ui="capabilityEyebrow">Clinical focus</div><h2 id="capability-heading"></h2></div>
+        <p id="capability-intro"></p>
       </div>
       <div id="capability-grid" class="detail-capability-grid"></div>
     </section>
@@ -58,27 +59,19 @@
     <section class="workflow-band">
       <div class="container detail-section">
         <div class="detail-heading">
-          <div><div class="eyebrow" data-product-ui="workflowEyebrow">Workflow view</div><h2 data-product-ui="workflowHeading">From clinical input to professional review</h2></div>
-          <p data-product-ui="workflowIntro">A clear workflow helps teams understand where AI contributes and where professional judgement remains essential.</p>
+          <div><div class="eyebrow" data-product-ui="workflowEyebrow">Product workflow</div><h2 id="workflow-heading"></h2></div>
+          <p id="workflow-intro"></p>
         </div>
-        <div class="workflow-flow">
-          <article><b>01</b><span class="workflow-symbol" aria-hidden="true"></span><h3 data-product-ui="workflowStep1Title">Clinical input</h3><p data-product-ui="workflowStep1Text">Relevant images, measurements or workflow data enter the solution.</p></article>
-          <article><b>02</b><span class="workflow-symbol process" aria-hidden="true"></span><h3 data-product-ui="workflowStep2Title">AI processing</h3><p data-product-ui="workflowStep2Text">The system analyses the input and organises outputs for review.</p></article>
-          <article><b>03</b><span class="workflow-symbol review" aria-hidden="true"></span><h3 data-product-ui="workflowStep3Title">Professional review</h3><p data-product-ui="workflowStep3Text">Qualified users review results within the intended clinical or operational workflow.</p></article>
-        </div>
+        <div id="workflow-flow" class="workflow-flow"></div>
       </div>
     </section>
 
     <section class="container detail-section deployment-section">
       <div class="detail-heading">
-        <div><div class="eyebrow" data-product-ui="deploymentEyebrow">Practical deployment</div><h2 data-product-ui="deploymentHeading">Designed around real operating conditions</h2></div>
+        <div><div class="eyebrow" data-product-ui="highlightEyebrow">Application value</div><h2 id="highlight-heading"></h2></div>
+        <p id="highlight-intro"></p>
       </div>
-      <div class="deployment-grid">
-        <article><span>01</span><h3 data-product-ui="deployment1Title">Workflow fit</h3><p data-product-ui="deployment1Text">Integration, users, data flow and review responsibilities should be mapped before deployment.</p></article>
-        <article><span>02</span><h3 data-product-ui="deployment2Title">Human oversight</h3><p data-product-ui="deployment2Text">Outputs support qualified professionals and must be interpreted within the applicable standard of care.</p></article>
-        <article><span>03</span><h3 data-product-ui="deployment3Title">Local requirements</h3><p data-product-ui="deployment3Text">Availability, indications, configuration and regulatory status vary by product version and market.</p></article>
-      </div>
-      <div class="detail-note"><b data-product-ui="importantLabel">Important information</b><p data-product-ui="importantText">Images on this page are original conceptual visuals for communication purposes. They do not reproduce a third-party interface, device photograph or diagnostic output. Contact SCOVION for current product documentation and local availability.</p></div>
+      <div id="highlight-grid" class="deployment-grid"></div>
     </section>
 
     <section class="container detail-cta">
@@ -94,6 +87,6 @@
     <p data-i18n="availabilityFooter">Product availability varies by market.</p>
   </footer>
   <script src="main.js?v=1.4.0"></script>
-  <script src="product-details.js?v=1.0.0"></script>
+  <script src="product-details.js?v=1.1.0"></script>
 </body>
 </html>
