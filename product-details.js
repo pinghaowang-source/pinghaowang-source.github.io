@@ -551,7 +551,7 @@
       titleKey: 'boneAgeTitle',
       categoryKey: 'devicesEyebrow',
       summaryKey: 'boneAgeDesc',
-      images: ['assets/products/visual-bone-age-device.webp'],
+      images: ['assets/products/visual-bone-age-device-v2.jpg'],
       secondaryImage: 'assets/products/visual-bone-age-analysis.webp',
       secondaryHeadings: {
         en: 'AI bone-age assessment, presented at full scale',
