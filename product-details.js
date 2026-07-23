@@ -6,6 +6,7 @@
       exploreCapabilities: 'Explore capabilities',
       visualNotice: 'Image for reference only.',
       capabilityEyebrow: 'Clinical focus',
+      secondaryVisualEyebrow: 'Analysis view',
       workflowEyebrow: 'Product workflow',
       highlightEyebrow: 'Application value',
       ctaEyebrow: 'Explore the fit',
@@ -19,6 +20,7 @@
       exploreCapabilities: '查看核心能力',
       visualNotice: '图像仅供参考。',
       capabilityEyebrow: '临床重点',
+      secondaryVisualEyebrow: '分析视图',
       workflowEyebrow: '产品流程',
       highlightEyebrow: '应用价值',
       ctaEyebrow: '评估适配性',
@@ -32,6 +34,7 @@
       exploreCapabilities: '查看核心能力',
       visualNotice: '圖像僅供參考。',
       capabilityEyebrow: '臨床重點',
+      secondaryVisualEyebrow: '分析視圖',
       workflowEyebrow: '產品流程',
       highlightEyebrow: '應用價值',
       ctaEyebrow: '評估適配性',
@@ -45,6 +48,7 @@
       exploreCapabilities: 'Teroka keupayaan',
       visualNotice: 'Imej untuk rujukan sahaja.',
       capabilityEyebrow: 'Fokus klinikal',
+      secondaryVisualEyebrow: 'Paparan analisis',
       workflowEyebrow: 'Aliran produk',
       highlightEyebrow: 'Nilai aplikasi',
       ctaEyebrow: 'Nilai kesesuaian',
@@ -58,6 +62,7 @@
       exploreCapabilities: 'สำรวจความสามารถ',
       visualNotice: 'ภาพใช้เพื่อการอ้างอิงเท่านั้น',
       capabilityEyebrow: 'จุดเน้นทางคลินิก',
+      secondaryVisualEyebrow: 'มุมมองการวิเคราะห์',
       workflowEyebrow: 'ขั้นตอนการทำงานของผลิตภัณฑ์',
       highlightEyebrow: 'คุณค่าการใช้งาน',
       ctaEyebrow: 'ประเมินความเหมาะสม',
@@ -85,7 +90,7 @@
             ['PACS','Results can be reviewed within the imaging workflow']
           ],
           capHeading: 'A full mammography reading pathway, not a single finding detector',
-          capIntro: 'The supplied manual describes a system that connects lesion detection, breast composition, risk assessment and reporting in one workflow.',
+          capIntro: 'An integrated workflow connects lesion detection, breast composition, risk assessment and reporting.',
           caps: [
             ['Multi-lesion detection','Localises and segments masses, calcifications, architectural distortion and asymmetric density, with correspondence across standard mammography views.'],
             ['Density and associated signs','Classifies breast composition using the ACR framework and identifies signs including benign calcification, nipple retraction, skin thickening and enlarged axillary nodes.'],
@@ -100,7 +105,7 @@
             ['Review and report','The radiologist reviews breast composition, lesion characteristics, BI-RADS suggestion and the generated structured report.']
           ],
           highlightHeading: 'Built for screening volume and diagnostic consistency',
-          highlightIntro: 'The product manual emphasises dense-breast analysis, standard terminology and a workflow that helps imaging teams manage growing demand.',
+          highlightIntro: 'Dense-breast analysis, standard terminology and a streamlined reading workflow help imaging teams manage growing demand.',
           highlights: [
             ['Support for dense breasts','Multi-view reasoning and feature analysis are intended to improve visibility of findings that may be obscured by dense tissue.'],
             ['Consistent documentation','Structured content follows a familiar diagnostic framework, helping standardise terminology and report completeness.'],
@@ -114,7 +119,7 @@
             ['PACS','结果可在影像工作流程中直接调阅']
           ],
           capHeading: '覆盖完整乳腺X线阅片链路，而不只是单一病灶检测',
-          capIntro: '产品手册展示了从病灶检出、腺体构成、风险评估到报告生成的一体化乳腺X线辅助诊断流程。',
+          capIntro: '一体化乳腺X线辅助诊断流程贯通病灶检出、腺体构成、风险评估与报告生成。',
           caps: [
             ['多病灶检出与定位','对肿块、钙化、结构扭曲和不对称影进行检出与分割，并在标准投照位之间关联同一病灶。'],
             ['腺体分型与伴随征象','按照ACR框架评估乳腺腺体构成，并识别良性钙化、乳头凹陷、皮肤增厚及腋下淋巴结肿大等征象。'],
@@ -129,7 +134,7 @@
             ['审核与报告','医师审核腺体构成、病灶特征、BI-RADS建议及系统生成的结构化报告。']
           ],
           highlightHeading: '面向筛查规模与诊断一致性设计',
-          highlightIntro: '手册重点强调致密型乳腺分析、标准术语以及应对乳腺X线阅片需求增长的工作流程。',
+          highlightIntro: '致密型乳腺分析、标准术语与高效阅片流程，帮助影像团队应对持续增长的阅片需求。',
           highlights: [
             ['致密型乳腺支持','利用多视角分析与征象描述，帮助呈现可能被致密腺体遮挡的可疑区域。'],
             ['报告规范化','结构化内容遵循熟悉的诊断框架，帮助统一术语并提升报告完整度。'],
@@ -143,7 +148,7 @@
             ['PACS','結果可在影像工作流程中直接調閱']
           ],
           capHeading: '涵蓋完整乳腺X線閱片鏈路，而不只是單一病灶偵測',
-          capIntro: '產品手冊展示了從病灶偵測、腺體構成、風險評估到報告產生的一體化乳腺X線輔助診斷流程。',
+          capIntro: '一體化乳腺X線輔助診斷流程貫通病灶偵測、腺體構成、風險評估與報告產生。',
           caps: [
             ['多病灶偵測與定位','對腫塊、鈣化、結構扭曲和不對稱影進行偵測與分割，並在標準投照位之間關聯同一病灶。'],
             ['腺體分型與伴隨徵象','按照ACR架構評估乳腺腺體構成，並識別良性鈣化、乳頭凹陷、皮膚增厚及腋下淋巴結腫大等徵象。'],
@@ -158,7 +163,7 @@
             ['審核與報告','醫師審核腺體構成、病灶特徵、BI-RADS建議及系統產生的結構化報告。']
           ],
           highlightHeading: '面向篩檢規模與診斷一致性設計',
-          highlightIntro: '手冊重點強調緻密型乳腺分析、標準術語以及因應乳腺X線閱片需求成長的工作流程。',
+          highlightIntro: '緻密型乳腺分析、標準術語與高效閱片流程，協助影像團隊因應持續成長的閱片需求。',
           highlights: [
             ['緻密型乳腺支援','利用多視角分析與徵象描述，協助呈現可能被緻密腺體遮擋的可疑區域。'],
             ['報告規範化','結構化內容遵循熟悉的診斷架構，協助統一術語並提升報告完整度。'],
@@ -172,7 +177,7 @@
             ['PACS','Hasil boleh disemak dalam aliran kerja pengimejan']
           ],
           capHeading: 'Aliran pembacaan mamografi penuh, bukan sekadar pengesan satu penemuan',
-          capIntro: 'Manual produk menerangkan aliran bersepadu daripada pengesanan lesi dan komposisi payudara kepada penilaian risiko serta laporan.',
+          capIntro: 'Aliran bersepadu menghubungkan pengesanan lesi, komposisi payudara, penilaian risiko dan pelaporan.',
           caps: [
             ['Pengesanan pelbagai lesi','Menyetempat dan membahagi jisim, kalsifikasi, herotan seni bina serta ketumpatan tidak simetri, dengan padanan antara pandangan mamografi standard.'],
             ['Ketumpatan dan tanda berkaitan','Mengelaskan komposisi payudara mengikut rangka ACR serta mengenal pasti kalsifikasi jinak, retraksi puting, penebalan kulit dan nodus aksila membesar.'],
@@ -187,7 +192,7 @@
             ['Semak dan lapor','Pakar radiologi menyemak komposisi payudara, ciri lesi, cadangan BI-RADS dan laporan berstruktur.']
           ],
           highlightHeading: 'Direka untuk jumlah saringan dan konsistensi diagnosis',
-          highlightIntro: 'Manual menekankan analisis payudara padat, istilah standard dan aliran kerja untuk membantu pasukan pengimejan mengurus permintaan.',
+          highlightIntro: 'Analisis payudara padat, istilah standard dan aliran bacaan yang cekap membantu pasukan pengimejan mengurus permintaan.',
           highlights: [
             ['Sokongan payudara padat','Penaakulan pelbagai pandangan membantu menyerlahkan penemuan yang mungkin terlindung oleh tisu padat.'],
             ['Dokumentasi konsisten','Kandungan berstruktur membantu menyeragamkan istilah dan kelengkapan laporan.'],
@@ -201,7 +206,7 @@
             ['PACS','ตรวจทานผลภายในขั้นตอนงานภาพทางการแพทย์ได้']
           ],
           capHeading: 'ครอบคลุมกระบวนการอ่านแมมโมแกรม ไม่ได้ตรวจเพียงความผิดปกติชนิดเดียว',
-          capIntro: 'คู่มืออธิบายกระบวนการแบบบูรณาการตั้งแต่ตรวจหารอยโรคและองค์ประกอบเต้านม ไปจนถึงประเมินความเสี่ยงและออกรายงาน',
+          capIntro: 'กระบวนการแบบบูรณาการเชื่อมการตรวจหารอยโรค องค์ประกอบเต้านม การประเมินความเสี่ยง และการออกรายงาน',
           caps: [
             ['ตรวจหารอยโรคหลายชนิด','ระบุตำแหน่งและแบ่งส่วนก้อน หินปูน ความบิดเบี้ยวของโครงสร้าง และความหนาแน่นไม่สมมาตร พร้อมเชื่อมโยงรอยโรคระหว่างมุมถ่ายมาตรฐาน'],
             ['ความหนาแน่นและสัญญาณร่วม','จัดประเภทองค์ประกอบเต้านมตามกรอบ ACR และระบุสัญญาณ เช่น หินปูนชนิดไม่ร้ายแรง หัวนมบุ๋ม ผิวหนังหนา และต่อมน้ำเหลืองรักแร้โต'],
@@ -216,7 +221,7 @@
             ['ตรวจทานและรายงาน','รังสีแพทย์ตรวจองค์ประกอบเต้านม ลักษณะรอยโรค คำแนะนำ BI-RADS และรายงานที่ระบบสร้าง']
           ],
           highlightHeading: 'ออกแบบเพื่อรองรับปริมาณการคัดกรองและความสม่ำเสมอ',
-          highlightIntro: 'คู่มือเน้นการวิเคราะห์เต้านมหนาแน่น คำศัพท์มาตรฐาน และขั้นตอนที่ช่วยจัดการความต้องการอ่านภาพที่เพิ่มขึ้น',
+          highlightIntro: 'การวิเคราะห์เต้านมหนาแน่น คำศัพท์มาตรฐาน และขั้นตอนอ่านภาพที่มีประสิทธิภาพ ช่วยรองรับปริมาณงานที่เพิ่มขึ้น',
           highlights: [
             ['รองรับเต้านมหนาแน่น','การวิเคราะห์หลายมุมช่วยแสดงบริเวณน่าสงสัยที่อาจถูกเนื้อเยื่อหนาแน่นบดบัง'],
             ['เอกสารสม่ำเสมอ','เนื้อหาแบบมีโครงสร้างช่วยให้คำศัพท์และความครบถ้วนของรายงานเป็นมาตรฐาน'],
@@ -238,12 +243,12 @@
       details: {
         en: {
           facts: [
-            ['≤3 min','Brochure-stated time for automated reconstruction and selected analyses'],
-            ['1.5 mm','Small coronary branches described as segmentable'],
+            ['≤3 min','Automated reconstruction and selected analyses'],
+            ['1.5 mm','Small coronary branch segmentation'],
             ['3-in-1','Morphology, functional assessment and structured output']
           ],
           capHeading: 'Coronary CTA from automatic reconstruction to functional assessment',
-          capIntro: 'The manual presents a zero-click pathway that turns CT images into coronary anatomy, plaque and stenosis analysis, functional indicators, films and reports.',
+          capIntro: 'A zero-click pathway turns CT images into coronary anatomy, plaque and stenosis analysis, functional indicators, films and reports.',
           caps: [
             ['Automated CTA reconstruction','Builds cardiac 3D views, coronary trees and 2D CPR, MPR and MIP series, with vessel naming and support for stents, grafts and myocardial bridges.'],
             ['Plaque and stenosis analysis','Segments the lumen, identifies calcified, non-calcified and mixed plaque, and quantifies the degree of coronary narrowing.'],
@@ -267,12 +272,12 @@
         },
         'zh-cn': {
           facts: [
-            ['≤3分钟','手册列示的自动重建及部分分析用时'],
+            ['≤3分钟','自动重建及部分分析用时'],
             ['1.5 mm','可分割的细小冠脉分支尺度'],
             ['三合一','形态学、功能学与结构化输出']
           ],
           capHeading: '从冠脉CTA自动重建延伸到功能学评估',
-          capIntro: '手册展示了一条零键后处理链路，将CT影像转化为冠脉解剖、斑块与狭窄分析、功能指标、胶片和报告。',
+          capIntro: '零键后处理链路将CT影像转化为冠脉解剖、斑块与狭窄分析、功能指标、胶片和报告。',
           caps: [
             ['冠脉CTA自动重建','生成心脏三维图、冠脉树及CPR、MPR、MIP等二维序列，自动命名血管，并支持支架、搭桥血管和心肌桥显示。'],
             ['斑块与狭窄分析','分割管腔，识别钙化、非钙化及混合斑块，并量化评估冠状动脉狭窄程度。'],
@@ -296,12 +301,12 @@
         },
         'zh-tw': {
           facts: [
-            ['≤3分鐘','手冊列示的自動重建及部分分析用時'],
+            ['≤3分鐘','自動重建及部分分析用時'],
             ['1.5 mm','可分割的細小冠脈分支尺度'],
             ['三合一','形態學、功能學與結構化輸出']
           ],
           capHeading: '從冠脈CTA自動重建延伸到功能學評估',
-          capIntro: '手冊展示了一條零鍵後處理鏈路，將CT影像轉化為冠脈解剖、斑塊與狹窄分析、功能指標、膠片和報告。',
+          capIntro: '零鍵後處理鏈路將CT影像轉化為冠脈解剖、斑塊與狹窄分析、功能指標、膠片和報告。',
           caps: [
             ['冠脈CTA自動重建','產生心臟三維圖、冠脈樹及CPR、MPR、MIP等二維序列，自動命名血管，並支援支架、繞道血管和心肌橋顯示。'],
             ['斑塊與狹窄分析','分割管腔，識別鈣化、非鈣化及混合斑塊，並量化評估冠狀動脈狹窄程度。'],
@@ -325,12 +330,12 @@
         },
         ms: {
           facts: [
-            ['≤3 min','Masa automasi terpilih yang dinyatakan dalam manual'],
-            ['1.5 mm','Cabang koronari kecil yang diterangkan boleh disegmentasi'],
+            ['≤3 min','Pembinaan semula automatik dan analisis terpilih'],
+            ['1.5 mm','Segmentasi cabang koronari kecil'],
             ['3-dalam-1','Morfologi, fungsi dan output berstruktur']
           ],
           capHeading: 'Daripada pembinaan semula CTA koronari kepada penilaian fungsi',
-          capIntro: 'Manual menerangkan laluan tanpa klik yang menukar imej CT kepada anatomi koronari, analisis plak dan stenosis, petunjuk fungsi, filem dan laporan.',
+          capIntro: 'Laluan tanpa klik menukar imej CT kepada anatomi koronari, analisis plak dan stenosis, petunjuk fungsi, filem dan laporan.',
           caps: [
             ['Pembinaan semula CTA automatik','Membina pandangan 3D jantung, pokok koronari serta siri CPR, MPR dan MIP dengan penamaan salur dan sokongan untuk stent, graft dan myocardial bridge.'],
             ['Analisis plak dan stenosis','Membahagi lumen, mengenal pasti plak berkalsium, tidak berkalsium dan campuran, serta mengukur tahap penyempitan.'],
@@ -354,12 +359,12 @@
         },
         th: {
           facts: [
-            ['≤3 นาที','เวลาที่คู่มือระบุสำหรับการสร้างภาพและการวิเคราะห์บางส่วน'],
-            ['1.5 มม.','ขนาดกิ่งหลอดเลือดหัวใจเล็กที่ระบบอธิบายว่าสามารถแบ่งส่วนได้'],
+            ['≤3 นาที','การสร้างภาพอัตโนมัติและการวิเคราะห์บางส่วน'],
+            ['1.5 มม.','การแบ่งส่วนกิ่งหลอดเลือดหัวใจขนาดเล็ก'],
             ['3 ใน 1','สัณฐานวิทยา การทำงาน และผลลัพธ์แบบมีโครงสร้าง']
           ],
           capHeading: 'จากการสร้างภาพ Coronary CTA อัตโนมัติสู่การประเมินการทำงาน',
-          capIntro: 'คู่มือแสดงขั้นตอนแบบไม่ต้องคลิกซึ่งเปลี่ยนภาพ CT เป็นกายวิภาคหลอดเลือดหัวใจ การวิเคราะห์คราบพลัคและการตีบ ตัวชี้วัดการทำงาน ฟิล์ม และรายงาน',
+          capIntro: 'ขั้นตอนแบบไม่ต้องคลิกเปลี่ยนภาพ CT เป็นกายวิภาคหลอดเลือดหัวใจ การวิเคราะห์คราบพลัคและการตีบ ตัวชี้วัดการทำงาน ฟิล์ม และรายงาน',
           caps: [
             ['สร้างภาพ CTA อัตโนมัติ','สร้างภาพหัวใจ 3 มิติ ต้นไม้หลอดเลือด และชุด CPR, MPR, MIP พร้อมตั้งชื่อหลอดเลือดและรองรับ stent, graft และ myocardial bridge'],
             ['วิเคราะห์คราบพลัคและการตีบ','แบ่งส่วนลูเมน ระบุคราบพลัคชนิดมีหินปูน ไม่มีหินปูน และชนิดผสม พร้อมวัดระดับการตีบ'],
@@ -397,11 +402,11 @@
         en: {
           facts: [
             ['NCCT · CTA · CTP','One pathway across key stroke imaging sequences'],
-            ['≈3 min','Brochure-stated time for automated head-and-neck CTA reconstruction'],
-            ['<3 mm','Micro-aneurysm analysis described in the supplied material']
+            ['≈3 min','Automated head-and-neck CTA reconstruction'],
+            ['<3 mm','Micro-aneurysm analysis capability']
           ],
           capHeading: 'A one-stop pathway for stroke and head-and-neck vascular imaging',
-          capIntro: 'The manual brings NCCT, CTA and CTP together to support rapid lesion review, vascular assessment and perfusion analysis.',
+          capIntro: 'NCCT, CTA and CTP come together to support rapid lesion review, vascular assessment and perfusion analysis.',
           caps: [
             ['NCCT stroke assessment','Identifies and marks suspected ischaemic and haemorrhagic findings to support rapid initial review.'],
             ['CTA reconstruction without subtraction','Automatically separates vessels from bone, reconstructs head-and-neck vasculature and produces VR, VMIP, MIP and CPR views.'],
@@ -426,11 +431,11 @@
         'zh-cn': {
           facts: [
             ['NCCT · CTA · CTP','覆盖卒中关键影像序列的一体化流程'],
-            ['约3分钟','手册列示的头颈CTA自动重建时间'],
-            ['<3 mm','资料所述的微小动脉瘤分析范围']
+            ['约3分钟','头颈CTA自动重建时间'],
+            ['<3 mm','微小动脉瘤分析能力']
           ],
           capHeading: '面向脑卒中与头颈血管影像的一站式流程',
-          capIntro: '产品手册将NCCT、CTA与CTP结合，用于快速病灶复核、血管评估和灌注分析。',
+          capIntro: 'NCCT、CTA与CTP协同支持快速病灶复核、血管评估和灌注分析。',
           caps: [
             ['NCCT卒中评估','识别并标记疑似缺血与出血表现，支持急诊初筛和快速复核。'],
             ['无需减影的CTA重建','自动区分血管与骨组织，重建头颈血管，并生成VR、VMIP、MIP及CPR等视图。'],
@@ -455,11 +460,11 @@
         'zh-tw': {
           facts: [
             ['NCCT · CTA · CTP','涵蓋卒中關鍵影像序列的一體化流程'],
-            ['約3分鐘','手冊列示的頭頸CTA自動重建時間'],
-            ['<3 mm','資料所述的微小動脈瘤分析範圍']
+            ['約3分鐘','頭頸CTA自動重建時間'],
+            ['<3 mm','微小動脈瘤分析能力']
           ],
           capHeading: '面向腦卒中與頭頸血管影像的一站式流程',
-          capIntro: '產品手冊將NCCT、CTA與CTP結合，用於快速病灶複核、血管評估和灌注分析。',
+          capIntro: 'NCCT、CTA與CTP協同支援快速病灶複核、血管評估和灌注分析。',
           caps: [
             ['NCCT卒中評估','識別並標記疑似缺血與出血表現，支援急診初篩和快速複核。'],
             ['無需減影的CTA重建','自動區分血管與骨組織，重建頭頸血管，並產生VR、VMIP、MIP及CPR等視圖。'],
@@ -484,11 +489,11 @@
         ms: {
           facts: [
             ['NCCT · CTA · CTP','Satu laluan merentasi siri pengimejan strok utama'],
-            ['≈3 min','Masa pembinaan semula CTA yang dinyatakan dalam manual'],
-            ['<3 mm','Analisis mikroaneurisme yang diterangkan dalam bahan']
+            ['≈3 min','Pembinaan semula CTA kepala dan leher automatik'],
+            ['<3 mm','Keupayaan analisis mikroaneurisme']
           ],
           capHeading: 'Laluan sehenti untuk strok dan pengimejan vaskular kepala serta leher',
-          capIntro: 'Manual menggabungkan NCCT, CTA dan CTP bagi menyokong semakan lesi, penilaian vaskular dan analisis perfusi.',
+          capIntro: 'NCCT, CTA dan CTP digabungkan untuk menyokong semakan lesi, penilaian vaskular dan analisis perfusi.',
           caps: [
             ['Penilaian strok NCCT','Mengenal pasti dan menanda penemuan iskemia serta pendarahan yang disyaki untuk semakan awal pantas.'],
             ['CTA tanpa subtraksi','Memisahkan salur daripada tulang secara automatik dan menghasilkan pandangan VR, VMIP, MIP serta CPR.'],
@@ -513,11 +518,11 @@
         th: {
           facts: [
             ['NCCT · CTA · CTP','ขั้นตอนเดียวครอบคลุมชุดภาพสำคัญของโรคหลอดเลือดสมอง'],
-            ['≈3 นาที','เวลาสร้างภาพ CTA ศีรษะและคอที่คู่มือระบุ'],
-            ['<3 มม.','ช่วงการวิเคราะห์หลอดเลือดโป่งพองขนาดเล็กตามเอกสาร']
+            ['≈3 นาที','การสร้างภาพ CTA ศีรษะและคออัตโนมัติ'],
+            ['<3 มม.','ความสามารถวิเคราะห์หลอดเลือดโป่งพองขนาดเล็ก']
           ],
           capHeading: 'ขั้นตอนแบบครบวงจรสำหรับโรคหลอดเลือดสมองและหลอดเลือดศีรษะคอ',
-          capIntro: 'คู่มือรวม NCCT, CTA และ CTP เพื่อสนับสนุนการตรวจรอยโรค ประเมินหลอดเลือด และวิเคราะห์การไหลเวียน',
+          capIntro: 'NCCT, CTA และ CTP ทำงานร่วมกันเพื่อสนับสนุนการตรวจรอยโรค ประเมินหลอดเลือด และวิเคราะห์การไหลเวียน',
           caps: [
             ['ประเมินโรคหลอดเลือดสมองด้วย NCCT','ระบุและทำเครื่องหมายภาวะขาดเลือดหรือเลือดออกที่สงสัย เพื่อช่วยตรวจทานเบื้องต้นอย่างรวดเร็ว'],
             ['สร้าง CTA โดยไม่ต้องลบภาพ','แยกหลอดเลือดออกจากกระดูกอัตโนมัติ และสร้างมุมมอง VR, VMIP, MIP และ CPR'],
@@ -546,7 +551,15 @@
       titleKey: 'boneAgeTitle',
       categoryKey: 'devicesEyebrow',
       summaryKey: 'boneAgeDesc',
-      images: ['assets/products/visual-bone-age-device.webp','assets/products/visual-bone-age-analysis.webp'],
+      images: ['assets/products/visual-bone-age-device.webp'],
+      secondaryImage: 'assets/products/visual-bone-age-analysis.webp',
+      secondaryHeadings: {
+        en: 'AI bone-age assessment, presented at full scale',
+        'zh-cn': '完整呈现AI骨龄评估视图',
+        'zh-tw': '完整呈現AI骨齡評估視圖',
+        ms: 'Penilaian umur tulang AI dalam paparan penuh',
+        th: 'มุมมองการประเมินอายุกระดูกด้วย AI แบบเต็มภาพ'
+      },
       focusImage: 'assets/products/focus-bone-age-analyser.jpg',
       tags: [{key:'nmpaApproved'}],
       accent: '#7ee7ff',
@@ -554,12 +567,12 @@
       details: {
         en: {
           facts: [
-            ['<1 s','Brochure-stated exposure time'],
+            ['<1 s','Exposure time'],
             ['80 cm','Source-to-image distance for consistent hand imaging'],
             ['0.25 m²','Compact equipment footprint']
           ],
           capHeading: 'Imaging, bone-age assessment and growth follow-up in one device',
-          capIntro: 'The manual describes an integrated system that controls image acquisition and radiation protection, then carries the study through AI assessment and reporting.',
+          capIntro: 'An integrated system connects controlled image acquisition and radiation protection with AI assessment and reporting.',
           caps: [
             ['Intelligent low-dose acquisition','Automatic focusing, one-touch capture and body-size-adaptive exposure are designed to produce clear hand images at an appropriate dose.'],
             ['Automated bone-age assessment','Automatically grades ossification features and supports multiple established assessment methods for consistent comparison.'],
@@ -576,19 +589,19 @@
           highlightHeading: 'A compact platform for paediatric growth assessment',
           highlightIntro: 'The product combines a small footprint with controlled imaging and longitudinal data management.',
           highlights: [
-            ['Simplified site requirements','The supplied specifications describe a 220 V, movable system with full shielding and no dedicated shielded room under applicable conditions.'],
+            ['Simplified site requirements','A 220 V, movable system with full shielding can operate without a dedicated shielded room under applicable conditions.'],
             ['Repeatable assessment','Standardised acquisition and automated grading are intended to improve consistency across readers and follow-up visits.'],
             ['Clinical and research continuity','Longitudinal records support screening, diagnosis, treatment follow-up and structured research data collection.']
           ]
         },
         'zh-cn': {
           facts: [
-            ['<1秒','手册列示的曝光时间'],
+            ['<1秒','曝光时间'],
             ['80 cm','保持手部成像一致性的管片距'],
             ['0.25 m²','设备占地面积']
           ],
           capHeading: '将拍摄、骨龄评估与生长随访整合在一台设备中',
-          capIntro: '手册展示了一套软硬件一体化系统：先完成图像采集与辐射防护，再进入AI骨龄评估和报告流程。',
+          capIntro: '软硬件一体化系统将受控图像采集、辐射防护、AI骨龄评估与报告流程连为一体。',
           caps: [
             ['智能低剂量拍摄','通过自动对焦、一键成像及按体型调节的曝光模式，在控制剂量的同时获得清晰手部影像。'],
             ['自动骨龄评估','自动识别骨骺发育特征，并支持多种成熟骨龄评估方法，便于一致比较。'],
@@ -605,19 +618,19 @@
           highlightHeading: '面向儿童生长发育评估的紧凑平台',
           highlightIntro: '产品把较小占地、受控成像与长期数据管理结合在一起。',
           highlights: [
-            ['简化场地条件','资料规格显示设备使用220V电源、可移动并采用全屏蔽设计，在满足适用条件时无需专用屏蔽机房。'],
+            ['简化场地条件','设备使用220V电源、可移动并采用全屏蔽设计，在满足适用条件时无需专用屏蔽机房。'],
             ['提升评估一致性','标准化拍摄与自动骨骺分级有助于减少不同阅片人员和多次随访之间的差异。'],
             ['连接临床与科研','纵向记录可支持筛查、诊断、治疗随访以及规范化科研数据采集。']
           ]
         },
         'zh-tw': {
           facts: [
-            ['<1秒','手冊列示的曝光時間'],
+            ['<1秒','曝光時間'],
             ['80 cm','保持手部成像一致性的管片距'],
             ['0.25 m²','設備占地面積']
           ],
           capHeading: '將拍攝、骨齡評估與生長追蹤整合在一台設備中',
-          capIntro: '手冊展示了一套軟硬體一體化系統：先完成影像採集與輻射防護，再進入AI骨齡評估和報告流程。',
+          capIntro: '軟硬體一體化系統將受控影像採集、輻射防護、AI骨齡評估與報告流程連為一體。',
           caps: [
             ['智能低劑量拍攝','透過自動對焦、一鍵成像及按體型調節的曝光模式，在控制劑量的同時獲得清晰手部影像。'],
             ['自動骨齡評估','自動識別骨骺發育特徵，並支援多種成熟骨齡評估方法，便於一致比較。'],
@@ -634,19 +647,19 @@
           highlightHeading: '面向兒童生長發育評估的緊湊平台',
           highlightIntro: '產品把較小占地、受控成像與長期資料管理結合在一起。',
           highlights: [
-            ['簡化場地條件','資料規格顯示設備使用220V電源、可移動並採用全屏蔽設計，在符合適用條件時無需專用屏蔽機房。'],
+            ['簡化場地條件','設備使用220V電源、可移動並採用全屏蔽設計，在符合適用條件時無需專用屏蔽機房。'],
             ['提升評估一致性','標準化拍攝與自動骨骺分級有助於減少不同閱片人員和多次追蹤之間的差異。'],
             ['連接臨床與科研','縱向紀錄可支援篩檢、診斷、治療追蹤以及規範化科研資料採集。']
           ]
         },
         ms: {
           facts: [
-            ['<1 saat','Masa dedahan yang dinyatakan dalam manual'],
+            ['<1 saat','Masa dedahan'],
             ['80 cm','Jarak sumber-ke-imej untuk pengimejan tangan konsisten'],
             ['0.25 m²','Jejak peralatan yang padat']
           ],
           capHeading: 'Pengimejan, penilaian umur tulang dan susulan pertumbuhan dalam satu peranti',
-          capIntro: 'Manual menerangkan sistem bersepadu yang mengawal pemerolehan imej dan perlindungan sinaran sebelum penilaian AI dan laporan.',
+          capIntro: 'Sistem bersepadu menghubungkan pemerolehan imej terkawal dan perlindungan sinaran dengan penilaian AI serta pelaporan.',
           caps: [
             ['Pemerolehan dos rendah pintar','Fokus automatik, tangkapan satu sentuhan dan dedahan mengikut saiz badan direka untuk menghasilkan imej tangan yang jelas.'],
             ['Penilaian umur tulang automatik','Menggred ciri osifikasi secara automatik dan menyokong beberapa kaedah penilaian yang mantap.'],
@@ -670,12 +683,12 @@
         },
         th: {
           facts: [
-            ['<1 วินาที','เวลาเอกซเรย์ที่ระบุในคู่มือ'],
+            ['<1 วินาที','เวลาเอกซเรย์'],
             ['80 ซม.','ระยะต้นกำเนิดถึงภาพเพื่อความสม่ำเสมอ'],
             ['0.25 ตร.ม.','พื้นที่ติดตั้งขนาดกะทัดรัด']
           ],
           capHeading: 'ถ่ายภาพ ประเมินอายุกระดูก และติดตามการเจริญเติบโตในอุปกรณ์เดียว',
-          capIntro: 'คู่มืออธิบายระบบรวมที่ควบคุมการถ่ายภาพและการป้องกันรังสี ก่อนเข้าสู่การประเมินด้วย AI และรายงาน',
+          capIntro: 'ระบบรวมเชื่อมการถ่ายภาพแบบควบคุมและการป้องกันรังสีเข้ากับการประเมินด้วย AI และการออกรายงาน',
           caps: [
             ['ถ่ายภาพรังสีต่ำอัจฉริยะ','โฟกัสอัตโนมัติ ถ่ายด้วยปุ่มเดียว และปรับปริมาณรังสีตามขนาดร่างกาย เพื่อให้ภาพมือชัดเจน'],
             ['ประเมินอายุกระดูกอัตโนมัติ','จัดระดับลักษณะการสร้างกระดูกและรองรับวิธีประเมินมาตรฐานหลายแบบ'],
@@ -692,7 +705,7 @@
           highlightHeading: 'แพลตฟอร์มกะทัดรัดสำหรับการเติบโตของเด็ก',
           highlightIntro: 'รวมพื้นที่ติดตั้งขนาดเล็ก การถ่ายภาพที่ควบคุมได้ และการจัดการข้อมูลระยะยาว',
           highlights: [
-            ['เงื่อนไขติดตั้งง่ายขึ้น','สเปกระบุระบบ 220 V เคลื่อนย้ายได้ มีเกราะป้องกันเต็มรูปแบบ และไม่ต้องใช้ห้องเฉพาะเมื่อเป็นไปตามเงื่อนไข'],
+            ['เงื่อนไขติดตั้งง่ายขึ้น','ระบบใช้ไฟ 220 V เคลื่อนย้ายได้ มีเกราะป้องกันเต็มรูปแบบ และไม่ต้องใช้ห้องเฉพาะเมื่อเป็นไปตามเงื่อนไข'],
             ['การประเมินสม่ำเสมอ','การถ่ายมาตรฐานและการจัดระดับอัตโนมัติช่วยลดความต่างระหว่างผู้อ่านและการติดตาม'],
             ['เชื่อมคลินิกกับงานวิจัย','ข้อมูลระยะยาวรองรับการคัดกรอง วินิจฉัย ติดตามการรักษา และเก็บข้อมูลงานวิจัย']
           ]
@@ -704,7 +717,15 @@
       titleKey: 'boneDensityTitle',
       categoryKey: 'devicesEyebrow',
       summaryKey: 'boneDensityDesc',
-      images: ['assets/products/visual-bone-density-device.webp','assets/products/visual-bone-density-analysis.webp'],
+      images: ['assets/products/visual-bone-density-device.webp'],
+      secondaryImage: 'assets/products/visual-bone-density-analysis.webp',
+      secondaryHeadings: {
+        en: 'Automated bone-density analysis, shown in detail',
+        'zh-cn': '大图展示自动骨密度分析',
+        'zh-tw': '大圖展示自動骨密度分析',
+        ms: 'Analisis ketumpatan tulang automatik secara terperinci',
+        th: 'การวิเคราะห์ความหนาแน่นกระดูกอัตโนมัติแบบละเอียด'
+      },
       focusImage: 'assets/products/focus-bone-density-analyser.jpg',
       tags: [{key:'boneDensityMeasurement'},{key:'exemptionFiling'},{key:'structuredReport'}],
       accent: '#85d9ff',
@@ -712,8 +733,8 @@
       details: {
         en: {
           facts: [
-            ['≈2 s','Brochure-stated image acquisition time'],
-            ['≥2 LP/mm','Detector resolution stated in the supplied material'],
+            ['≈2 s','Image acquisition time'],
+            ['≥2 LP/mm','Detector resolution'],
             ['0.2 m²','Compact equipment footprint']
           ],
           capHeading: 'Consistent forearm bone-density measurement with intelligent positioning',
@@ -732,7 +753,7 @@
             ['Review and follow','The system produces the measurement and report, with prior results available for same-site comparison.']
           ],
           highlightHeading: 'Compact hardware with flexible hospital connectivity',
-          highlightIntro: 'The manual describes a shielded, movable system that can work independently or connect to a hospital network.',
+          highlightIntro: 'The shielded, movable system can work independently or connect to a hospital network.',
           highlights: [
             ['Space-efficient operation','The approximately 507 × 320 × 490 mm unit occupies about 0.2 m² and is designed for desktop use.'],
             ['Wireless clinical control','Tablet or computer operation supports remote positioning, real-time viewing and convenient clinician-patient interaction.'],
@@ -741,8 +762,8 @@
         },
         'zh-cn': {
           facts: [
-            ['约2秒','手册列示的图像采集时间'],
-            ['≥2 LP/mm','资料列示的探测器分辨率'],
+            ['约2秒','图像采集时间'],
+            ['≥2 LP/mm','探测器分辨率'],
             ['0.2 m²','设备占地面积']
           ],
           capHeading: '通过智能定位实现一致的前臂骨密度测量',
@@ -761,7 +782,7 @@
             ['审核与随访','系统生成测量结果和报告，并提供历史结果用于同部位对比。']
           ],
           highlightHeading: '紧凑硬件与灵活的院内连接方式',
-          highlightIntro: '手册展示了一套全屏蔽、可移动的设备，可独立工作，也可连接医院局域网。',
+          highlightIntro: '全屏蔽、可移动的设备既可独立工作，也可连接医院局域网。',
           highlights: [
             ['节省空间','设备约507 × 320 × 490 mm，占地约0.2 m²，适合桌面放置。'],
             ['无线临床操作','平板或电脑操作支持远台摆位、实时观察及更方便的医患互动。'],
@@ -770,8 +791,8 @@
         },
         'zh-tw': {
           facts: [
-            ['約2秒','手冊列示的影像採集時間'],
-            ['≥2 LP/mm','資料列示的探測器解析度'],
+            ['約2秒','影像採集時間'],
+            ['≥2 LP/mm','探測器解析度'],
             ['0.2 m²','設備占地面積']
           ],
           capHeading: '透過智能定位實現一致的前臂骨密度測量',
@@ -790,7 +811,7 @@
             ['審核與追蹤','系統產生測量結果和報告，並提供歷史結果用於同部位比較。']
           ],
           highlightHeading: '緊湊硬體與靈活的院內連接方式',
-          highlightIntro: '手冊展示了一套全屏蔽、可移動的設備，可獨立工作，也可連接醫院區域網路。',
+          highlightIntro: '全屏蔽、可移動的設備既可獨立工作，也可連接醫院區域網路。',
           highlights: [
             ['節省空間','設備約507 × 320 × 490 mm，占地約0.2 m²，適合桌面放置。'],
             ['無線臨床操作','平板或電腦操作支援遠端擺位、即時觀察及更方便的醫病互動。'],
@@ -799,8 +820,8 @@
         },
         ms: {
           facts: [
-            ['≈2 saat','Masa pemerolehan imej yang dinyatakan dalam manual'],
-            ['≥2 LP/mm','Resolusi pengesan dalam bahan yang dibekalkan'],
+            ['≈2 saat','Masa pemerolehan imej'],
+            ['≥2 LP/mm','Resolusi pengesan'],
             ['0.2 m²','Jejak peralatan yang padat']
           ],
           capHeading: 'Pengukuran ketumpatan tulang lengan bawah yang konsisten',
@@ -819,7 +840,7 @@
             ['Semak dan susuli','Sistem menghasilkan ukuran dan laporan dengan hasil terdahulu untuk perbandingan tapak sama.']
           ],
           highlightHeading: 'Perkakasan padat dengan sambungan hospital fleksibel',
-          highlightIntro: 'Manual menerangkan sistem terlindung dan boleh bergerak yang berfungsi sendiri atau melalui rangkaian hospital.',
+          highlightIntro: 'Sistem terlindung dan boleh bergerak boleh berfungsi sendiri atau melalui rangkaian hospital.',
           highlights: [
             ['Operasi jimat ruang','Unit kira-kira 507 × 320 × 490 mm menggunakan sekitar 0.2 m² dan sesuai di atas meja.'],
             ['Kawalan klinikal tanpa wayar','Tablet atau komputer menyokong kedudukan jauh dan paparan masa nyata.'],
@@ -828,8 +849,8 @@
         },
         th: {
           facts: [
-            ['≈2 วินาที','เวลารับภาพที่ระบุในคู่มือ'],
-            ['≥2 LP/mm','ความละเอียดตัวตรวจจับตามเอกสาร'],
+            ['≈2 วินาที','เวลารับภาพ'],
+            ['≥2 LP/mm','ความละเอียดตัวตรวจจับ'],
             ['0.2 ตร.ม.','พื้นที่ติดตั้งขนาดกะทัดรัด']
           ],
           capHeading: 'วัดความหนาแน่นกระดูกปลายแขนอย่างสม่ำเสมอด้วยการจัดตำแหน่งอัจฉริยะ',
@@ -848,7 +869,7 @@
             ['ตรวจทานและติดตาม','ระบบสร้างผลและรายงาน พร้อมประวัติสำหรับเปรียบเทียบตำแหน่งเดิม']
           ],
           highlightHeading: 'ฮาร์ดแวร์กะทัดรัด เชื่อมต่อโรงพยาบาลได้ยืดหยุ่น',
-          highlightIntro: 'คู่มืออธิบายระบบมีเกราะป้องกัน เคลื่อนย้ายได้ และทำงานเดี่ยวหรือผ่านเครือข่ายโรงพยาบาล',
+          highlightIntro: 'ระบบมีเกราะป้องกันและเคลื่อนย้ายได้ สามารถทำงานเดี่ยวหรือผ่านเครือข่ายโรงพยาบาล',
           highlights: [
             ['ประหยัดพื้นที่','อุปกรณ์ประมาณ 507 × 320 × 490 มม. ใช้พื้นที่ราว 0.2 ตร.ม. และวางบนโต๊ะได้'],
             ['ควบคุมไร้สาย','แท็บเล็ตหรือคอมพิวเตอร์รองรับการจัดตำแหน่งระยะไกลและดูภาพสด'],
@@ -870,12 +891,12 @@
       details: {
         en: {
           facts: [
-            ['4 mm','Smallest nodule size described in the supplied presentation'],
+            ['4 mm','Minimum supported nodule size'],
             ['4 types','Pure GGN, solid, mixed GGN and suspected tumour'],
             ['Big 3','Lung nodules, coronary calcium and COPD indicators']
           ],
           capHeading: 'Beyond nodule detection: a quantitative view of whole-lung health',
-          capIntro: 'The supplied presentation combines lung-cancer screening, opportunistic findings, longitudinal comparison and structured reporting.',
+          capIntro: 'Lung-cancer screening, opportunistic findings, longitudinal comparison and structured reporting come together in one solution.',
           caps: [
             ['Nodule detection and typing','Detects pulmonary nodules and classifies key patterns including pure ground-glass, solid and mixed ground-glass nodules.'],
             ['Growth tracking','Measures and compares nodules across examinations to help clinicians assess interval change.'],
@@ -899,12 +920,12 @@
         },
         'zh-cn': {
           facts: [
-            ['4 mm','资料中描述的最小结节检出尺度'],
+            ['4 mm','支持的最小结节检出尺度'],
             ['4类','纯磨玻璃、实性、混合磨玻璃与疑似肿瘤'],
             ['三大疾病','肺结节、冠脉钙化与COPD相关指标']
           ],
           capHeading: '不止检出结节，也提供全肺健康的定量视图',
-          capIntro: '资料将肺癌筛查、机会性发现、纵向比较和结构化报告整合在同一产品中。',
+          capIntro: '产品将肺癌筛查、机会性发现、纵向比较和结构化报告整合在同一解决方案中。',
           caps: [
             ['结节检出与分类','检出肺结节，并识别纯磨玻璃、实性及混合磨玻璃等关键影像类型。'],
             ['结节生长追踪','对不同检查中的结节进行测量与对比，辅助医师判断随时间发生的变化。'],
@@ -928,12 +949,12 @@
         },
         'zh-tw': {
           facts: [
-            ['4 mm','資料中描述的最小結節偵測尺度'],
+            ['4 mm','支援的最小結節偵測尺度'],
             ['4類','純磨玻璃、實性、混合磨玻璃與疑似腫瘤'],
             ['三大疾病','肺結節、冠脈鈣化與COPD相關指標']
           ],
           capHeading: '不只偵測結節，也提供全肺健康的定量視圖',
-          capIntro: '資料將肺癌篩檢、機會性發現、縱向比較和結構化報告整合在同一產品中。',
+          capIntro: '產品將肺癌篩檢、機會性發現、縱向比較和結構化報告整合在同一解決方案中。',
           caps: [
             ['結節偵測與分類','偵測肺結節，並識別純磨玻璃、實性及混合磨玻璃等關鍵影像類型。'],
             ['結節生長追蹤','對不同檢查中的結節進行測量與比較，協助醫師判斷隨時間發生的變化。'],
@@ -957,12 +978,12 @@
         },
         ms: {
           facts: [
-            ['4 mm','Saiz nodul terkecil yang diterangkan dalam bahan'],
+            ['4 mm','Saiz nodul minimum yang disokong'],
             ['4 jenis','GGN tulen, pepejal, GGN campuran dan tumor disyaki'],
             ['Big 3','Nodul paru-paru, kalsium koronari dan petunjuk COPD']
           ],
           capHeading: 'Lebih daripada pengesanan nodul: pandangan kuantitatif seluruh paru-paru',
-          capIntro: 'Bahan menggabungkan saringan kanser paru-paru, penemuan oportunistik, perbandingan longitudinal dan laporan berstruktur.',
+          capIntro: 'Saringan kanser paru-paru, penemuan oportunistik, perbandingan longitudinal dan laporan berstruktur digabungkan dalam satu penyelesaian.',
           caps: [
             ['Pengesanan dan pengelasan nodul','Mengesan nodul dan mengelaskan corak utama termasuk ground-glass tulen, pepejal dan campuran.'],
             ['Penjejakan pertumbuhan','Mengukur dan membandingkan nodul antara pemeriksaan untuk menilai perubahan.'],
@@ -986,12 +1007,12 @@
         },
         th: {
           facts: [
-            ['4 มม.','ขนาดก้อนเล็กสุดที่อธิบายในเอกสาร'],
+            ['4 มม.','ขนาดก้อนต่ำสุดที่รองรับ'],
             ['4 ชนิด','Pure GGN, solid, mixed GGN และเนื้องอกที่สงสัย'],
             ['Big 3','ก้อนปอด แคลเซียมหลอดเลือดหัวใจ และตัวชี้วัด COPD']
           ],
           capHeading: 'มากกว่าการตรวจหาก้อน ด้วยภาพเชิงปริมาณของปอดทั้งหมด',
-          capIntro: 'เอกสารรวมการคัดกรองมะเร็งปอด การค้นพบโดยบังเอิญ การเปรียบเทียบระยะยาว และรายงานแบบมีโครงสร้าง',
+          capIntro: 'การคัดกรองมะเร็งปอด การค้นพบโดยบังเอิญ การเปรียบเทียบระยะยาว และรายงานแบบมีโครงสร้าง รวมอยู่ในโซลูชันเดียว',
           caps: [
             ['ตรวจและจำแนกก้อน','ตรวจหาก้อนปอดและจำแนกรูปแบบสำคัญ เช่น ground-glass ล้วน ก้อนทึบ และชนิดผสม'],
             ['ติดตามการเติบโต','วัดและเปรียบเทียบก้อนระหว่างการตรวจ เพื่อช่วยประเมินการเปลี่ยนแปลง'],
@@ -1029,15 +1050,15 @@
         en: {
           facts: [
             ['20+','Lesion labels across chest X-ray review'],
-            ['≈14 s','Average prediction time stated in the supplied presentation'],
+            ['≈14 s','Average prediction time'],
             ['Configurable','Report content can be adapted to the workflow']
           ],
           capHeading: 'Fast chest X-ray triage with visible findings and configurable output',
-          capIntro: 'The presentation describes a system that labels abnormalities, highlights risk and produces report content across routine examination and tuberculosis screening.',
+          capIntro: 'The system labels abnormalities, highlights risk and produces report content across routine examination and tuberculosis screening.',
           caps: [
             ['Broad abnormality coverage','Supports review of findings including fracture, pneumothorax, pleural effusion, cardiac enlargement, aortic change and abnormal lung fields.'],
             ['Marked images and warnings','Displays lesion location, abnormality probability and conspicuous warnings on the study for rapid review.'],
-            ['Tuberculosis screening support','Supports computer-assisted TB screening review in community and healthcare settings for the population described in the supplied material.'],
+            ['Tuberculosis screening support','Supports computer-assisted TB screening review in community and healthcare settings for indicated populations.'],
             ['Configurable reporting','Automatically creates inspection results from AI predictions, with report content configurable to departmental needs.']
           ],
           flowHeading: 'From chest radiograph to prioritised review in seconds',
@@ -1058,15 +1079,15 @@
         'zh-cn': {
           facts: [
             ['20+','覆盖胸部X线阅片的病灶标签'],
-            ['约14秒','资料列示的平均预测时间'],
+            ['约14秒','平均预测时间'],
             ['可配置','报告内容可按工作流程调整']
           ],
           capHeading: '以可视化征象与可配置输出支持快速胸片分诊',
-          capIntro: '资料展示了覆盖常规体检与结核筛查的工作流程：标记异常、提示风险并自动生成报告内容。',
+          capIntro: '覆盖常规体检与结核筛查的工作流程可标记异常、提示风险并自动生成报告内容。',
           caps: [
             ['广泛异常覆盖','支持复核骨折、气胸、胸腔积液、心影增大、主动脉改变及肺野异常等多类征象。'],
             ['病灶标记与预警','在影像上呈现病灶位置、异常概率和醒目提示，便于快速阅片。'],
-            ['结核病筛查支持','在资料所述适用人群和场景中，为社区及医疗机构的计算机辅助结核筛查提供支持。'],
+            ['结核病筛查支持','面向适用人群，为社区及医疗机构的计算机辅助结核筛查提供支持。'],
             ['可配置报告','根据AI预测自动形成检查结果，并允许科室按实际需求配置报告内容。']
           ],
           flowHeading: '从胸片到数秒级的优先阅片提示',
@@ -1087,15 +1108,15 @@
         'zh-tw': {
           facts: [
             ['20+','涵蓋胸部X線閱片的病灶標籤'],
-            ['約14秒','資料列示的平均預測時間'],
+            ['約14秒','平均預測時間'],
             ['可設定','報告內容可按工作流程調整']
           ],
           capHeading: '以視覺化徵象與可設定輸出支援快速胸片分診',
-          capIntro: '資料展示了涵蓋常規體檢與結核篩檢的工作流程：標記異常、提示風險並自動產生報告內容。',
+          capIntro: '涵蓋常規體檢與結核篩檢的工作流程可標記異常、提示風險並自動產生報告內容。',
           caps: [
             ['廣泛異常涵蓋','支援複核骨折、氣胸、胸腔積液、心影增大、主動脈改變及肺野異常等多類徵象。'],
             ['病灶標記與預警','在影像上呈現病灶位置、異常機率和醒目提示，便於快速閱片。'],
-            ['結核病篩檢支援','在資料所述適用人群和場景中，為社區及醫療機構的電腦輔助結核篩檢提供支援。'],
+            ['結核病篩檢支援','面向適用人群，為社區及醫療機構的電腦輔助結核篩檢提供支援。'],
             ['可設定報告','根據AI預測自動形成檢查結果，並允許科室按實際需求設定報告內容。']
           ],
           flowHeading: '從胸片到數秒級的優先閱片提示',
@@ -1116,15 +1137,15 @@
         ms: {
           facts: [
             ['20+','Label lesi merentasi semakan X-ray dada'],
-            ['≈14 saat','Purata masa ramalan dalam bahan yang dibekalkan'],
+            ['≈14 saat','Purata masa ramalan'],
             ['Boleh dikonfigurasi','Kandungan laporan boleh disesuaikan']
           ],
           capHeading: 'Triage X-ray dada pantas dengan penemuan jelas dan output fleksibel',
-          capIntro: 'Bahan menerangkan sistem yang melabel keabnormalan, menyerlahkan risiko dan menghasilkan laporan untuk pemeriksaan rutin serta saringan TB.',
+          capIntro: 'Sistem melabel keabnormalan, menyerlahkan risiko dan menghasilkan laporan untuk pemeriksaan rutin serta saringan TB.',
           caps: [
             ['Liputan abnormaliti luas','Menyokong semakan patah, pneumotoraks, efusi pleura, pembesaran jantung, perubahan aorta dan medan paru-paru abnormal.'],
             ['Imej bertanda dan amaran','Memaparkan lokasi lesi, kebarangkalian abnormaliti dan amaran untuk semakan pantas.'],
-            ['Sokongan saringan TB','Menyokong semakan saringan TB berbantukan komputer dalam populasi dan persekitaran yang diterangkan dalam bahan.'],
+            ['Sokongan saringan TB','Menyokong semakan saringan TB berbantukan komputer dalam komuniti dan kemudahan kesihatan bagi populasi yang sesuai.'],
             ['Pelaporan boleh konfigurasi','Mencipta hasil pemeriksaan daripada ramalan AI dengan kandungan yang boleh disesuaikan.']
           ],
           flowHeading: 'Daripada radiograf dada kepada semakan berkeutamaan dalam beberapa saat',
@@ -1145,15 +1166,15 @@
         th: {
           facts: [
             ['20+','ป้ายกำกับรอยโรคในการอ่านเอกซเรย์ทรวงอก'],
-            ['≈14 วินาที','เวลาทำนายเฉลี่ยตามเอกสาร'],
+            ['≈14 วินาที','เวลาทำนายเฉลี่ย'],
             ['ปรับได้','เนื้อหารายงานปรับตามขั้นตอนงานได้']
           ],
           capHeading: 'คัดแยกเอกซเรย์ทรวงอกอย่างรวดเร็วด้วยผลที่มองเห็นและรายงานปรับได้',
-          capIntro: 'เอกสารอธิบายระบบที่ทำป้ายความผิดปกติ แสดงความเสี่ยง และสร้างรายงานสำหรับการตรวจทั่วไปและคัดกรองวัณโรค',
+          capIntro: 'ระบบทำป้ายความผิดปกติ แสดงความเสี่ยง และสร้างรายงานสำหรับการตรวจทั่วไปและคัดกรองวัณโรค',
           caps: [
             ['ครอบคลุมความผิดปกติหลายชนิด','ช่วยตรวจทานกระดูกหัก ลมรั่วในช่องอก น้ำในเยื่อหุ้มปอด หัวใจโต การเปลี่ยนแปลงเอออร์ตา และความผิดปกติในปอด'],
             ['ภาพทำเครื่องหมายและคำเตือน','แสดงตำแหน่งรอยโรค ความน่าจะเป็น และคำเตือนเพื่อการตรวจเร็ว'],
-            ['สนับสนุนคัดกรองวัณโรค','ช่วยตรวจทานการคัดกรองวัณโรคด้วยคอมพิวเตอร์ในประชากรและสถานการณ์ที่เอกสารระบุ'],
+            ['สนับสนุนคัดกรองวัณโรค','ช่วยตรวจทานการคัดกรองวัณโรคด้วยคอมพิวเตอร์ในชุมชนและสถานพยาบาลสำหรับกลุ่มประชากรที่เหมาะสม'],
             ['รายงานปรับได้','สร้างผลตรวจจากการทำนายของ AI และปรับเนื้อหาให้ตรงความต้องการแผนก']
           ],
           flowHeading: 'จากภาพเอกซเรย์สู่การตรวจตามลำดับความสำคัญภายในไม่กี่วินาที',
@@ -1191,7 +1212,7 @@
             ['3 procedures','Wedge resection, subsegmentectomy and lobectomy']
           ],
           capHeading: 'Patient-specific lung anatomy for thoracic surgical planning',
-          capIntro: 'The supplied presentation describes automated whole-lung reconstruction that makes anatomical relationships and variations easier to inspect before surgery.',
+          capIntro: 'Automated whole-lung reconstruction makes anatomical relationships and variations easier to inspect before surgery.',
           caps: [
             ['Whole-lung reconstruction','Automatically segments and reconstructs bronchi, pulmonary arteries, pulmonary veins, lobar and segmental lung, body surface and bone.'],
             ['Anatomical variation review','Helps the surgical team identify patient-specific bronchovascular relationships and variations before entering theatre.'],
@@ -1220,7 +1241,7 @@
             ['3类术式','楔形切除、亚段切除与肺叶切除']
           ],
           capHeading: '以患者个体化肺部解剖支持胸外科手术规划',
-          capIntro: '资料展示了自动全肺重建，帮助手术团队在术前更直观地查看解剖关系与变异。',
+          capIntro: '自动全肺重建帮助手术团队在术前更直观地查看解剖关系与变异。',
           caps: [
             ['全肺自动重建','自动分割并重建支气管、肺动脉、肺静脉、肺叶与肺段、体表及骨骼结构。'],
             ['解剖变异评估','帮助手术团队在进入手术室前识别患者特异的支气管血管关系与变异。'],
@@ -1249,7 +1270,7 @@
             ['3類術式','楔形切除、亞段切除與肺葉切除']
           ],
           capHeading: '以患者個體化肺部解剖支援胸外科手術規劃',
-          capIntro: '資料展示了自動全肺重建，協助手術團隊在術前更直觀地查看解剖關係與變異。',
+          capIntro: '自動全肺重建協助手術團隊在術前更直觀地查看解剖關係與變異。',
           caps: [
             ['全肺自動重建','自動分割並重建支氣管、肺動脈、肺靜脈、肺葉與肺段、體表及骨骼結構。'],
             ['解剖變異評估','協助手術團隊在進入手術室前識別患者特異的支氣管血管關係與變異。'],
@@ -1278,7 +1299,7 @@
             ['3 prosedur','Reseksi baji, subsegmentektomi dan lobektomi']
           ],
           capHeading: 'Anatomi paru-paru khusus pesakit untuk perancangan toraks',
-          capIntro: 'Bahan menerangkan pembinaan semula seluruh paru-paru yang memudahkan semakan hubungan dan variasi anatomi sebelum pembedahan.',
+          capIntro: 'Pembinaan semula seluruh paru-paru memudahkan semakan hubungan dan variasi anatomi sebelum pembedahan.',
           caps: [
             ['Pembinaan semula seluruh paru-paru','Membahagi dan membina semula bronkus, arteri pulmonari, vena, lobus dan segmen, permukaan badan serta tulang.'],
             ['Semakan variasi anatomi','Membantu pasukan mengenal pasti hubungan bronkovaskular khusus pesakit sebelum pembedahan.'],
@@ -1307,7 +1328,7 @@
             ['3 หัตถการ','Wedge resection, subsegmentectomy และ lobectomy']
           ],
           capHeading: 'กายวิภาคปอดเฉพาะผู้ป่วยสำหรับการวางแผนผ่าตัดทรวงอก',
-          capIntro: 'เอกสารอธิบายการสร้างภาพปอดทั้งหมดอัตโนมัติ เพื่อดูความสัมพันธ์และความแปรผันก่อนผ่าตัดได้ง่ายขึ้น',
+          capIntro: 'การสร้างภาพปอดทั้งหมดอัตโนมัติช่วยให้ดูความสัมพันธ์และความแปรผันก่อนผ่าตัดได้ง่ายขึ้น',
           caps: [
             ['สร้างภาพปอดทั้งหมด','แบ่งและสร้างหลอดลม หลอดเลือดปอด กลีบและส่วนปอด ผิวร่างกาย และกระดูกอัตโนมัติ'],
             ['ตรวจความแปรผัน','ช่วยทีมระบุความสัมพันธ์หลอดลมและหลอดเลือดเฉพาะผู้ป่วยก่อนเข้าห้องผ่าตัด'],
@@ -1345,11 +1366,11 @@
         en: {
           facts: [
             ['5 fingers','Independent and coordinated movement'],
-            ['8-channel','EMG configuration described for the advanced version'],
-            ['24 gestures','Preset library described for the standard version']
+            ['8-channel','Advanced-version EMG configuration'],
+            ['24 gestures','Standard-version preset library']
           ],
           capHeading: 'Intent-driven control for everyday upper-limb function',
-          capIntro: 'The manual describes two product configurations that translate neuroelectric and muscle signals into hand movement for users with upper-limb loss.',
+          capIntro: 'Two product configurations translate neuroelectric and muscle signals into hand movement for users with upper-limb loss.',
           caps: [
             ['Neural and EMG intent recognition','Pattern-recognition algorithms decode residual neuromuscular signals to infer the movement the user intends to perform.'],
             ['Independent finger control','The advanced configuration supports individual finger movement, coordinated multi-finger actions and a broad range of gestures without repeated mode switching.'],
@@ -1364,21 +1385,21 @@
             ['Control and refine','Decoded intent drives the prosthetic hand; practice and ongoing adjustment help improve control in daily activities.']
           ],
           highlightHeading: 'A product family for different control needs',
-          highlightIntro: 'The manual separates an advanced intent-recognition version from a standard preset-gesture version while sharing a durable hand platform.',
+          highlightIntro: 'An advanced intent-recognition version and a standard preset-gesture version share a durable hand platform.',
           highlights: [
             ['Advanced or standard control','Configuration can be aligned with amputation level, available signals and the user’s functional goals.'],
-            ['Engineered for daily use','The brochure describes quiet gearing, anti-impact joints, lightweight materials and components tested for repeated opening and closing.'],
-            ['Documented product credentials','The supplied manual lists FDA 510(k) clearance, FDA Class I registration and a national rehabilitation-assistive-device quality report.']
+            ['Engineered for daily use','Quiet gearing, anti-impact joints, lightweight materials and components tested for repeated opening and closing support everyday use.'],
+            ['Product credentials','Product credentials include FDA 510(k) clearance, FDA Class I registration and a national rehabilitation-assistive-device quality report.']
           ]
         },
         'zh-cn': {
           facts: [
             ['5指','支持独立运动与协同操作'],
-            ['8通道','高端版手册所述的肌电配置'],
-            ['24种手势','标准版手册所述的预设手势库']
+            ['8通道','高端版肌电配置'],
+            ['24种手势','标准版预设手势库']
           ],
           capHeading: '以运动意图驱动日常上肢功能',
-          capIntro: '手册介绍了两种产品配置，将神经电与肌肉电信号转化为仿生手动作，服务上肢缺失用户的日常功能需求。',
+          capIntro: '两种产品配置将神经电与肌肉电信号转化为仿生手动作，满足上肢缺失用户的日常功能需求。',
           caps: [
             ['神经电与肌电意图识别','模式识别算法解码残肢神经肌肉信号，判断用户希望完成的动作。'],
             ['五指独立控制','高端配置支持单指运动、多指协同及更丰富的手势，无需频繁切换模式。'],
@@ -1393,21 +1414,21 @@
             ['控制并持续优化','解码后的意图驱动仿生手，通过练习和后续调整逐步提升日常操作能力。']
           ],
           highlightHeading: '面向不同控制需求的产品系列',
-          highlightIntro: '手册将意图识别高端版与预设手势标准版区分开来，同时共用耐用的仿生手平台。',
+          highlightIntro: '意图识别高端版与预设手势标准版共用耐用的仿生手平台。',
           highlights: [
             ['高端或标准控制','可根据截肢部位、可用信号及用户功能目标选择配置。'],
-            ['面向日常使用设计','手册描述了低噪声传动、防撞关节、轻量材料及经反复开合测试的关键部件。'],
-            ['具备产品资质资料','所提供手册列有FDA 510(k)许可、FDA I类产品注册和国家康复辅具质检报告。']
+            ['面向日常使用设计','低噪声传动、防撞关节、轻量材料及经反复开合测试的关键部件支持日常使用。'],
+            ['产品资质','产品列有FDA 510(k)许可、FDA I类产品注册和国家康复辅具质检报告。']
           ]
         },
         'zh-tw': {
           facts: [
             ['5指','支援獨立運動與協同操作'],
-            ['8通道','高階版手冊所述的肌電配置'],
-            ['24種手勢','標準版手冊所述的預設手勢庫']
+            ['8通道','高階版肌電設定'],
+            ['24種手勢','標準版預設手勢庫']
           ],
           capHeading: '以運動意圖驅動日常上肢功能',
-          capIntro: '手冊介紹了兩種產品設定，將神經電與肌肉電訊號轉化為仿生手動作，服務上肢缺失使用者的日常功能需求。',
+          capIntro: '兩種產品設定將神經電與肌肉電訊號轉化為仿生手動作，滿足上肢缺失使用者的日常功能需求。',
           caps: [
             ['神經電與肌電意圖識別','模式識別演算法解碼殘肢神經肌肉訊號，判斷使用者希望完成的動作。'],
             ['五指獨立控制','高階設定支援單指運動、多指協同及更豐富的手勢，無需頻繁切換模式。'],
@@ -1422,11 +1443,11 @@
             ['控制並持續最佳化','解碼後的意圖驅動仿生手，透過練習和後續調整逐步提升日常操作能力。']
           ],
           highlightHeading: '面向不同控制需求的產品系列',
-          highlightIntro: '手冊將意圖識別高階版與預設手勢標準版區分開來，同時共用耐用的仿生手平台。',
+          highlightIntro: '意圖識別高階版與預設手勢標準版共用耐用的仿生手平台。',
           highlights: [
             ['高階或標準控制','可根據截肢部位、可用訊號及使用者功能目標選擇設定。'],
-            ['面向日常使用設計','手冊描述了低噪聲傳動、防撞關節、輕量材料及經反覆開合測試的關鍵零件。'],
-            ['具備產品資格資料','所提供手冊列有FDA 510(k)許可、FDA I類產品註冊和國家康復輔具質檢報告。']
+            ['面向日常使用設計','低噪聲傳動、防撞關節、輕量材料及經反覆開合測試的關鍵零件支援日常使用。'],
+            ['產品資格','產品列有FDA 510(k)許可、FDA I類產品註冊和國家康復輔具質檢報告。']
           ]
         },
         ms: {
@@ -1436,7 +1457,7 @@
             ['24 gerak isyarat','Pustaka pratetap untuk versi standard']
           ],
           capHeading: 'Kawalan berasaskan niat untuk fungsi anggota atas harian',
-          capIntro: 'Manual menerangkan dua konfigurasi yang menterjemah isyarat saraf dan otot kepada pergerakan tangan.',
+          capIntro: 'Dua konfigurasi menterjemah isyarat saraf dan otot kepada pergerakan tangan.',
           caps: [
             ['Pengecaman niat neural dan EMG','Algoritma corak menyahkod isyarat neuromuskular baki untuk mengesan gerakan yang dimaksudkan.'],
             ['Kawalan jari bebas','Versi lanjutan menyokong pergerakan setiap jari, tindakan terselaras dan pelbagai gerak isyarat.'],
@@ -1451,11 +1472,11 @@
             ['Kawal dan perhalusi','Niat yang dinyahkod memacu tangan; latihan dan pelarasan membantu meningkatkan kawalan.']
           ],
           highlightHeading: 'Keluarga produk untuk keperluan kawalan berbeza',
-          highlightIntro: 'Manual membezakan versi pengecaman niat lanjutan dan versi gerak isyarat standard.',
+          highlightIntro: 'Versi pengecaman niat lanjutan dan versi gerak isyarat standard berkongsi platform tangan yang tahan lasak.',
           highlights: [
             ['Kawalan lanjutan atau standard','Konfigurasi boleh dipadankan dengan tahap amputasi, isyarat dan matlamat fungsi.'],
-            ['Direka untuk kegunaan harian','Manual menerangkan gear senyap, sendi tahan hentakan, bahan ringan dan komponen tahan ulang guna.'],
-            ['Kelayakan produk didokumenkan','Manual menyenaraikan pelepasan FDA 510(k), pendaftaran FDA Kelas I dan laporan kualiti kebangsaan.']
+            ['Direka untuk kegunaan harian','Gear senyap, sendi tahan hentakan, bahan ringan dan komponen tahan ulang guna menyokong penggunaan harian.'],
+            ['Kelayakan produk','Produk menyenaraikan pelepasan FDA 510(k), pendaftaran FDA Kelas I dan laporan kualiti kebangsaan.']
           ]
         },
         th: {
@@ -1465,7 +1486,7 @@
             ['24 ท่าทาง','คลังท่าทางสำเร็จรูปของรุ่นมาตรฐาน']
           ],
           capHeading: 'ควบคุมด้วยเจตนาการเคลื่อนไหวเพื่อการใช้ชีวิตประจำวัน',
-          capIntro: 'คู่มืออธิบายสองรุ่นที่แปลงสัญญาณประสาทและกล้ามเนื้อเป็นการเคลื่อนไหวของมือสำหรับผู้สูญเสียแขน',
+          capIntro: 'สองรุ่นแปลงสัญญาณประสาทและกล้ามเนื้อเป็นการเคลื่อนไหวของมือสำหรับผู้สูญเสียแขน',
           caps: [
             ['รู้จำเจตนาจากประสาทและ EMG','อัลกอริทึมถอดรหัสสัญญาณประสาทกล้ามเนื้อที่เหลือ เพื่อคาดการณ์ท่าที่ผู้ใช้ต้องการ'],
             ['ควบคุมนิ้วแยกกัน','รุ่นขั้นสูงรองรับการเคลื่อนไหวแต่ละนิ้ว การประสานหลายนิ้ว และท่าทางหลากหลาย'],
@@ -1480,11 +1501,11 @@
             ['ควบคุมและปรับปรุง','เจตนาที่ถอดรหัสขับมือกล การฝึกและการปรับช่วยเพิ่มความคล่องในการใช้ชีวิต']
           ],
           highlightHeading: 'ผลิตภัณฑ์หลายรุ่นสำหรับความต้องการควบคุมต่างกัน',
-          highlightIntro: 'คู่มือแยกรุ่นรู้จำเจตนาขั้นสูงออกจากรุ่นท่าทางสำเร็จรูปบนแพลตฟอร์มมือที่ทนทาน',
+          highlightIntro: 'รุ่นรู้จำเจตนาขั้นสูงและรุ่นท่าทางสำเร็จรูปใช้แพลตฟอร์มมือที่ทนทานร่วมกัน',
           highlights: [
             ['ควบคุมขั้นสูงหรือมาตรฐาน','เลือกให้เหมาะกับระดับการตัดแขน สัญญาณที่ใช้ได้ และเป้าหมายการทำงาน'],
-            ['ออกแบบเพื่อใช้ทุกวัน','คู่มือระบุชุดเกียร์เงียบ ข้อต่อกันกระแทก วัสดุน้ำหนักเบา และชิ้นส่วนทนต่อการเปิดปิดซ้ำ'],
-            ['มีเอกสารคุณสมบัติผลิตภัณฑ์','คู่มือระบุ FDA 510(k), การขึ้นทะเบียน FDA Class I และรายงานคุณภาพอุปกรณ์ฟื้นฟูระดับชาติ']
+            ['ออกแบบเพื่อใช้ทุกวัน','ชุดเกียร์เงียบ ข้อต่อกันกระแทก วัสดุน้ำหนักเบา และชิ้นส่วนทนต่อการเปิดปิดซ้ำรองรับการใช้งานประจำวัน'],
+            ['คุณสมบัติผลิตภัณฑ์','ผลิตภัณฑ์มี FDA 510(k), การขึ้นทะเบียน FDA Class I และรายงานคุณภาพอุปกรณ์ฟื้นฟูระดับชาติ']
           ]
         }
       }
@@ -1536,7 +1557,6 @@
 
     const alt=uiText(lang,'imageAlt').replace('{product}',title);
     const gallery=document.querySelector('#product-gallery');
-    gallery.classList.toggle('dual',product.images.length>1);
     gallery.innerHTML=product.images.map(image=>`<figure><img src="${escapeHtml(image)}" alt="${escapeHtml(alt)}"></figure>`).join('');
 
     renderCards('#product-tags',product.tags,tag=>{
@@ -1562,6 +1582,17 @@
         </div>
       </article>
     `);
+
+    const secondarySection=document.querySelector('#product-secondary-visual');
+    if(product.secondaryImage){
+      document.querySelector('#secondary-visual-heading').textContent=product.secondaryHeadings[lang] || product.secondaryHeadings.en;
+      const secondaryImage=document.querySelector('#secondary-visual-image');
+      secondaryImage.src=product.secondaryImage;
+      secondaryImage.alt=alt;
+      secondarySection.hidden=false;
+    }else{
+      secondarySection.hidden=true;
+    }
 
     document.querySelector('#workflow-heading').textContent=detail.flowHeading;
     document.querySelector('#workflow-intro').textContent=detail.flowIntro;
