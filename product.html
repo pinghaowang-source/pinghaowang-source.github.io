@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Explore the capabilities, workflow and deployment considerations of a SCOVION AI Healthcare solution.">
+  <title>AI Healthcare Product — SCOVION</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="product-detail.css?v=1.0.0">
+</head>
+<body class="product-detail-page">
+  <header class="container nav">
+    <a class="brand" href="index.html">SCO<i>V</i>ION</a>
+    <nav class="links">
+      <a href="index.html" data-i18n="home">Home</a>
+      <a class="active" href="index.html#solutions" data-i18n="solutions">Solutions</a>
+      <a href="about.html" data-i18n="about">About</a>
+      <a href="contact.html" data-i18n="contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <select id="language" class="lang" aria-label="Language"></select>
+      <a class="button" href="contact.html" data-i18n="navCta">Talk to us</a>
+      <button class="menu" aria-label="Menu">☰</button>
+    </div>
+  </header>
+
+  <main id="product-detail" hidden>
+    <section class="detail-hero">
+      <div class="container">
+        <a class="detail-back" href="ai-healthcare.html" data-product-ui="backToPortfolio">← Back to AI Healthcare</a>
+        <div class="detail-hero-grid">
+          <div class="detail-hero-copy">
+            <div id="product-category" class="eyebrow"></div>
+            <h1 id="product-title"></h1>
+            <p id="product-summary"></p>
+            <div class="hero-buttons">
+              <a id="product-enquiry" class="button" href="contact.html" data-product-ui="discussProduct">Discuss this product</a>
+              <a class="button outline" href="#capabilities" data-product-ui="exploreCapabilities">Explore capabilities</a>
+            </div>
+          </div>
+          <div>
+            <div id="product-gallery" class="detail-gallery"></div>
+            <p class="visual-origin"><span aria-hidden="true">◎</span><span data-product-ui="visualNotice">Original conceptual visual created for SCOVION. Not a manufacturer-supplied product image.</span></p>
+          </div>
+        </div>
+        <div id="product-tags" class="detail-tags"></div>
+      </div>
+    </section>
+
+    <section id="capabilities" class="container detail-section">
+      <div class="detail-heading">
+        <div><div class="eyebrow" data-product-ui="capabilityEyebrow">Product capabilities</div><h2 data-product-ui="capabilityHeading">What the solution is designed to support</h2></div>
+        <p data-product-ui="capabilityIntro">The capabilities below describe intended workflow functions. They are not clinical performance claims or substitutes for product-specific instructions for use.</p>
+      </div>
+      <div id="capability-grid" class="detail-capability-grid"></div>
+    </section>
+
+    <section class="workflow-band">
+      <div class="container detail-section">
+        <div class="detail-heading">
+          <div><div class="eyebrow" data-product-ui="workflowEyebrow">Workflow view</div><h2 data-product-ui="workflowHeading">From clinical input to professional review</h2></div>
+          <p data-product-ui="workflowIntro">A clear workflow helps teams understand where AI contributes and where professional judgement remains essential.</p>
+        </div>
+        <div class="workflow-flow">
+          <article><b>01</b><span class="workflow-symbol" aria-hidden="true"></span><h3 data-product-ui="workflowStep1Title">Clinical input</h3><p data-product-ui="workflowStep1Text">Relevant images, measurements or workflow data enter the solution.</p></article>
+          <article><b>02</b><span class="workflow-symbol process" aria-hidden="true"></span><h3 data-product-ui="workflowStep2Title">AI processing</h3><p data-product-ui="workflowStep2Text">The system analyses the input and organises outputs for review.</p></article>
+          <article><b>03</b><span class="workflow-symbol review" aria-hidden="true"></span><h3 data-product-ui="workflowStep3Title">Professional review</h3><p data-product-ui="workflowStep3Text">Qualified users review results within the intended clinical or operational workflow.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="container detail-section deployment-section">
+      <div class="detail-heading">
+        <div><div class="eyebrow" data-product-ui="deploymentEyebrow">Practical deployment</div><h2 data-product-ui="deploymentHeading">Designed around real operating conditions</h2></div>
+      </div>
+      <div class="deployment-grid">
+        <article><span>01</span><h3 data-product-ui="deployment1Title">Workflow fit</h3><p data-product-ui="deployment1Text">Integration, users, data flow and review responsibilities should be mapped before deployment.</p></article>
+        <article><span>02</span><h3 data-product-ui="deployment2Title">Human oversight</h3><p data-product-ui="deployment2Text">Outputs support qualified professionals and must be interpreted within the applicable standard of care.</p></article>
+        <article><span>03</span><h3 data-product-ui="deployment3Title">Local requirements</h3><p data-product-ui="deployment3Text">Availability, indications, configuration and regulatory status vary by product version and market.</p></article>
+      </div>
+      <div class="detail-note"><b data-product-ui="importantLabel">Important information</b><p data-product-ui="importantText">Images on this page are original conceptual visuals for communication purposes. They do not reproduce a third-party interface, device photograph or diagnostic output. Contact SCOVION for current product documentation and local availability.</p></div>
+    </section>
+
+    <section class="container detail-cta">
+      <div><div class="eyebrow" data-product-ui="ctaEyebrow">Explore the fit</div><h2 data-product-ui="ctaHeading">Discuss the workflow, setting and outcome you need</h2><p data-product-ui="ctaText">We can help clarify product fit, deployment considerations and the appropriate next step for your market.</p></div>
+      <a id="product-cta" class="button" href="contact.html" data-product-ui="discussProduct">Discuss this product</a>
+    </section>
+  </main>
+
+  <noscript><main class="container detail-noscript"><h1>AI Healthcare product details</h1><p>JavaScript is required to display this product page. Please return to the <a href="ai-healthcare.html">AI Healthcare portfolio</a>.</p></main></noscript>
+
+  <footer class="container footer">
+    <p>© <span data-year></span> SCOVION. All rights reserved.</p>
+    <p data-i18n="availabilityFooter">Product availability varies by market.</p>
+  </footer>
+  <script src="main.js?v=1.4.0"></script>
+  <script src="product-details.js?v=1.0.0"></script>
+</body>
+</html>

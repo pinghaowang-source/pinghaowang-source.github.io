@@ -115,6 +115,12 @@ Object.assign(copy['zh-tw'],{technologyPoint1:'研發方向涵蓋知識圖譜、
 Object.assign(copy.ms,{technologyPoint1:'Penyelidikan dan pembangunan merangkumi graf pengetahuan, ejen AI, manusia digital, OCR, pembelajaran bersekutu dan aplikasi model besar, termasuk dalam penjagaan kesihatan.'});
 Object.assign(copy.th,{technologyPoint1:'งานวิจัยและพัฒนาครอบคลุมกราฟความรู้ AI Agent มนุษย์ดิจิทัล OCR การเรียนรู้แบบสหพันธ์ และการประยุกต์ใช้โมเดลขนาดใหญ่ รวมถึงด้านการดูแลสุขภาพ'});
 
+Object.assign(copy.en,{conceptVisualNotice:'Original conceptual visual created for SCOVION. Not a manufacturer-supplied product image.'});
+Object.assign(copy['zh-cn'],{conceptVisualNotice:'SCOVION原创概念视觉，不是厂商提供的产品原图。'});
+Object.assign(copy['zh-tw'],{conceptVisualNotice:'SCOVION原創概念視覺，不是廠商提供的產品原圖。'});
+Object.assign(copy.ms,{conceptVisualNotice:'Visual konsep asli yang dicipta untuk SCOVION. Bukan imej produk yang dibekalkan pengeluar.'});
+Object.assign(copy.th,{conceptVisualNotice:'ภาพแนวคิดต้นฉบับที่สร้างขึ้นสำหรับ SCOVION ไม่ใช่ภาพผลิตภัณฑ์จากผู้ผลิต'});
+
 const languages=[['en','English'],['zh-cn','简体中文'],['zh-tw','繁體中文'],['ms','Bahasa Melayu'],['th','ไทย']];
 const languageAliases={zh:'zh-tw'};
 
@@ -124,4 +130,25 @@ function normalizeHeadingPunctuation(){document.querySelectorAll('h1,h2').forEac
 function readLanguage(){try{return localStorage.getItem('scovion-lang')}catch{return null}}
 function saveLanguage(lang){try{localStorage.setItem('scovion-lang',lang)}catch{}}
 function resolveLanguage(value){const normalized=String(value||'en').toLowerCase();const lang=languageAliases[normalized]||normalized;return copy[lang]?lang:'en'}
-function init(requestedLanguage){const lang=resolveLanguage(typeof requestedLanguage==='string'?requestedLanguage:readLanguage());document.documentElement.lang=lang;document.querySelectorAll('[data-i18n]').forEach(e=>e.textContent=copy[lang][e.dataset.i18n]||copy.en[e.dataset.i18n]||e.textContent);document.querySelectorAll('[data-i18n-placeholder]').forEach(e=>e.placeholder=copy[lang][e.dataset.i18nPlaceholder]||copy.en[e.dataset.i18nPlaceholder]||e.placeholder);const sel=document.querySelector('#language');if(sel){sel.innerHTML=languages.map(([value,label])=>`<option value="${value}">${label}</option>`).join('');sel.value=lang;sel.onchange=()=>{const nextLanguage=resolveLanguage(sel.value);saveLanguage(nextLanguage);init(nextLanguage)}}const menu=document.querySelector('.menu');if(menu)menu.onclick=()=>document.querySelector('.links').classList.toggle('open');document.querySelectorAll('[data-year]').forEach(e=>e.textContent=new Date().getFullYear());normalizeHeadingPunctuation()}document.addEventListener('DOMContentLoaded',()=>init());
+function init(requestedLanguage){
+  const lang=resolveLanguage(typeof requestedLanguage==='string'?requestedLanguage:readLanguage());
+  document.documentElement.lang=lang;
+  document.querySelectorAll('[data-i18n]').forEach(e=>e.textContent=copy[lang][e.dataset.i18n]||copy.en[e.dataset.i18n]||e.textContent);
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(e=>e.placeholder=copy[lang][e.dataset.i18nPlaceholder]||copy.en[e.dataset.i18nPlaceholder]||e.placeholder);
+  const sel=document.querySelector('#language');
+  if(sel){
+    sel.innerHTML=languages.map(([value,label])=>`<option value="${value}">${label}</option>`).join('');
+    sel.value=lang;
+    sel.onchange=()=>{
+      const nextLanguage=resolveLanguage(sel.value);
+      saveLanguage(nextLanguage);
+      init(nextLanguage)
+    }
+  }
+  const menu=document.querySelector('.menu');
+  if(menu)menu.onclick=()=>document.querySelector('.links').classList.toggle('open');
+  document.querySelectorAll('[data-year]').forEach(e=>e.textContent=new Date().getFullYear());
+  normalizeHeadingPunctuation();
+  if(typeof CustomEvent==='function')document.dispatchEvent(new CustomEvent('scovion:languagechange',{detail:{lang}}))
+}
+document.addEventListener('DOMContentLoaded',()=>init());
