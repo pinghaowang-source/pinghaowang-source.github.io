@@ -1208,7 +1208,7 @@
       },
       images: ['assets/products/visual-thorax-planning.webp'],
       focusImage: 'assets/products/focus-thorax-planning-v2.jpg',
-      tags: [{key:'chestCT'},{key:'reconstruction'},{key:'preoperativePlanning'}],
+      tags: [{key:'chestCT'},{key:'ceMarked'},{key:'fdaCleared'},{key:'ukcaMarked'},{key:'nmpaApproved'},{key:'reconstruction'},{key:'preoperativePlanning'}],
       accent: '#ffd166',
       glow: '#eebd3b36',
       details: {
@@ -1373,7 +1373,7 @@
       },
       images: ['assets/products/visual-liver-planning.webp'],
       focusImage: 'assets/products/focus-liver-planning.jpg',
-      tags: [{key:'abdominalCT'},{key:'reconstruction'},{key:'preoperativePlanning'}],
+      tags: [{key:'abdominalCT'},{key:'ceMarked'},{key:'fdaCleared'},{key:'ukcaMarked'},{key:'nmpaApproved'},{key:'reconstruction'},{key:'preoperativePlanning'}],
       accent: '#ffb56b',
       glow: '#ec8e3038',
       details: {
@@ -1538,7 +1538,7 @@
       },
       images: ['assets/products/visual-urology-planning.webp'],
       focusImage: 'assets/products/focus-urology-planning.jpg',
-      tags: [{key:'abdominalCT'},{key:'reconstruction'},{key:'preoperativePlanning'}],
+      tags: [{key:'abdominalCT'},{key:'ceMarked'},{key:'fdaCleared'},{key:'ukcaMarked'},{key:'nmpaApproved'},{key:'reconstruction'},{key:'preoperativePlanning'}],
       accent: '#83d7ff',
       glow: '#4698ed36',
       details: {

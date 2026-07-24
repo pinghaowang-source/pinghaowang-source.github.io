@@ -7,7 +7,7 @@
   <title>AI Healthcare — SCOVION</title>
   <link rel="icon" type="image/png" href="assets/scovion-logo-mark.png">
   <link rel="apple-touch-icon" href="assets/scovion-logo-mark.png">
-  <link rel="stylesheet" href="styles.css?v=1.4.1">
+  <link rel="stylesheet" href="styles.css?v=1.4.2">
 </head>
 <body>
   <header class="container nav">
@@ -42,20 +42,20 @@
           <strong data-i18n="pathImaging">Imaging diagnosis</strong>
           <small data-i18n="pathImagingText">AI-assisted screening and image analysis</small>
         </a>
-        <a href="#agents">
+        <a href="#planning">
           <span>02</span>
+          <strong data-i18n="pathPlanning">Surgical planning</strong>
+          <small data-i18n="pathPlanningText">Anatomical 3D reconstruction</small>
+        </a>
+        <a href="#agents">
+          <span>03</span>
           <strong data-i18n="pathAgent">Medical AI Agent</strong>
           <small data-i18n="pathAgentText">Documentation, quality and decision support</small>
         </a>
         <a href="#devices">
-          <span>03</span>
+          <span>04</span>
           <strong data-i18n="pathDevices">Intelligent devices</strong>
           <small data-i18n="pathDevicesText">Integrated acquisition, analysis and reporting</small>
-        </a>
-        <a href="#planning">
-          <span>04</span>
-          <strong data-i18n="pathPlanning">Surgical planning</strong>
-          <small data-i18n="pathPlanningText">Anatomical 3D reconstruction</small>
         </a>
         <a href="#prosthetics">
           <span>05</span>
@@ -64,8 +64,8 @@
         </a>
         <a href="#specialty">
           <span>06</span>
-          <strong data-i18n="pathSpecialty">NMPA-approved products</strong>
-          <small data-i18n="pathSpecialtyText">Products currently carrying NMPA approval only</small>
+          <strong data-i18n="pathSpecialty">Specialty AI</strong>
+          <small data-i18n="pathSpecialtyText">Disease-focused diagnostic workflows</small>
         </a>
       </div>
     </section>
@@ -89,35 +89,25 @@
       <div class="container section">
         <div class="section-head">
           <div>
-            <div class="eyebrow" data-i18n="nmpaPortfolioEyebrow">China-market approvals</div>
-            <h2 data-i18n="nmpaPortfolioHeading">NMPA-approved clinical platforms</h2>
+            <div class="eyebrow" data-i18n="specialtyEyebrow">Specialty disease solutions</div>
+            <h2 data-i18n="specialtyHeading">Deeper intelligence for complex pathways</h2>
           </div>
-          <p class="section-intro" data-i18n="nmpaPortfolioIntro">Products currently carrying NMPA approval only are presented after the internationally certified portfolio.</p>
+          <p class="section-intro" data-i18n="specialtyIntro">Focused AI workflows for cardiovascular and neurovascular imaging.</p>
         </div>
         <div class="product-grid">
-          <article class="product medical-product" data-regulatory-tier="nmpa-only">
+          <article class="product medical-product">
             <div class="product-media"><img src="assets/products/visual-cardiovascular-analysis.webp" alt="Conceptual illustration of cardiovascular CT analysis" loading="lazy"></div>
             <h3 data-i18n="cardiovascularAiTitle">Cardiovascular AI Solution</h3>
             <div class="approval-row"><span class="approval" data-i18n="nmpaApproved">NMPA approved</span><span class="approval" data-i18n="coronaryCTA">Coronary CTA</span><span class="approval">CT-FFR</span><span class="approval" data-i18n="calciumScoring">Calcium scoring</span></div>
             <p data-i18n="cardiovascularAiDesc">Automates coronary reconstruction, vessel naming, plaque and stenosis analysis, calcium scoring, CT-FFR assessment and structured reporting.</p>
             <a class="product-detail-link" href="product.html?product=cardiovascular-ai" data-i18n="learnMore">View details →</a>
           </article>
-          <article class="product medical-product" data-regulatory-tier="nmpa-only">
+          <article class="product medical-product">
             <div class="product-media"><img src="assets/products/visual-head-neck-vascular.webp" alt="Conceptual illustration of head and neck vascular analysis" loading="lazy"></div>
             <h3 data-i18n="headNeckAiTitle">Head &amp; Neck Vascular AI</h3>
             <div class="approval-row"><span class="approval" data-i18n="nmpaApproved">NMPA approved</span><span class="approval" data-i18n="headNeckCTA">Head &amp; neck CTA</span><span class="approval" data-i18n="aneurysmDetection">Aneurysm detection</span><span class="approval" data-i18n="perfusionAnalysis">Perfusion analysis</span></div>
             <p data-i18n="headNeckAiDesc">Supports automated vessel extraction, plaque and stenosis assessment, aneurysm detection, cerebral perfusion analysis and structured reports.</p>
             <a class="product-detail-link" href="product.html?product=head-neck-ai" data-i18n="learnMore">View details →</a>
-          </article>
-          <article class="product medical-product" data-regulatory-tier="nmpa-only">
-            <div class="product-media dual-media">
-              <div class="hardware"><img src="assets/products/visual-bone-age-device-v2.jpg" alt="AI micro-dose X-ray bone age analyser" loading="lazy"></div>
-              <div class="software"><img src="assets/products/visual-bone-age-analysis.webp" alt="Conceptual illustration of bone age analysis" loading="lazy"></div>
-            </div>
-            <h3 data-i18n="boneAgeTitle">AI Micro-dose X-ray Bone Age Analyser</h3>
-            <div class="approval-row"><span class="approval" data-i18n="nmpaApproved">NMPA approved</span></div>
-            <p data-i18n="boneAgeDesc">Combines adaptive low-dose imaging, automatic focusing, AI bone-age assessment, adult-height prediction, follow-up tracking and structured growth reports.</p>
-            <a class="product-detail-link" href="product.html?product=bone-age-analyser" data-i18n="learnMore">View details →</a>
           </article>
         </div>
       </div>
@@ -132,6 +122,16 @@
         <p class="section-intro" data-i18n="devicesIntro">Integrated hardware and AI software designed for efficient screening and follow-up.</p>
       </div>
       <div class="product-grid">
+        <article class="product medical-product">
+          <div class="product-media dual-media">
+            <div class="hardware"><img src="assets/products/visual-bone-age-device-v2.jpg" alt="AI micro-dose X-ray bone age analyser" loading="lazy"></div>
+            <div class="software"><img src="assets/products/visual-bone-age-analysis.webp" alt="Conceptual illustration of bone age analysis" loading="lazy"></div>
+          </div>
+          <h3 data-i18n="boneAgeTitle">AI Micro-dose X-ray Bone Age Analyser</h3>
+          <div class="approval-row"><span class="approval" data-i18n="nmpaApproved">NMPA approved</span></div>
+          <p data-i18n="boneAgeDesc">Combines adaptive low-dose imaging, automatic focusing, AI bone-age assessment, adult-height prediction, follow-up tracking and structured growth reports.</p>
+          <a class="product-detail-link" href="product.html?product=bone-age-analyser" data-i18n="learnMore">View details →</a>
+        </article>
         <article class="product medical-product">
           <div class="product-media dual-media">
             <div class="hardware"><img src="assets/products/visual-bone-density-device.webp" alt="Conceptual bone density assessment device" loading="lazy"></div>
@@ -299,6 +299,10 @@
           <h3>Thorax Planning</h3>
           <div class="approval-row">
             <span class="approval" data-i18n="chestCT">Chest CT</span>
+            <span class="approval" data-i18n="ceMarked">CE marked</span>
+            <span class="approval" data-i18n="fdaCleared">FDA cleared</span>
+            <span class="approval" data-i18n="ukcaMarked">UKCA marked</span>
+            <span class="approval" data-i18n="nmpaApproved">NMPA approved</span>
             <span class="approval" data-i18n="reconstruction">3D reconstruction</span>
             <span class="approval" data-i18n="preoperativePlanning">Preoperative planning</span>
           </div>
@@ -311,6 +315,10 @@
           <h3>Liver Planning</h3>
           <div class="approval-row">
             <span class="approval" data-i18n="abdominalCT">Abdominal CT</span>
+            <span class="approval" data-i18n="ceMarked">CE marked</span>
+            <span class="approval" data-i18n="fdaCleared">FDA cleared</span>
+            <span class="approval" data-i18n="ukcaMarked">UKCA marked</span>
+            <span class="approval" data-i18n="nmpaApproved">NMPA approved</span>
             <span class="approval" data-i18n="reconstruction">3D reconstruction</span>
             <span class="approval" data-i18n="preoperativePlanning">Preoperative planning</span>
           </div>
@@ -323,6 +331,10 @@
           <h3>Urology Planning</h3>
           <div class="approval-row">
             <span class="approval" data-i18n="abdominalCT">Abdominal CT</span>
+            <span class="approval" data-i18n="ceMarked">CE marked</span>
+            <span class="approval" data-i18n="fdaCleared">FDA cleared</span>
+            <span class="approval" data-i18n="ukcaMarked">UKCA marked</span>
+            <span class="approval" data-i18n="nmpaApproved">NMPA approved</span>
             <span class="approval" data-i18n="reconstruction">3D reconstruction</span>
             <span class="approval" data-i18n="preoperativePlanning">Preoperative planning</span>
           </div>
@@ -379,6 +391,6 @@
     <p>© <span data-year></span> SCOVION. All rights reserved.</p>
     <p data-i18n="availabilityFooter">Product availability varies by market.</p>
   </footer>
-  <script src="main.js?v=1.4.1"></script>
+  <script src="main.js?v=1.4.2"></script>
 </body>
 </html>
