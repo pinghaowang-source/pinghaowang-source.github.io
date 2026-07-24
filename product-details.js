@@ -79,7 +79,7 @@
       summaryKey: 'breastAiDesc',
       images: ['assets/products/visual-mammography.webp'],
       focusImage: 'assets/products/focus-breast-ai.jpg',
-      tags: [{key:'breastXray'},{key:'ceMarked'},{key:'nmpaApproved'},{text:'BI-RADS'}],
+      tags: [{key:'breastXray'},{key:'nmpaApproved'},{text:'BI-RADS'}],
       accent: '#ff9fc3',
       glow: '#e9578f35',
       details: {
