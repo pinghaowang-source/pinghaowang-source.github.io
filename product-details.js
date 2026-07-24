@@ -79,7 +79,7 @@
       summaryKey: 'breastAiDesc',
       images: ['assets/products/visual-mammography.webp'],
       focusImage: 'assets/products/focus-breast-ai.jpg',
-      tags: [{key:'breastXray'},{key:'nmpaApproved'},{text:'BI-RADS'}],
+      tags: [{key:'breastXray'},{key:'ceMarked'},{key:'nmpaApproved'},{text:'BI-RADS'}],
       accent: '#ff9fc3',
       glow: '#e9578f35',
       details: {
@@ -237,7 +237,7 @@
       summaryKey: 'cardiovascularAiDesc',
       images: ['assets/products/visual-cardiovascular-analysis.webp'],
       focusImage: 'assets/products/focus-cardiovascular-ai.jpg',
-      tags: [{key:'coronaryCTA'},{text:'CT-FFR'},{key:'calciumScoring'}],
+      tags: [{key:'nmpaApproved'},{key:'coronaryCTA'},{text:'CT-FFR'},{key:'calciumScoring'}],
       accent: '#ff9d7d',
       glow: '#ef6a4538',
       details: {
@@ -395,7 +395,7 @@
       summaryKey: 'headNeckAiDesc',
       images: ['assets/products/visual-head-neck-vascular.webp'],
       focusImage: 'assets/products/focus-head-neck-ai.jpg',
-      tags: [{key:'headNeckCTA'},{key:'aneurysmDetection'},{key:'perfusionAnalysis'}],
+      tags: [{key:'nmpaApproved'},{key:'headNeckCTA'},{key:'aneurysmDetection'},{key:'perfusionAnalysis'}],
       accent: '#b7a6ff',
       glow: '#725ae83b',
       details: {
