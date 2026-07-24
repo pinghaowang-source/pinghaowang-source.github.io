@@ -1199,155 +1199,492 @@
       title: 'Thorax Planning',
       categoryKey: 'interventionTreatment',
       summaryKey: 'thoraxDesc',
+      summaries: {
+        en: 'Automatically reconstructs lung lobes, segments, subsegments, vessels and bronchi from contrast or non-contrast chest CT to support lesion positioning and resection-margin planning.',
+        'zh-cn': '可根据增强或非增强胸部CT自动重建肺叶、肺段、亚段、血管与支气管，支持病灶定位和切缘规划。',
+        'zh-tw': '可根據增強或非增強胸部CT自動重建肺葉、肺段、亞段、血管與支氣管，支援病灶定位和切緣規劃。',
+        ms: 'Membina semula lobus, segmen, subsegmen, salur dan bronkus secara automatik daripada CT dada dengan atau tanpa kontras untuk menyokong kedudukan lesi dan perancangan margin reseksi.',
+        th: 'สร้างภาพกลีบปอด ส่วนปอด ส่วนย่อย หลอดเลือด และหลอดลมโดยอัตโนมัติจาก CT ทรวงอกทั้งแบบฉีดและไม่ฉีดสารทึบรังสี เพื่อช่วยระบุตำแหน่งรอยโรคและวางแผนขอบเขตการตัด'
+      },
       images: ['assets/products/visual-thorax-planning.webp'],
-      focusImage: 'assets/products/focus-thorax-planning.jpg',
+      focusImage: 'assets/products/focus-thorax-planning-v2.jpg',
       tags: [{key:'chestCT'},{key:'reconstruction'},{key:'preoperativePlanning'}],
       accent: '#ffd166',
       glow: '#eebd3b36',
       details: {
         en: {
           facts: [
-            ['6 structures','Bronchi, arteries, veins, lung segments, body surface and bone'],
-            ['3D','Automated segmentation and reconstruction'],
-            ['3 procedures','Wedge resection, subsegmentectomy and lobectomy']
+            ['Contrast + non-contrast','CT input support'],
+            ['Minute-level','Automated 3D reconstruction'],
+            ['Web viewer','Review on monitors and smartphones']
           ],
           capHeading: 'Patient-specific lung anatomy for thoracic surgical planning',
-          capIntro: 'Automated whole-lung reconstruction makes anatomical relationships and variations easier to inspect before surgery.',
+          capIntro: 'Detailed reconstruction, quantitative lesion review and virtual resection planning bring patient-specific thoracic anatomy into one workflow.',
           caps: [
-            ['Whole-lung reconstruction','Automatically segments and reconstructs bronchi, pulmonary arteries, pulmonary veins, lobar and segmental lung, body surface and bone.'],
-            ['Anatomical variation review','Helps the surgical team identify patient-specific bronchovascular relationships and variations before entering theatre.'],
-            ['Procedure planning','Supports wedge resection, subsegmentectomy and lobectomy by visualising the target and surrounding structures.'],
-            ['Approach communication','Interactive 3D anatomy helps surgeons discuss the proposed approach, improve spatial understanding and align the team.']
+            ['Detailed lung reconstruction','Builds a 3D model from contrast or non-contrast CT, covering lung lobes, segments, subsegments, vessels, bronchi, bone and skin.'],
+            ['Lesion and margin planning','Supports quantitative lesion review, virtual nodule positioning and resection-margin definition for preoperative planning.'],
+            ['Anatomical variation review','Makes patient-specific bronchovascular relationships and anatomical variations easier to inspect before surgery.'],
+            ['Cross-device review and reports','A web-based viewer supports review on monitors and smartphones, with one-click graphic-rich reports for communication.']
           ],
           flowHeading: 'From chest CT to a patient-specific surgical map',
-          flowIntro: 'The workflow transforms routine CT data into a segmented model that can be reviewed during preoperative planning.',
+          flowIntro: 'The workflow carries a thoracic CT study from automated reconstruction to a reviewable surgical plan and report.',
           steps: [
-            ['Import the CT study','Thin-slice chest CT data are received for reconstruction of the relevant lung anatomy.'],
-            ['Segment and reconstruct','The system separates bronchial, vascular, lung-segment, body-surface and skeletal structures into a 3D model.'],
-            ['Plan the procedure','The surgical team reviews variations, target relationships and the intended resection approach before surgery.']
+            ['Receive the CT study','Contrast or non-contrast chest CT data enter the reconstruction workflow.'],
+            ['Reconstruct and quantify','AI creates the thoracic 3D model and organises lesions, vessels, bronchi and segmental anatomy for review.'],
+            ['Plan, review and share','The team positions the target and resection margin, reviews the plan through the web viewer and generates a graphic-rich report.']
           ],
-          highlightHeading: 'A clearer anatomical conversation before surgery',
-          highlightIntro: 'The model turns complex two-dimensional slices into an accessible view for planning and multidisciplinary communication.',
+          highlightHeading: 'Planning information ready when the surgical team needs it',
+          highlightIntro: 'Minute-level reconstruction and flexible delivery help convert routine CT into an accessible planning resource.',
           highlights: [
-            ['Precise anatomical context','Colour-separated structures help reveal the relationship between the lesion, bronchi, vessels and lung segments.'],
-            ['Support across procedures','The same reconstruction approach can assist planning for limited resection through lobectomy.'],
-            ['Greater planning confidence','Patient-specific anatomy helps teams anticipate variation and compare possible surgical approaches.']
+            ['Stronger decision context','Colour-separated anatomy clarifies the relationship between the target, bronchi, vessels, segments and planned margin.'],
+            ['Faster case preparation','Automated minute-level reconstruction reduces the delay between image availability and surgical review.'],
+            ['Flexible deployment and integration','On-premise and cloud options can connect with existing hospital information systems while supporting secure access.']
           ]
         },
         'zh-cn': {
           facts: [
-            ['6类结构','支气管、动脉、静脉、肺段、体表与骨骼'],
-            ['3D','自动分割与三维重建'],
-            ['3类术式','楔形切除、亚段切除与肺叶切除']
+            ['增强 + 非增强','支持两类CT输入'],
+            ['分钟级','自动三维重建'],
+            ['Web阅览器','支持显示器与智能手机查看']
           ],
           capHeading: '以患者个体化肺部解剖支持胸外科手术规划',
-          capIntro: '自动全肺重建帮助手术团队在术前更直观地查看解剖关系与变异。',
+          capIntro: '将精细重建、病灶定量复核与虚拟切除规划整合到同一患者个体化胸外科流程中。',
           caps: [
-            ['全肺自动重建','自动分割并重建支气管、肺动脉、肺静脉、肺叶与肺段、体表及骨骼结构。'],
-            ['解剖变异评估','帮助手术团队在进入手术室前识别患者特异的支气管血管关系与变异。'],
-            ['术式规划','通过显示靶区与周围结构，支持楔形切除、亚段切除及肺叶切除方案讨论。'],
-            ['手术路径沟通','可交互三维解剖有助于讨论拟定入路、增强空间理解并统一团队认知。']
+            ['肺部精细重建','根据增强或非增强CT建立肺叶、肺段、亚段、血管、支气管、骨骼及皮肤的三维模型。'],
+            ['病灶与切缘规划','支持病灶定量复核、结节虚拟定位及切除边界设定，用于术前方案讨论。'],
+            ['解剖变异评估','直观呈现患者特异的支气管血管关系和解剖变异，便于术前复核。'],
+            ['跨终端阅览与报告','Web阅览器支持显示器和智能手机查看，并可一键生成图文报告用于沟通。']
           ],
           flowHeading: '从胸部CT到患者个体化手术地图',
-          flowIntro: '流程将常规CT数据转化为分割后的三维模型，用于术前规划审核。',
+          flowIntro: '流程将胸部CT从自动重建推进到可复核的手术规划与图文报告。',
           steps: [
-            ['导入CT检查','接收薄层胸部CT数据，用于重建相关肺部解剖结构。'],
-            ['分割与重建','系统将支气管、血管、肺段、体表和骨骼分别重建为三维模型。'],
-            ['规划手术方案','团队在术前查看解剖变异、靶区关系及拟采用的切除路径。']
+            ['接收CT检查','增强或非增强胸部CT数据进入自动重建流程。'],
+            ['重建与量化','AI建立胸部三维模型，并整理病灶、血管、支气管与肺段解剖关系。'],
+            ['规划、复核与分享','团队设定靶区和切缘，通过Web阅览器复核方案并生成图文报告。']
           ],
-          highlightHeading: '让术前解剖沟通更清晰',
-          highlightIntro: '模型把复杂的二维切片转化为更易理解的视图，用于规划和多学科沟通。',
+          highlightHeading: '在手术团队需要时提供可用的规划信息',
+          highlightIntro: '分钟级重建与灵活交付方式，将常规CT转化为便于使用的术前规划资源。',
           highlights: [
-            ['精确解剖环境','不同颜色分离的结构帮助呈现病灶、支气管、血管和肺段之间的关系。'],
-            ['覆盖多类术式','同一重建方式可从局部切除延伸到肺叶切除的规划。'],
-            ['增强规划信心','个体化解剖有助于提前识别变异并比较不同手术路径。']
+            ['增强决策依据','分色解剖清晰呈现靶区、支气管、血管、肺段与计划切缘之间的关系。'],
+            ['加快病例准备','分钟级自动重建缩短影像完成到外科团队开始复核之间的等待。'],
+            ['灵活部署与集成','支持本地化与云端部署，并可与医院现有信息系统安全连接。']
           ]
         },
         'zh-tw': {
           facts: [
-            ['6類結構','支氣管、動脈、靜脈、肺段、體表與骨骼'],
-            ['3D','自動分割與三維重建'],
-            ['3類術式','楔形切除、亞段切除與肺葉切除']
+            ['增強 + 非增強','支援兩類CT輸入'],
+            ['分鐘級','自動三維重建'],
+            ['Web閱覽器','支援顯示器與智慧型手機查看']
           ],
           capHeading: '以患者個體化肺部解剖支援胸外科手術規劃',
-          capIntro: '自動全肺重建協助手術團隊在術前更直觀地查看解剖關係與變異。',
+          capIntro: '將精細重建、病灶定量複核與虛擬切除規劃整合到同一患者個體化胸外科流程中。',
           caps: [
-            ['全肺自動重建','自動分割並重建支氣管、肺動脈、肺靜脈、肺葉與肺段、體表及骨骼結構。'],
-            ['解剖變異評估','協助手術團隊在進入手術室前識別患者特異的支氣管血管關係與變異。'],
-            ['術式規劃','透過顯示靶區與周圍結構，支援楔形切除、亞段切除及肺葉切除方案討論。'],
-            ['手術路徑溝通','可互動三維解剖有助於討論擬定入路、增強空間理解並統一團隊認知。']
+            ['肺部精細重建','根據增強或非增強CT建立肺葉、肺段、亞段、血管、支氣管、骨骼及皮膚的三維模型。'],
+            ['病灶與切緣規劃','支援病灶定量複核、結節虛擬定位及切除邊界設定，用於術前方案討論。'],
+            ['解剖變異評估','直觀呈現患者特異的支氣管血管關係和解剖變異，便於術前複核。'],
+            ['跨終端閱覽與報告','Web閱覽器支援顯示器和智慧型手機查看，並可一鍵產生圖文報告用於溝通。']
           ],
           flowHeading: '從胸部CT到患者個體化手術地圖',
-          flowIntro: '流程將常規CT資料轉化為分割後的三維模型，用於術前規劃審核。',
+          flowIntro: '流程將胸部CT從自動重建推進到可複核的手術規劃與圖文報告。',
           steps: [
-            ['匯入CT檢查','接收薄層胸部CT資料，用於重建相關肺部解剖結構。'],
-            ['分割與重建','系統將支氣管、血管、肺段、體表和骨骼分別重建為三維模型。'],
-            ['規劃手術方案','團隊在術前查看解剖變異、靶區關係及擬採用的切除路徑。']
+            ['接收CT檢查','增強或非增強胸部CT資料進入自動重建流程。'],
+            ['重建與量化','AI建立胸部三維模型，並整理病灶、血管、支氣管與肺段解剖關係。'],
+            ['規劃、複核與分享','團隊設定靶區和切緣，透過Web閱覽器複核方案並產生圖文報告。']
           ],
-          highlightHeading: '讓術前解剖溝通更清晰',
-          highlightIntro: '模型把複雜的二維切片轉化為更易理解的視圖，用於規劃和多學科溝通。',
+          highlightHeading: '在手術團隊需要時提供可用的規劃資訊',
+          highlightIntro: '分鐘級重建與靈活交付方式，將常規CT轉化為便於使用的術前規劃資源。',
           highlights: [
-            ['精確解剖環境','不同顏色分離的結構協助呈現病灶、支氣管、血管和肺段之間的關係。'],
-            ['涵蓋多類術式','同一重建方式可從局部切除延伸到肺葉切除的規劃。'],
-            ['增強規劃信心','個體化解剖有助於提前識別變異並比較不同手術路徑。']
+            ['增強決策依據','分色解剖清晰呈現靶區、支氣管、血管、肺段與計畫切緣之間的關係。'],
+            ['加快病例準備','分鐘級自動重建縮短影像完成到外科團隊開始複核之間的等待。'],
+            ['靈活部署與整合','支援本地化與雲端部署，並可與醫院現有資訊系統安全連接。']
           ]
         },
         ms: {
           facts: [
-            ['6 struktur','Bronkus, arteri, vena, segmen paru-paru, permukaan dan tulang'],
-            ['3D','Segmentasi dan pembinaan semula automatik'],
-            ['3 prosedur','Reseksi baji, subsegmentektomi dan lobektomi']
+            ['Kontras + tanpa kontras','Sokongan input CT'],
+            ['Tahap minit','Pembinaan semula 3D automatik'],
+            ['Pemapar web','Semakan pada monitor dan telefon pintar']
           ],
           capHeading: 'Anatomi paru-paru khusus pesakit untuk perancangan toraks',
-          capIntro: 'Pembinaan semula seluruh paru-paru memudahkan semakan hubungan dan variasi anatomi sebelum pembedahan.',
+          capIntro: 'Pembinaan semula terperinci, semakan kuantitatif lesi dan perancangan reseksi maya digabungkan dalam satu aliran toraks khusus pesakit.',
           caps: [
-            ['Pembinaan semula seluruh paru-paru','Membahagi dan membina semula bronkus, arteri pulmonari, vena, lobus dan segmen, permukaan badan serta tulang.'],
-            ['Semakan variasi anatomi','Membantu pasukan mengenal pasti hubungan bronkovaskular khusus pesakit sebelum pembedahan.'],
-            ['Perancangan prosedur','Menyokong reseksi baji, subsegmentektomi dan lobektomi melalui visualisasi sasaran serta struktur sekeliling.'],
-            ['Komunikasi pendekatan','Anatomi 3D interaktif membantu pasukan membincangkan pendekatan dan memahami ruang.']
+            ['Pembinaan semula paru-paru terperinci','Membina model 3D daripada CT kontras atau tanpa kontras, meliputi lobus, segmen, subsegmen, salur, bronkus, tulang dan kulit.'],
+            ['Perancangan lesi dan margin','Menyokong semakan kuantitatif, kedudukan maya nodul dan penentuan margin reseksi untuk perancangan praoperasi.'],
+            ['Semakan variasi anatomi','Menjadikan hubungan bronkovaskular dan variasi khusus pesakit lebih mudah diperiksa sebelum pembedahan.'],
+            ['Semakan merentas peranti dan laporan','Pemapar web menyokong monitor serta telefon pintar, bersama laporan bergambar satu klik.']
           ],
           flowHeading: 'Daripada CT dada kepada peta pembedahan khusus pesakit',
-          flowIntro: 'Data CT diubah menjadi model bersegmen untuk semakan perancangan praoperasi.',
+          flowIntro: 'Kajian CT toraks bergerak daripada pembinaan semula automatik kepada pelan pembedahan dan laporan yang boleh disemak.',
           steps: [
-            ['Import kajian CT','Data CT dada nipis diterima untuk pembinaan semula anatomi berkaitan.'],
-            ['Segmen dan bina semula','Sistem memisahkan struktur bronkus, vaskular, segmen paru-paru, permukaan dan rangka.'],
-            ['Rancang prosedur','Pasukan menyemak variasi, hubungan sasaran dan pendekatan reseksi sebelum pembedahan.']
+            ['Terima kajian CT','Data CT dada kontras atau tanpa kontras memasuki aliran pembinaan semula.'],
+            ['Bina semula dan kuantifikasi','AI menghasilkan model 3D serta menyusun lesi, salur, bronkus dan anatomi segmen untuk semakan.'],
+            ['Rancang, semak dan kongsi','Pasukan menetapkan sasaran dan margin, menyemak melalui pemapar web dan menjana laporan bergambar.']
           ],
-          highlightHeading: 'Perbincangan anatomi lebih jelas sebelum pembedahan',
-          highlightIntro: 'Model menukar irisan dua dimensi kepada pandangan yang mudah difahami.',
+          highlightHeading: 'Maklumat perancangan tersedia apabila pasukan memerlukannya',
+          highlightIntro: 'Pembinaan semula tahap minit dan penghantaran fleksibel menukar CT rutin kepada sumber perancangan yang mudah digunakan.',
           highlights: [
-            ['Konteks anatomi tepat','Struktur berwarna menunjukkan hubungan lesi, bronkus, salur dan segmen paru-paru.'],
-            ['Sokongan pelbagai prosedur','Kaedah yang sama membantu perancangan daripada reseksi terhad hingga lobektomi.'],
-            ['Keyakinan perancangan','Anatomi khusus pesakit membantu menjangka variasi dan membandingkan pendekatan.']
+            ['Konteks keputusan lebih kukuh','Anatomi berwarna menjelaskan hubungan sasaran, bronkus, salur, segmen dan margin yang dirancang.'],
+            ['Persediaan kes lebih pantas','Pembinaan semula automatik tahap minit mengurangkan masa menunggu sebelum semakan pembedahan.'],
+            ['Penggunaan dan integrasi fleksibel','Pilihan setempat dan awan boleh disambungkan secara selamat dengan sistem maklumat hospital.']
           ]
         },
         th: {
           facts: [
-            ['6 โครงสร้าง','หลอดลม หลอดเลือดแดงและดำ กลีบปอด ผิวกาย และกระดูก'],
-            ['3D','แบ่งส่วนและสร้างภาพอัตโนมัติ'],
-            ['3 หัตถการ','Wedge resection, subsegmentectomy และ lobectomy']
+            ['CT ฉีดและไม่ฉีดสี','รองรับข้อมูลทั้งสองแบบ'],
+            ['ระดับนาที','สร้างภาพ 3 มิติอัตโนมัติ'],
+            ['Web viewer','ดูบนจอและสมาร์ตโฟน']
           ],
           capHeading: 'กายวิภาคปอดเฉพาะผู้ป่วยสำหรับการวางแผนผ่าตัดทรวงอก',
-          capIntro: 'การสร้างภาพปอดทั้งหมดอัตโนมัติช่วยให้ดูความสัมพันธ์และความแปรผันก่อนผ่าตัดได้ง่ายขึ้น',
+          capIntro: 'รวมการสร้างภาพละเอียด การทบทวนรอยโรคเชิงปริมาณ และการวางแผนตัดเสมือนในขั้นตอนเฉพาะผู้ป่วย',
           caps: [
-            ['สร้างภาพปอดทั้งหมด','แบ่งและสร้างหลอดลม หลอดเลือดปอด กลีบและส่วนปอด ผิวร่างกาย และกระดูกอัตโนมัติ'],
-            ['ตรวจความแปรผัน','ช่วยทีมระบุความสัมพันธ์หลอดลมและหลอดเลือดเฉพาะผู้ป่วยก่อนเข้าห้องผ่าตัด'],
-            ['วางแผนหัตถการ','แสดงเป้าหมายและโครงสร้างรอบข้างเพื่อช่วยวางแผนการตัดปอดหลายรูปแบบ'],
-            ['สื่อสารแนวทางผ่าตัด','กายวิภาค 3 มิติแบบโต้ตอบช่วยพูดคุยแนวทางและสร้างความเข้าใจร่วมกัน']
+            ['สร้างภาพปอดละเอียด','สร้างโมเดล 3 มิติจาก CT ฉีดหรือไม่ฉีดสี ครอบคลุมกลีบ ส่วนย่อย หลอดเลือด หลอดลม กระดูก และผิวหนัง'],
+            ['วางแผนรอยโรคและขอบตัด','รองรับการทบทวนเชิงปริมาณ การวางตำแหน่งก้อนเสมือน และกำหนดขอบตัดก่อนผ่าตัด'],
+            ['ตรวจความแปรผัน','ช่วยให้เห็นความสัมพันธ์หลอดลมและหลอดเลือด รวมถึงความแปรผันเฉพาะผู้ป่วยได้ชัดเจน'],
+            ['ดูข้ามอุปกรณ์และรายงาน','Web viewer รองรับจอและสมาร์ตโฟน พร้อมรายงานภาพแบบคลิกเดียว']
           ],
           flowHeading: 'จาก CT ทรวงอกสู่แผนที่ผ่าตัดเฉพาะผู้ป่วย',
-          flowIntro: 'เปลี่ยนข้อมูล CT เป็นโมเดลแบ่งส่วนสำหรับตรวจทานก่อนผ่าตัด',
+          flowIntro: 'นำ CT ทรวงอกจากการสร้างภาพอัตโนมัติไปสู่แผนผ่าตัดและรายงานที่พร้อมตรวจทาน',
           steps: [
-            ['นำเข้า CT','รับข้อมูล CT ทรวงอกชั้นบางเพื่อสร้างกายวิภาคที่เกี่ยวข้อง'],
-            ['แบ่งและสร้างภาพ','ระบบแยกหลอดลม หลอดเลือด ส่วนปอด ผิวกาย และกระดูกเป็นโมเดล 3 มิติ'],
-            ['วางแผนหัตถการ','ทีมตรวจความแปรผัน ความสัมพันธ์เป้าหมาย และเส้นทางการตัดก่อนผ่าตัด']
+            ['รับข้อมูล CT','CT ทรวงอกแบบฉีดหรือไม่ฉีดสีเข้าสู่ขั้นตอนสร้างภาพอัตโนมัติ'],
+            ['สร้างภาพและวัดผล','AI สร้างโมเดล 3 มิติและจัดรอยโรค หลอดเลือด หลอดลม และส่วนปอดให้พร้อมตรวจทาน'],
+            ['วางแผน ตรวจ และแชร์','ทีมกำหนดเป้าหมายกับขอบตัด ตรวจแผนผ่าน Web viewer และสร้างรายงานภาพ']
           ],
-          highlightHeading: 'สนทนาเรื่องกายวิภาคก่อนผ่าตัดได้ชัดเจนขึ้น',
-          highlightIntro: 'โมเดลเปลี่ยนภาพตัดสองมิติที่ซับซ้อนให้เป็นมุมมองเข้าใจง่ายสำหรับการวางแผน',
+          highlightHeading: 'ข้อมูลวางแผนพร้อมเมื่อทีมผ่าตัดต้องการ',
+          highlightIntro: 'การสร้างภาพระดับนาทีและการส่งมอบยืดหยุ่น เปลี่ยน CT ปกติให้เป็นทรัพยากรวางแผนที่เข้าถึงง่าย',
           highlights: [
-            ['บริบทกายวิภาคแม่นยำ','สีแยกโครงสร้างช่วยแสดงความสัมพันธ์ของรอยโรค หลอดลม หลอดเลือด และส่วนปอด'],
-            ['รองรับหลายหัตถการ','วิธีสร้างภาพเดียวช่วยวางแผนได้ตั้งแต่การตัดเฉพาะที่ถึง lobectomy'],
-            ['เพิ่มความมั่นใจ','กายวิภาคเฉพาะผู้ป่วยช่วยคาดการณ์ความแปรผันและเปรียบเทียบแนวทาง']
+            ['บริบทการตัดสินใจชัดเจน','กายวิภาคแยกสีช่วยแสดงความสัมพันธ์ของเป้าหมาย หลอดลม หลอดเลือด ส่วนปอด และขอบตัด'],
+            ['เตรียมเคสได้เร็วขึ้น','การสร้างภาพอัตโนมัติระดับนาทีลดเวลารอระหว่างได้รับภาพและเริ่มทบทวนการผ่าตัด'],
+            ['ติดตั้งและเชื่อมต่อยืดหยุ่น','รองรับทั้งในสถานที่และคลาวด์ พร้อมเชื่อมระบบข้อมูลโรงพยาบาลอย่างปลอดภัย']
+          ]
+        }
+      }
+    },
+
+    'liver-planning': {
+      title: 'Liver Planning',
+      categoryKey: 'interventionTreatment',
+      summaryKey: 'liverDesc',
+      summaries: {
+        en: 'Automatically reconstructs Couinaud segments, vessels and the biliary system from abdominal CT, with volume calculation and virtual lesion and resection-margin planning.',
+        'zh-cn': '可根据腹部CT自动重建Couinaud肝段、血管及胆道系统，并支持体积计算、病灶定位与虚拟切缘规划。',
+        'zh-tw': '可根據腹部CT自動重建Couinaud肝段、血管及膽道系統，並支援體積計算、病灶定位與虛擬切緣規劃。',
+        ms: 'Membina semula segmen Couinaud, salur dan sistem biliari secara automatik daripada CT abdomen, dengan pengiraan isipadu serta perancangan maya lesi dan margin reseksi.',
+        th: 'สร้างภาพส่วนตับ Couinaud หลอดเลือด และระบบท่อน้ำดีโดยอัตโนมัติจาก CT ช่องท้อง พร้อมคำนวณปริมาตร ระบุตำแหน่งรอยโรค และวางแผนขอบเขตการตัดเสมือน'
+      },
+      images: ['assets/products/visual-liver-planning.webp'],
+      focusImage: 'assets/products/focus-liver-planning.jpg',
+      tags: [{key:'abdominalCT'},{key:'reconstruction'},{key:'preoperativePlanning'}],
+      accent: '#ffb56b',
+      glow: '#ec8e3038',
+      details: {
+        en: {
+          facts: [
+            ['Couinaud','Segment-based liver model'],
+            ['Minute-level','Automated 3D reconstruction'],
+            ['Web viewer','Review on monitors and smartphones']
+          ],
+          capHeading: 'Patient-specific liver anatomy for resection planning',
+          capIntro: 'Detailed reconstruction, lesion quantification and virtual resection planning bring the liver, vessels and biliary system into one reviewable model.',
+          caps: [
+            ['Detailed liver reconstruction','Builds a 3D model of Couinaud segments, hepatic vessels, biliary system, bone and skin to reveal patient-specific anatomy.'],
+            ['Quantitative lesion analysis','Automatically calculates volumes and positions lesions within the surrounding vascular and biliary anatomy.'],
+            ['Virtual resection planning','Supports virtual placement of nodules and resection margins to define and review a planned resection area before surgery.'],
+            ['Cross-device review and reports','A web-based viewer supports monitors and smartphones, with one-click graphic-rich reports for clinical and patient communication.']
+          ],
+          flowHeading: 'From abdominal CT to a reviewable liver resection plan',
+          flowIntro: 'The workflow turns CT data into a segmented anatomical model, quantitative target review and a shareable planning report.',
+          steps: [
+            ['Receive the CT study','Abdominal CT data enter the automated reconstruction workflow for liver anatomy and related structures.'],
+            ['Reconstruct and quantify','AI builds the 3D model, calculates volumes and places lesions in relation to vessels and bile ducts.'],
+            ['Plan, review and share','The team defines the resection margin, reviews the plan through the web viewer and generates a graphic-rich report.']
+          ],
+          highlightHeading: 'A clearer view of anatomy, target and planned margin',
+          highlightIntro: 'Minute-level reconstruction and flexible access help move surgical review from complex slices to a patient-specific 3D planning resource.',
+          highlights: [
+            ['Anatomical variation in context','Segment, vessel and biliary relationships are separated visually to support safer, more informed planning discussions.'],
+            ['Faster case preparation and communication','Automated reconstruction and one-click reports help teams prepare cases and explain the proposed approach.'],
+            ['Flexible deployment and integration','On-premise and cloud options can connect with existing hospital information systems while supporting secure access.']
+          ]
+        },
+        'zh-cn': {
+          facts: [
+            ['Couinaud','基于肝段的三维模型'],
+            ['分钟级','自动三维重建'],
+            ['Web阅览器','支持显示器与智能手机查看']
+          ],
+          capHeading: '以患者个体化肝脏解剖支持切除规划',
+          capIntro: '将精细重建、病灶定量与虚拟切除规划整合为涵盖肝脏、血管及胆道系统的可复核模型。',
+          caps: [
+            ['肝脏精细重建','建立Couinaud肝段、肝脏血管、胆道系统、骨骼及皮肤的三维模型，呈现患者个体化解剖。'],
+            ['病灶定量分析','自动计算体积，并将病灶定位在周围血管和胆道解剖环境中。'],
+            ['虚拟切除规划','支持结节与切缘的虚拟定位，在术前定义并复核计划切除区域。'],
+            ['跨终端阅览与报告','Web阅览器支持显示器和智能手机查看，并可一键生成图文报告用于临床及患者沟通。']
+          ],
+          flowHeading: '从腹部CT到可复核的肝切除规划',
+          flowIntro: '流程将CT数据转化为分割后的解剖模型、定量靶区复核和可分享的规划报告。',
+          steps: [
+            ['接收CT检查','腹部CT数据进入肝脏及相关结构的自动重建流程。'],
+            ['重建与量化','AI建立三维模型、计算体积，并呈现病灶与血管及胆道的空间关系。'],
+            ['规划、复核与分享','团队设定切缘，通过Web阅览器复核方案并生成图文报告。']
+          ],
+          highlightHeading: '更清晰地呈现解剖、靶区与计划切缘',
+          highlightIntro: '分钟级重建与灵活访问方式，将复杂切片转化为患者个体化三维规划资源。',
+          highlights: [
+            ['在完整环境中识别解剖变异','肝段、血管与胆道关系通过分色展示，为更充分的术前讨论提供支持。'],
+            ['加快病例准备与沟通','自动重建和一键图文报告帮助团队准备病例并说明拟定方案。'],
+            ['灵活部署与集成','支持本地化与云端部署，并可与医院现有信息系统安全连接。']
+          ]
+        },
+        'zh-tw': {
+          facts: [
+            ['Couinaud','基於肝段的三維模型'],
+            ['分鐘級','自動三維重建'],
+            ['Web閱覽器','支援顯示器與智慧型手機查看']
+          ],
+          capHeading: '以患者個體化肝臟解剖支援切除規劃',
+          capIntro: '將精細重建、病灶定量與虛擬切除規劃整合為涵蓋肝臟、血管及膽道系統的可複核模型。',
+          caps: [
+            ['肝臟精細重建','建立Couinaud肝段、肝臟血管、膽道系統、骨骼及皮膚的三維模型，呈現患者個體化解剖。'],
+            ['病灶定量分析','自動計算體積，並將病灶定位在周圍血管和膽道解剖環境中。'],
+            ['虛擬切除規劃','支援結節與切緣的虛擬定位，在術前定義並複核計畫切除區域。'],
+            ['跨終端閱覽與報告','Web閱覽器支援顯示器和智慧型手機查看，並可一鍵產生圖文報告用於臨床及患者溝通。']
+          ],
+          flowHeading: '從腹部CT到可複核的肝切除規劃',
+          flowIntro: '流程將CT資料轉化為分割後的解剖模型、定量靶區複核和可分享的規劃報告。',
+          steps: [
+            ['接收CT檢查','腹部CT資料進入肝臟及相關結構的自動重建流程。'],
+            ['重建與量化','AI建立三維模型、計算體積，並呈現病灶與血管及膽道的空間關係。'],
+            ['規劃、複核與分享','團隊設定切緣，透過Web閱覽器複核方案並產生圖文報告。']
+          ],
+          highlightHeading: '更清晰地呈現解剖、靶區與計畫切緣',
+          highlightIntro: '分鐘級重建與靈活存取方式，將複雜切片轉化為患者個體化三維規劃資源。',
+          highlights: [
+            ['在完整環境中識別解剖變異','肝段、血管與膽道關係透過分色展示，為更充分的術前討論提供支援。'],
+            ['加快病例準備與溝通','自動重建和一鍵圖文報告協助團隊準備病例並說明擬定方案。'],
+            ['靈活部署與整合','支援本地化與雲端部署，並可與醫院現有資訊系統安全連接。']
+          ]
+        },
+        ms: {
+          facts: [
+            ['Couinaud','Model hati berasaskan segmen'],
+            ['Tahap minit','Pembinaan semula 3D automatik'],
+            ['Pemapar web','Semakan pada monitor dan telefon pintar']
+          ],
+          capHeading: 'Anatomi hati khusus pesakit untuk perancangan reseksi',
+          capIntro: 'Pembinaan semula terperinci, kuantifikasi lesi dan perancangan reseksi maya menggabungkan hati, salur dan sistem biliari dalam satu model.',
+          caps: [
+            ['Pembinaan semula hati terperinci','Membina model 3D segmen Couinaud, salur hati, sistem biliari, tulang dan kulit untuk menunjukkan anatomi khusus pesakit.'],
+            ['Analisis kuantitatif lesi','Mengira isipadu secara automatik dan meletakkan lesi dalam konteks vaskular serta biliari.'],
+            ['Perancangan reseksi maya','Menyokong kedudukan maya nodul dan margin reseksi untuk menentukan kawasan reseksi sebelum pembedahan.'],
+            ['Semakan merentas peranti dan laporan','Pemapar web menyokong monitor serta telefon pintar, bersama laporan bergambar satu klik untuk komunikasi.']
+          ],
+          flowHeading: 'Daripada CT abdomen kepada pelan reseksi hati yang boleh disemak',
+          flowIntro: 'Data CT diubah kepada model anatomi bersegmen, semakan sasaran kuantitatif dan laporan perancangan yang boleh dikongsi.',
+          steps: [
+            ['Terima kajian CT','Data CT abdomen memasuki aliran pembinaan semula automatik untuk hati dan struktur berkaitan.'],
+            ['Bina semula dan kuantifikasi','AI membina model 3D, mengira isipadu dan menunjukkan lesi berhubung salur serta duktus hempedu.'],
+            ['Rancang, semak dan kongsi','Pasukan menetapkan margin, menyemak melalui pemapar web dan menjana laporan bergambar.']
+          ],
+          highlightHeading: 'Pandangan lebih jelas terhadap anatomi, sasaran dan margin',
+          highlightIntro: 'Pembinaan semula tahap minit dan akses fleksibel menukar irisan kompleks kepada sumber perancangan 3D khusus pesakit.',
+          highlights: [
+            ['Variasi anatomi dalam konteks','Hubungan segmen, salur dan biliari dipisahkan secara visual untuk perbincangan perancangan yang lebih bermaklumat.'],
+            ['Persediaan kes dan komunikasi lebih pantas','Pembinaan semula automatik dan laporan satu klik membantu pasukan menyediakan kes serta menerangkan pendekatan.'],
+            ['Penggunaan dan integrasi fleksibel','Pilihan setempat dan awan boleh disambungkan secara selamat dengan sistem maklumat hospital.']
+          ]
+        },
+        th: {
+          facts: [
+            ['Couinaud','โมเดลตับตามส่วนกายวิภาค'],
+            ['ระดับนาที','สร้างภาพ 3 มิติอัตโนมัติ'],
+            ['Web viewer','ดูบนจอและสมาร์ตโฟน']
+          ],
+          capHeading: 'กายวิภาคตับเฉพาะผู้ป่วยสำหรับวางแผนการตัด',
+          capIntro: 'รวมการสร้างภาพละเอียด การวัดรอยโรค และการวางแผนตัดเสมือนเป็นโมเดลเดียวของตับ หลอดเลือด และระบบท่อน้ำดี',
+          caps: [
+            ['สร้างภาพตับละเอียด','สร้างโมเดล 3 มิติของส่วน Couinaud หลอดเลือดตับ ระบบท่อน้ำดี กระดูก และผิวหนัง'],
+            ['วิเคราะห์รอยโรคเชิงปริมาณ','คำนวณปริมาตรอัตโนมัติและแสดงตำแหน่งรอยโรคเทียบกับหลอดเลือดและท่อน้ำดี'],
+            ['วางแผนตัดเสมือน','รองรับการวางตำแหน่งก้อนและขอบตัดเสมือน เพื่อกำหนดและตรวจพื้นที่ตัดก่อนผ่าตัด'],
+            ['ดูข้ามอุปกรณ์และรายงาน','Web viewer รองรับจอและสมาร์ตโฟน พร้อมรายงานภาพแบบคลิกเดียวสำหรับการสื่อสาร']
+          ],
+          flowHeading: 'จาก CT ช่องท้องสู่แผนตัดตับที่พร้อมตรวจทาน',
+          flowIntro: 'เปลี่ยนข้อมูล CT เป็นโมเดลกายวิภาค การทบทวนเป้าหมายเชิงปริมาณ และรายงานที่แชร์ได้',
+          steps: [
+            ['รับข้อมูล CT','CT ช่องท้องเข้าสู่ขั้นตอนสร้างภาพอัตโนมัติสำหรับตับและโครงสร้างที่เกี่ยวข้อง'],
+            ['สร้างภาพและวัดผล','AI สร้างโมเดล 3 มิติ คำนวณปริมาตร และแสดงรอยโรคสัมพันธ์กับหลอดเลือดและท่อน้ำดี'],
+            ['วางแผน ตรวจ และแชร์','ทีมกำหนดขอบตัด ตรวจแผนผ่าน Web viewer และสร้างรายงานภาพ']
+          ],
+          highlightHeading: 'เห็นกายวิภาค เป้าหมาย และขอบตัดได้ชัดเจนขึ้น',
+          highlightIntro: 'การสร้างภาพระดับนาทีและการเข้าถึงยืดหยุ่น เปลี่ยนภาพตัดซับซ้อนเป็นทรัพยากรวางแผน 3 มิติเฉพาะผู้ป่วย',
+          highlights: [
+            ['เห็นความแปรผันในบริบท','แยกสีส่วนตับ หลอดเลือด และท่อน้ำดี เพื่อสนับสนุนการหารือก่อนผ่าตัด'],
+            ['เตรียมเคสและสื่อสารเร็วขึ้น','การสร้างภาพอัตโนมัติและรายงานคลิกเดียวช่วยเตรียมเคสและอธิบายแนวทาง'],
+            ['ติดตั้งและเชื่อมต่อยืดหยุ่น','รองรับทั้งในสถานที่และคลาวด์ พร้อมเชื่อมระบบข้อมูลโรงพยาบาลอย่างปลอดภัย']
+          ]
+        }
+      }
+    },
+
+    'urology-planning': {
+      title: 'Urology Planning',
+      categoryKey: 'interventionTreatment',
+      summaryKey: 'urologyDesc',
+      summaries: {
+        en: 'Automatically reconstructs the kidneys, renal vessels, ureters, bladder and adrenal glands from abdominal CT, with lesion quantification and partial-nephrectomy planning.',
+        'zh-cn': '可根据腹部CT自动重建肾脏、肾血管、输尿管、膀胱与肾上腺，并支持病灶定量和肾部分切除规划。',
+        'zh-tw': '可根據腹部CT自動重建腎臟、腎血管、輸尿管、膀胱與腎上腺，並支援病灶定量和腎部分切除規劃。',
+        ms: 'Membina semula buah pinggang, salur renal, ureter, pundi kencing dan kelenjar adrenal secara automatik daripada CT abdomen, dengan kuantifikasi lesi dan perancangan nefrektomi separa.',
+        th: 'สร้างภาพไต หลอดเลือดไต ท่อไต กระเพาะปัสสาวะ และต่อมหมวกไตโดยอัตโนมัติจาก CT ช่องท้อง พร้อมวัดรอยโรคและวางแผนผ่าตัดไตบางส่วน'
+      },
+      images: ['assets/products/visual-urology-planning.webp'],
+      focusImage: 'assets/products/focus-urology-planning.jpg',
+      tags: [{key:'abdominalCT'},{key:'reconstruction'},{key:'preoperativePlanning'}],
+      accent: '#83d7ff',
+      glow: '#4698ed36',
+      details: {
+        en: {
+          facts: [
+            ['5 anatomy groups','Kidneys, bladder, renal vessels, ureters and adrenal glands'],
+            ['Minute-level','Automated 3D reconstruction'],
+            ['Web viewer','Review on monitors and smartphones']
+          ],
+          capHeading: 'Patient-specific urinary anatomy for partial-nephrectomy planning',
+          capIntro: 'Detailed reconstruction, lesion quantification and virtual resection planning bring the kidneys, vessels and urinary tract into one reviewable model.',
+          caps: [
+            ['Detailed urinary reconstruction','Builds a 3D model of the kidneys, bladder, renal arteries and veins, ureters and adrenal glands to reveal patient-specific anatomy.'],
+            ['Quantitative lesion analysis','Automatically calculates volumes and positions renal lesions in relation to vessels, collecting system and surrounding anatomy.'],
+            ['Virtual resection planning','Supports virtual placement of nodules and resection margins to review the planned area for partial nephrectomy.'],
+            ['Cross-device review and reports','A web-based viewer supports monitors and smartphones, with one-click graphic-rich reports for clinical and patient communication.']
+          ],
+          flowHeading: 'From abdominal CT to a reviewable urology surgical plan',
+          flowIntro: 'The workflow turns CT data into a segmented urinary model, quantitative target review and a shareable planning report.',
+          steps: [
+            ['Receive the CT study','Abdominal CT data enter the automated reconstruction workflow for the urinary system and related structures.'],
+            ['Reconstruct and quantify','AI builds the 3D model, calculates volumes and places renal lesions in relation to vessels and the collecting system.'],
+            ['Plan, review and share','The team defines the resection margin, reviews the plan through the web viewer and generates a graphic-rich report.']
+          ],
+          highlightHeading: 'A clearer view of renal anatomy, target and preservation strategy',
+          highlightIntro: 'Minute-level reconstruction and flexible access help turn complex CT slices into a patient-specific planning resource for partial nephrectomy.',
+          highlights: [
+            ['Anatomical variation in context','Kidney, vessel, ureter and adrenal relationships are separated visually to support more informed planning discussions.'],
+            ['Faster case preparation and communication','Automated reconstruction and one-click reports help teams prepare cases and explain the proposed approach.'],
+            ['Flexible deployment and integration','On-premise and cloud options can connect with existing hospital information systems while supporting secure access.']
+          ]
+        },
+        'zh-cn': {
+          facts: [
+            ['5类解剖','肾脏、膀胱、肾血管、输尿管与肾上腺'],
+            ['分钟级','自动三维重建'],
+            ['Web阅览器','支持显示器与智能手机查看']
+          ],
+          capHeading: '以患者个体化泌尿解剖支持肾部分切除规划',
+          capIntro: '将精细重建、病灶定量与虚拟切除规划整合为涵盖肾脏、血管及泌尿系统的可复核模型。',
+          caps: [
+            ['泌尿系统精细重建','建立肾脏、膀胱、肾动静脉、输尿管及肾上腺的三维模型，呈现患者个体化解剖。'],
+            ['病灶定量分析','自动计算体积，并呈现肾脏病灶与血管、集合系统及周围结构的空间关系。'],
+            ['虚拟切除规划','支持结节与切缘的虚拟定位，用于复核肾部分切除的计划区域。'],
+            ['跨终端阅览与报告','Web阅览器支持显示器和智能手机查看，并可一键生成图文报告用于临床及患者沟通。']
+          ],
+          flowHeading: '从腹部CT到可复核的泌尿外科规划',
+          flowIntro: '流程将CT数据转化为分割后的泌尿系统模型、定量靶区复核和可分享的规划报告。',
+          steps: [
+            ['接收CT检查','腹部CT数据进入泌尿系统及相关结构的自动重建流程。'],
+            ['重建与量化','AI建立三维模型、计算体积，并呈现肾脏病灶与血管及集合系统的关系。'],
+            ['规划、复核与分享','团队设定切缘，通过Web阅览器复核方案并生成图文报告。']
+          ],
+          highlightHeading: '更清晰地呈现肾脏解剖、靶区与保留策略',
+          highlightIntro: '分钟级重建与灵活访问方式，将复杂CT切片转化为肾部分切除的患者个体化规划资源。',
+          highlights: [
+            ['在完整环境中识别解剖变异','肾脏、血管、输尿管与肾上腺关系通过分色展示，为更充分的术前讨论提供支持。'],
+            ['加快病例准备与沟通','自动重建和一键图文报告帮助团队准备病例并说明拟定方案。'],
+            ['灵活部署与集成','支持本地化与云端部署，并可与医院现有信息系统安全连接。']
+          ]
+        },
+        'zh-tw': {
+          facts: [
+            ['5類解剖','腎臟、膀胱、腎血管、輸尿管與腎上腺'],
+            ['分鐘級','自動三維重建'],
+            ['Web閱覽器','支援顯示器與智慧型手機查看']
+          ],
+          capHeading: '以患者個體化泌尿解剖支援腎部分切除規劃',
+          capIntro: '將精細重建、病灶定量與虛擬切除規劃整合為涵蓋腎臟、血管及泌尿系統的可複核模型。',
+          caps: [
+            ['泌尿系統精細重建','建立腎臟、膀胱、腎動靜脈、輸尿管及腎上腺的三維模型，呈現患者個體化解剖。'],
+            ['病灶定量分析','自動計算體積，並呈現腎臟病灶與血管、集合系統及周圍結構的空間關係。'],
+            ['虛擬切除規劃','支援結節與切緣的虛擬定位，用於複核腎部分切除的計畫區域。'],
+            ['跨終端閱覽與報告','Web閱覽器支援顯示器和智慧型手機查看，並可一鍵產生圖文報告用於臨床及患者溝通。']
+          ],
+          flowHeading: '從腹部CT到可複核的泌尿外科規劃',
+          flowIntro: '流程將CT資料轉化為分割後的泌尿系統模型、定量靶區複核和可分享的規劃報告。',
+          steps: [
+            ['接收CT檢查','腹部CT資料進入泌尿系統及相關結構的自動重建流程。'],
+            ['重建與量化','AI建立三維模型、計算體積，並呈現腎臟病灶與血管及集合系統的關係。'],
+            ['規劃、複核與分享','團隊設定切緣，透過Web閱覽器複核方案並產生圖文報告。']
+          ],
+          highlightHeading: '更清晰地呈現腎臟解剖、靶區與保留策略',
+          highlightIntro: '分鐘級重建與靈活存取方式，將複雜CT切片轉化為腎部分切除的患者個體化規劃資源。',
+          highlights: [
+            ['在完整環境中識別解剖變異','腎臟、血管、輸尿管與腎上腺關係透過分色展示，為更充分的術前討論提供支援。'],
+            ['加快病例準備與溝通','自動重建和一鍵圖文報告協助團隊準備病例並說明擬定方案。'],
+            ['靈活部署與整合','支援本地化與雲端部署，並可與醫院現有資訊系統安全連接。']
+          ]
+        },
+        ms: {
+          facts: [
+            ['5 kumpulan anatomi','Buah pinggang, pundi kencing, salur renal, ureter dan adrenal'],
+            ['Tahap minit','Pembinaan semula 3D automatik'],
+            ['Pemapar web','Semakan pada monitor dan telefon pintar']
+          ],
+          capHeading: 'Anatomi urinari khusus pesakit untuk perancangan nefrektomi separa',
+          capIntro: 'Pembinaan semula terperinci, kuantifikasi lesi dan perancangan reseksi maya menggabungkan buah pinggang, salur dan sistem urinari dalam satu model.',
+          caps: [
+            ['Pembinaan semula urinari terperinci','Membina model 3D buah pinggang, pundi kencing, arteri dan vena renal, ureter serta kelenjar adrenal.'],
+            ['Analisis kuantitatif lesi','Mengira isipadu dan menunjukkan lesi renal berhubung salur, sistem pengumpulan dan anatomi sekeliling.'],
+            ['Perancangan reseksi maya','Menyokong kedudukan maya nodul dan margin reseksi untuk menyemak kawasan nefrektomi separa yang dirancang.'],
+            ['Semakan merentas peranti dan laporan','Pemapar web menyokong monitor serta telefon pintar, bersama laporan bergambar satu klik untuk komunikasi.']
+          ],
+          flowHeading: 'Daripada CT abdomen kepada pelan pembedahan urologi yang boleh disemak',
+          flowIntro: 'Data CT diubah kepada model urinari bersegmen, semakan sasaran kuantitatif dan laporan perancangan yang boleh dikongsi.',
+          steps: [
+            ['Terima kajian CT','Data CT abdomen memasuki aliran pembinaan semula automatik untuk sistem urinari dan struktur berkaitan.'],
+            ['Bina semula dan kuantifikasi','AI membina model 3D, mengira isipadu dan menunjukkan lesi renal berhubung salur serta sistem pengumpulan.'],
+            ['Rancang, semak dan kongsi','Pasukan menetapkan margin, menyemak melalui pemapar web dan menjana laporan bergambar.']
+          ],
+          highlightHeading: 'Pandangan lebih jelas terhadap anatomi renal, sasaran dan strategi pemeliharaan',
+          highlightIntro: 'Pembinaan semula tahap minit dan akses fleksibel menukar irisan CT kompleks kepada sumber perancangan khusus pesakit.',
+          highlights: [
+            ['Variasi anatomi dalam konteks','Hubungan buah pinggang, salur, ureter dan adrenal dipisahkan secara visual untuk perbincangan lebih bermaklumat.'],
+            ['Persediaan kes dan komunikasi lebih pantas','Pembinaan semula automatik dan laporan satu klik membantu pasukan menyediakan kes serta menerangkan pendekatan.'],
+            ['Penggunaan dan integrasi fleksibel','Pilihan setempat dan awan boleh disambungkan secara selamat dengan sistem maklumat hospital.']
+          ]
+        },
+        th: {
+          facts: [
+            ['5 กลุ่มกายวิภาค','ไต กระเพาะปัสสาวะ หลอดเลือดไต ท่อไต และต่อมหมวกไต'],
+            ['ระดับนาที','สร้างภาพ 3 มิติอัตโนมัติ'],
+            ['Web viewer','ดูบนจอและสมาร์ตโฟน']
+          ],
+          capHeading: 'กายวิภาคระบบปัสสาวะเฉพาะผู้ป่วยสำหรับวางแผนตัดไตบางส่วน',
+          capIntro: 'รวมการสร้างภาพละเอียด การวัดรอยโรค และการวางแผนตัดเสมือนเป็นโมเดลเดียวของไต หลอดเลือด และระบบปัสสาวะ',
+          caps: [
+            ['สร้างภาพระบบปัสสาวะละเอียด','สร้างโมเดล 3 มิติของไต กระเพาะปัสสาวะ หลอดเลือดแดงและดำไต ท่อไต และต่อมหมวกไต'],
+            ['วิเคราะห์รอยโรคเชิงปริมาณ','คำนวณปริมาตรและแสดงรอยโรคไตสัมพันธ์กับหลอดเลือด ระบบกรวยไต และโครงสร้างรอบข้าง'],
+            ['วางแผนตัดเสมือน','รองรับการวางตำแหน่งก้อนและขอบตัดเสมือน เพื่อตรวจพื้นที่ตัดไตบางส่วนที่วางแผนไว้'],
+            ['ดูข้ามอุปกรณ์และรายงาน','Web viewer รองรับจอและสมาร์ตโฟน พร้อมรายงานภาพแบบคลิกเดียวสำหรับการสื่อสาร']
+          ],
+          flowHeading: 'จาก CT ช่องท้องสู่แผนผ่าตัดระบบปัสสาวะที่พร้อมตรวจทาน',
+          flowIntro: 'เปลี่ยนข้อมูล CT เป็นโมเดลระบบปัสสาวะ การทบทวนเป้าหมายเชิงปริมาณ และรายงานที่แชร์ได้',
+          steps: [
+            ['รับข้อมูล CT','CT ช่องท้องเข้าสู่ขั้นตอนสร้างภาพอัตโนมัติสำหรับระบบปัสสาวะและโครงสร้างที่เกี่ยวข้อง'],
+            ['สร้างภาพและวัดผล','AI สร้างโมเดล 3 มิติ คำนวณปริมาตร และแสดงรอยโรคไตสัมพันธ์กับหลอดเลือดและระบบกรวยไต'],
+            ['วางแผน ตรวจ และแชร์','ทีมกำหนดขอบตัด ตรวจแผนผ่าน Web viewer และสร้างรายงานภาพ']
+          ],
+          highlightHeading: 'เห็นกายวิภาคไต เป้าหมาย และกลยุทธ์การเก็บเนื้อไตได้ชัดเจนขึ้น',
+          highlightIntro: 'การสร้างภาพระดับนาทีและการเข้าถึงยืดหยุ่น เปลี่ยน CT ซับซ้อนเป็นทรัพยากรวางแผนเฉพาะผู้ป่วย',
+          highlights: [
+            ['เห็นความแปรผันในบริบท','แยกสีไต หลอดเลือด ท่อไต และต่อมหมวกไต เพื่อสนับสนุนการหารือก่อนผ่าตัด'],
+            ['เตรียมเคสและสื่อสารเร็วขึ้น','การสร้างภาพอัตโนมัติและรายงานคลิกเดียวช่วยเตรียมเคสและอธิบายแนวทาง'],
+            ['ติดตั้งและเชื่อมต่อยืดหยุ่น','รองรับทั้งในสถานที่และคลาวด์ พร้อมเชื่อมระบบข้อมูลโรงพยาบาลอย่างปลอดภัย']
           ]
         }
       }
@@ -1547,7 +1884,7 @@
     });
 
     const title=product.title || mainText(lang,product.titleKey);
-    const summary=mainText(lang,product.summaryKey);
+    const summary=product.summaries?.[lang] || mainText(lang,product.summaryKey);
     document.querySelector('#product-title').textContent=title;
     document.querySelector('#product-summary').textContent=summary;
     document.querySelector('#product-category').textContent=mainText(lang,product.categoryKey);
