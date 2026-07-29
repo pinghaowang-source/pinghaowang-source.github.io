@@ -133,12 +133,6 @@ Object.assign(copy['zh-tw'],{pathSpecialty:'專科AI',pathSpecialtyText:'面向�
 Object.assign(copy.ms,{pathSpecialty:'AI khusus',pathSpecialtyText:'Aliran diagnosis berfokus penyakit',specialtyIntro:'Aliran kerja AI khusus untuk pengimejan kardiovaskular dan neurovaskular.'});
 Object.assign(copy.th,{pathSpecialty:'AI เฉพาะทาง',pathSpecialtyText:'ขั้นตอนวินิจฉัยเฉพาะโรค',specialtyIntro:'ขั้นตอน AI เฉพาะทางสำหรับภาพหัวใจและหลอดเลือด รวมถึงหลอดเลือดสมอง'});
 
-Object.assign(copy.en,{portfolioIntro:'This section lists the five imaging products currently confirmed as CE marked; every regulatory label remains specific to the individual product and applicable market.'});
-Object.assign(copy['zh-cn'],{portfolioIntro:'本板块仅展示目前确认已取得CE认证的五款影像产品；每项监管标签仅对应具体产品及适用市场。'});
-Object.assign(copy['zh-tw'],{portfolioIntro:'本板塊僅展示目前確認已取得CE認證的五款影像產品；每項監管標籤僅對應具體產品及適用市場。'});
-Object.assign(copy.ms,{portfolioIntro:'Bahagian ini hanya menyenaraikan lima produk pengimejan yang kini disahkan mempunyai penandaan CE; setiap label kawal selia kekal khusus kepada produk dan pasaran yang berkenaan.'});
-Object.assign(copy.th,{portfolioIntro:'ส่วนนี้แสดงเฉพาะผลิตภัณฑ์ภาพทางการแพทย์ห้ารายการที่ยืนยันว่ามีเครื่องหมาย CE โดยฉลากกำกับดูแลแต่ละรายการใช้เฉพาะกับผลิตภัณฑ์และตลาดที่เกี่ยวข้อง'});
-
 const languages=[['en','English'],['zh-cn','简体中文'],['zh-tw','繁體中文'],['ms','Bahasa Melayu'],['th','ไทย']];
 const languageAliases={zh:'zh-tw'};
 
