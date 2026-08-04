@@ -1043,6 +1043,12 @@
       summaryKey: 'strokeDesc',
       images: ['assets/products/visual-ct-stroke.webp'],
       focusImage: 'assets/products/visual-ct-stroke.webp',
+      capabilityImages: [
+        'assets/products/visual-ct-stroke-ncct.webp',
+        'assets/products/visual-ct-stroke-highlight.webp',
+        'assets/products/visual-ct-stroke-priority.webp',
+        'assets/products/visual-ct-stroke-review.webp'
+      ],
       tags: [{key:'brainCT'},{key:'ceMarked'},{key:'fdaCleared'},{key:'ukcaMarked'},{key:'nmpaApproved'}],
       accent: '#b6a7ff',
       glow: '#7d67ee38',
@@ -2511,10 +2517,14 @@
 
     document.querySelector('#capability-heading').textContent=detail.capHeading;
     document.querySelector('#capability-intro').textContent=detail.capIntro;
-    renderCards('#capability-grid',detail.caps,([heading,text],index)=>`
+    renderCards('#capability-grid',detail.caps,([heading,text],index)=>{
+      const dedicatedImage=product.capabilityImages?.[index];
+      const capabilityImage=dedicatedImage || product.focusImage;
+      const visualClass=`capability-visual capability-visual-${index}${dedicatedImage?' capability-visual-dedicated':''}`;
+      return `
       <article>
-        <div class="capability-visual capability-visual-${index}" role="img" aria-label="${escapeHtml(heading)}">
-          <img src="${escapeHtml(product.focusImage)}" alt="" loading="lazy">
+        <div class="${visualClass}" role="img" aria-label="${escapeHtml(heading)}">
+          <img src="${escapeHtml(capabilityImage)}" alt="" loading="lazy">
         </div>
         <div class="capability-copy">
           <b>${String(index+1).padStart(2,'0')}</b>
@@ -2522,7 +2532,8 @@
           <p>${escapeHtml(text)}</p>
         </div>
       </article>
-    `);
+    `;
+    });
 
     const secondarySection=document.querySelector('#product-secondary-visual');
     if(product.secondaryImage){

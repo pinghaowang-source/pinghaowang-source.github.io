@@ -216,6 +216,19 @@
   left: -100%;
 }
 
+.capability-visual.capability-visual-dedicated {
+  aspect-ratio: 16 / 10;
+}
+
+.capability-visual.capability-visual-dedicated img {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
 .capability-copy {
   padding: 28px 30px 32px;
 }
