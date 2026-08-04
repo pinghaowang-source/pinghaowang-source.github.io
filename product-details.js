@@ -885,6 +885,12 @@
       summaryKey: 'boneDesc',
       images: ['assets/products/visual-ct-bone.webp'],
       focusImage: 'assets/products/visual-ct-bone.webp',
+      capabilityImages: [
+        'assets/products/visual-ct-bone-regions.webp',
+        'assets/products/visual-ct-bone-localisation.webp',
+        'assets/products/visual-ct-bone-characterisation.webp',
+        'assets/products/visual-ct-bone-vr.webp'
+      ],
       tags: [{key:'chestCT'},{key:'ceMarked'},{key:'ukcaMarked'},{key:'nmpaApproved'}],
       accent: '#8fd8ff',
       glow: '#58bdf33a',
@@ -1208,6 +1214,12 @@
       summaryKey: 'coronaryDesc',
       images: ['assets/products/visual-ct-coronary.webp'],
       focusImage: 'assets/products/focus-cardiovascular-ai.jpg',
+      capabilityImages: [
+        'assets/products/visual-ct-coronary-reconstruction.webp',
+        'assets/products/visual-ct-coronary-stenosis.webp',
+        'assets/products/visual-ct-coronary-plaque.webp',
+        'assets/products/visual-ct-coronary-modules.webp'
+      ],
       tags: [{key:'coronaryCT'},{key:'ceMarked'},{key:'ukcaMarked'},{key:'nmpaApproved'}],
       accent: '#ff8f82',
       glow: '#e6574a36',
@@ -1367,6 +1379,12 @@
       summaryKey: 'ctLungDesc',
       images: ['assets/products/visual-ct-lung.webp'],
       focusImage: 'assets/products/focus-ct-lung.jpg',
+      capabilityImages: [
+        'assets/products/visual-ct-lung-nodules.webp',
+        'assets/products/visual-ct-lung-growth.webp',
+        'assets/products/visual-ct-lung-quantification.webp',
+        'assets/products/visual-ct-lung-followup.webp'
+      ],
       tags: [{key:'chestCT'},{key:'ceMarked'},{key:'fdaCleared'},{key:'nmpaApproved'},{key:'ukcaMarked'}],
       accent: '#6ce6d0',
       glow: '#22d6b33c',
@@ -1525,6 +1543,12 @@
       summaryKey: 'drChestDesc',
       images: ['assets/products/visual-dr-chest.webp'],
       focusImage: 'assets/products/focus-dr-chest.jpg',
+      capabilityImages: [
+        'assets/products/visual-dr-chest-coverage.webp',
+        'assets/products/visual-dr-chest-warning.webp',
+        'assets/products/visual-dr-chest-tb.webp',
+        'assets/products/visual-dr-chest-reporting.webp'
+      ],
       tags: [{key:'chestXray'},{key:'ceMarked'},{key:'ukcaMarked'}],
       accent: '#74c7ff',
       glow: '#268edc3c',
@@ -2399,15 +2423,20 @@
         <p>${escapeHtml(detail.capIntro)}</p>
       </div>`;
     const visual=`<figure class="story-primary-visual"><img src="${escapeHtml(product.images[0])}" alt="${escapeHtml(alt)}" loading="lazy"></figure>`;
-    const capabilityCards=detail.caps.map(([title,text],index)=>`
+    const capabilityCards=detail.caps.map(([title,text],index)=>{
+      const dedicatedImage=product.capabilityImages?.[index];
+      const capabilityImage=dedicatedImage || product.focusImage;
+      const visualClass=`story-point-visual story-point-visual-${index}${dedicatedImage?' story-point-visual-dedicated':''}`;
+      return `
       <article>
-        <div class="story-point-visual story-point-visual-${index}" aria-hidden="true"><img src="${escapeHtml(product.focusImage)}" alt="" loading="lazy"></div>
+        <div class="${visualClass}" role="img" aria-label="${escapeHtml(title)}"><img src="${escapeHtml(capabilityImage)}" alt="" loading="lazy"></div>
         <div class="story-point-copy">
           <b>${String(index+1).padStart(2,'0')}</b>
           <h3>${escapeHtml(title)}</h3>
           <p>${escapeHtml(text)}</p>
         </div>
-      </article>`).join('');
+      </article>`;
+    }).join('');
 
     if(layout==='lung'){
       const temporalRail=detail.steps.map(([title],index)=>`<span><b>${String(index+1).padStart(2,'0')}</b>${escapeHtml(title)}</span>`).join('');
