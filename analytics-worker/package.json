@@ -1,0 +1,22 @@
+{
+  "name": "scovion-analytics-worker",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.9.0",
+  "scripts": {
+    "dev:collector": "wrangler dev --config wrangler.collector.jsonc",
+    "dev:admin": "wrangler dev --config wrangler.admin.jsonc",
+    "deploy:collector": "wrangler deploy --config wrangler.collector.jsonc",
+    "deploy:admin": "wrangler deploy --config wrangler.admin.jsonc",
+    "db:migrate:local": "wrangler d1 migrations apply scovion-analytics --local --config wrangler.collector.jsonc",
+    "db:migrate:remote": "wrangler d1 migrations apply scovion-analytics --remote --config wrangler.collector.jsonc",
+    "typecheck": "tsc --noEmit",
+    "test": "tsc -p tsconfig.test.json && node --test tests/*.test.mjs"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^5.20260804.1",
+    "typescript": "^5.9.2",
+    "wrangler": "^4.27.0"
+  }
+}

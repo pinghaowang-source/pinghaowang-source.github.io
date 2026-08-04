@@ -103,6 +103,9 @@
       form.classList.remove('was-validated');
       validatePhonePair();
       showStatus(successStatus);
+      document.dispatchEvent(new CustomEvent('scovion:analytics', {
+        detail: { type: 'conversion', id: 'contact-form-success', section: 'enquiry' }
+      }));
     } catch (error) {
       showStatus(errorStatus);
     } finally {

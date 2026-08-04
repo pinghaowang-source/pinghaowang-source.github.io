@@ -1,0 +1,3 @@
+# Local development only. Never commit the real .dev.vars file.
+IP_HASH_SECRET=replace-with-an-independent-random-secret-of-at-least-32-bytes
+IP_ENCRYPTION_KEY=replace-with-a-base64-encoded-32-byte-key

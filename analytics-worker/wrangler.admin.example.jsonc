@@ -1,0 +1,43 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "analytics",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-08-01",
+  "workers_dev": true,
+  "preview_urls": false,
+  "rules": [
+    {
+      "type": "Text",
+      "globs": ["**/*.html", "**/*.css", "**/*.client.js"],
+      "fallthrough": true
+    }
+  ],
+
+  // Copy the exact DB binding created for the collector into this config so
+  // both Workers use one D1 database. Never invent a database_id.
+  // "d1_databases": [
+  //   {
+  //     "binding": "DB",
+  //     "database_name": "scovion-analytics",
+  //     "database_id": "<actual value returned by Cloudflare>",
+  //     "migrations_dir": "migrations"
+  //   }
+  // ],
+
+  // ACCESS_TEAM_DOMAIN, ACCESS_AUD, ADMIN_EMAILS and IP_ENCRYPTION_KEY are
+  // supplied with `wrangler secret put` to avoid committing live values.
+  "vars": {
+    "COLLECT_HOST": "collect.pinghao-wang.workers.dev",
+    "ADMIN_HOST": "analytics.pinghao-wang.workers.dev",
+    "IP_RETENTION_DAYS": "30",
+    "EVENT_RETENTION_DAYS": "30",
+    "AGGREGATE_RETENTION_DAYS": "395",
+    "AUDIT_RETENTION_DAYS": "395"
+  },
+  "triggers": {
+    "crons": ["17 3 * * *"]
+  },
+  "observability": {
+    "enabled": true
+  }
+}

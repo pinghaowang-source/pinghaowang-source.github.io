@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="robots" content="noindex,nofollow,noarchive">
+    <title>SCOVION 网站数据中心</title>
+    <link rel="stylesheet" href="/admin/style.css">
+  </head>
+  <body>
+    <div class="shell">
+      <aside class="sidebar">
+        <a class="brand" href="/admin" aria-label="SCOVION 数据中心首页">
+          <span class="brand-mark" aria-hidden="true">S</span>
+          <span><strong>SCOVION</strong><small>网站数据中心</small></span>
+        </a>
+        <nav aria-label="数据中心导航">
+          <a class="nav-link is-active" href="#overview"><span>01</span>数据总览</a>
+          <a class="nav-link" href="#pages"><span>02</span>页面表现</a>
+          <a class="nav-link" href="#audience"><span>03</span>访客洞察</a>
+          <a class="nav-link" href="#visitors"><span>04</span>访问记录</a>
+        </nav>
+        <div class="security-card">
+          <span class="security-dot"></span>
+          <div><strong>受保护的管理区</strong><small>Cloudflare Access 身份验证</small></div>
+        </div>
+      </aside>
+
+      <main>
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Website intelligence</p>
+            <h1>网站数据中心</h1>
+            <p class="subtitle">掌握访问趋势、页面互动与转化表现</p>
+          </div>
+          <div class="topbar-actions">
+            <label class="range-control">时间范围
+              <select id="range" aria-label="选择时间范围">
+                <option value="24h">过去 24 小时</option>
+                <option value="7d">过去 7 天</option>
+                <option value="30d" selected>过去 30 天</option>
+                <option value="90d">过去 90 天</option>
+                <option value="13mo">过去 13 个月</option>
+              </select>
+            </label>
+            <button class="refresh" id="refresh" type="button"><span aria-hidden="true">↻</span> 刷新</button>
+          </div>
+        </header>
+
+        <div class="status-banner" id="status" role="status" hidden></div>
+
+        <section id="overview" aria-labelledby="overview-title">
+          <div class="section-heading">
+            <div><p class="eyebrow">Overview</p><h2 id="overview-title">核心指标</h2></div>
+            <p id="updated">正在读取最新数据…</p>
+          </div>
+          <div class="metric-grid">
+            <article class="metric-card accent"><span>页面浏览量</span><strong id="metric-views">—</strong><small>Page views</small></article>
+            <article class="metric-card"><span>估算独立访客</span><strong id="metric-visitors">—</strong><small id="visitor-label">基于 IP + 浏览器特征估算</small></article>
+            <article class="metric-card"><span>会话点击率</span><strong id="metric-ctr">—</strong><small>点击会话 / 浏览会话</small></article>
+            <article class="metric-card"><span>原始点击次数</span><strong id="metric-clicks">—</strong><small>用于评估互动深度</small></article>
+            <article class="metric-card"><span>转化次数</span><strong id="metric-conversions">—</strong><small>例如联系表单成功</small></article>
+            <article class="metric-card"><span>浏览会话</span><strong id="metric-sessions">—</strong><small>CTR 分母</small></article>
+          </div>
+        </section>
+
+        <section class="panel trend-panel" aria-labelledby="trend-title">
+          <div class="panel-heading">
+            <div><p class="eyebrow">Trend</p><h2 id="trend-title">访问趋势</h2></div>
+            <div class="legend"><span><i class="views"></i>浏览量</span><span><i class="clicks"></i>点击</span></div>
+          </div>
+          <div class="chart-wrap" id="trend-chart" aria-label="访问趋势图"></div>
+        </section>
+
+        <section class="panel" id="pages" aria-labelledby="pages-title">
+          <div class="panel-heading">
+            <div><p class="eyebrow">Page performance</p><h2 id="pages-title">页面表现</h2></div>
+            <p>CTR 按独立会话计算，不会因同一会话重复点击而超过 100%</p>
+          </div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>页面</th><th>浏览量</th><th>浏览会话</th><th>点击会话</th><th>CTR</th><th>点击次数</th><th>转化</th></tr></thead>
+              <tbody id="pages-body"><tr><td colspan="7" class="empty">正在载入页面数据…</td></tr></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section id="audience" aria-labelledby="audience-title">
+          <div class="section-heading"><div><p class="eyebrow">Audience</p><h2 id="audience-title">访客与互动洞察</h2></div></div>
+          <div class="insight-grid">
+            <article class="panel compact"><h3>来源域名</h3><div class="bar-list" id="referrers"></div></article>
+            <article class="panel compact"><h3>国家 / 地区</h3><div class="bar-list" id="countries"></div></article>
+            <article class="panel compact"><h3>设备类别</h3><div class="bar-list" id="devices"></div></article>
+            <article class="panel compact"><h3>热门点击目标</h3><div class="bar-list" id="targets"></div></article>
+          </div>
+        </section>
+
+        <section class="panel" id="visitors" aria-labelledby="visitors-title">
+          <div class="panel-heading">
+            <div><p class="eyebrow">Visitor records</p><h2 id="visitors-title">近期访问记录</h2></div>
+            <p>默认仅显示掩码 IP；查看完整 IP 会写入审计日志</p>
+          </div>
+          <div class="privacy-note"><strong>最小化访问原则</strong><span>仅在确有业务或安全需要时查看完整 IP。解密记录与详细事件将在保留期届满后自动删除。</span></div>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>访客 IP</th><th>国家 / 地区</th><th>设备</th><th>最后访问页面</th><th>事件数</th><th>最后访问</th><th></th></tr></thead>
+              <tbody id="visitors-body"><tr><td colspan="7" class="empty">正在载入访问记录…</td></tr></tbody>
+            </table>
+          </div>
+        </section>
+
+        <footer class="admin-footer">
+          <span id="identity">身份验证中…</span>
+          <span>详细事件与可解密 IP 默认保留 30 天 · 匿名汇总最长保留 13 个月</span>
+          <a href="/cdn-cgi/access/logout">安全退出</a>
+        </footer>
+      </main>
+    </div>
+
+    <dialog id="reveal-dialog">
+      <form method="dialog" id="reveal-form">
+        <div class="dialog-icon" aria-hidden="true">IP</div>
+        <h2>查看完整 IP</h2>
+        <p>此操作会记录管理员身份、时间和查看原因。请说明查看该 IP 的业务或安全原因。</p>
+        <label>查看原因<textarea id="reveal-reason" required minlength="3" maxlength="160" placeholder="例如：调查异常高频访问"></textarea></label>
+        <p class="dialog-error" id="reveal-error" hidden></p>
+        <div class="dialog-actions"><button value="cancel" class="secondary">取消</button><button id="reveal-confirm" value="default">确认并查看</button></div>
+      </form>
+    </dialog>
+
+    <script type="module" src="/admin/app.js"></script>
+  </body>
+</html>

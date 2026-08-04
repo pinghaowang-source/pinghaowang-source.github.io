@@ -1,0 +1,7 @@
+node_modules/
+.wrangler/
+.dev.vars
+wrangler.collector.jsonc
+wrangler.admin.jsonc
+coverage/
+.test-build/

@@ -7,3 +7,9 @@ Pages: Home, AI Healthcare, Medical AI Agent, Custom AI Solutions, About, and Co
 Products with a supplied product manual link to a dedicated detail experience. Products without a supporting manual remain in the portfolio without a detail-page link until source material is available.
 
 The Contact page sends enquiries through an AJAX form endpoint. The receiving address is not displayed in the page content.
+
+## Website analytics
+
+The public pages load `analytics.js` after their page-specific scripts. Analytics starts only after a visitor allows it, honours supported browser privacy signals, stores only a random session ID in the browser, and never sends contact-form values. Product-detail URLs are normalised to independent page keys such as `/product/thorax-planning`.
+
+The protected backend lives in `analytics-worker/`. It is designed for Cloudflare Workers, D1 and Access, with separate `collect.scovion.com` and `analytics.scovion.com` hosts. Deployment, secret creation, D1 migration and Access configuration are documented in `analytics-worker/README.md`; no production credentials belong in this repository.
