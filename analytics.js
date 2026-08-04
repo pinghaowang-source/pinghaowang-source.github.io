@@ -10,35 +10,35 @@
 
   const copy = {
     en: {
-      notice: 'Help us improve this website with privacy-conscious analytics. If allowed, we record page visits, clicks and the IP address received by our analytics service. Contact-form contents are never collected.',
+      notice: 'Help us understand page visits and improve the website experience. Analytics is enabled only after you choose to allow it.',
       allow: 'Allow analytics',
       decline: 'Decline',
       privacy: 'Privacy & analytics',
       settings: 'Analytics settings'
     },
     'zh-cn': {
-      notice: '帮助我们通过注重隐私的访问分析改进网站。允许后，我们会记录页面访问、点击以及分析服务接收到的 IP 地址，但绝不会采集联系表单内容。',
+      notice: '帮助我们了解页面访问与使用情况，持续改进网站体验。只有在您选择允许后才会启用访问分析。',
       allow: '允许访问分析',
       decline: '拒绝',
       privacy: '隐私与访问分析',
       settings: '分析设置'
     },
     'zh-tw': {
-      notice: '協助我們透過重視私隱的造訪分析改善網站。允許後，我們會記錄頁面造訪、點擊及分析服務收到的 IP 位址，但絕不會收集聯絡表單內容。',
+      notice: '協助我們了解頁面造訪與使用情況，持續改善網站體驗。只有在您選擇允許後才會啟用造訪分析。',
       allow: '允許造訪分析',
       decline: '拒絕',
       privacy: '私隱與造訪分析',
       settings: '分析設定'
     },
     ms: {
-      notice: 'Bantu kami menambah baik laman ini dengan analitik yang menjaga privasi. Jika dibenarkan, kami merekod lawatan halaman, klik dan alamat IP yang diterima oleh perkhidmatan analitik. Kandungan borang hubungan tidak pernah dikumpulkan.',
+      notice: 'Bantu kami memahami lawatan dan penggunaan halaman untuk menambah baik pengalaman laman. Analitik hanya diaktifkan selepas anda membenarkannya.',
       allow: 'Benarkan analitik',
       decline: 'Tolak',
       privacy: 'Privasi & analitik',
       settings: 'Tetapan analitik'
     },
     th: {
-      notice: 'ช่วยเราปรับปรุงเว็บไซต์ด้วยการวิเคราะห์ที่คำนึงถึงความเป็นส่วนตัว หากอนุญาต เราจะบันทึกการเข้าชมหน้า การคลิก และที่อยู่ IP ที่บริการวิเคราะห์ได้รับ โดยจะไม่เก็บเนื้อหาในแบบฟอร์มติดต่อ',
+      notice: 'ช่วยให้เราเข้าใจการเข้าชมและการใช้งานหน้าเว็บเพื่อปรับปรุงประสบการณ์บนเว็บไซต์ ระบบวิเคราะห์จะเปิดใช้งานเมื่อคุณเลือกอนุญาตเท่านั้น',
       allow: 'อนุญาตการวิเคราะห์',
       decline: 'ปฏิเสธ',
       privacy: 'ความเป็นส่วนตัวและการวิเคราะห์',
