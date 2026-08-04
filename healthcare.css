@@ -3,6 +3,41 @@
   background: #f5f8f9;
 }
 
+/* The healthcare page uses a dark, full-width navigation bar. Keep its
+   identity and navigation labels independent from the light global header. */
+body > .nav {
+  color: #f4fbff;
+}
+
+body > .nav::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+  background: #07192e;
+}
+
+body > .nav .brand {
+  color: #f4fbff;
+}
+
+body > .nav .links {
+  color: #b8c9d8;
+}
+
+body > .nav .links a:hover,
+body > .nav .links a.active {
+  color: #72e5c9;
+}
+
+body > .nav .menu {
+  color: #f4fbff;
+}
+
 .healthcare-hero {
   padding: clamp(64px, 8vw, 112px) 0 28px;
   overflow: hidden;
@@ -222,6 +257,7 @@
 }
 
 .imaging-chapter {
+  color: #102033;
   background: #f5f8f9;
 }
 
@@ -295,10 +331,18 @@
 }
 
 .health-product-card h3,
-.planning-product-card h3,
 .specialty-product-card h3,
 .device-story h3 {
   margin: 18px 0 17px;
+  color: #102033;
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: .98;
+  letter-spacing: -.052em;
+}
+
+.planning-product-card h3 {
+  margin: 18px 0 17px;
+  color: #fff;
   font-size: clamp(32px, 4vw, 52px);
   line-height: .98;
   letter-spacing: -.052em;
@@ -426,6 +470,7 @@
 
 .healthcare-agent-chapter {
   padding: 0;
+  color: #102033;
   background: #dfeeee;
 }
 
@@ -483,6 +528,7 @@
 }
 
 .devices-chapter {
+  color: #102033;
   background: #fff;
 }
 
@@ -539,6 +585,7 @@
 }
 
 .prosthetics-chapter {
+  color: #102033;
   background: linear-gradient(145deg, #e5edf4 0%, #f5f7fa 58%, #e8f3ef 100%);
 }
 
@@ -608,6 +655,7 @@
 }
 
 .specialty-chapter {
+  color: #102033;
   background: #f7f9fa;
 }
 
@@ -761,6 +809,15 @@
 }
 
 @media (max-width: 680px) {
+  body > .nav .links.open {
+    color: #405168;
+  }
+
+  body > .nav .links.open a:hover,
+  body > .nav .links.open a.active {
+    color: #0966df;
+  }
+
   .healthcare-hero {
     padding-top: 58px;
   }
