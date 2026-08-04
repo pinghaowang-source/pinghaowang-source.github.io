@@ -158,7 +158,16 @@ function init(requestedLanguage){
     }
   }
   const menu=document.querySelector('.menu');
-  if(menu)menu.onclick=()=>document.querySelector('.links').classList.toggle('open');
+  const links=document.querySelector('.links');
+  if(menu&&links){
+    if(!links.id)links.id='primary-navigation';
+    menu.setAttribute('aria-controls',links.id);
+    menu.setAttribute('aria-expanded',String(links.classList.contains('open')));
+    menu.onclick=()=>{
+      const isOpen=links.classList.toggle('open');
+      menu.setAttribute('aria-expanded',String(isOpen));
+    }
+  }
   document.querySelectorAll('[data-year]').forEach(e=>e.textContent=new Date().getFullYear());
   normalizeHeadingPunctuation();
   if(typeof CustomEvent==='function')document.dispatchEvent(new CustomEvent('scovion:languagechange',{detail:{lang}}))
