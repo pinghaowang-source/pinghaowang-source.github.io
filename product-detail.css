@@ -504,3 +504,472 @@
     margin-top: 25px;
   }
 }
+
+/* Product-specific editorial stories */
+.product-story-section {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-story-section .detail-section {
+  position: relative;
+}
+
+.story-heading {
+  margin-bottom: 52px;
+}
+
+.story-primary-visual {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid #d1dfe5;
+  background: #06182d;
+  box-shadow: 0 28px 65px #173f5c1b;
+}
+
+.story-primary-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid #ffffff18;
+  pointer-events: none;
+}
+
+.story-primary-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.story-point-visual {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 16 / 10;
+  background: #071a31;
+}
+
+.story-point-visual img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  max-width: none;
+  object-fit: fill;
+}
+
+.story-point-visual-1 img {
+  left: -100%;
+}
+
+.story-point-visual-2 img {
+  top: -100%;
+}
+
+.story-point-visual-3 img {
+  top: -100%;
+  left: -100%;
+}
+
+.story-point-copy {
+  min-width: 0;
+}
+
+.product-story-section article b {
+  display: block;
+  color: var(--product-accent);
+  font-size: 10px;
+  letter-spacing: .1em;
+}
+
+.product-story-section article h3 {
+  margin: 16px 0 9px;
+  font-size: 23px;
+  line-height: 1.12;
+  letter-spacing: -.034em;
+}
+
+.product-story-section article p {
+  margin: 0;
+  color: #627684;
+  font-size: 13px;
+  line-height: 1.65;
+}
+
+.product-layout-lung .detail-hero {
+  background:
+    radial-gradient(circle at 83% 12%, #6ce6d040, transparent 29%),
+    linear-gradient(145deg, #edf7f6, #f8fbfb 57%, #e6f1f3);
+  color: #102033;
+}
+
+.product-layout-lung .detail-back,
+.product-layout-lung .detail-hero-copy > p,
+.product-layout-lung .detail-tags span,
+.product-layout-lung .detail-facts span {
+  color: #587180;
+}
+
+.product-layout-lung .detail-hero .button.outline {
+  border-color: #8097a5;
+  color: #183349;
+}
+
+.product-layout-lung .detail-tags {
+  border-top-color: #b9cdd3;
+}
+
+.product-layout-lung .detail-tags span {
+  border-color: #b9cdd3;
+  background: #ffffff6e;
+}
+
+.product-layout-lung .detail-facts {
+  border-color: #bfd1d6;
+  background: #bfd1d6;
+}
+
+.product-layout-lung .detail-facts article {
+  background: #f5faf9;
+}
+
+.product-layout-lung .detail-gallery {
+  border-color: #bfd0d5;
+  box-shadow: 0 34px 80px #23485428;
+}
+
+.story-lung {
+  background: #fff;
+}
+
+.lung-story-stage {
+  display: grid;
+  grid-template-columns: minmax(390px, .9fr) minmax(0, 1.1fr);
+  gap: clamp(42px, 6vw, 78px);
+  align-items: start;
+}
+
+.lung-story-visual .story-primary-visual {
+  aspect-ratio: 1;
+}
+
+.lung-temporal-rail {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-right: 1px solid #ccdade;
+  border-bottom: 1px solid #ccdade;
+  border-left: 1px solid #ccdade;
+}
+
+.lung-temporal-rail span {
+  min-height: 82px;
+  padding: 17px 14px;
+  border-right: 1px solid #ccdade;
+  color: #415f6c;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.lung-temporal-rail span:last-child {
+  border-right: 0;
+}
+
+.lung-temporal-rail b {
+  display: block;
+  margin-bottom: 12px;
+  color: #0b8d76;
+  font-size: 9px;
+  letter-spacing: .1em;
+}
+
+.lung-story-paths {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 1px solid #ccdade;
+  border-left: 1px solid #ccdade;
+}
+
+.lung-story-paths article {
+  min-height: 250px;
+  padding: 0;
+  border-right: 1px solid #ccdade;
+  border-bottom: 1px solid #ccdade;
+}
+
+.lung-story-paths .story-point-copy {
+  padding: 25px 27px 29px;
+}
+
+.product-layout-lung .workflow-band {
+  background: #0a2731;
+}
+
+.product-layout-thorax .detail-hero {
+  background:
+    radial-gradient(circle at 83% 16%, #ffd16631, transparent 29%),
+    linear-gradient(145deg, #07192e, #10334c);
+}
+
+.story-thorax {
+  background:
+    radial-gradient(circle at 14% 16%, #a7d5e841, transparent 27%),
+    #edf4f6;
+}
+
+.thorax-anatomy-map {
+  display: grid;
+  grid-template-columns: minmax(0, 1.18fr) minmax(340px, .82fr);
+  border-top: 1px solid #bdced5;
+  border-bottom: 1px solid #bdced5;
+}
+
+.thorax-anatomy-map .story-primary-visual {
+  min-height: 650px;
+  border-width: 0 1px 0 0;
+  box-shadow: none;
+}
+
+.thorax-anatomy-rail {
+  display: flex;
+  flex-direction: column;
+}
+
+.thorax-anatomy-rail article {
+  position: relative;
+  display: grid;
+  grid-template-columns: 92px minmax(0, 1fr);
+  gap: 22px;
+  align-items: center;
+  flex: 1;
+  padding: 18px 0 18px 25px;
+  border-bottom: 1px solid #bdced5;
+}
+
+.thorax-anatomy-rail article:last-child {
+  border-bottom: 0;
+}
+
+.thorax-anatomy-rail .story-point-visual {
+  width: 92px;
+  aspect-ratio: 1;
+  border: 1px solid #b6cad2;
+}
+
+.product-layout-thorax .workflow-band {
+  background: #07192e;
+}
+
+.product-layout-liver .detail-hero {
+  background:
+    radial-gradient(circle at 82% 12%, #ffb45b38, transparent 30%),
+    linear-gradient(145deg, #261b1a, #4a2821 58%, #16263a);
+}
+
+.story-liver {
+  background: #f7f2eb;
+}
+
+.story-liver .eyebrow,
+.story-liver article b {
+  color: #a65e24;
+}
+
+.liver-planning-layers {
+  display: grid;
+  grid-template-columns: minmax(360px, .78fr) minmax(0, 1.22fr);
+  gap: clamp(46px, 7vw, 92px);
+  align-items: center;
+}
+
+.liver-planning-layers .story-primary-visual {
+  aspect-ratio: 1;
+  order: 2;
+  border-color: #dac7b6;
+  box-shadow: 0 30px 70px #6e42221d;
+}
+
+.liver-layer-list {
+  border-top: 1px solid #d8c6b6;
+}
+
+.liver-layer-list article {
+  display: grid;
+  grid-template-columns: 104px minmax(0, 1fr);
+  gap: 22px;
+  align-items: center;
+  padding: 18px 0;
+  border-bottom: 1px solid #d8c6b6;
+}
+
+.liver-layer-list .story-point-visual {
+  width: 104px;
+  aspect-ratio: 1;
+  border: 1px solid #d8c6b6;
+}
+
+.liver-layer-list article h3 {
+  margin: 0 0 8px;
+}
+
+.product-layout-liver .workflow-band {
+  background: #36221e;
+}
+
+.product-layout-urology .detail-hero {
+  background:
+    radial-gradient(circle at 82% 12%, #a88cff34, transparent 29%),
+    linear-gradient(145deg, #0a1830, #1d2854 58%, #102d46);
+}
+
+.story-urology {
+  background: #edf1f8;
+}
+
+.urology-focus-map {
+  display: grid;
+  grid-template-columns: minmax(380px, .9fr) minmax(0, 1.1fr);
+  gap: clamp(42px, 6vw, 78px);
+  align-items: center;
+}
+
+.urology-focus-map .story-primary-visual {
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border-color: #aebdd6;
+  box-shadow: 0 30px 75px #2438662a;
+}
+
+.urology-focus-points {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+
+.urology-focus-points article {
+  min-height: 245px;
+  padding: 0;
+  border: 1px solid #c4cfdf;
+  background: #f8faff;
+}
+
+.urology-focus-points .story-point-copy {
+  padding: 24px 25px 28px;
+}
+
+.product-layout-urology .workflow-band {
+  background: #121f43;
+}
+
+.product-layout-coronary .detail-hero {
+  background:
+    radial-gradient(circle at 82% 12%, #ff8a7836, transparent 30%),
+    linear-gradient(145deg, #151b2b, #41232b 58%, #11273b);
+}
+
+.story-coronary {
+  background: #fff;
+}
+
+.coronary-analysis-stage .story-primary-visual {
+  aspect-ratio: 16 / 8;
+  border-color: #d7dce1;
+}
+
+.coronary-analysis-track {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  border-right: 1px solid #d4dde2;
+  border-bottom: 1px solid #d4dde2;
+  border-left: 1px solid #d4dde2;
+}
+
+.coronary-analysis-track article {
+  min-height: 260px;
+  padding: 0;
+  border-right: 1px solid #d4dde2;
+}
+
+.coronary-analysis-track .story-point-copy {
+  padding: 24px 24px 28px;
+}
+
+.coronary-analysis-track article:last-child {
+  border-right: 0;
+}
+
+.product-layout-coronary .workflow-band {
+  background: #2b1e27;
+}
+
+@media (max-width: 900px) {
+  .lung-story-stage,
+  .thorax-anatomy-map,
+  .liver-planning-layers,
+  .urology-focus-map {
+    grid-template-columns: 1fr;
+  }
+
+  .thorax-anatomy-map .story-primary-visual {
+    min-height: 0;
+    aspect-ratio: 1;
+    border-right: 0;
+    border-bottom: 1px solid #bdced5;
+  }
+
+  .liver-planning-layers .story-primary-visual {
+    order: 0;
+  }
+
+  .coronary-analysis-track {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .coronary-analysis-track article:nth-child(2) {
+    border-right: 0;
+  }
+
+  .coronary-analysis-track article:nth-child(-n+2) {
+    border-bottom: 1px solid #d4dde2;
+  }
+}
+
+@media (max-width: 620px) {
+  .lung-story-paths,
+  .urology-focus-points,
+  .coronary-analysis-track {
+    grid-template-columns: 1fr;
+  }
+
+  .lung-story-paths article,
+  .urology-focus-points article,
+  .coronary-analysis-track article {
+    min-height: 0;
+  }
+
+  .lung-temporal-rail {
+    grid-template-columns: 1fr;
+  }
+
+  .lung-temporal-rail span {
+    min-height: 0;
+    border-right: 0;
+    border-bottom: 1px solid #ccdade;
+  }
+
+  .lung-temporal-rail span:last-child {
+    border-bottom: 0;
+  }
+
+  .coronary-analysis-track article,
+  .coronary-analysis-track article:nth-child(2) {
+    border-right: 0;
+    border-bottom: 1px solid #d4dde2;
+  }
+
+  .coronary-analysis-track article:last-child {
+    border-bottom: 0;
+  }
+}

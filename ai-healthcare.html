@@ -3,11 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="SCOVION AI Healthcare solutions.">
+  <meta name="description" content="Explore SCOVION AI Healthcare across imaging diagnosis, 3D surgical planning, hospital AI, intelligent devices and assistive technology.">
   <title>AI Healthcare — SCOVION</title>
   <link rel="icon" type="image/png" href="assets/scovion-logo-mark.png">
   <link rel="apple-touch-icon" href="assets/scovion-logo-mark.png">
   <link rel="stylesheet" href="styles.css?v=1.5.0">
+  <link rel="stylesheet" href="healthcare.css?v=1.0.0">
 </head>
 <body>
   <header class="container nav">
@@ -26,86 +27,224 @@
   </header>
 
   <main class="healthcare-page">
-    <section class="page-hero">
+    <section class="healthcare-hero">
+      <div class="container healthcare-hero-grid">
+        <div class="healthcare-hero-copy">
+          <div class="eyebrow" data-i18n="medical">Medical imaging intelligence</div>
+          <h1 data-i18n="medicalTitle">AI Healthcare, powered by proven clinical imaging.</h1>
+          <p data-i18n="medicalText">Advanced AI medical imaging solutions for screening, diagnosis, intervention and research workflows.</p>
+          <a class="healthcare-text-link" href="#imaging" data-i18n="pathImaging">Imaging diagnosis</a>
+        </div>
+        <div class="healthcare-hero-visual">
+          <figure>
+            <img src="assets/products/visual-ct-lung.webp" alt="Lung CT analysis visualization">
+          </figure>
+          <div class="healthcare-hero-legend">
+            <span data-i18n="screeningDiagnosis">Screening &amp; diagnosis</span>
+            <span data-i18n="preoperativePlanning">Preoperative planning</span>
+            <span data-i18n="medicalAiInfrastructure">Medical AI infrastructure</span>
+          </div>
+          <p data-i18n="conceptVisualNotice">Image for reference only.</p>
+        </div>
+      </div>
+      <div class="container healthcare-availability" data-i18n="medNote">Product availability, indications and regulatory status vary by market. Please contact SCOVION for local information.</div>
+    </section>
+
+    <section class="healthcare-pathways" aria-label="AI Healthcare portfolio index">
+      <nav class="container healthcare-index">
+        <a href="#imaging"><span>01</span><strong data-i18n="pathImaging">Imaging diagnosis</strong><small data-i18n="pathImagingText">AI-assisted screening and image analysis</small></a>
+        <a href="#planning"><span>02</span><strong data-i18n="pathPlanning">Surgical planning</strong><small data-i18n="pathPlanningText">Anatomical 3D reconstruction</small></a>
+        <a href="#agents"><span>03</span><strong data-i18n="pathAgent">Medical AI Agent</strong><small data-i18n="pathAgentText">Documentation, quality and decision support</small></a>
+        <a href="#devices"><span>04</span><strong data-i18n="pathDevices">Intelligent devices</strong><small data-i18n="pathDevicesText">Integrated acquisition, analysis and reporting</small></a>
+        <a href="#prosthetics"><span>05</span><strong data-i18n="pathProsthetics">Intelligent prosthetics</strong><small data-i18n="pathProstheticsText">Intent-driven mobility assistance</small></a>
+        <a href="#specialty"><span>06</span><strong data-i18n="pathSpecialty">Specialty AI</strong><small data-i18n="pathSpecialtyText">Disease-focused diagnostic workflows</small></a>
+      </nav>
+    </section>
+
+    <section id="imaging" class="healthcare-chapter imaging-chapter">
       <div class="container">
-        <div class="kicker" data-i18n="medical">Medical imaging intelligence</div>
-        <h1 data-i18n="medicalTitle">AI Healthcare, powered by proven clinical imaging.</h1>
-        <p data-i18n="medicalText">Advanced AI medical imaging solutions for screening, diagnosis, intervention and research workflows.</p>
+        <div class="healthcare-chapter-head">
+          <div class="chapter-number">01</div>
+          <div><div class="eyebrow" data-i18n="screeningDiagnosis">Screening &amp; diagnosis</div><h2 data-i18n="imagingPortfolio">Imaging intelligence portfolio</h2></div>
+        </div>
+        <div class="imaging-portfolio-grid">
+          <article id="ct-lung" class="health-product-card health-product-feature">
+            <div class="health-product-media"><img src="assets/products/visual-ct-lung.webp" alt="Lung CT nodule analysis visualization" loading="lazy"></div>
+            <div class="health-product-copy">
+              <div class="health-product-modality" data-i18n="chestCT">Chest CT</div>
+              <h3>CT Lung</h3>
+              <p data-i18n="ctLungDesc">Detects small pulmonary nodules in chest CT images, compares nodule development and supports clinical decision-making.</p>
+              <div class="product-regulations"><span data-i18n="ceMarked">CE marked</span><span data-i18n="fdaCleared">FDA cleared</span><span data-i18n="ukcaMarked">UKCA marked</span><span data-i18n="nmpaApproved">NMPA approved</span></div>
+              <a class="product-detail-link" href="product.html?product=ct-lung" data-i18n="learnMore">View details →</a>
+            </div>
+          </article>
+
+          <article class="health-product-card health-product-compact">
+            <div class="health-product-media"><img src="assets/products/visual-ct-bone.webp" alt="Chest CT fracture assessment visualization" loading="lazy"></div>
+            <div class="health-product-copy">
+              <div class="health-product-modality" data-i18n="chestCT">Chest CT</div>
+              <h3>CT Bone</h3>
+              <p data-i18n="boneDesc">Identifies suspected chest fractures in chest CT images and provides timely alerts.</p>
+              <div class="product-regulations"><span data-i18n="ceMarked">CE marked</span><span data-i18n="ukcaMarked">UKCA marked</span><span data-i18n="nmpaApproved">NMPA approved</span></div>
+              <a class="product-detail-link" href="product.html?product=ct-bone" data-i18n="learnMore">View details →</a>
+            </div>
+          </article>
+
+          <article class="health-product-card health-product-compact">
+            <div class="health-product-media"><img src="assets/products/visual-ct-stroke.webp" alt="Brain CT haemorrhage assessment visualization" loading="lazy"></div>
+            <div class="health-product-copy">
+              <div class="health-product-modality" data-i18n="brainCT">Brain CT</div>
+              <h3>CT Stroke</h3>
+              <p data-i18n="strokeDesc">Rapidly identifies and alerts clinicians to suspected intracranial haemorrhage in brain CT images.</p>
+              <div class="product-regulations"><span data-i18n="ceMarked">CE marked</span><span data-i18n="fdaCleared">FDA cleared</span><span data-i18n="ukcaMarked">UKCA marked</span><span data-i18n="nmpaApproved">NMPA approved</span></div>
+              <a class="product-detail-link" href="product.html?product=ct-stroke" data-i18n="learnMore">View details →</a>
+            </div>
+          </article>
+
+          <article class="health-product-card health-product-compact">
+            <div class="health-product-media"><img src="assets/products/visual-dr-chest.webp" alt="Chest X-ray screening visualization" loading="lazy"></div>
+            <div class="health-product-copy">
+              <div class="health-product-modality" data-i18n="chestXray">Chest X-ray</div>
+              <h3>DR Chest</h3>
+              <p data-i18n="drChestDesc">Automatically analyses chest radiographs and assesses the probability of chest abnormalities, including tuberculosis.</p>
+              <div class="product-regulations"><span data-i18n="ceMarked">CE marked</span><span data-i18n="ukcaMarked">UKCA marked</span></div>
+              <a class="product-detail-link" href="product.html?product=dr-chest" data-i18n="learnMore">View details →</a>
+            </div>
+          </article>
+
+          <article class="health-product-card health-product-compact">
+            <div class="health-product-media"><img src="assets/products/visual-ct-coronary.webp" alt="Coronary CT analysis visualization" loading="lazy"></div>
+            <div class="health-product-copy">
+              <div class="health-product-modality" data-i18n="coronaryCT">Coronary CT</div>
+              <h3>CT Coronary</h3>
+              <p data-i18n="coronaryDesc">Segments and reconstructs coronary vessels from CT images and identifies coronary artery stenosis.</p>
+              <div class="product-regulations"><span data-i18n="ceMarked">CE marked</span><span data-i18n="ukcaMarked">UKCA marked</span><span data-i18n="nmpaApproved">NMPA approved</span></div>
+              <a class="product-detail-link" href="product.html?product=ct-coronary" data-i18n="learnMore">View details →</a>
+            </div>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section class="container section healthcare-pathways">
-      <div class="note" data-i18n="medNote">Product availability, indications and regulatory status vary by market. Please contact SCOVION for local information.</div>
-      <div class="medical-pathways">
-        <a href="#imaging">
-          <span>01</span>
-          <strong data-i18n="pathImaging">Imaging diagnosis</strong>
-          <small data-i18n="pathImagingText">AI-assisted screening and image analysis</small>
-        </a>
-        <a href="#planning">
-          <span>02</span>
-          <strong data-i18n="pathPlanning">Surgical planning</strong>
-          <small data-i18n="pathPlanningText">Anatomical 3D reconstruction</small>
-        </a>
-        <a href="#agents">
-          <span>03</span>
-          <strong data-i18n="pathAgent">Medical AI Agent</strong>
-          <small data-i18n="pathAgentText">Documentation, quality and decision support</small>
-        </a>
-        <a href="#devices">
-          <span>04</span>
-          <strong data-i18n="pathDevices">Intelligent devices</strong>
-          <small data-i18n="pathDevicesText">Integrated acquisition, analysis and reporting</small>
-        </a>
-        <a href="#prosthetics">
-          <span>05</span>
-          <strong data-i18n="pathProsthetics">Intelligent prosthetics</strong>
-          <small data-i18n="pathProstheticsText">Intent-driven mobility assistance</small>
-        </a>
-        <a href="#specialty">
-          <span>06</span>
-          <strong data-i18n="pathSpecialty">Specialty AI</strong>
-          <small data-i18n="pathSpecialtyText">Disease-focused diagnostic workflows</small>
-        </a>
+    <section id="planning" class="healthcare-chapter planning-chapter">
+      <div class="container">
+        <div class="healthcare-chapter-head">
+          <div class="chapter-number">02</div>
+          <div><div class="eyebrow" data-i18n="interventionTreatment">Intervention &amp; treatment</div><h2 data-i18n="planningSolutions">3D planning solutions</h2></div>
+        </div>
+        <div class="planning-product-grid">
+          <article class="planning-product-card">
+            <div class="health-product-media"><img src="assets/products/visual-thorax-planning.webp" alt="Thoracic anatomy planning visualization" loading="lazy"></div>
+            <div class="health-product-modality" data-i18n="chestCT">Chest CT</div>
+            <h3>Thorax Planning</h3>
+            <p data-i18n="thoraxDesc">Creates whole-lung 3D reconstructions from chest CT images to support anatomical assessment and thoracic surgical planning.</p>
+            <div class="product-regulations"><span>CE</span><span>FDA</span><span>UKCA</span><span>NMPA</span></div>
+            <a class="product-detail-link" href="product.html?product=thorax-planning" data-i18n="learnMore">View details →</a>
+          </article>
+          <article class="planning-product-card">
+            <div class="health-product-media"><img src="assets/products/visual-liver-planning.webp" alt="Liver anatomy planning visualization" loading="lazy"></div>
+            <div class="health-product-modality" data-i18n="abdominalCT">Abdominal CT</div>
+            <h3>Liver Planning</h3>
+            <p data-i18n="liverDesc">Creates liver 3D reconstructions from abdominal CT images to support anatomical assessment and surgical planning.</p>
+            <div class="product-regulations"><span>CE</span><span>FDA</span><span>UKCA</span><span>NMPA</span></div>
+            <a class="product-detail-link" href="product.html?product=liver-planning" data-i18n="learnMore">View details →</a>
+          </article>
+          <article class="planning-product-card">
+            <div class="health-product-media"><img src="assets/products/visual-urology-planning.webp" alt="Urology anatomy planning visualization" loading="lazy"></div>
+            <div class="health-product-modality" data-i18n="abdominalCT">Abdominal CT</div>
+            <h3>Urology Planning</h3>
+            <p data-i18n="urologyDesc">Creates kidney and urinary-system 3D reconstructions from abdominal CT images for anatomical assessment and surgical planning.</p>
+            <div class="product-regulations"><span>CE</span><span>FDA</span><span>UKCA</span><span>NMPA</span></div>
+            <a class="product-detail-link" href="product.html?product=urology-planning" data-i18n="learnMore">View details →</a>
+          </article>
+        </div>
       </div>
     </section>
 
-    <section id="agents" class="agent-band">
-      <div class="container section">
-        <div class="section-head"><div><div class="eyebrow" data-i18n="medicalAiInfrastructure">Medical AI infrastructure</div><h2 data-i18n="agentSectionHeading">Multimodal AI for hospital workflows</h2></div><p class="section-intro" data-i18n="agentSectionIntro">A locally deployed appliance supporting documentation, quality control, clinical assistance and health screening.</p></div>
-        <article class="product agent-preview">
-          <div class="agent-preview-media"><img src="assets/products/visual-medical-ai-appliance.webp" alt="Conceptual illustration of an on-premise medical AI appliance" loading="lazy"></div>
-          <div class="agent-preview-copy">
-            <h3 data-i18n="agentApplianceShort">Medical AI Agent</h3>
-            <div class="agent-feature-list"><span data-i18n="outpatientRecords">Outpatient records</span><span data-i18n="inpatientRecords">Inpatient records</span><span data-i18n="recordQuality">Medical record quality control</span><span data-i18n="healthScreening">Health screening</span></div>
-            <p data-i18n="agentPreviewDesc">Combines multimodal medical models with local computing to support voice documentation, structured record generation, content quality checks, decision support and integrated health reports.</p>
-            <a class="button" href="ai-agent.html" data-i18n="learnMore">View details →</a>
+    <section id="agents" class="healthcare-chapter healthcare-agent-chapter">
+      <div class="container healthcare-agent-grid">
+        <div class="healthcare-agent-media"><img src="assets/products/visual-medical-ai-appliance.webp" alt="On-premise medical AI appliance" loading="lazy"></div>
+        <div class="healthcare-agent-copy">
+          <div class="chapter-number">03</div>
+          <div class="eyebrow" data-i18n="medicalAiInfrastructure">Medical AI infrastructure</div>
+          <h2 data-i18n="agentSectionHeading">Multimodal AI for hospital workflows</h2>
+          <p data-i18n="agentPreviewDesc">Combines multimodal medical models with local computing to support voice documentation, structured record generation, content quality checks, decision support and integrated health reports.</p>
+          <div class="agent-feature-list"><span data-i18n="outpatientRecords">Outpatient records</span><span data-i18n="inpatientRecords">Inpatient records</span><span data-i18n="recordQuality">Medical record quality control</span><span data-i18n="healthScreening">Health screening</span></div>
+          <a class="product-detail-link" href="ai-agent.html" data-i18n="learnMore">View details →</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="devices" class="healthcare-chapter devices-chapter">
+      <div class="container">
+        <div class="healthcare-chapter-head">
+          <div class="chapter-number">04</div>
+          <div><div class="eyebrow" data-i18n="devicesEyebrow">Intelligent examination devices</div><h2 data-i18n="devicesHeading">From acquisition to report</h2></div>
+          <p class="section-intro" data-i18n="devicesIntro">Integrated hardware and AI software designed for efficient screening and follow-up.</p>
+        </div>
+        <div class="device-story-list">
+          <article class="device-story">
+            <div class="device-story-media"><img src="assets/products/visual-bone-age-device-v2.jpg" alt="AI micro-dose X-ray bone age analyser" loading="lazy"></div>
+            <div class="device-story-copy">
+              <div class="health-product-modality" data-i18n="nmpaApproved">NMPA approved</div>
+              <h3 data-i18n="boneAgeTitle">AI Micro-dose X-ray Bone Age Analyser</h3>
+              <p data-i18n="boneAgeDesc">Combines adaptive low-dose imaging, automatic focusing, AI bone-age assessment, adult-height prediction, follow-up tracking and structured growth reports.</p>
+              <a class="product-detail-link" href="product.html?product=bone-age-analyser" data-i18n="learnMore">View details →</a>
+            </div>
+          </article>
+          <article class="device-story device-story-reverse">
+            <div class="device-story-media"><img src="assets/products/visual-bone-density-device.webp" alt="Intelligent bone density analyser" loading="lazy"></div>
+            <div class="device-story-copy">
+              <div class="health-product-modality" data-i18n="boneDensityMeasurement">X-ray bone density</div>
+              <h3 data-i18n="boneDensityTitle">Intelligent Bone Density Analyser</h3>
+              <p data-i18n="boneDensityDesc">Uses intelligent radius and ulna segmentation for consistent measurement positioning, supports repeat follow-up at the same site and generates reports automatically.</p>
+              <div class="device-meta-line"><span data-i18n="exemptionFiling">Radiation-protection exemption filing</span><span data-i18n="structuredReport">Structured report</span></div>
+              <a class="product-detail-link" href="product.html?product=bone-density-analyser" data-i18n="learnMore">View details →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="prosthetics" class="healthcare-chapter prosthetics-chapter">
+      <div class="container">
+        <div class="healthcare-chapter-head">
+          <div class="chapter-number">05</div>
+          <div><div class="eyebrow" data-i18n="rehabProsthetics">Intelligent rehabilitation &amp; prosthetics</div><h2 data-i18n="prostheticsHeading">Restoring intuitive movement</h2></div>
+        </div>
+        <article class="prosthetic-story">
+          <div class="prosthetic-story-media"><img src="assets/products/visual-prosthetic-hand.webp" alt="Intelligent prosthetic hand" loading="lazy"></div>
+          <div class="prosthetic-story-copy">
+            <div class="eyebrow" data-i18n="assistiveTechnology">Assistive technology</div>
+            <h3 data-i18n="prostheticHand">Intelligent Prosthetic Hand</h3>
+            <p data-i18n="prostheticDesc">Detects neural and muscle electrical signals, recognises movement intent with AI algorithms, and translates that intent into independent and coordinated five-finger movements for upper-limb amputees.</p>
+            <div class="capability-row"><span data-i18n="fiveFingerControl">Independent five-finger control</span><span data-i18n="intentRecognition">Movement-intent recognition</span><span data-i18n="emgSensing">Multi-channel EMG sensing</span></div>
+            <div class="product-regulations"><span data-i18n="fda510k">FDA 510(k) cleared</span><span data-i18n="fdaClassI">FDA Class I registered</span><span data-i18n="qualityReport">National quality inspection report</span></div>
+            <a class="product-detail-link" href="product.html?product=prosthetic-hand" data-i18n="learnMore">View details →</a>
           </div>
         </article>
       </div>
     </section>
 
-    <section id="specialty" class="specialty-band">
-      <div class="container section">
-        <div class="section-head">
-          <div>
-            <div class="eyebrow" data-i18n="specialtyEyebrow">Specialty disease solutions</div>
-            <h2 data-i18n="specialtyHeading">Deeper intelligence for complex pathways</h2>
-          </div>
+    <section id="specialty" class="healthcare-chapter specialty-chapter">
+      <div class="container">
+        <div class="healthcare-chapter-head">
+          <div class="chapter-number">06</div>
+          <div><div class="eyebrow" data-i18n="specialtyEyebrow">Specialty disease solutions</div><h2 data-i18n="specialtyHeading">Deeper intelligence for complex pathways</h2></div>
           <p class="section-intro" data-i18n="specialtyIntro">Focused AI workflows for cardiovascular and neurovascular imaging.</p>
         </div>
-        <div class="product-grid">
-          <article class="product medical-product">
-            <div class="product-media"><img src="assets/products/visual-cardiovascular-analysis.webp" alt="Conceptual illustration of cardiovascular CT analysis" loading="lazy"></div>
+        <div class="specialty-product-grid">
+          <article class="specialty-product-card">
+            <div class="health-product-media"><img src="assets/products/visual-cardiovascular-analysis.webp" alt="Cardiovascular CT analysis visualization" loading="lazy"></div>
+            <div class="health-product-modality"><span data-i18n="nmpaApproved">NMPA approved</span> · <span data-i18n="coronaryCTA">Coronary CTA</span></div>
             <h3 data-i18n="cardiovascularAiTitle">Cardiovascular AI Solution</h3>
-            <div class="approval-row"><span class="approval" data-i18n="nmpaApproved">NMPA approved</span><span class="approval" data-i18n="coronaryCTA">Coronary CTA</span><span class="approval">CT-FFR</span><span class="approval" data-i18n="calciumScoring">Calcium scoring</span></div>
             <p data-i18n="cardiovascularAiDesc">Automates coronary reconstruction, vessel naming, plaque and stenosis analysis, calcium scoring, CT-FFR assessment and structured reporting.</p>
             <a class="product-detail-link" href="product.html?product=cardiovascular-ai" data-i18n="learnMore">View details →</a>
           </article>
-          <article class="product medical-product">
-            <div class="product-media"><img src="assets/products/visual-head-neck-vascular.webp" alt="Conceptual illustration of head and neck vascular analysis" loading="lazy"></div>
+          <article class="specialty-product-card">
+            <div class="health-product-media"><img src="assets/products/visual-head-neck-vascular.webp" alt="Head and neck vascular analysis visualization" loading="lazy"></div>
+            <div class="health-product-modality"><span data-i18n="nmpaApproved">NMPA approved</span> · <span data-i18n="headNeckCTA">Head &amp; neck CTA</span></div>
             <h3 data-i18n="headNeckAiTitle">Head &amp; Neck Vascular AI</h3>
-            <div class="approval-row"><span class="approval" data-i18n="nmpaApproved">NMPA approved</span><span class="approval" data-i18n="headNeckCTA">Head &amp; neck CTA</span><span class="approval" data-i18n="aneurysmDetection">Aneurysm detection</span><span class="approval" data-i18n="perfusionAnalysis">Perfusion analysis</span></div>
             <p data-i18n="headNeckAiDesc">Supports automated vessel extraction, plaque and stenosis assessment, aneurysm detection, cerebral perfusion analysis and structured reports.</p>
             <a class="product-detail-link" href="product.html?product=head-neck-ai" data-i18n="learnMore">View details →</a>
           </article>
@@ -113,210 +252,8 @@
       </div>
     </section>
 
-    <section id="devices" class="container section">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow" data-i18n="devicesEyebrow">Intelligent examination devices</div>
-          <h2 data-i18n="devicesHeading">From acquisition to report</h2>
-        </div>
-        <p class="section-intro" data-i18n="devicesIntro">Integrated hardware and AI software designed for efficient screening and follow-up.</p>
-      </div>
-      <div class="product-grid">
-        <article class="product medical-product">
-          <div class="product-media dual-media">
-            <div class="hardware"><img src="assets/products/visual-bone-age-device-v2.jpg" alt="AI micro-dose X-ray bone age analyser" loading="lazy"></div>
-            <div class="software"><img src="assets/products/visual-bone-age-analysis.webp" alt="Conceptual illustration of bone age analysis" loading="lazy"></div>
-          </div>
-          <h3 data-i18n="boneAgeTitle">AI Micro-dose X-ray Bone Age Analyser</h3>
-          <div class="approval-row"><span class="approval" data-i18n="nmpaApproved">NMPA approved</span></div>
-          <p data-i18n="boneAgeDesc">Combines adaptive low-dose imaging, automatic focusing, AI bone-age assessment, adult-height prediction, follow-up tracking and structured growth reports.</p>
-          <a class="product-detail-link" href="product.html?product=bone-age-analyser" data-i18n="learnMore">View details →</a>
-        </article>
-        <article class="product medical-product">
-          <div class="product-media dual-media">
-            <div class="hardware"><img src="assets/products/visual-bone-density-device.webp" alt="Conceptual bone density assessment device" loading="lazy"></div>
-            <div class="software"><img src="assets/products/visual-bone-density-analysis.webp" alt="Conceptual illustration of bone density analysis" loading="lazy"></div>
-          </div>
-          <h3 data-i18n="boneDensityTitle">Intelligent Bone Density Analyser</h3>
-          <div class="approval-row"><span class="approval" data-i18n="boneDensityMeasurement">X-ray bone density</span><span class="approval" data-i18n="exemptionFiling">Radiation-protection exemption filing</span><span class="approval" data-i18n="structuredReport">Structured report</span></div>
-          <p data-i18n="boneDensityDesc">Uses intelligent radius and ulna segmentation for consistent measurement positioning, supports repeat follow-up at the same site and generates reports automatically.</p>
-          <a class="product-detail-link" href="product.html?product=bone-density-analyser" data-i18n="learnMore">View details →</a>
-        </article>
-      </div>
-    </section>
-
-    <section id="imaging" class="container section compact-section">
-      <div class="section-head" style="margin-top:55px">
-        <div>
-          <div class="eyebrow" data-i18n="screeningDiagnosis">Screening &amp; diagnosis</div>
-          <h2 data-i18n="imagingPortfolio">Imaging intelligence portfolio</h2>
-        </div>
-      </div>
-
-      <div class="product-grid">
-        <article id="ct-lung" class="product medical-product" data-regulatory-tier="international">
-          <div class="product-media"><img src="assets/products/visual-ct-lung.webp" alt="Conceptual illustration of lung CT nodule detection" loading="lazy"></div>
-          <h3>CT Lung</h3>
-          <div class="approval-row">
-            <span class="approval" data-i18n="chestCT">Chest CT</span>
-            <span class="approval" data-i18n="ceMarked">CE marked</span>
-            <span class="approval" data-i18n="fdaCleared">FDA cleared</span>
-            <span class="approval" data-i18n="nmpaApproved">NMPA approved</span>
-            <span class="approval" data-i18n="ukcaMarked">UKCA marked</span>
-          </div>
-          <p data-i18n="ctLungDesc">Detects small pulmonary nodules in chest CT images, compares nodule development and supports clinical decision-making.</p>
-          <a class="product-detail-link" href="product.html?product=ct-lung" data-i18n="learnMore">View details →</a>
-        </article>
-
-        <article class="product medical-product" data-regulatory-tier="international">
-          <div class="product-media"><img src="assets/products/visual-ct-bone.webp" alt="Conceptual illustration of CT fracture assessment" loading="lazy"></div>
-          <h3>CT Bone</h3>
-          <div class="approval-row">
-            <span class="approval" data-i18n="chestCT">Chest CT</span>
-            <span class="approval" data-i18n="ceMarked">CE marked</span>
-            <span class="approval" data-i18n="nmpaApproved">NMPA approved</span>
-            <span class="approval" data-i18n="ukcaMarked">UKCA marked</span>
-          </div>
-          <p data-i18n="boneDesc">Identifies suspected chest fractures in chest CT images and provides timely alerts.</p>
-        </article>
-
-        <article class="product medical-product" data-regulatory-tier="international">
-          <div class="product-media"><img src="assets/products/visual-ct-stroke.webp" alt="Conceptual illustration of stroke CT assessment" loading="lazy"></div>
-          <h3>CT Stroke</h3>
-          <div class="approval-row">
-            <span class="approval" data-i18n="brainCT">Brain CT</span>
-            <span class="approval" data-i18n="ceMarked">CE marked</span>
-            <span class="approval" data-i18n="fdaCleared">FDA cleared</span>
-            <span class="approval" data-i18n="nmpaApproved">NMPA approved</span>
-            <span class="approval" data-i18n="ukcaMarked">UKCA marked</span>
-          </div>
-          <p data-i18n="strokeDesc">Rapidly identifies and alerts clinicians to suspected intracranial haemorrhage in brain CT images.</p>
-        </article>
-
-        <article class="product medical-product" data-regulatory-tier="international">
-          <div class="product-media"><img src="assets/products/visual-dr-chest.webp" alt="Conceptual illustration of chest X-ray screening" loading="lazy"></div>
-          <h3>DR Chest</h3>
-          <div class="approval-row">
-            <span class="approval" data-i18n="chestXray">Chest X-ray</span>
-            <span class="approval" data-i18n="ceMarked">CE marked</span>
-            <span class="approval" data-i18n="ukcaMarked">UKCA marked</span>
-          </div>
-          <p data-i18n="drChestDesc">Automatically analyses chest radiographs and assesses the probability of chest abnormalities, including tuberculosis.</p>
-          <a class="product-detail-link" href="product.html?product=dr-chest" data-i18n="learnMore">View details →</a>
-        </article>
-
-        <article class="product medical-product" data-regulatory-tier="international">
-          <div class="product-media"><img src="assets/products/visual-ct-coronary.webp" alt="Conceptual illustration of coronary CT analysis" loading="lazy"></div>
-          <h3>CT Coronary</h3>
-          <div class="approval-row">
-            <span class="approval" data-i18n="coronaryCT">Coronary CT</span>
-            <span class="approval" data-i18n="ceMarked">CE marked</span>
-            <span class="approval" data-i18n="nmpaApproved">NMPA approved</span>
-            <span class="approval" data-i18n="ukcaMarked">UKCA marked</span>
-          </div>
-          <p data-i18n="coronaryDesc">Segments and reconstructs coronary vessels from CT images and identifies coronary artery stenosis.</p>
-        </article>
-      </div>
-    </section>
-
-    <section id="planning" class="container section" style="padding-top:0">
-      <div class="section-head">
-        <div>
-          <div class="eyebrow" data-i18n="interventionTreatment">Intervention &amp; treatment</div>
-          <h2 data-i18n="planningSolutions">3D planning solutions</h2>
-        </div>
-      </div>
-
-      <div class="product-grid">
-        <article class="product medical-product">
-          <div class="product-media"><img src="assets/products/visual-thorax-planning.webp" alt="Conceptual illustration of thoracic surgical planning" loading="lazy"></div>
-          <h3>Thorax Planning</h3>
-          <div class="approval-row">
-            <span class="approval" data-i18n="chestCT">Chest CT</span>
-            <span class="approval" data-i18n="ceMarked">CE marked</span>
-            <span class="approval" data-i18n="fdaCleared">FDA cleared</span>
-            <span class="approval" data-i18n="ukcaMarked">UKCA marked</span>
-            <span class="approval" data-i18n="nmpaApproved">NMPA approved</span>
-            <span class="approval" data-i18n="reconstruction">3D reconstruction</span>
-            <span class="approval" data-i18n="preoperativePlanning">Preoperative planning</span>
-          </div>
-          <p data-i18n="thoraxDesc">Creates whole-lung 3D reconstructions from chest CT images to support anatomical assessment and thoracic surgical planning.</p>
-          <a class="product-detail-link" href="product.html?product=thorax-planning" data-i18n="learnMore">View details →</a>
-        </article>
-
-        <article class="product medical-product">
-          <div class="product-media"><img src="assets/products/visual-liver-planning.webp" alt="Conceptual illustration of liver surgical planning" loading="lazy"></div>
-          <h3>Liver Planning</h3>
-          <div class="approval-row">
-            <span class="approval" data-i18n="abdominalCT">Abdominal CT</span>
-            <span class="approval" data-i18n="ceMarked">CE marked</span>
-            <span class="approval" data-i18n="fdaCleared">FDA cleared</span>
-            <span class="approval" data-i18n="ukcaMarked">UKCA marked</span>
-            <span class="approval" data-i18n="nmpaApproved">NMPA approved</span>
-            <span class="approval" data-i18n="reconstruction">3D reconstruction</span>
-            <span class="approval" data-i18n="preoperativePlanning">Preoperative planning</span>
-          </div>
-          <p data-i18n="liverDesc">Creates liver 3D reconstructions from abdominal CT images to support anatomical assessment and surgical planning.</p>
-          <a class="product-detail-link" href="product.html?product=liver-planning" data-i18n="learnMore">View details →</a>
-        </article>
-
-        <article class="product medical-product">
-          <div class="product-media"><img src="assets/products/visual-urology-planning.webp" alt="Conceptual illustration of urology surgical planning" loading="lazy"></div>
-          <h3>Urology Planning</h3>
-          <div class="approval-row">
-            <span class="approval" data-i18n="abdominalCT">Abdominal CT</span>
-            <span class="approval" data-i18n="ceMarked">CE marked</span>
-            <span class="approval" data-i18n="fdaCleared">FDA cleared</span>
-            <span class="approval" data-i18n="ukcaMarked">UKCA marked</span>
-            <span class="approval" data-i18n="nmpaApproved">NMPA approved</span>
-            <span class="approval" data-i18n="reconstruction">3D reconstruction</span>
-            <span class="approval" data-i18n="preoperativePlanning">Preoperative planning</span>
-          </div>
-          <p data-i18n="urologyDesc">Creates kidney and urinary-system 3D reconstructions from abdominal CT images for anatomical assessment and surgical planning.</p>
-          <a class="product-detail-link" href="product.html?product=urology-planning" data-i18n="learnMore">View details →</a>
-        </article>
-      </div>
-    </section>
-
-    <section id="prosthetics" class="prosthetics-band">
-      <div class="container section">
-        <div class="section-head">
-          <div>
-            <div class="eyebrow" data-i18n="rehabProsthetics">Intelligent rehabilitation &amp; prosthetics</div>
-            <h2 data-i18n="prostheticsHeading">Restoring intuitive movement</h2>
-          </div>
-          <p class="section-intro" data-i18n="prostheticsIntro">Assistive technology that translates the user's movement intent into responsive prosthetic control.</p>
-        </div>
-
-        <article class="product prosthetic-product">
-          <div class="product-media prosthetic-media">
-            <img src="assets/products/visual-prosthetic-hand.webp" alt="Conceptual illustration of an intelligent prosthetic hand" loading="lazy">
-          </div>
-          <div class="prosthetic-copy">
-            <div class="eyebrow" data-i18n="assistiveTechnology">Assistive technology</div>
-            <h3 data-i18n="prostheticHand">Intelligent Prosthetic Hand</h3>
-            <div class="approval-row">
-              <span class="approval" data-i18n="fda510k">FDA 510(k) cleared</span>
-              <span class="approval" data-i18n="fdaClassI">FDA Class I registered</span>
-              <span class="approval" data-i18n="qualityReport">National quality inspection report</span>
-            </div>
-            <p data-i18n="prostheticDesc">Detects neural and muscle electrical signals, recognises movement intent with AI algorithms, and translates that intent into independent and coordinated five-finger movements for upper-limb amputees.</p>
-            <div class="capability-row">
-              <span data-i18n="fiveFingerControl">Independent five-finger control</span>
-              <span data-i18n="intentRecognition">Movement-intent recognition</span>
-              <span data-i18n="emgSensing">Multi-channel EMG sensing</span>
-            </div>
-            <a class="product-detail-link" href="product.html?product=prosthetic-hand" data-i18n="learnMore">View details →</a>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <div class="container cta">
-      <div>
-        <div class="eyebrow">AI HEALTHCARE</div>
-        <h2 data-i18n="medicalCta">Explore the right clinical workflow.</h2>
-      </div>
+    <div class="container healthcare-cta">
+      <div><div class="eyebrow">AI HEALTHCARE</div><h2 data-i18n="medicalCta">Explore the right clinical workflow.</h2></div>
       <a class="button" href="contact.html" data-i18n="ctaButton">Start a conversation</a>
     </div>
   </main>
@@ -325,7 +262,7 @@
     <p>© <span data-year></span> SCOVION. All rights reserved.</p>
     <p data-i18n="availabilityFooter">Product availability varies by market.</p>
   </footer>
-  <script src="main.js?v=1.5.0"></script>
+  <script src="main.js?v=1.5.1"></script>
   <script src="analytics.js?v=1.0.1"></script>
 </body>
 </html>

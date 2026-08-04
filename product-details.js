@@ -248,7 +248,7 @@
             ['3-in-1','Morphology, functional assessment and structured output']
           ],
           capHeading: 'Coronary CTA from automatic reconstruction to functional assessment',
-          capIntro: 'A zero-click pathway turns CT images into coronary anatomy, plaque and stenosis analysis, functional indicators, films and reports.',
+          capIntro: 'The workflow brings coronary anatomy, plaque and stenosis analysis, functional indicators, films and reports into one review path.',
           caps: [
             ['Automated CTA reconstruction','Builds cardiac 3D views, coronary trees and 2D CPR, MPR and MIP series, with vessel naming and support for stents, grafts and myocardial bridges.'],
             ['Plaque and stenosis analysis','Segments the lumen, identifies calcified, non-calcified and mixed plaque, and quantifies the degree of coronary narrowing.'],
@@ -277,7 +277,7 @@
             ['三合一','形态学、功能学与结构化输出']
           ],
           capHeading: '从冠脉CTA自动重建延伸到功能学评估',
-          capIntro: '零键后处理链路将CT影像转化为冠脉解剖、斑块与狭窄分析、功能指标、胶片和报告。',
+          capIntro: '将冠脉解剖、斑块与狭窄分析、功能指标、胶片和报告整合到同一复核流程。',
           caps: [
             ['冠脉CTA自动重建','生成心脏三维图、冠脉树及CPR、MPR、MIP等二维序列，自动命名血管，并支持支架、搭桥血管和心肌桥显示。'],
             ['斑块与狭窄分析','分割管腔，识别钙化、非钙化及混合斑块，并量化评估冠状动脉狭窄程度。'],
@@ -306,7 +306,7 @@
             ['三合一','形態學、功能學與結構化輸出']
           ],
           capHeading: '從冠脈CTA自動重建延伸到功能學評估',
-          capIntro: '零鍵後處理鏈路將CT影像轉化為冠脈解剖、斑塊與狹窄分析、功能指標、膠片和報告。',
+          capIntro: '將冠脈解剖、斑塊與狹窄分析、功能指標、膠片和報告整合到同一複核流程。',
           caps: [
             ['冠脈CTA自動重建','產生心臟三維圖、冠脈樹及CPR、MPR、MIP等二維序列，自動命名血管，並支援支架、繞道血管和心肌橋顯示。'],
             ['斑塊與狹窄分析','分割管腔，識別鈣化、非鈣化及混合斑塊，並量化評估冠狀動脈狹窄程度。'],
@@ -335,7 +335,7 @@
             ['3-dalam-1','Morfologi, fungsi dan output berstruktur']
           ],
           capHeading: 'Daripada pembinaan semula CTA koronari kepada penilaian fungsi',
-          capIntro: 'Laluan tanpa klik menukar imej CT kepada anatomi koronari, analisis plak dan stenosis, petunjuk fungsi, filem dan laporan.',
+          capIntro: 'Aliran ini menyatukan anatomi koronari, analisis plak dan stenosis, petunjuk fungsi, filem serta laporan dalam satu laluan semakan.',
           caps: [
             ['Pembinaan semula CTA automatik','Membina pandangan 3D jantung, pokok koronari serta siri CPR, MPR dan MIP dengan penamaan salur dan sokongan untuk stent, graft dan myocardial bridge.'],
             ['Analisis plak dan stenosis','Membahagi lumen, mengenal pasti plak berkalsium, tidak berkalsium dan campuran, serta mengukur tahap penyempitan.'],
@@ -364,7 +364,7 @@
             ['3 ใน 1','สัณฐานวิทยา การทำงาน และผลลัพธ์แบบมีโครงสร้าง']
           ],
           capHeading: 'จากการสร้างภาพ Coronary CTA อัตโนมัติสู่การประเมินการทำงาน',
-          capIntro: 'ขั้นตอนแบบไม่ต้องคลิกเปลี่ยนภาพ CT เป็นกายวิภาคหลอดเลือดหัวใจ การวิเคราะห์คราบพลัคและการตีบ ตัวชี้วัดการทำงาน ฟิล์ม และรายงาน',
+          capIntro: 'ขั้นตอนนี้รวมกายวิภาคหลอดเลือดหัวใจ การวิเคราะห์คราบพลัคและการตีบ ตัวชี้วัดการทำงาน ฟิล์ม และรายงานไว้ในเส้นทางการทบทวนเดียว',
           caps: [
             ['สร้างภาพ CTA อัตโนมัติ','สร้างภาพหัวใจ 3 มิติ ต้นไม้หลอดเลือด และชุด CPR, MPR, MIP พร้อมตั้งชื่อหลอดเลือดและรองรับ stent, graft และ myocardial bridge'],
             ['วิเคราะห์คราบพลัคและการตีบ','แบ่งส่วนลูเมน ระบุคราบพลัคชนิดมีหินปูน ไม่มีหินปูน และชนิดผสม พร้อมวัดระดับการตีบ'],
@@ -879,8 +879,484 @@
       }
     },
 
+    'ct-bone': {
+      title: 'CT Bone',
+      categoryKey: 'screeningDiagnosis',
+      summaryKey: 'boneDesc',
+      images: ['assets/products/visual-ct-bone.webp'],
+      focusImage: 'assets/products/visual-ct-bone.webp',
+      tags: [{key:'chestCT'},{key:'ceMarked'},{key:'ukcaMarked'},{key:'nmpaApproved'}],
+      accent: '#8fd8ff',
+      glow: '#58bdf33a',
+      details: {
+        en: {
+          facts: [
+            ['Chest CT','Source examination'],
+            ['4 regions','Ribs, scapulae, clavicles and sternum'],
+            ['VR review','Volumetric context for marked findings']
+          ],
+          capHeading: 'Chest-fracture review across the thoracic skeleton',
+          capIntro: 'AI-assisted review brings suspected fractures from multiple thoracic bones into one focused reading pathway.',
+          caps: [
+            ['Multi-region analysis','Reviews the ribs, scapulae, clavicles and sternum on chest CT rather than limiting the search to one bone group.'],
+            ['Suspected fracture localisation','Marks locations that may represent fractures so the reader can return directly to the relevant source images.'],
+            ['Finding characterisation','Organises the location and visible characteristics of each suspected finding for clinician review.'],
+            ['Volumetric review','Adds VR visualisation to help inspect the distribution and spatial context of marked findings alongside the source CT.']
+          ],
+          flowHeading: 'From chest CT to a focused fracture review',
+          flowIntro: 'The workflow surfaces suspected findings while keeping confirmation with the clinician and the original examination.',
+          steps: [
+            ['Receive the chest CT','The examination enters the analysis workflow without requiring a separate bone-specific acquisition.'],
+            ['Analyse and organise','The system reviews the supported thoracic bones, marks suspected fractures and groups the findings for review.'],
+            ['Confirm on source images','The clinician checks each mark on the original slices and can use VR visualisation for additional spatial context.']
+          ],
+          highlightHeading: 'A clearer way to review distributed chest-bone findings',
+          highlightIntro: 'Coverage across several thoracic structures helps readers organise a search task that can span many images and anatomical regions.',
+          highlights: [
+            ['Broader thoracic coverage','Ribs, scapulae, clavicles and sternum are reviewed within the same chest CT pathway.'],
+            ['Focused case reading','Localised marks help direct attention to relevant areas while preserving review of the full examination.'],
+            ['Reviewable visual context','Source-image confirmation and VR viewing provide complementary perspectives for clinician assessment.']
+          ]
+        },
+        'zh-cn': {
+          facts: [
+            ['胸部CT','来源检查'],
+            ['4个区域','肋骨、肩胛骨、锁骨与胸骨'],
+            ['VR复核','以容积视图呈现标记位置的空间关系']
+          ],
+          capHeading: '覆盖胸廓多处骨性结构的骨折复核',
+          capIntro: 'AI辅助分析将胸廓不同骨性结构中的疑似骨折集中到一条清晰的阅片路径中。',
+          caps: [
+            ['多区域分析','在胸部CT中复核肋骨、肩胛骨、锁骨与胸骨，而不是将检索范围局限于单一骨群。'],
+            ['疑似骨折定位','标记可能存在骨折的位置，便于阅片人员直接返回相关原始图像进行核查。'],
+            ['征象整理','整理每处疑似发现的位置与可见特征，供临床人员进一步复核。'],
+            ['容积视图复核','通过VR可视化辅助查看标记发现的分布与空间关系，并与原始CT图像结合复核。']
+          ],
+          flowHeading: '从胸部CT到聚焦的骨折复核',
+          flowIntro: '系统主动呈现疑似发现，同时由临床人员依据原始检查完成确认。',
+          steps: [
+            ['接收胸部CT','检查进入分析流程，无需额外进行专门的骨骼影像采集。'],
+            ['分析并整理','系统复核支持的胸廓骨性结构，标记疑似骨折并整理待复核发现。'],
+            ['回到原图确认','临床人员在原始层面图像中逐项核查，并可借助VR视图理解空间关系。']
+          ],
+          highlightHeading: '更清晰地复核分散于胸廓各处的骨折征象',
+          highlightIntro: '对多种胸廓骨性结构的覆盖，有助于组织跨越大量图像与多个解剖区域的检索任务。',
+          highlights: [
+            ['覆盖多种胸廓骨骼','肋骨、肩胛骨、锁骨与胸骨可在同一胸部CT流程中复核。'],
+            ['聚焦病例阅片','定位标记帮助将注意力引向相关区域，同时保留对完整检查的审阅。'],
+            ['可核查的视觉信息','原始图像确认与VR查看提供互补视角，支持临床人员进行判断。']
+          ]
+        },
+        'zh-tw': {
+          facts: [
+            ['胸部CT','來源檢查'],
+            ['4個區域','肋骨、肩胛骨、鎖骨與胸骨'],
+            ['VR複核','以容積視圖呈現標記位置的空間關係']
+          ],
+          capHeading: '涵蓋胸廓多處骨性結構的骨折複核',
+          capIntro: 'AI輔助分析將胸廓不同骨性結構中的疑似骨折集中到一條清晰的閱片路徑中。',
+          caps: [
+            ['多區域分析','在胸部CT中複核肋骨、肩胛骨、鎖骨與胸骨，而不是將搜尋範圍侷限於單一骨群。'],
+            ['疑似骨折定位','標記可能存在骨折的位置，方便閱片人員直接返回相關原始影像進行核查。'],
+            ['徵象整理','整理每處疑似發現的位置與可見特徵，供臨床人員進一步複核。'],
+            ['容積視圖複核','透過VR視覺化協助查看標記發現的分布與空間關係，並與原始CT影像結合複核。']
+          ],
+          flowHeading: '從胸部CT到聚焦的骨折複核',
+          flowIntro: '系統主動呈現疑似發現，同時由臨床人員依據原始檢查完成確認。',
+          steps: [
+            ['接收胸部CT','檢查進入分析流程，無需額外進行專門的骨骼影像採集。'],
+            ['分析並整理','系統複核支援的胸廓骨性結構，標記疑似骨折並整理待複核發現。'],
+            ['返回原圖確認','臨床人員在原始切面影像中逐項核查，並可運用VR視圖理解空間關係。']
+          ],
+          highlightHeading: '更清晰地複核分散於胸廓各處的骨折徵象',
+          highlightIntro: '對多種胸廓骨性結構的涵蓋，有助於組織跨越大量影像與多個解剖區域的搜尋任務。',
+          highlights: [
+            ['涵蓋多種胸廓骨骼','肋骨、肩胛骨、鎖骨與胸骨可在同一胸部CT流程中複核。'],
+            ['聚焦病例閱片','定位標記協助將注意力引向相關區域，同時保留對完整檢查的審閱。'],
+            ['可核查的視覺資訊','原始影像確認與VR查看提供互補視角，支援臨床人員進行判斷。']
+          ]
+        },
+        ms: {
+          facts: [
+            ['CT dada','Pemeriksaan sumber'],
+            ['4 kawasan','Rusuk, skapula, klavikel dan sternum'],
+            ['Semakan VR','Konteks volumetrik bagi penemuan bertanda']
+          ],
+          capHeading: 'Semakan patah tulang merentas rangka toraks',
+          capIntro: 'Semakan berbantu AI menghimpunkan patah tulang yang disyaki pada beberapa tulang toraks dalam satu aliran pembacaan yang tertumpu.',
+          caps: [
+            ['Analisis pelbagai kawasan','Menyemak rusuk, skapula, klavikel dan sternum pada CT dada tanpa mengehadkan carian kepada satu kumpulan tulang.'],
+            ['Penyetempatan patah tulang disyaki','Menandakan lokasi yang mungkin menunjukkan patah tulang supaya pembaca boleh kembali terus kepada imej sumber berkaitan.'],
+            ['Pencirian penemuan','Menyusun lokasi dan ciri yang kelihatan bagi setiap penemuan disyaki untuk semakan klinikal.'],
+            ['Semakan volumetrik','Menambah visualisasi VR untuk membantu menilai taburan dan konteks ruang penemuan bertanda bersama CT sumber.']
+          ],
+          flowHeading: 'Daripada CT dada kepada semakan patah tulang tertumpu',
+          flowIntro: 'Aliran ini menyerlahkan penemuan disyaki sambil mengekalkan pengesahan oleh klinisian berdasarkan pemeriksaan asal.',
+          steps: [
+            ['Terima CT dada','Pemeriksaan memasuki aliran analisis tanpa memerlukan pemerolehan khusus tulang yang berasingan.'],
+            ['Analisis dan susun','Sistem menyemak tulang toraks yang disokong, menandakan patah tulang disyaki dan menyusun penemuan untuk semakan.'],
+            ['Sahkan pada imej sumber','Klinisian memeriksa setiap tanda pada hirisan asal dan boleh menggunakan VR untuk konteks ruang tambahan.']
+          ],
+          highlightHeading: 'Cara lebih jelas untuk menyemak penemuan tulang dada yang berselerak',
+          highlightIntro: 'Liputan beberapa struktur toraks membantu pembaca menyusun tugas carian yang merentasi banyak imej dan kawasan anatomi.',
+          highlights: [
+            ['Liputan toraks lebih luas','Rusuk, skapula, klavikel dan sternum disemak dalam aliran CT dada yang sama.'],
+            ['Pembacaan kes tertumpu','Tanda setempat menghalakan perhatian ke kawasan berkaitan sambil mengekalkan semakan keseluruhan pemeriksaan.'],
+            ['Konteks visual boleh disemak','Pengesahan imej sumber dan pandangan VR memberi perspektif saling melengkapi untuk penilaian klinikal.']
+          ]
+        },
+        th: {
+          facts: [
+            ['CT ทรวงอก','การตรวจต้นทาง'],
+            ['4 บริเวณ','ซี่โครง สะบัก ไหปลาร้า และกระดูกอก'],
+            ['การทบทวน VR','บริบทเชิงปริมาตรของจุดที่ทำเครื่องหมาย']
+          ],
+          capHeading: 'ทบทวนกระดูกหักครอบคลุมโครงกระดูกทรวงอก',
+          capIntro: 'การวิเคราะห์ด้วย AI รวบรวมจุดที่สงสัยว่ากระดูกหักในกระดูกทรวงอกหลายส่วนไว้ในขั้นตอนการอ่านที่ชัดเจน',
+          caps: [
+            ['วิเคราะห์หลายบริเวณ','ทบทวนซี่โครง สะบัก ไหปลาร้า และกระดูกอกจาก CT ทรวงอก โดยไม่จำกัดการค้นหาไว้ที่กระดูกกลุ่มเดียว'],
+            ['ระบุตำแหน่งที่สงสัยว่าหัก','ทำเครื่องหมายตำแหน่งที่อาจเป็นกระดูกหัก เพื่อให้ผู้อ่านกลับไปยังภาพต้นทางที่เกี่ยวข้องได้โดยตรง'],
+            ['จัดลักษณะสิ่งที่พบ','จัดระเบียบตำแหน่งและลักษณะที่มองเห็นของแต่ละจุดที่สงสัย เพื่อให้บุคลากรทางคลินิกทบทวน'],
+            ['ทบทวนเชิงปริมาตร','เพิ่มภาพ VR เพื่อช่วยดูการกระจายและความสัมพันธ์เชิงพื้นที่ของจุดที่ทำเครื่องหมายควบคู่กับ CT ต้นทาง']
+          ],
+          flowHeading: 'จาก CT ทรวงอกสู่การทบทวนกระดูกหักแบบเจาะจง',
+          flowIntro: 'ระบบแสดงจุดที่สงสัย ขณะที่การยืนยันยังอยู่กับบุคลากรทางคลินิกและการตรวจต้นฉบับ',
+          steps: [
+            ['รับ CT ทรวงอก','การตรวจเข้าสู่ขั้นตอนวิเคราะห์โดยไม่ต้องถ่ายภาพเฉพาะกระดูกเพิ่มเติม'],
+            ['วิเคราะห์และจัดระเบียบ','ระบบทบทวนกระดูกทรวงอกที่รองรับ ทำเครื่องหมายจุดที่สงสัยว่าหัก และจัดรายการเพื่อทบทวน'],
+            ['ยืนยันบนภาพต้นทาง','บุคลากรทางคลินิกตรวจแต่ละจุดบนภาพตัดต้นฉบับ และใช้ VR เพื่อดูบริบทเชิงพื้นที่เพิ่มเติมได้']
+          ],
+          highlightHeading: 'ทบทวนจุดกระดูกทรวงอกที่กระจายอยู่ได้ชัดเจนขึ้น',
+          highlightIntro: 'การครอบคลุมโครงสร้างทรวงอกหลายส่วนช่วยจัดระบบงานค้นหาที่ต้องดูภาพจำนวนมากและหลายบริเวณกายวิภาค',
+          highlights: [
+            ['ครอบคลุมกระดูกทรวงอกกว้างขึ้น','ทบทวนซี่โครง สะบัก ไหปลาร้า และกระดูกอกในขั้นตอน CT ทรวงอกเดียวกัน'],
+            ['อ่านเคสอย่างมีจุดเน้น','เครื่องหมายตำแหน่งช่วยนำความสนใจไปยังบริเวณที่เกี่ยวข้อง โดยยังคงการทบทวนภาพตรวจทั้งหมด'],
+            ['บริบทภาพที่ตรวจสอบได้','การยืนยันบนภาพต้นทางและมุมมอง VR ให้ข้อมูลเสริมกันสำหรับการประเมินทางคลินิก']
+          ]
+        }
+      }
+    },
+
+    'ct-stroke': {
+      title: 'CT Stroke',
+      categoryKey: 'screeningDiagnosis',
+      summaryKey: 'strokeDesc',
+      images: ['assets/products/visual-ct-stroke.webp'],
+      focusImage: 'assets/products/visual-ct-stroke.webp',
+      tags: [{key:'brainCT'},{key:'ceMarked'},{key:'fdaCleared'},{key:'ukcaMarked'},{key:'nmpaApproved'}],
+      accent: '#b6a7ff',
+      glow: '#7d67ee38',
+      details: {
+        en: {
+          facts: [
+            ['NCCT','Non-contrast brain CT pathway'],
+            ['ICH','Suspected intracranial haemorrhage'],
+            ['Priority alert','Supports time-sensitive case review']
+          ],
+          capHeading: 'Focused triage for suspected intracranial haemorrhage',
+          capIntro: 'The product analyses non-contrast brain CT and brings suspected haemorrhage cases forward for clinician review.',
+          caps: [
+            ['NCCT analysis','Processes non-contrast brain CT examinations within a clearly defined haemorrhage-triage pathway.'],
+            ['Suspected haemorrhage highlighting','Flags image areas that may represent intracranial haemorrhage for focused review on the source examination.'],
+            ['Case-priority alert','Raises suspected positive cases within the worklist so time-sensitive examinations can be reviewed sooner.'],
+            ['Clinician-controlled review','Presents AI findings as decision support; interpretation and the clinical decision remain with the qualified reader.']
+          ],
+          flowHeading: 'A short path from incoming NCCT to priority review',
+          flowIntro: 'The workflow is intentionally narrow: analyse the scan, flag a suspected haemorrhage case and return it to the clinical team.',
+          steps: [
+            ['Receive the brain CT','A non-contrast brain CT enters the supported analysis and triage workflow.'],
+            ['Identify and prioritise','The system checks for findings suggestive of intracranial haemorrhage and issues a priority alert when appropriate.'],
+            ['Review and decide','The clinician opens the source images, checks the highlighted area and completes the clinical interpretation.']
+          ],
+          highlightHeading: 'Built around a time-sensitive reading decision',
+          highlightIntro: 'A defined modality and finding scope keeps the product centred on suspected intracranial haemorrhage triage.',
+          highlights: [
+            ['Earlier visibility','Priority alerts can bring suspected haemorrhage cases to the attention of the reading team.'],
+            ['Focused visual cue','Highlighted areas guide the reader to locations that warrant prompt inspection on the original CT.'],
+            ['Clinical oversight','The output supports prioritisation and review without replacing clinician interpretation.']
+          ]
+        },
+        'zh-cn': {
+          facts: [
+            ['NCCT','非增强脑部CT流程'],
+            ['ICH','疑似颅内出血'],
+            ['优先提示','支持时间敏感的病例复核']
+          ],
+          capHeading: '聚焦疑似颅内出血的辅助分诊',
+          capIntro: '产品分析非增强脑部CT，并将疑似颅内出血病例提前呈现给临床人员复核。',
+          caps: [
+            ['NCCT分析','在明确限定的颅内出血分诊流程中处理非增强脑部CT检查。'],
+            ['疑似出血区域提示','标记可能存在颅内出血的影像区域，供临床人员在原始检查中重点复核。'],
+            ['病例优先提示','在工作列表中提示疑似阳性病例，帮助时间敏感的检查更早得到复核。'],
+            ['由临床人员完成判断','AI结果用于辅助决策；影像解读与临床决定仍由具备资质的专业人员完成。']
+          ],
+          flowHeading: '从NCCT进入到优先复核的简短路径',
+          flowIntro: '流程保持清晰聚焦：分析扫描、提示疑似出血病例，再交由临床团队复核。',
+          steps: [
+            ['接收脑部CT','非增强脑部CT进入支持的分析与分诊流程。'],
+            ['识别并排序','系统检查疑似颅内出血征象，并在适当情况下发出优先提示。'],
+            ['复核并判断','临床人员打开原始图像，核查标记区域并完成影像解读。']
+          ],
+          highlightHeading: '围绕时间敏感的阅片决定设计',
+          highlightIntro: '明确的成像方式与发现范围，使产品始终聚焦于疑似颅内出血分诊。',
+          highlights: [
+            ['更早进入视野','优先提示可帮助阅片团队更快注意到疑似颅内出血病例。'],
+            ['聚焦的视觉提示','区域标记引导阅片人员在原始CT中及时查看需要关注的位置。'],
+            ['保留临床主导','结果用于支持病例排序与复核，不替代临床人员的影像解读。']
+          ]
+        },
+        'zh-tw': {
+          facts: [
+            ['NCCT','非增強腦部CT流程'],
+            ['ICH','疑似顱內出血'],
+            ['優先提示','支援時間敏感的病例複核']
+          ],
+          capHeading: '聚焦疑似顱內出血的輔助分診',
+          capIntro: '產品分析非增強腦部CT，並將疑似顱內出血病例提前呈現給臨床人員複核。',
+          caps: [
+            ['NCCT分析','在明確限定的顱內出血分診流程中處理非增強腦部CT檢查。'],
+            ['疑似出血區域提示','標記可能存在顱內出血的影像區域，供臨床人員在原始檢查中重點複核。'],
+            ['病例優先提示','在工作清單中提示疑似陽性病例，協助時間敏感的檢查更早得到複核。'],
+            ['由臨床人員完成判斷','AI結果用於輔助決策；影像判讀與臨床決定仍由具備資格的專業人員完成。']
+          ],
+          flowHeading: '從NCCT進入到優先複核的簡短路徑',
+          flowIntro: '流程保持清晰聚焦：分析掃描、提示疑似出血病例，再交由臨床團隊複核。',
+          steps: [
+            ['接收腦部CT','非增強腦部CT進入支援的分析與分診流程。'],
+            ['識別並排序','系統檢查疑似顱內出血徵象，並在適當情況下發出優先提示。'],
+            ['複核並判斷','臨床人員開啟原始影像，核查標記區域並完成影像判讀。']
+          ],
+          highlightHeading: '圍繞時間敏感的閱片決定設計',
+          highlightIntro: '明確的成像方式與發現範圍，使產品始終聚焦於疑似顱內出血分診。',
+          highlights: [
+            ['更早進入視野','優先提示可協助閱片團隊更快注意到疑似顱內出血病例。'],
+            ['聚焦的視覺提示','區域標記引導閱片人員在原始CT中及時查看需要關注的位置。'],
+            ['保留臨床主導','結果用於支援病例排序與複核，不取代臨床人員的影像判讀。']
+          ]
+        },
+        ms: {
+          facts: [
+            ['NCCT','Aliran CT otak tanpa kontras'],
+            ['ICH','Pendarahan intrakranium yang disyaki'],
+            ['Amaran keutamaan','Menyokong semakan kes sensitif masa']
+          ],
+          capHeading: 'Triase tertumpu untuk pendarahan intrakranium yang disyaki',
+          capIntro: 'Produk menganalisis CT otak tanpa kontras dan mengutamakan kes yang disyaki mengalami pendarahan untuk semakan klinikal.',
+          caps: [
+            ['Analisis NCCT','Memproses pemeriksaan CT otak tanpa kontras dalam aliran triase pendarahan yang ditakrifkan dengan jelas.'],
+            ['Sorotan pendarahan disyaki','Menandakan kawasan imej yang mungkin menunjukkan pendarahan intrakranium untuk semakan tertumpu pada pemeriksaan sumber.'],
+            ['Amaran keutamaan kes','Mengangkat kes positif yang disyaki dalam senarai kerja supaya pemeriksaan sensitif masa boleh disemak lebih awal.'],
+            ['Semakan di bawah kawalan klinisian','Penemuan AI berfungsi sebagai sokongan keputusan; tafsiran dan keputusan klinikal kekal dengan pembaca berkelayakan.']
+          ],
+          flowHeading: 'Laluan ringkas daripada NCCT masuk kepada semakan keutamaan',
+          flowIntro: 'Alirannya sengaja khusus: analisis imbasan, tandakan kes pendarahan disyaki dan kembalikan kepada pasukan klinikal.',
+          steps: [
+            ['Terima CT otak','CT otak tanpa kontras memasuki aliran analisis dan triase yang disokong.'],
+            ['Kenal pasti dan utamakan','Sistem menyemak penemuan yang menunjukkan pendarahan intrakranium dan mengeluarkan amaran keutamaan apabila sesuai.'],
+            ['Semak dan putuskan','Klinisian membuka imej sumber, memeriksa kawasan bertanda dan melengkapkan tafsiran klinikal.']
+          ],
+          highlightHeading: 'Dibina sekitar keputusan pembacaan yang sensitif masa',
+          highlightIntro: 'Skop modaliti dan penemuan yang jelas memastikan produk tertumpu pada triase pendarahan intrakranium yang disyaki.',
+          highlights: [
+            ['Dapat dilihat lebih awal','Amaran keutamaan boleh membawa kes pendarahan disyaki kepada perhatian pasukan pembacaan.'],
+            ['Petunjuk visual tertumpu','Kawasan bertanda membimbing pembaca ke lokasi yang perlu diperiksa segera pada CT asal.'],
+            ['Pengawasan klinikal','Hasil menyokong keutamaan dan semakan tanpa menggantikan tafsiran klinisian.']
+          ]
+        },
+        th: {
+          facts: [
+            ['NCCT','ขั้นตอน CT สมองแบบไม่ฉีดสารทึบรังสี'],
+            ['ICH','สงสัยเลือดออกในกะโหลกศีรษะ'],
+            ['แจ้งเตือนลำดับความสำคัญ','ช่วยทบทวนเคสที่ต้องแข่งกับเวลา']
+          ],
+          capHeading: 'การคัดแยกที่มุ่งเน้นภาวะเลือดออกในกะโหลกศีรษะที่สงสัย',
+          capIntro: 'ผลิตภัณฑ์วิเคราะห์ CT สมองแบบไม่ฉีดสารทึบรังสี และนำเคสที่สงสัยเลือดออกขึ้นมาให้บุคลากรทางคลินิกทบทวนก่อน',
+          caps: [
+            ['วิเคราะห์ NCCT','ประมวลผล CT สมองแบบไม่ฉีดสารทึบรังสีภายในขั้นตอนคัดแยกภาวะเลือดออกที่กำหนดขอบเขตชัดเจน'],
+            ['เน้นบริเวณที่สงสัยเลือดออก','ทำเครื่องหมายบริเวณภาพที่อาจเป็นเลือดออกในกะโหลกศีรษะ เพื่อให้ทบทวนอย่างเจาะจงบนภาพตรวจต้นทาง'],
+            ['แจ้งเตือนลำดับเคส','ยกเคสที่สงสัยว่าพบความผิดปกติขึ้นในรายการงาน เพื่อให้ตรวจที่ต้องแข่งกับเวลาได้รับการทบทวนเร็วขึ้น'],
+            ['บุคลากรทางคลินิกควบคุมการทบทวน','ผล AI ใช้สนับสนุนการตัดสินใจ ส่วนการแปลผลและการตัดสินใจทางคลินิกยังอยู่กับผู้เชี่ยวชาญ']
+          ],
+          flowHeading: 'เส้นทางสั้นจาก NCCT ที่เข้ามาสู่การทบทวนเร่งด่วน',
+          flowIntro: 'ขั้นตอนถูกกำหนดให้แคบและชัดเจน: วิเคราะห์ภาพ แจ้งเคสที่สงสัยเลือดออก แล้วส่งกลับให้ทีมคลินิก',
+          steps: [
+            ['รับ CT สมอง','CT สมองแบบไม่ฉีดสารทึบรังสีเข้าสู่ขั้นตอนวิเคราะห์และคัดแยกที่รองรับ'],
+            ['ระบุและจัดลำดับ','ระบบตรวจหาสัญญาณที่บ่งชี้ภาวะเลือดออกในกะโหลกศีรษะ และแจ้งเตือนลำดับความสำคัญเมื่อเหมาะสม'],
+            ['ทบทวนและตัดสินใจ','บุคลากรทางคลินิกเปิดภาพต้นทาง ตรวจบริเวณที่ทำเครื่องหมาย และสรุปการแปลผล']
+          ],
+          highlightHeading: 'ออกแบบรอบการตัดสินใจอ่านภาพที่ต้องแข่งกับเวลา',
+          highlightIntro: 'ขอบเขตชนิดภาพและสิ่งที่ตรวจชัดเจน ทำให้ผลิตภัณฑ์มุ่งเน้นการคัดแยกภาวะเลือดออกในกะโหลกศีรษะที่สงสัย',
+          highlights: [
+            ['มองเห็นเคสเร็วขึ้น','การแจ้งเตือนลำดับความสำคัญช่วยนำเคสที่สงสัยเลือดออกเข้าสู่ความสนใจของทีมอ่านภาพ'],
+            ['จุดชี้ภาพที่เจาะจง','บริเวณที่ทำเครื่องหมายช่วยนำผู้อ่านไปยังตำแหน่งที่ควรตรวจทันทีบน CT ต้นฉบับ'],
+            ['คงการกำกับโดยคลินิก','ผลลัพธ์ช่วยจัดลำดับและทบทวน โดยไม่แทนที่การแปลผลของบุคลากรทางคลินิก']
+          ]
+        }
+      }
+    },
+
+    'ct-coronary': {
+      title: 'CT Coronary',
+      layout: 'coronary',
+      categoryKey: 'screeningDiagnosis',
+      summaryKey: 'coronaryDesc',
+      images: ['assets/products/visual-ct-coronary.webp'],
+      focusImage: 'assets/products/focus-cardiovascular-ai.jpg',
+      tags: [{key:'coronaryCT'},{key:'ceMarked'},{key:'ukcaMarked'},{key:'nmpaApproved'}],
+      accent: '#ff8f82',
+      glow: '#e6574a36',
+      details: {
+        en: {
+          facts: [
+            ['3D coronary tree','Automatic reconstruction and visualisation'],
+            ['Stenosis + plaque','Detection and characterisation for review'],
+            ['Modular','CT-FFR, FAI and plaque-analysis options vary by configuration']
+          ],
+          capHeading: 'Connect coronary anatomy, stenosis and plaque in one review',
+          capIntro: 'Automatic reconstruction establishes the vessel context before focused stenosis and plaque analysis.',
+          caps: [
+            ['Automatic coronary reconstruction','Extracts and reconstructs the coronary tree from coronary CT, presenting anatomy in reviewable 3D and vessel views.'],
+            ['Stenosis analysis','Detects suspected narrowing and presents relevant vessel segments and characteristics for clinician review.'],
+            ['Plaque analysis','Detects and characterises suspected plaque findings alongside the coronary anatomy.'],
+            ['Optional advanced modules','CT-FFR, pericoronary fat analysis (FAI) and extended plaque-analysis functions may be supplied as separate configuration modules.']
+          ],
+          flowHeading: 'From coronary CT to anatomy-led review',
+          flowIntro: 'The workflow begins with reconstruction, adds lesion analysis and then presents the outputs selected for the deployed configuration.',
+          steps: [
+            ['Reconstruct the coronary tree','The system processes the coronary CT and creates visualisations of the coronary anatomy.'],
+            ['Analyse stenosis and plaque','Suspected narrowing and plaque findings are detected, localised and organised for review.'],
+            ['Review selected outputs','The clinician reviews the source CT, reconstructed anatomy and any advanced modules included in the applicable configuration.']
+          ],
+          highlightHeading: 'An anatomy-first view of coronary disease',
+          highlightIntro: 'Reconstruction and lesion analysis come together, while optional modules can be matched to the intended workflow.',
+          highlights: [
+            ['Coordinated visual context','Three-dimensional and vessel-oriented views help relate a suspected finding to its coronary location.'],
+            ['Structured lesion review','Stenosis and plaque outputs are organised around the reconstructed coronary tree for focused assessment.'],
+            ['Modular deployment','Optional CT-FFR, FAI and advanced plaque-analysis functions can be selected according to the deployed configuration and intended workflow.']
+          ]
+        },
+        'zh-cn': {
+          facts: [
+            ['三维冠脉树','自动重建与可视化'],
+            ['狭窄 + 斑块','辅助检出、表征与复核'],
+            ['模块化','CT-FFR、FAI与斑块分析选项随配置而异']
+          ],
+          capHeading: '在同一复核视图中连接冠脉解剖、狭窄与斑块',
+          capIntro: '自动重建先建立血管解剖背景，再进行聚焦的狭窄与斑块分析。',
+          caps: [
+            ['冠脉自动重建','从冠状动脉CT中提取并重建冠脉树，以三维及血管视图呈现可复核的解剖结构。'],
+            ['狭窄分析','检出疑似狭窄，并呈现相关血管节段与特征供临床人员复核。'],
+            ['斑块分析','结合冠脉解剖结构检出并表征疑似斑块发现。'],
+            ['可选高级模块','CT-FFR、冠周脂肪分析（FAI）及扩展斑块分析功能可能以独立配置模块提供。']
+          ],
+          flowHeading: '从冠状动脉CT到以解剖为主线的复核',
+          flowIntro: '流程从重建开始，加入病变分析，再呈现实际部署配置中选定的输出。',
+          steps: [
+            ['重建冠脉树','系统处理冠状动脉CT并生成冠脉解剖结构的可视化结果。'],
+            ['分析狭窄与斑块','检出、定位并整理疑似狭窄与斑块发现，供后续复核。'],
+            ['复核选定输出','临床人员复核原始CT、重建解剖结构，以及适用配置中包含的高级模块结果。']
+          ],
+          highlightHeading: '以解剖为起点理解冠状动脉病变',
+          highlightIntro: '重建与病变分析在同一流程中衔接，并可根据实际工作流程选择相应的可选模块。',
+          highlights: [
+            ['连贯的视觉背景','三维与血管导向视图有助于将疑似发现对应到具体冠脉位置。'],
+            ['结构化病变复核','狭窄与斑块结果围绕重建冠脉树进行组织，便于聚焦评估。'],
+            ['模块化部署','可根据部署配置与实际工作流程，选择CT-FFR、FAI及高级斑块分析等可选功能。']
+          ]
+        },
+        'zh-tw': {
+          facts: [
+            ['三維冠脈樹','自動重建與視覺化'],
+            ['狹窄 + 斑塊','輔助偵測、表徵與複核'],
+            ['模組化','CT-FFR、FAI與斑塊分析選項依配置而異']
+          ],
+          capHeading: '在同一複核視圖中連結冠脈解剖、狹窄與斑塊',
+          capIntro: '自動重建先建立血管解剖背景，再進行聚焦的狹窄與斑塊分析。',
+          caps: [
+            ['冠脈自動重建','從冠狀動脈CT中提取並重建冠脈樹，以三維及血管視圖呈現可複核的解剖結構。'],
+            ['狹窄分析','偵測疑似狹窄，並呈現相關血管節段與特徵供臨床人員複核。'],
+            ['斑塊分析','結合冠脈解剖結構偵測並表徵疑似斑塊發現。'],
+            ['可選進階模組','CT-FFR、冠周脂肪分析（FAI）及擴展斑塊分析功能可能以獨立配置模組提供。']
+          ],
+          flowHeading: '從冠狀動脈CT到以解剖為主線的複核',
+          flowIntro: '流程從重建開始，加入病變分析，再呈現實際部署配置中選定的輸出。',
+          steps: [
+            ['重建冠脈樹','系統處理冠狀動脈CT並產生冠脈解剖結構的視覺化結果。'],
+            ['分析狹窄與斑塊','偵測、定位並整理疑似狹窄與斑塊發現，供後續複核。'],
+            ['複核選定輸出','臨床人員複核原始CT、重建解剖結構，以及適用配置中包含的進階模組結果。']
+          ],
+          highlightHeading: '以解剖為起點理解冠狀動脈病變',
+          highlightIntro: '重建與病變分析在同一流程中銜接，並可根據實際工作流程選擇相應的可選模組。',
+          highlights: [
+            ['連貫的視覺背景','三維與血管導向視圖有助於將疑似發現對應到具體冠脈位置。'],
+            ['結構化病變複核','狹窄與斑塊結果圍繞重建冠脈樹進行組織，便於聚焦評估。'],
+            ['模組化部署','可根據部署配置與實際工作流程，選擇CT-FFR、FAI及進階斑塊分析等可選功能。']
+          ]
+        },
+        ms: {
+          facts: [
+            ['Pokok koronari 3D','Pembinaan semula dan visualisasi automatik'],
+            ['Stenosis + plak','Pengesanan dan pencirian untuk semakan'],
+            ['Modular','Pilihan CT-FFR, FAI dan analisis plak berbeza mengikut konfigurasi']
+          ],
+          capHeading: 'Hubungkan anatomi koronari, stenosis dan plak dalam satu semakan',
+          capIntro: 'Pembinaan semula automatik membina konteks salur sebelum analisis stenosis dan plak yang tertumpu.',
+          caps: [
+            ['Pembinaan semula koronari automatik','Mengekstrak dan membina semula pokok koronari daripada CT koronari serta memaparkan anatomi dalam pandangan 3D dan salur yang boleh disemak.'],
+            ['Analisis stenosis','Mengesan penyempitan disyaki dan memaparkan segmen salur serta ciri berkaitan untuk semakan klinikal.'],
+            ['Analisis plak','Mengesan dan mencirikan penemuan plak yang disyaki bersama anatomi koronari.'],
+            ['Modul lanjutan pilihan','CT-FFR, analisis lemak perikoronari (FAI) dan fungsi analisis plak lanjutan boleh dibekalkan sebagai modul konfigurasi berasingan.']
+          ],
+          flowHeading: 'Daripada CT koronari kepada semakan berpandukan anatomi',
+          flowIntro: 'Aliran bermula dengan pembinaan semula, menambah analisis lesi dan kemudian memaparkan output yang dipilih untuk konfigurasi dipasang.',
+          steps: [
+            ['Bina semula pokok koronari','Sistem memproses CT koronari dan menghasilkan visualisasi anatomi koronari.'],
+            ['Analisis stenosis dan plak','Penyempitan serta plak disyaki dikesan, disetempatkan dan disusun untuk semakan.'],
+            ['Semak output terpilih','Klinisian menyemak CT sumber, anatomi yang dibina semula dan modul lanjutan yang termasuk dalam konfigurasi berkenaan.']
+          ],
+          highlightHeading: 'Pandangan penyakit koronari yang bermula dengan anatomi',
+          highlightIntro: 'Pembinaan semula dan analisis lesi digabungkan, manakala modul pilihan boleh dipadankan dengan aliran kerja yang dimaksudkan.',
+          highlights: [
+            ['Konteks visual bersepadu','Pandangan 3D dan berorientasikan salur membantu mengaitkan penemuan disyaki dengan lokasi koronarinya.'],
+            ['Semakan lesi berstruktur','Output stenosis dan plak disusun mengikut pokok koronari yang dibina semula untuk penilaian tertumpu.'],
+            ['Pelaksanaan modular','Fungsi pilihan CT-FFR, FAI dan analisis plak lanjutan boleh dipilih mengikut konfigurasi dan aliran kerja penggunaan.']
+          ]
+        },
+        th: {
+          facts: [
+            ['โครงข่ายหลอดเลือดหัวใจ 3 มิติ','สร้างภาพและแสดงผลโดยอัตโนมัติ'],
+            ['การตีบ + คราบพลัค','ตรวจหาและจำแนกลักษณะเพื่อการทบทวน'],
+            ['แบบโมดูล','ตัวเลือก CT-FFR, FAI และการวิเคราะห์พลัคแตกต่างตามการกำหนดค่า']
+          ],
+          capHeading: 'เชื่อมกายวิภาคหลอดเลือดหัวใจ การตีบ และคราบพลัคในการทบทวนเดียว',
+          capIntro: 'การสร้างภาพอัตโนมัติวางบริบทของหลอดเลือดก่อนการวิเคราะห์การตีบและคราบพลัคอย่างเจาะจง',
+          caps: [
+            ['สร้างภาพหลอดเลือดหัวใจอัตโนมัติ','แยกและสร้างโครงข่ายหลอดเลือดหัวใจจาก CT หลอดเลือดหัวใจ พร้อมแสดงกายวิภาคในมุมมอง 3 มิติและตามแนวหลอดเลือด'],
+            ['วิเคราะห์การตีบ','ตรวจหาการตีบที่สงสัย และแสดงช่วงหลอดเลือดกับลักษณะที่เกี่ยวข้องให้บุคลากรทางคลินิกทบทวน'],
+            ['วิเคราะห์คราบพลัค','ตรวจหาและจำแนกลักษณะคราบพลัคที่สงสัยควบคู่กับกายวิภาคหลอดเลือดหัวใจ'],
+            ['โมดูลขั้นสูงที่เลือกได้','CT-FFR การวิเคราะห์ไขมันรอบหลอดเลือดหัวใจ (FAI) และการวิเคราะห์พลัคเพิ่มเติม อาจให้บริการเป็นโมดูลการกำหนดค่าแยก']
+          ],
+          flowHeading: 'จาก CT หลอดเลือดหัวใจสู่การทบทวนที่นำด้วยกายวิภาค',
+          flowIntro: 'ขั้นตอนเริ่มจากการสร้างภาพ เพิ่มการวิเคราะห์รอยโรค แล้วแสดงผลลัพธ์ที่เลือกไว้สำหรับการกำหนดค่าที่ติดตั้ง',
+          steps: [
+            ['สร้างโครงข่ายหลอดเลือดหัวใจ','ระบบประมวลผล CT หลอดเลือดหัวใจและสร้างภาพกายวิภาคหลอดเลือดหัวใจ'],
+            ['วิเคราะห์การตีบและพลัค','ตรวจหา ระบุตำแหน่ง และจัดระเบียบการตีบกับคราบพลัคที่สงสัยเพื่อทบทวน'],
+            ['ทบทวนผลลัพธ์ที่เลือก','บุคลากรทางคลินิกทบทวน CT ต้นทาง กายวิภาคที่สร้างขึ้น และโมดูลขั้นสูงที่รวมอยู่ในการกำหนดค่าที่เกี่ยวข้อง']
+          ],
+          highlightHeading: 'มุมมองโรคหลอดเลือดหัวใจที่เริ่มจากกายวิภาค',
+          highlightIntro: 'การสร้างภาพและการวิเคราะห์รอยโรคทำงานร่วมกัน โดยเลือกโมดูลเสริมให้เหมาะกับขั้นตอนงานที่ต้องการได้',
+          highlights: [
+            ['บริบทภาพที่เชื่อมโยงกัน','มุมมอง 3 มิติและตามแนวหลอดเลือดช่วยเชื่อมสิ่งที่สงสัยกับตำแหน่งในหลอดเลือดหัวใจ'],
+            ['ทบทวนรอยโรคอย่างเป็นระบบ','ผลการตีบและพลัคจัดตามโครงข่ายหลอดเลือดหัวใจที่สร้างขึ้นเพื่อการประเมินแบบเจาะจง'],
+            ['การติดตั้งแบบโมดูล','เลือกฟังก์ชัน CT-FFR, FAI และการวิเคราะห์พลัคขั้นสูงได้ตามการกำหนดค่าและขั้นตอนงานที่ใช้งาน']
+          ]
+        }
+      }
+    },
+
     'ct-lung': {
       title: 'CT Lung',
+      layout: 'lung',
       categoryKey: 'screeningDiagnosis',
       summaryKey: 'ctLungDesc',
       images: ['assets/products/visual-ct-lung.webp'],
@@ -891,17 +1367,17 @@
       details: {
         en: {
           facts: [
-            ['4 mm','Minimum supported nodule size'],
-            ['4 types','Pure GGN, solid, mixed GGN and suspected tumour'],
-            ['Big 3','Lung nodules, coronary calcium and COPD indicators']
+            ['Nodule + whole lung','Two connected review perspectives'],
+            ['Longitudinal','Current and prior examination comparison'],
+            ['Lobe-level','Density and volume analysis']
           ],
           capHeading: 'Beyond nodule detection: a quantitative view of whole-lung health',
-          capIntro: 'Lung-cancer screening, opportunistic findings, longitudinal comparison and structured reporting come together in one solution.',
+          capIntro: 'Nodule review, longitudinal comparison, whole-lung quantification and structured reporting come together in one solution.',
           caps: [
             ['Nodule detection and typing','Detects pulmonary nodules and classifies key patterns including pure ground-glass, solid and mixed ground-glass nodules.'],
             ['Growth tracking','Measures and compares nodules across examinations to help clinicians assess interval change.'],
             ['Whole-lung quantification','Analyses lobe-level density and volume and supports review of emphysema, interstitial disease and other abnormal density patterns.'],
-            ['Opportunistic screening and reports','Brings lung nodules, coronary artery calcification and COPD-related indicators into a structured report integrated with the imaging workflow.']
+            ['Workflow integration and follow-up','Organises marked images, quantitative findings and structured reports for review, sharing and follow-up management.']
           ],
           flowHeading: 'Chest CT becomes a longitudinal lung-health record',
           flowIntro: 'Detection, measurement and comparison are organised so the reader can move from a current scan to a broader assessment.',
@@ -910,7 +1386,7 @@
             ['Classify and quantify','Findings are typed, measured and compared with prior studies; lung volumes and selected secondary indicators are calculated.'],
             ['Review the structured report','The clinician reviews marked images, quantitative tables and the generated report within the existing workflow.']
           ],
-          highlightHeading: 'Suitable for screening and opportunistic case finding',
+          highlightHeading: 'Designed for screening and longitudinal review',
           highlightIntro: 'The solution uses one chest CT to support both focused nodule review and a broader quantitative assessment.',
           highlights: [
             ['Early nodule visibility','Small-nodule detection and visual marking support lung-cancer screening and incidental case review.'],
@@ -920,17 +1396,17 @@
         },
         'zh-cn': {
           facts: [
-            ['4 mm','支持的最小结节检出尺度'],
-            ['4类','纯磨玻璃、实性、混合磨玻璃与疑似肿瘤'],
-            ['三大疾病','肺结节、冠脉钙化与COPD相关指标']
+            ['结节 + 全肺','两条相互衔接的复核视角'],
+            ['纵向比较','对照本次与既往检查'],
+            ['肺叶层级','密度与体积分析']
           ],
           capHeading: '不止检出结节，也提供全肺健康的定量视图',
-          capIntro: '产品将肺癌筛查、机会性发现、纵向比较和结构化报告整合在同一解决方案中。',
+          capIntro: '产品将结节复核、纵向比较、全肺定量和结构化报告整合在同一解决方案中。',
           caps: [
             ['结节检出与分类','检出肺结节，并识别纯磨玻璃、实性及混合磨玻璃等关键影像类型。'],
             ['结节生长追踪','对不同检查中的结节进行测量与对比，辅助医师判断随时间发生的变化。'],
             ['全肺定量分析','分析各肺叶密度与体积，并支持肺气肿、间质性肺病及其他异常密度模式的复核。'],
-            ['机会性筛查与报告','将肺结节、冠状动脉钙化和COPD相关指标整理进可与影像流程连接的结构化报告。']
+            ['流程衔接与随访管理','将标记影像、定量结果和结构化报告组织起来，支持复核、分享与随访管理。']
           ],
           flowHeading: '让胸部CT形成可纵向追踪的肺健康记录',
           flowIntro: '系统组织检出、测量和对比结果，使阅片人员能够从本次扫描延伸到更完整的评估。',
@@ -939,7 +1415,7 @@
             ['分类与量化','对发现进行分型、测量并与既往检查比较，同时计算肺容积和部分相关指标。'],
             ['审核结构化报告','医师在现有流程中查看标记影像、定量表格及系统生成的报告。']
           ],
-          highlightHeading: '同时适用于筛查与机会性病例发现',
+          highlightHeading: '面向筛查与纵向复核设计',
           highlightIntro: '方案利用一次胸部CT兼顾结节重点复核与更广泛的定量评估。',
           highlights: [
             ['提升早期结节可见性','小结节检出与可视化标记可支持肺癌筛查和偶发病例复核。'],
@@ -949,17 +1425,17 @@
         },
         'zh-tw': {
           facts: [
-            ['4 mm','支援的最小結節偵測尺度'],
-            ['4類','純磨玻璃、實性、混合磨玻璃與疑似腫瘤'],
-            ['三大疾病','肺結節、冠脈鈣化與COPD相關指標']
+            ['結節 + 全肺','兩條相互銜接的複核視角'],
+            ['縱向比較','對照本次與既往檢查'],
+            ['肺葉層級','密度與體積分析']
           ],
           capHeading: '不只偵測結節，也提供全肺健康的定量視圖',
-          capIntro: '產品將肺癌篩檢、機會性發現、縱向比較和結構化報告整合在同一解決方案中。',
+          capIntro: '產品將結節複核、縱向比較、全肺定量和結構化報告整合在同一解決方案中。',
           caps: [
             ['結節偵測與分類','偵測肺結節，並識別純磨玻璃、實性及混合磨玻璃等關鍵影像類型。'],
             ['結節生長追蹤','對不同檢查中的結節進行測量與比較，協助醫師判斷隨時間發生的變化。'],
             ['全肺定量分析','分析各肺葉密度與體積，並支援肺氣腫、間質性肺病及其他異常密度模式的複核。'],
-            ['機會性篩檢與報告','將肺結節、冠狀動脈鈣化和COPD相關指標整理進可與影像流程連接的結構化報告。']
+            ['流程銜接與追蹤管理','將標記影像、定量結果和結構化報告組織起來，支援複核、分享與追蹤管理。']
           ],
           flowHeading: '讓胸部CT形成可縱向追蹤的肺健康紀錄',
           flowIntro: '系統組織偵測、測量和比較結果，使閱片人員能夠從本次掃描延伸到更完整的評估。',
@@ -968,7 +1444,7 @@
             ['分類與量化','對發現進行分型、測量並與既往檢查比較，同時計算肺容積和部分相關指標。'],
             ['審核結構化報告','醫師在現有流程中查看標記影像、定量表格及系統產生的報告。']
           ],
-          highlightHeading: '同時適用於篩檢與機會性病例發現',
+          highlightHeading: '面向篩檢與縱向複核設計',
           highlightIntro: '方案利用一次胸部CT兼顧結節重點複核與更廣泛的定量評估。',
           highlights: [
             ['提升早期結節可見性','小結節偵測與視覺化標記可支援肺癌篩檢和偶發病例複核。'],
@@ -978,17 +1454,17 @@
         },
         ms: {
           facts: [
-            ['4 mm','Saiz nodul minimum yang disokong'],
-            ['4 jenis','GGN tulen, pepejal, GGN campuran dan tumor disyaki'],
-            ['Big 3','Nodul paru-paru, kalsium koronari dan petunjuk COPD']
+            ['Nodul + seluruh paru-paru','Dua perspektif semakan yang saling berkait'],
+            ['Longitudinal','Perbandingan pemeriksaan semasa dan terdahulu'],
+            ['Tahap lobus','Analisis ketumpatan dan isipadu']
           ],
           capHeading: 'Lebih daripada pengesanan nodul: pandangan kuantitatif seluruh paru-paru',
-          capIntro: 'Saringan kanser paru-paru, penemuan oportunistik, perbandingan longitudinal dan laporan berstruktur digabungkan dalam satu penyelesaian.',
+          capIntro: 'Semakan nodul, perbandingan longitudinal, kuantifikasi seluruh paru-paru dan laporan berstruktur digabungkan dalam satu penyelesaian.',
           caps: [
             ['Pengesanan dan pengelasan nodul','Mengesan nodul dan mengelaskan corak utama termasuk ground-glass tulen, pepejal dan campuran.'],
             ['Penjejakan pertumbuhan','Mengukur dan membandingkan nodul antara pemeriksaan untuk menilai perubahan.'],
             ['Kuantifikasi seluruh paru-paru','Menganalisis ketumpatan serta isipadu lobus dan menyokong semakan emfisema serta penyakit interstisial.'],
-            ['Saringan oportunistik dan laporan','Menggabungkan nodul, kalsifikasi arteri koronari dan petunjuk COPD ke dalam laporan berstruktur.']
+            ['Integrasi aliran dan susulan','Menyusun imej bertanda, dapatan kuantitatif dan laporan berstruktur untuk semakan, perkongsian dan susulan.']
           ],
           flowHeading: 'CT dada menjadi rekod kesihatan paru-paru longitudinal',
           flowIntro: 'Pengesanan, ukuran dan perbandingan disusun untuk membawa pembaca daripada imbasan semasa kepada penilaian lebih luas.',
@@ -997,7 +1473,7 @@
             ['Kelas dan ukur','Penemuan dikelaskan, diukur dan dibandingkan dengan kajian terdahulu; isipadu serta petunjuk terpilih dikira.'],
             ['Semak laporan berstruktur','Klinisi menyemak imej bertanda, jadual kuantitatif dan laporan dalam aliran sedia ada.']
           ],
-          highlightHeading: 'Untuk saringan dan penemuan kes oportunistik',
+          highlightHeading: 'Direka untuk saringan dan semakan longitudinal',
           highlightIntro: 'Satu CT dada menyokong semakan nodul tertumpu serta penilaian kuantitatif yang lebih luas.',
           highlights: [
             ['Keterlihatan nodul awal','Pengesanan nodul kecil dan penandaan visual menyokong saringan serta semakan penemuan insidental.'],
@@ -1007,17 +1483,17 @@
         },
         th: {
           facts: [
-            ['4 มม.','ขนาดก้อนต่ำสุดที่รองรับ'],
-            ['4 ชนิด','Pure GGN, solid, mixed GGN และเนื้องอกที่สงสัย'],
-            ['Big 3','ก้อนปอด แคลเซียมหลอดเลือดหัวใจ และตัวชี้วัด COPD']
+            ['ก้อน + ปอดทั้งหมด','สองมุมมองการทบทวนที่เชื่อมโยงกัน'],
+            ['ระยะยาว','เปรียบเทียบการตรวจปัจจุบันกับครั้งก่อน'],
+            ['ระดับกลีบปอด','วิเคราะห์ความหนาแน่นและปริมาตร']
           ],
           capHeading: 'มากกว่าการตรวจหาก้อน ด้วยภาพเชิงปริมาณของปอดทั้งหมด',
-          capIntro: 'การคัดกรองมะเร็งปอด การค้นพบโดยบังเอิญ การเปรียบเทียบระยะยาว และรายงานแบบมีโครงสร้าง รวมอยู่ในโซลูชันเดียว',
+          capIntro: 'การทบทวนก้อน การเปรียบเทียบระยะยาว การวิเคราะห์ปอดทั้งหมด และรายงานแบบมีโครงสร้างรวมอยู่ในโซลูชันเดียว',
           caps: [
             ['ตรวจและจำแนกก้อน','ตรวจหาก้อนปอดและจำแนกรูปแบบสำคัญ เช่น ground-glass ล้วน ก้อนทึบ และชนิดผสม'],
             ['ติดตามการเติบโต','วัดและเปรียบเทียบก้อนระหว่างการตรวจ เพื่อช่วยประเมินการเปลี่ยนแปลง'],
             ['วิเคราะห์ปอดเชิงปริมาณ','วิเคราะห์ความหนาแน่นและปริมาตรแต่ละกลีบ พร้อมช่วยตรวจภาวะถุงลมโป่งพองและโรคเนื้อปอด'],
-            ['คัดกรองเสริมและรายงาน','รวมก้อนปอด แคลเซียมหลอดเลือดหัวใจ และตัวชี้วัด COPD ในรายงานแบบมีโครงสร้าง']
+            ['เชื่อมขั้นตอนงานและติดตามผล','จัดระเบียบภาพที่ทำเครื่องหมาย ผลเชิงปริมาณ และรายงานแบบมีโครงสร้างเพื่อการทบทวน แชร์ และติดตามผล']
           ],
           flowHeading: 'เปลี่ยน CT ทรวงอกเป็นบันทึกสุขภาพปอดระยะยาว',
           flowIntro: 'จัดการผลการตรวจ วัด และเปรียบเทียบ เพื่อให้ผู้อ่านมองจากการสแกนปัจจุบันไปสู่ภาพรวมที่กว้างขึ้น',
@@ -1026,7 +1502,7 @@
             ['จำแนกและวัด','จำแนก วัด และเปรียบเทียบกับการตรวจก่อนหน้า พร้อมคำนวณปริมาตรและตัวชี้วัด'],
             ['ตรวจรายงาน','แพทย์ดูภาพที่ทำเครื่องหมาย ตารางเชิงปริมาณ และรายงานในขั้นตอนเดิม']
           ],
-          highlightHeading: 'เหมาะสำหรับการคัดกรองและค้นหาโรคโดยบังเอิญ',
+          highlightHeading: 'ออกแบบเพื่อการคัดกรองและทบทวนระยะยาว',
           highlightIntro: 'CT ทรวงอกหนึ่งครั้งรองรับทั้งการตรวจทานก้อนและการประเมินเชิงปริมาณที่กว้างขึ้น',
           highlights: [
             ['มองเห็นก้อนระยะแรก','การตรวจหาก้อนเล็กและทำเครื่องหมายช่วยการคัดกรองและตรวจสิ่งที่พบโดยบังเอิญ'],
@@ -1197,6 +1673,7 @@
 
     'thorax-planning': {
       title: 'Thorax Planning',
+      layout: 'thorax',
       categoryKey: 'interventionTreatment',
       summaryKey: 'thoraxDesc',
       summaries: {
@@ -1238,7 +1715,7 @@
           highlights: [
             ['Stronger decision context','Colour-separated anatomy clarifies the relationship between the target, bronchi, vessels, segments and planned margin.'],
             ['Faster case preparation','Automated minute-level reconstruction reduces the delay between image availability and surgical review.'],
-            ['Flexible deployment and integration','On-premise and cloud options can connect with existing hospital information systems while supporting secure access.']
+            ['Flexible deployment and integration','On-premise and cloud options can connect with existing hospital information systems for supported workflows.']
           ]
         },
         'zh-cn': {
@@ -1267,7 +1744,7 @@
           highlights: [
             ['增强决策依据','分色解剖清晰呈现靶区、支气管、血管、肺段与计划切缘之间的关系。'],
             ['加快病例准备','分钟级自动重建缩短影像完成到外科团队开始复核之间的等待。'],
-            ['灵活部署与集成','支持本地化与云端部署，并可与医院现有信息系统安全连接。']
+            ['灵活部署与集成','支持本地化与云端部署，并可与医院现有信息系统连接。']
           ]
         },
         'zh-tw': {
@@ -1296,7 +1773,7 @@
           highlights: [
             ['增強決策依據','分色解剖清晰呈現靶區、支氣管、血管、肺段與計畫切緣之間的關係。'],
             ['加快病例準備','分鐘級自動重建縮短影像完成到外科團隊開始複核之間的等待。'],
-            ['靈活部署與整合','支援本地化與雲端部署，並可與醫院現有資訊系統安全連接。']
+            ['靈活部署與整合','支援本地化與雲端部署，並可與醫院現有資訊系統連接。']
           ]
         },
         ms: {
@@ -1325,7 +1802,7 @@
           highlights: [
             ['Konteks keputusan lebih kukuh','Anatomi berwarna menjelaskan hubungan sasaran, bronkus, salur, segmen dan margin yang dirancang.'],
             ['Persediaan kes lebih pantas','Pembinaan semula automatik tahap minit mengurangkan masa menunggu sebelum semakan pembedahan.'],
-            ['Penggunaan dan integrasi fleksibel','Pilihan setempat dan awan boleh disambungkan secara selamat dengan sistem maklumat hospital.']
+            ['Penggunaan dan integrasi fleksibel','Pilihan setempat dan awan boleh disambungkan dengan sistem maklumat hospital.']
           ]
         },
         th: {
@@ -1354,7 +1831,7 @@
           highlights: [
             ['บริบทการตัดสินใจชัดเจน','กายวิภาคแยกสีช่วยแสดงความสัมพันธ์ของเป้าหมาย หลอดลม หลอดเลือด ส่วนปอด และขอบตัด'],
             ['เตรียมเคสได้เร็วขึ้น','การสร้างภาพอัตโนมัติระดับนาทีลดเวลารอระหว่างได้รับภาพและเริ่มทบทวนการผ่าตัด'],
-            ['ติดตั้งและเชื่อมต่อยืดหยุ่น','รองรับทั้งในสถานที่และคลาวด์ พร้อมเชื่อมระบบข้อมูลโรงพยาบาลอย่างปลอดภัย']
+            ['ติดตั้งและเชื่อมต่อยืดหยุ่น','รองรับทั้งในสถานที่และคลาวด์ พร้อมเชื่อมต่อกับระบบข้อมูลโรงพยาบาล']
           ]
         }
       }
@@ -1362,6 +1839,7 @@
 
     'liver-planning': {
       title: 'Liver Planning',
+      layout: 'liver',
       categoryKey: 'interventionTreatment',
       summaryKey: 'liverDesc',
       summaries: {
@@ -1403,7 +1881,7 @@
           highlights: [
             ['Anatomical variation in context','Segment, vessel and biliary relationships are separated visually to support safer, more informed planning discussions.'],
             ['Faster case preparation and communication','Automated reconstruction and one-click reports help teams prepare cases and explain the proposed approach.'],
-            ['Flexible deployment and integration','On-premise and cloud options can connect with existing hospital information systems while supporting secure access.']
+            ['Flexible deployment and integration','On-premise and cloud options can connect with existing hospital information systems for supported workflows.']
           ]
         },
         'zh-cn': {
@@ -1432,7 +1910,7 @@
           highlights: [
             ['在完整环境中识别解剖变异','肝段、血管与胆道关系通过分色展示，为更充分的术前讨论提供支持。'],
             ['加快病例准备与沟通','自动重建和一键图文报告帮助团队准备病例并说明拟定方案。'],
-            ['灵活部署与集成','支持本地化与云端部署，并可与医院现有信息系统安全连接。']
+            ['灵活部署与集成','支持本地化与云端部署，并可与医院现有信息系统连接。']
           ]
         },
         'zh-tw': {
@@ -1461,7 +1939,7 @@
           highlights: [
             ['在完整環境中識別解剖變異','肝段、血管與膽道關係透過分色展示，為更充分的術前討論提供支援。'],
             ['加快病例準備與溝通','自動重建和一鍵圖文報告協助團隊準備病例並說明擬定方案。'],
-            ['靈活部署與整合','支援本地化與雲端部署，並可與醫院現有資訊系統安全連接。']
+            ['靈活部署與整合','支援本地化與雲端部署，並可與醫院現有資訊系統連接。']
           ]
         },
         ms: {
@@ -1490,7 +1968,7 @@
           highlights: [
             ['Variasi anatomi dalam konteks','Hubungan segmen, salur dan biliari dipisahkan secara visual untuk perbincangan perancangan yang lebih bermaklumat.'],
             ['Persediaan kes dan komunikasi lebih pantas','Pembinaan semula automatik dan laporan satu klik membantu pasukan menyediakan kes serta menerangkan pendekatan.'],
-            ['Penggunaan dan integrasi fleksibel','Pilihan setempat dan awan boleh disambungkan secara selamat dengan sistem maklumat hospital.']
+            ['Penggunaan dan integrasi fleksibel','Pilihan setempat dan awan boleh disambungkan dengan sistem maklumat hospital.']
           ]
         },
         th: {
@@ -1519,7 +1997,7 @@
           highlights: [
             ['เห็นความแปรผันในบริบท','แยกสีส่วนตับ หลอดเลือด และท่อน้ำดี เพื่อสนับสนุนการหารือก่อนผ่าตัด'],
             ['เตรียมเคสและสื่อสารเร็วขึ้น','การสร้างภาพอัตโนมัติและรายงานคลิกเดียวช่วยเตรียมเคสและอธิบายแนวทาง'],
-            ['ติดตั้งและเชื่อมต่อยืดหยุ่น','รองรับทั้งในสถานที่และคลาวด์ พร้อมเชื่อมระบบข้อมูลโรงพยาบาลอย่างปลอดภัย']
+            ['ติดตั้งและเชื่อมต่อยืดหยุ่น','รองรับทั้งในสถานที่และคลาวด์ พร้อมเชื่อมต่อกับระบบข้อมูลโรงพยาบาล']
           ]
         }
       }
@@ -1527,6 +2005,7 @@
 
     'urology-planning': {
       title: 'Urology Planning',
+      layout: 'urology',
       categoryKey: 'interventionTreatment',
       summaryKey: 'urologyDesc',
       summaries: {
@@ -1568,7 +2047,7 @@
           highlights: [
             ['Anatomical variation in context','Kidney, vessel, ureter and adrenal relationships are separated visually to support more informed planning discussions.'],
             ['Faster case preparation and communication','Automated reconstruction and one-click reports help teams prepare cases and explain the proposed approach.'],
-            ['Flexible deployment and integration','On-premise and cloud options can connect with existing hospital information systems while supporting secure access.']
+            ['Flexible deployment and integration','On-premise and cloud options can connect with existing hospital information systems for supported workflows.']
           ]
         },
         'zh-cn': {
@@ -1597,7 +2076,7 @@
           highlights: [
             ['在完整环境中识别解剖变异','肾脏、血管、输尿管与肾上腺关系通过分色展示，为更充分的术前讨论提供支持。'],
             ['加快病例准备与沟通','自动重建和一键图文报告帮助团队准备病例并说明拟定方案。'],
-            ['灵活部署与集成','支持本地化与云端部署，并可与医院现有信息系统安全连接。']
+            ['灵活部署与集成','支持本地化与云端部署，并可与医院现有信息系统连接。']
           ]
         },
         'zh-tw': {
@@ -1626,7 +2105,7 @@
           highlights: [
             ['在完整環境中識別解剖變異','腎臟、血管、輸尿管與腎上腺關係透過分色展示，為更充分的術前討論提供支援。'],
             ['加快病例準備與溝通','自動重建和一鍵圖文報告協助團隊準備病例並說明擬定方案。'],
-            ['靈活部署與整合','支援本地化與雲端部署，並可與醫院現有資訊系統安全連接。']
+            ['靈活部署與整合','支援本地化與雲端部署，並可與醫院現有資訊系統連接。']
           ]
         },
         ms: {
@@ -1655,7 +2134,7 @@
           highlights: [
             ['Variasi anatomi dalam konteks','Hubungan buah pinggang, salur, ureter dan adrenal dipisahkan secara visual untuk perbincangan lebih bermaklumat.'],
             ['Persediaan kes dan komunikasi lebih pantas','Pembinaan semula automatik dan laporan satu klik membantu pasukan menyediakan kes serta menerangkan pendekatan.'],
-            ['Penggunaan dan integrasi fleksibel','Pilihan setempat dan awan boleh disambungkan secara selamat dengan sistem maklumat hospital.']
+            ['Penggunaan dan integrasi fleksibel','Pilihan setempat dan awan boleh disambungkan dengan sistem maklumat hospital.']
           ]
         },
         th: {
@@ -1684,7 +2163,7 @@
           highlights: [
             ['เห็นความแปรผันในบริบท','แยกสีไต หลอดเลือด ท่อไต และต่อมหมวกไต เพื่อสนับสนุนการหารือก่อนผ่าตัด'],
             ['เตรียมเคสและสื่อสารเร็วขึ้น','การสร้างภาพอัตโนมัติและรายงานคลิกเดียวช่วยเตรียมเคสและอธิบายแนวทาง'],
-            ['ติดตั้งและเชื่อมต่อยืดหยุ่น','รองรับทั้งในสถานที่และคลาวด์ พร้อมเชื่อมระบบข้อมูลโรงพยาบาลอย่างปลอดภัย']
+            ['ติดตั้งและเชื่อมต่อยืดหยุ่น','รองรับทั้งในสถานที่และคลาวด์ พร้อมเชื่อมต่อกับระบบข้อมูลโรงพยาบาล']
           ]
         }
       }
@@ -1849,6 +2328,22 @@
     }
   };
 
+  const currentProductIds = new Set([
+    'cardiovascular-ai',
+    'head-neck-ai',
+    'bone-age-analyser',
+    'bone-density-analyser',
+    'ct-lung',
+    'ct-bone',
+    'ct-stroke',
+    'dr-chest',
+    'ct-coronary',
+    'thorax-planning',
+    'liver-planning',
+    'urology-planning',
+    'prosthetic-hand'
+  ]);
+
   const escapeHtml = value => String(value).replace(/[&<>"']/g, character => ({
     '&':'&amp;',
     '<':'&lt;',
@@ -1869,11 +2364,118 @@
     document.querySelector(target).innerHTML=items.map(renderer).join('');
   }
 
+  function renderProductStory(product,detail,alt){
+    const story=document.querySelector('#product-story');
+    const capabilitySection=document.querySelector('#capabilities');
+    const exploreLink=document.querySelector('#product-explore');
+    const layout=product.layout;
+
+    document.body.classList.forEach(className=>{
+      if(className.startsWith('product-layout-'))document.body.classList.remove(className);
+    });
+
+    if(!layout){
+      story.hidden=true;
+      story.innerHTML='';
+      capabilitySection.hidden=false;
+      exploreLink.href='#capabilities';
+      return;
+    }
+
+    document.body.classList.add(`product-layout-${layout}`);
+    story.hidden=false;
+    capabilitySection.hidden=true;
+    exploreLink.href='#product-story';
+
+    const heading=`
+      <div class="detail-heading story-heading">
+        <div><div class="eyebrow">${escapeHtml(uiText(document.documentElement.lang,'capabilityEyebrow'))}</div><h2>${escapeHtml(detail.capHeading)}</h2></div>
+        <p>${escapeHtml(detail.capIntro)}</p>
+      </div>`;
+    const visual=`<figure class="story-primary-visual"><img src="${escapeHtml(product.images[0])}" alt="${escapeHtml(alt)}" loading="lazy"></figure>`;
+    const capabilityCards=detail.caps.map(([title,text],index)=>`
+      <article>
+        <div class="story-point-visual story-point-visual-${index}" aria-hidden="true"><img src="${escapeHtml(product.focusImage)}" alt="" loading="lazy"></div>
+        <div class="story-point-copy">
+          <b>${String(index+1).padStart(2,'0')}</b>
+          <h3>${escapeHtml(title)}</h3>
+          <p>${escapeHtml(text)}</p>
+        </div>
+      </article>`).join('');
+
+    if(layout==='lung'){
+      const temporalRail=detail.steps.map(([title],index)=>`<span><b>${String(index+1).padStart(2,'0')}</b>${escapeHtml(title)}</span>`).join('');
+      story.innerHTML=`
+        <section class="product-story-section story-lung">
+          <div class="container detail-section">
+            ${heading}
+            <div class="lung-story-stage">
+              <div class="lung-story-visual">${visual}<div class="lung-temporal-rail">${temporalRail}</div></div>
+              <div class="lung-story-paths">${capabilityCards}</div>
+            </div>
+          </div>
+        </section>`;
+      return;
+    }
+
+    if(layout==='thorax'){
+      story.innerHTML=`
+        <section class="product-story-section story-thorax">
+          <div class="container detail-section">
+            ${heading}
+            <div class="thorax-anatomy-map">
+              ${visual}
+              <div class="thorax-anatomy-rail">${capabilityCards}</div>
+            </div>
+          </div>
+        </section>`;
+      return;
+    }
+
+    if(layout==='liver'){
+      story.innerHTML=`
+        <section class="product-story-section story-liver">
+          <div class="container detail-section">
+            ${heading}
+            <div class="liver-planning-layers">
+              <div class="liver-layer-list">${capabilityCards}</div>
+              ${visual}
+            </div>
+          </div>
+        </section>`;
+      return;
+    }
+
+    if(layout==='urology'){
+      story.innerHTML=`
+        <section class="product-story-section story-urology">
+          <div class="container detail-section">
+            ${heading}
+            <div class="urology-focus-map">
+              ${visual}
+              <div class="urology-focus-points">${capabilityCards}</div>
+            </div>
+          </div>
+        </section>`;
+      return;
+    }
+
+    if(layout==='coronary'){
+      story.innerHTML=`
+        <section class="product-story-section story-coronary">
+          <div class="container detail-section">
+            ${heading}
+            <div class="coronary-analysis-stage">${visual}<div class="coronary-analysis-track">${capabilityCards}</div></div>
+          </div>
+        </section>`;
+    }
+  }
+
   function renderProduct(requestedLanguage){
     const lang=resolveLanguage(requestedLanguage || document.documentElement.lang);
     const productId=new URLSearchParams(window.location.search).get('product');
     const product=productCatalog[productId];
-    if(!product){
+    if(!currentProductIds.has(productId) || !product){
       window.location.replace('ai-healthcare.html');
       return;
     }
@@ -1904,6 +2506,8 @@
     renderCards('#product-facts',detail.facts,([value,label])=>`
       <article><strong>${escapeHtml(value)}</strong><span>${escapeHtml(label)}</span></article>
     `);
+
+    renderProductStory(product,detail,alt);
 
     document.querySelector('#capability-heading').textContent=detail.capHeading;
     document.querySelector('#capability-intro').textContent=detail.capIntro;

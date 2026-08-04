@@ -1,0 +1,861 @@
+.healthcare-page {
+  display: block;
+  background: #f5f8f9;
+}
+
+.healthcare-hero {
+  padding: clamp(64px, 8vw, 112px) 0 28px;
+  overflow: hidden;
+  border-top: 1px solid #dbe4e8;
+  background:
+    radial-gradient(circle at 82% 10%, #8dd9d52b, transparent 30%),
+    linear-gradient(145deg, #eef4f5 0%, #f8fafb 58%, #e9f2f1 100%);
+}
+
+.healthcare-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, .88fr) minmax(500px, 1.12fr);
+  gap: clamp(48px, 7vw, 96px);
+  align-items: center;
+}
+
+.healthcare-hero-copy h1 {
+  max-width: 680px;
+  margin: 19px 0 27px;
+  font-size: clamp(54px, 6.7vw, 92px);
+  line-height: .91;
+  letter-spacing: -.072em;
+}
+
+.healthcare-hero-copy > p {
+  max-width: 590px;
+  margin: 0;
+  color: #526778;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+.healthcare-text-link,
+.healthcare-page .product-detail-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 30px;
+  color: #0966df;
+  font-size: 13px;
+  font-weight: 760;
+}
+
+.healthcare-text-link::after {
+  content: "↗";
+  display: grid;
+  width: 27px;
+  height: 27px;
+  place-items: center;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  font-size: 12px;
+  transition: transform .22s ease, background .22s ease, color .22s ease;
+}
+
+.healthcare-text-link:hover::after {
+  transform: translate(2px, -2px);
+  background: #0966df;
+  color: #fff;
+}
+
+.healthcare-hero-visual figure {
+  position: relative;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid #b9cbd3;
+  border-radius: 2px;
+  background: #07172a;
+  box-shadow: 0 35px 75px #123c5330;
+}
+
+.healthcare-hero-visual figure::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid #ffffff24;
+  pointer-events: none;
+}
+
+.healthcare-hero-visual img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  filter: saturate(.84) contrast(1.04);
+}
+
+.healthcare-hero-legend {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-right: 1px solid #bfcdd3;
+  border-bottom: 1px solid #bfcdd3;
+  border-left: 1px solid #bfcdd3;
+}
+
+.healthcare-hero-legend span {
+  min-height: 64px;
+  padding: 17px 15px;
+  border-right: 1px solid #bfcdd3;
+  color: #365163;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.healthcare-hero-legend span:last-child {
+  border-right: 0;
+}
+
+.healthcare-hero-visual > p {
+  margin: 10px 0 0;
+  color: #758994;
+  font-size: 10px;
+}
+
+.healthcare-availability {
+  margin-top: clamp(42px, 7vw, 82px);
+  padding-top: 17px;
+  border-top: 1px solid #ccd9de;
+  color: #6b7e88;
+  font-size: 11px;
+  line-height: 1.55;
+}
+
+.healthcare-pathways {
+  position: relative;
+  z-index: 2;
+  border-bottom: 1px solid #d2dde1;
+  background: #fbfcfcf2;
+  backdrop-filter: blur(18px);
+}
+
+.healthcare-index {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+}
+
+.healthcare-index a {
+  min-width: 0;
+  min-height: 122px;
+  padding: 19px 18px 18px 0;
+  border-right: 1px solid #d7e1e5;
+}
+
+.healthcare-index a:not(:first-child) {
+  padding-left: 18px;
+}
+
+.healthcare-index a:last-child {
+  border-right: 0;
+}
+
+.healthcare-index span {
+  display: block;
+  color: #0b70de;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .1em;
+}
+
+.healthcare-index strong {
+  display: block;
+  margin: 18px 0 5px;
+  font-size: 14px;
+  letter-spacing: -.02em;
+}
+
+.healthcare-index small {
+  display: block;
+  color: #71828d;
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+.healthcare-index a:hover strong {
+  color: #0966df;
+}
+
+.healthcare-chapter {
+  scroll-margin-top: 20px;
+  padding: clamp(94px, 10vw, 140px) 0;
+}
+
+.healthcare-chapter-head {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr) minmax(260px, 360px);
+  gap: 28px;
+  align-items: end;
+  margin-bottom: 50px;
+}
+
+.healthcare-chapter-head > div:nth-child(2):last-child {
+  grid-column: span 2;
+}
+
+.chapter-number {
+  align-self: start;
+  padding-top: 3px;
+  color: #78909b;
+  font-size: 12px;
+  font-weight: 780;
+  letter-spacing: .16em;
+}
+
+.healthcare-chapter-head h2,
+.healthcare-agent-copy h2 {
+  max-width: 760px;
+  margin: 10px 0 0;
+  font-size: clamp(42px, 5vw, 67px);
+  line-height: .96;
+  letter-spacing: -.058em;
+}
+
+.healthcare-chapter-head .section-intro {
+  margin: 0;
+  line-height: 1.68;
+}
+
+.imaging-chapter {
+  background: #f5f8f9;
+}
+
+.imaging-portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1px;
+  overflow: hidden;
+  border: 1px solid #d5e0e4;
+  background: #d5e0e4;
+}
+
+.health-product-card {
+  min-width: 0;
+  background: #fff;
+}
+
+.health-product-feature {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: minmax(0, 1.25fr) minmax(340px, .75fr);
+}
+
+.health-product-media {
+  position: relative;
+  overflow: hidden;
+  background: #07172b;
+}
+
+.health-product-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid #ffffff12;
+  pointer-events: none;
+}
+
+.health-product-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(.76) contrast(1.04);
+  transition: transform .5s ease, filter .5s ease;
+}
+
+.health-product-card:hover .health-product-media img,
+.planning-product-card:hover .health-product-media img,
+.specialty-product-card:hover .health-product-media img {
+  transform: scale(1.018);
+  filter: saturate(.9) contrast(1.04);
+}
+
+.health-product-feature .health-product-media {
+  min-height: 510px;
+}
+
+.health-product-copy {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(29px, 4vw, 50px);
+}
+
+.health-product-modality {
+  color: #0b6fd7;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .11em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.health-product-card h3,
+.planning-product-card h3,
+.specialty-product-card h3,
+.device-story h3 {
+  margin: 18px 0 17px;
+  font-size: clamp(32px, 4vw, 52px);
+  line-height: .98;
+  letter-spacing: -.052em;
+}
+
+.health-product-card p,
+.planning-product-card p,
+.specialty-product-card p,
+.device-story p {
+  margin: 0;
+  color: #617482;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.product-regulations {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+  margin-top: auto;
+  padding-top: 27px;
+}
+
+.product-regulations span {
+  color: #506775;
+  font-size: 10px;
+  font-weight: 780;
+  letter-spacing: .07em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.product-regulations span:not(:last-child)::after {
+  content: "/";
+  margin: 0 8px;
+  color: #9aabb3;
+}
+
+.health-product-compact .health-product-media {
+  aspect-ratio: 16 / 9;
+}
+
+.health-product-compact .health-product-copy {
+  min-height: 355px;
+}
+
+.health-product-compact h3 {
+  font-size: clamp(32px, 3.7vw, 47px);
+}
+
+.health-product-compact .product-detail-link {
+  margin-top: 25px;
+}
+
+.planning-chapter {
+  background:
+    radial-gradient(circle at 20% 0%, #1d53694f, transparent 34%),
+    #071827;
+  color: #fff;
+}
+
+.planning-chapter .eyebrow {
+  color: #72e5c9;
+}
+
+.planning-chapter .chapter-number {
+  color: #7590a0;
+}
+
+.planning-product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border-top: 1px solid #ffffff35;
+  border-bottom: 1px solid #ffffff35;
+}
+
+.planning-product-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  padding: 30px 28px 34px;
+  border-right: 1px solid #ffffff25;
+}
+
+.planning-product-card:first-child {
+  padding-left: 0;
+}
+
+.planning-product-card:last-child {
+  padding-right: 0;
+  border-right: 0;
+}
+
+.planning-product-card .health-product-media {
+  aspect-ratio: 4 / 3;
+  margin-bottom: 29px;
+  border: 1px solid #7193a32e;
+}
+
+.planning-product-card .health-product-modality {
+  color: #72e5c9;
+}
+
+.planning-product-card h3 {
+  font-size: clamp(30px, 3.1vw, 42px);
+}
+
+.planning-product-card p {
+  color: #afc0ca;
+}
+
+.planning-product-card .product-regulations span {
+  color: #d0dfe5;
+}
+
+.planning-product-card .product-detail-link {
+  margin-top: 27px;
+  color: #72e5c9;
+}
+
+.planning-product-card .product-detail-link:hover::after {
+  background: #72e5c9;
+  color: #071827;
+}
+
+.healthcare-agent-chapter {
+  padding: 0;
+  background: #dfeeee;
+}
+
+.healthcare-agent-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(360px, .9fr);
+  min-height: 700px;
+}
+
+.healthcare-agent-media {
+  min-width: 0;
+  margin-left: calc((100vw - min(1160px, calc(100vw - 48px))) / -2);
+  overflow: hidden;
+  background: #cfdee8;
+}
+
+.healthcare-agent-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(.72) contrast(1.03);
+}
+
+.healthcare-agent-copy {
+  align-self: center;
+  padding: 80px 0 80px clamp(48px, 7vw, 90px);
+}
+
+.healthcare-agent-copy .chapter-number {
+  margin-bottom: 50px;
+}
+
+.healthcare-agent-copy > p {
+  margin: 27px 0 0;
+  color: #526d73;
+  line-height: 1.72;
+}
+
+.healthcare-agent-copy .agent-feature-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 22px;
+  margin-top: 32px;
+  border-top: 1px solid #a9c3c4;
+}
+
+.healthcare-agent-copy .agent-feature-list span {
+  padding: 13px 0;
+  border-bottom: 1px solid #a9c3c4;
+  border-radius: 0;
+  background: transparent;
+  color: #34525b;
+  font-size: 11px;
+}
+
+.devices-chapter {
+  background: #fff;
+}
+
+.device-story-list {
+  border-top: 1px solid #cad8de;
+}
+
+.device-story {
+  display: grid;
+  grid-template-columns: minmax(0, 1.18fr) minmax(340px, .82fr);
+  gap: clamp(44px, 7vw, 96px);
+  align-items: center;
+  padding: 52px 0;
+  border-bottom: 1px solid #cad8de;
+}
+
+.device-story-reverse {
+  grid-template-columns: minmax(340px, .82fr) minmax(0, 1.18fr);
+}
+
+.device-story-reverse .device-story-media {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.device-story-media {
+  overflow: hidden;
+  border: 1px solid #d2dfe4;
+  background: #eef2f3;
+}
+
+.device-story-media img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: center;
+}
+
+.device-story h3 {
+  font-size: clamp(39px, 4.6vw, 62px);
+}
+
+.device-meta-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px 18px;
+  margin-top: 26px;
+  padding-top: 18px;
+  border-top: 1px solid #d5e0e4;
+  color: #5d737f;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.prosthetics-chapter {
+  background: linear-gradient(145deg, #e5edf4 0%, #f5f7fa 58%, #e8f3ef 100%);
+}
+
+.prosthetic-story {
+  display: grid;
+  grid-template-columns: minmax(0, .88fr) minmax(0, 1.12fr);
+  gap: clamp(45px, 7vw, 90px);
+  align-items: center;
+}
+
+.prosthetic-story-media {
+  overflow: hidden;
+  border: 1px solid #c9d6dd;
+  background: #fff;
+  box-shadow: 0 30px 70px #2344581b;
+}
+
+.prosthetic-story-media img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  filter: saturate(.72) contrast(1.03);
+}
+
+.prosthetic-story-copy h3 {
+  max-width: 700px;
+  margin: 16px 0 24px;
+  font-size: clamp(48px, 6.5vw, 82px);
+  line-height: .92;
+  letter-spacing: -.068em;
+}
+
+.prosthetic-story-copy > p {
+  max-width: 690px;
+  margin: 0;
+  color: #586d7b;
+  font-size: 16px;
+  line-height: 1.72;
+}
+
+.prosthetic-story .capability-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  margin: 31px 0 0;
+  border-top: 1px solid #c7d5db;
+  border-bottom: 1px solid #c7d5db;
+}
+
+.prosthetic-story .capability-row span {
+  padding: 15px 14px 15px 0;
+  border-right: 1px solid #c7d5db;
+  border-radius: 0;
+  background: transparent;
+  color: #3e5c6e;
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+.prosthetic-story .capability-row span:not(:first-child) {
+  padding-left: 14px;
+}
+
+.prosthetic-story .capability-row span:last-child {
+  border-right: 0;
+}
+
+.specialty-chapter {
+  background: #f7f9fa;
+}
+
+.specialty-product-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid #cfdce1;
+  border-bottom: 1px solid #cfdce1;
+}
+
+.specialty-product-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  padding: 32px 32px 38px 0;
+  border-right: 1px solid #cfdce1;
+}
+
+.specialty-product-card:last-child {
+  padding-right: 0;
+  padding-left: 32px;
+  border-right: 0;
+}
+
+.specialty-product-card .health-product-media {
+  aspect-ratio: 16 / 10;
+  margin-bottom: 28px;
+}
+
+.specialty-product-card h3 {
+  font-size: clamp(35px, 4.3vw, 55px);
+}
+
+.specialty-product-card .product-detail-link {
+  margin-top: 27px;
+}
+
+.healthcare-cta {
+  display: flex;
+  justify-content: space-between;
+  gap: 45px;
+  align-items: end;
+  margin-top: 28px;
+  margin-bottom: 90px;
+  padding-top: 72px;
+  padding-bottom: 72px;
+  border-top: 1px solid #cbd9df;
+  border-bottom: 1px solid #cbd9df;
+}
+
+.healthcare-cta h2 {
+  max-width: 700px;
+  margin: 11px 0 0;
+  font-size: clamp(39px, 5vw, 62px);
+  line-height: .96;
+  letter-spacing: -.058em;
+}
+
+.healthcare-cta .button {
+  flex: 0 0 auto;
+  border-radius: 3px;
+  box-shadow: none;
+}
+
+@media (max-width: 1050px) {
+  .healthcare-hero-grid {
+    grid-template-columns: minmax(0, .9fr) minmax(430px, 1.1fr);
+    gap: 48px;
+  }
+
+  .healthcare-index {
+    overflow-x: auto;
+    grid-template-columns: repeat(6, minmax(180px, 1fr));
+  }
+
+  .planning-product-card {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
+
+@media (max-width: 850px) {
+  .healthcare-hero-grid,
+  .health-product-feature,
+  .healthcare-agent-grid,
+  .device-story,
+  .device-story-reverse,
+  .prosthetic-story {
+    grid-template-columns: 1fr;
+  }
+
+  .healthcare-hero-visual {
+    max-width: 720px;
+  }
+
+  .healthcare-chapter-head {
+    grid-template-columns: 54px 1fr;
+  }
+
+  .healthcare-chapter-head .section-intro {
+    grid-column: 2;
+    max-width: 580px;
+  }
+
+  .healthcare-chapter-head > div:nth-child(2):last-child {
+    grid-column: auto;
+  }
+
+  .health-product-feature .health-product-media {
+    min-height: 0;
+    aspect-ratio: 16 / 10;
+  }
+
+  .planning-product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .planning-product-card,
+  .planning-product-card:first-child,
+  .planning-product-card:last-child {
+    padding: 30px 0 36px;
+    border-right: 0;
+    border-bottom: 1px solid #ffffff25;
+  }
+
+  .planning-product-card:last-child {
+    border-bottom: 0;
+  }
+
+  .planning-product-card .health-product-media {
+    aspect-ratio: 16 / 9;
+  }
+
+  .healthcare-agent-grid {
+    padding-bottom: 60px;
+  }
+
+  .healthcare-agent-media {
+    min-height: 480px;
+    margin-right: calc((100vw - min(1160px, calc(100vw - 48px))) / -2);
+  }
+
+  .healthcare-agent-copy {
+    padding: 62px 0 0;
+  }
+
+  .device-story-reverse .device-story-media {
+    grid-column: auto;
+    grid-row: auto;
+  }
+}
+
+@media (max-width: 680px) {
+  .healthcare-hero {
+    padding-top: 58px;
+  }
+
+  .healthcare-hero-copy h1 {
+    font-size: clamp(48px, 14vw, 66px);
+  }
+
+  .healthcare-hero-legend {
+    grid-template-columns: 1fr;
+  }
+
+  .healthcare-hero-legend span {
+    min-height: 0;
+    border-right: 0;
+    border-bottom: 1px solid #bfcdd3;
+  }
+
+  .healthcare-hero-legend span:last-child {
+    border-bottom: 0;
+  }
+
+  .healthcare-chapter-head {
+    display: block;
+    margin-bottom: 36px;
+  }
+
+  .healthcare-chapter-head .chapter-number {
+    margin-bottom: 24px;
+  }
+
+  .healthcare-chapter-head .section-intro {
+    margin-top: 20px;
+  }
+
+  .imaging-portfolio-grid,
+  .specialty-product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .health-product-compact .health-product-copy {
+    min-height: 0;
+  }
+
+  .product-regulations {
+    margin-top: 26px;
+  }
+
+  .healthcare-agent-media {
+    min-height: 360px;
+    margin-right: -16px;
+    margin-left: -16px;
+  }
+
+  .healthcare-agent-copy .agent-feature-list {
+    grid-template-columns: 1fr;
+  }
+
+  .device-story {
+    padding: 38px 0;
+  }
+
+  .prosthetic-story .capability-row {
+    grid-template-columns: 1fr;
+  }
+
+  .prosthetic-story .capability-row span,
+  .prosthetic-story .capability-row span:not(:first-child) {
+    padding: 13px 0;
+    border-right: 0;
+    border-bottom: 1px solid #c7d5db;
+  }
+
+  .prosthetic-story .capability-row span:last-child {
+    border-bottom: 0;
+  }
+
+  .specialty-product-card,
+  .specialty-product-card:last-child {
+    padding: 30px 0 36px;
+    border-right: 0;
+    border-bottom: 1px solid #cfdce1;
+  }
+
+  .specialty-product-card:last-child {
+    border-bottom: 0;
+  }
+
+  .healthcare-cta {
+    display: block;
+    padding-top: 52px;
+    padding-bottom: 52px;
+  }
+
+  .healthcare-cta .button {
+    margin-top: 28px;
+  }
+}
