@@ -926,6 +926,19 @@
   background: #2b1e27;
 }
 
+/* Preserve the complete planning workstation in each product hero. */
+body:is(.product-layout-thorax, .product-layout-liver, .product-layout-urology) .detail-gallery {
+  min-height: 0;
+  aspect-ratio: 16 / 9;
+  border-radius: 14px;
+  background: #07111d;
+}
+
+body:is(.product-layout-thorax, .product-layout-liver, .product-layout-urology) .detail-gallery img {
+  min-height: 0;
+  object-fit: contain;
+}
+
 @media (max-width: 900px) {
   .lung-story-stage,
   .thorax-anatomy-map,

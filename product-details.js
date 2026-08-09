@@ -1713,7 +1713,8 @@
         ms: 'Membina semula lobus, segmen, subsegmen, salur dan bronkus secara automatik daripada CT dada dengan atau tanpa kontras untuk menyokong kedudukan lesi dan perancangan margin reseksi.',
         th: 'สร้างภาพกลีบปอด ส่วนปอด ส่วนย่อย หลอดเลือด และหลอดลมโดยอัตโนมัติจาก CT ทรวงอกทั้งแบบฉีดและไม่ฉีดสารทึบรังสี เพื่อช่วยระบุตำแหน่งรอยโรคและวางแผนขอบเขตการตัด'
       },
-      images: ['assets/products/visual-thorax-planning.webp'],
+      images: ['assets/products/visual-thorax-planning-workstation.webp'],
+      storyImage: 'assets/products/visual-thorax-planning.webp',
       focusImage: 'assets/products/focus-thorax-planning-v2.jpg',
       tags: [{key:'chestCT'},{key:'ceMarked'},{key:'fdaCleared'},{key:'ukcaMarked'},{key:'nmpaApproved'},{key:'reconstruction'},{key:'preoperativePlanning'}],
       accent: '#ffd166',
@@ -1879,7 +1880,8 @@
         ms: 'Membina semula segmen Couinaud, salur dan sistem biliari secara automatik daripada CT abdomen, dengan pengiraan isipadu serta perancangan maya lesi dan margin reseksi.',
         th: 'สร้างภาพส่วนตับ Couinaud หลอดเลือด และระบบท่อน้ำดีโดยอัตโนมัติจาก CT ช่องท้อง พร้อมคำนวณปริมาตร ระบุตำแหน่งรอยโรค และวางแผนขอบเขตการตัดเสมือน'
       },
-      images: ['assets/products/visual-liver-planning.webp'],
+      images: ['assets/products/visual-liver-planning-workstation.webp'],
+      storyImage: 'assets/products/visual-liver-planning.webp',
       focusImage: 'assets/products/focus-liver-planning.jpg',
       tags: [{key:'abdominalCT'},{key:'ceMarked'},{key:'fdaCleared'},{key:'ukcaMarked'},{key:'nmpaApproved'},{key:'reconstruction'},{key:'preoperativePlanning'}],
       accent: '#ffb56b',
@@ -2045,7 +2047,8 @@
         ms: 'Membina semula buah pinggang, salur renal, ureter, pundi kencing dan kelenjar adrenal secara automatik daripada CT abdomen, dengan kuantifikasi lesi dan perancangan nefrektomi separa.',
         th: 'สร้างภาพไต หลอดเลือดไต ท่อไต กระเพาะปัสสาวะ และต่อมหมวกไตโดยอัตโนมัติจาก CT ช่องท้อง พร้อมวัดรอยโรคและวางแผนผ่าตัดไตบางส่วน'
       },
-      images: ['assets/products/visual-urology-planning.webp'],
+      images: ['assets/products/visual-urology-planning-workstation.webp'],
+      storyImage: 'assets/products/visual-urology-planning.webp',
       focusImage: 'assets/products/focus-urology-planning.jpg',
       tags: [{key:'abdominalCT'},{key:'ceMarked'},{key:'fdaCleared'},{key:'ukcaMarked'},{key:'nmpaApproved'},{key:'reconstruction'},{key:'preoperativePlanning'}],
       accent: '#83d7ff',
@@ -2422,7 +2425,7 @@
         <div><div class="eyebrow">${escapeHtml(uiText(document.documentElement.lang,'capabilityEyebrow'))}</div><h2>${escapeHtml(detail.capHeading)}</h2></div>
         <p>${escapeHtml(detail.capIntro)}</p>
       </div>`;
-    const visual=`<figure class="story-primary-visual"><img src="${escapeHtml(product.images[0])}" alt="${escapeHtml(alt)}" loading="lazy"></figure>`;
+    const visual=`<figure class="story-primary-visual"><img src="${escapeHtml(product.storyImage || product.images[0])}" alt="${escapeHtml(alt)}" loading="lazy"></figure>`;
     const capabilityCards=detail.caps.map(([title,text],index)=>{
       const dedicatedImage=product.capabilityImages?.[index];
       const capabilityImage=dedicatedImage || product.focusImage;
