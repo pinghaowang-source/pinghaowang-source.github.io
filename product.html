@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" href="assets/scovion-logo-mark.png">
   <link rel="apple-touch-icon" href="assets/scovion-logo-mark.png">
   <link rel="stylesheet" href="styles.css?v=1.5.0">
-  <link rel="stylesheet" href="product-detail.css?v=1.4.3">
+  <link rel="stylesheet" href="product-detail.css?v=1.4.4">
 </head>
 <body class="product-detail-page">
   <header class="container nav">
@@ -62,13 +62,17 @@
 
     <section id="product-secondary-visual" class="container detail-secondary-section" hidden>
       <div class="detail-secondary-heading">
-        <div class="eyebrow" data-product-ui="secondaryVisualEyebrow">Analysis view</div>
-        <h2 id="secondary-visual-heading"></h2>
+        <div>
+          <div id="secondary-visual-eyebrow" class="eyebrow" data-product-ui="secondaryVisualEyebrow">Analysis view</div>
+          <h2 id="secondary-visual-heading"></h2>
+        </div>
+        <p id="secondary-visual-intro" hidden></p>
       </div>
       <figure class="detail-secondary-visual">
-        <img id="secondary-visual-image" src="" alt="" loading="lazy">
+        <img id="secondary-visual-image" src="" alt="" loading="lazy" decoding="async">
       </figure>
       <p class="secondary-visual-origin" data-product-ui="visualNotice">Image for reference only.</p>
+      <div id="secondary-visual-points" class="detail-secondary-points" hidden></div>
     </section>
 
     <section class="workflow-band">
@@ -102,7 +106,7 @@
     <p data-i18n="availabilityFooter">Product availability varies by market.</p>
   </footer>
   <script src="main.js?v=1.5.1"></script>
-  <script src="product-details.js?v=1.5.3"></script>
+  <script src="product-details.js?v=1.5.4"></script>
   <script src="analytics.js?v=1.0.1"></script>
 </body>
 </html>

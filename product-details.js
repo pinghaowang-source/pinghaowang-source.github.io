@@ -7,6 +7,12 @@
       visualNotice: 'Image for reference only.',
       capabilityEyebrow: 'Clinical focus',
       secondaryVisualEyebrow: 'Analysis view',
+      followUpEyebrow: 'Longitudinal follow-up',
+      followUpPoints: [
+        ['Same-patient comparison','When a prior CT examination for the same patient is available, the current and prior studies can be reviewed side by side.'],
+        ['Review corresponding findings','Findings identified as potentially corresponding across examinations are shown with available measurements for clinician confirmation and comparison.'],
+        ['Interval trend overview','Available measurements from selected examinations are organised over time to support clinician assessment of interval change.']
+      ],
       workflowEyebrow: 'Product workflow',
       highlightEyebrow: 'Application value',
       ctaEyebrow: 'Explore the fit',
@@ -21,6 +27,12 @@
       visualNotice: '图像仅供参考。',
       capabilityEyebrow: '临床重点',
       secondaryVisualEyebrow: '分析视图',
+      followUpEyebrow: '纵向随访',
+      followUpPoints: [
+        ['同一患者检查对比','当同一患者存在可供复核的既往CT检查时，可将本次与既往检查并列查看。'],
+        ['对应发现复核','可将不同检查中可能相对应的影像发现与已有测量结果一并呈现，供医师确认和比较。'],
+        ['检查间趋势概览','按时间顺序整理所选检查中的已有测量结果，辅助医师评估检查间变化。']
+      ],
       workflowEyebrow: '产品流程',
       highlightEyebrow: '应用价值',
       ctaEyebrow: '评估适配性',
@@ -35,6 +47,12 @@
       visualNotice: '圖像僅供參考。',
       capabilityEyebrow: '臨床重點',
       secondaryVisualEyebrow: '分析視圖',
+      followUpEyebrow: '縱向追蹤',
+      followUpPoints: [
+        ['同一患者檢查比較','當同一患者有可供複核的既往CT檢查時，可將本次與既往檢查並列查看。'],
+        ['對應發現複核','可將不同檢查中可能相對應的影像發現與既有測量結果一併呈現，供醫師確認與比較。'],
+        ['檢查間趨勢概覽','依時間順序整理所選檢查中的既有測量結果，協助醫師評估檢查間變化。']
+      ],
       workflowEyebrow: '產品流程',
       highlightEyebrow: '應用價值',
       ctaEyebrow: '評估適配性',
@@ -49,6 +67,12 @@
       visualNotice: 'Imej untuk rujukan sahaja.',
       capabilityEyebrow: 'Fokus klinikal',
       secondaryVisualEyebrow: 'Paparan analisis',
+      followUpEyebrow: 'Susulan longitudinal',
+      followUpPoints: [
+        ['Perbandingan pesakit yang sama','Apabila pemeriksaan CT terdahulu bagi pesakit yang sama tersedia, pemeriksaan semasa dan terdahulu boleh dilihat bersebelahan.'],
+        ['Semakan dapatan sepadan','Dapatan yang dikenal pasti sebagai berkemungkinan sepadan antara pemeriksaan dipaparkan bersama ukuran yang tersedia untuk pengesahan dan perbandingan oleh klinisi.'],
+        ['Gambaran trend antara pemeriksaan','Ukuran yang tersedia daripada pemeriksaan terpilih disusun mengikut masa untuk menyokong penilaian klinisi terhadap perubahan antara pemeriksaan.']
+      ],
       workflowEyebrow: 'Aliran produk',
       highlightEyebrow: 'Nilai aplikasi',
       ctaEyebrow: 'Nilai kesesuaian',
@@ -63,6 +87,12 @@
       visualNotice: 'ภาพใช้เพื่อการอ้างอิงเท่านั้น',
       capabilityEyebrow: 'จุดเน้นทางคลินิก',
       secondaryVisualEyebrow: 'มุมมองการวิเคราะห์',
+      followUpEyebrow: 'การติดตามผลตามช่วงเวลา',
+      followUpPoints: [
+        ['เปรียบเทียบการตรวจของผู้ป่วยรายเดียวกัน','เมื่อมีการตรวจ CT ครั้งก่อนของผู้ป่วยรายเดียวกัน สามารถดูการตรวจครั้งปัจจุบันและครั้งก่อนแบบเคียงข้างกันได้'],
+        ['ทบทวนสิ่งที่พบซึ่งสอดคล้องกัน','สิ่งที่พบซึ่งระบุว่าอาจสอดคล้องกันระหว่างการตรวจ จะแสดงพร้อมค่าการวัดที่มี เพื่อให้แพทย์ยืนยันและเปรียบเทียบ'],
+        ['ภาพรวมแนวโน้มระหว่างการตรวจ','ค่าการวัดที่มีจากการตรวจที่เลือกจะเรียงตามเวลา เพื่อช่วยแพทย์ประเมินการเปลี่ยนแปลงระหว่างการตรวจ']
+      ],
       workflowEyebrow: 'ขั้นตอนการทำงานของผลิตภัณฑ์',
       highlightEyebrow: 'คุณค่าการใช้งาน',
       ctaEyebrow: 'ประเมินความเหมาะสม',
@@ -889,8 +919,24 @@
         'assets/products/visual-ct-bone-regions.webp',
         'assets/products/visual-ct-bone-localisation.webp',
         'assets/products/visual-ct-bone-characterisation.webp',
-        'assets/products/visual-ct-bone-vr.webp'
+        'assets/products/visual-ct-bone-3d-reconstruction-workstation.webp'
       ],
+      secondaryType: 'followup',
+      secondaryImage: 'assets/products/visual-ct-bone-longitudinal-workstation.webp',
+      secondaryHeadings: {
+        en: 'Compare thoracic-bone findings over time',
+        'zh-cn': '对比胸廓骨骼发现的时间变化',
+        'zh-tw': '比較胸廓骨骼發現的時間變化',
+        ms: 'Bandingkan penemuan tulang toraks dari semasa ke semasa',
+        th: 'เปรียบเทียบสิ่งที่พบในกระดูกทรวงอกตามช่วงเวลา'
+      },
+      secondaryDescriptions: {
+        en: 'Place prior and current chest CT examinations for the same patient side by side, review potentially corresponding suspected-fracture findings, and see relevant interval changes presented as a trend.',
+        'zh-cn': '并列查看同一患者的既往与本次胸部CT，复核可能相对应的疑似骨折发现，并以趋势视图呈现相关的检查间变化。',
+        'zh-tw': '並列查看同一患者的既往與本次胸部CT，複核可能相對應的疑似骨折發現，並以趨勢視圖呈現相關的檢查間變化。',
+        ms: 'Paparkan CT dada terdahulu dan semasa bagi pesakit yang sama secara bersebelahan, semak penemuan patah tulang disyaki yang berkemungkinan sepadan, dan lihat perubahan berkaitan antara pemeriksaan sebagai trend.',
+        th: 'แสดง CT ทรวงอกครั้งก่อนและครั้งปัจจุบันของผู้ป่วยรายเดียวกันแบบเคียงข้างกัน ทบทวนจุดที่สงสัยว่ากระดูกหักซึ่งอาจสอดคล้องกัน และดูการเปลี่ยนแปลงระหว่างการตรวจที่เกี่ยวข้องในรูปแบบแนวโน้ม'
+      },
       tags: [{key:'chestCT'},{key:'ceMarked'},{key:'ukcaMarked'},{key:'nmpaApproved'}],
       accent: '#8fd8ff',
       glow: '#58bdf33a',
@@ -899,7 +945,7 @@
           facts: [
             ['Chest CT','Source examination'],
             ['4 regions','Ribs, scapulae, clavicles and sternum'],
-            ['VR review','Volumetric context for marked findings']
+            ['3D reconstruction','Thoracic skeleton and marked findings']
           ],
           capHeading: 'Chest-fracture review across the thoracic skeleton',
           capIntro: 'AI-assisted review brings suspected fractures from multiple thoracic bones into one focused reading pathway.',
@@ -907,28 +953,28 @@
             ['Multi-region analysis','Reviews the ribs, scapulae, clavicles and sternum on chest CT rather than limiting the search to one bone group.'],
             ['Suspected fracture localisation','Marks locations that may represent fractures so the reader can return directly to the relevant source images.'],
             ['Finding characterisation','Organises the location and visible characteristics of each suspected finding for clinician review.'],
-            ['Volumetric review','Adds VR visualisation to help inspect the distribution and spatial context of marked findings alongside the source CT.']
+            ['3D thoracic bone reconstruction','Reconstructs the ribs, scapulae, clavicles and sternum from chest CT, presenting marked findings with the 3D model and source slices for spatial review.']
           ],
           flowHeading: 'From chest CT to a focused fracture review',
           flowIntro: 'The workflow surfaces suspected findings while keeping confirmation with the clinician and the original examination.',
           steps: [
             ['Receive the chest CT','The examination enters the analysis workflow without requiring a separate bone-specific acquisition.'],
-            ['Analyse and organise','The system reviews the supported thoracic bones, marks suspected fractures and groups the findings for review.'],
-            ['Confirm on source images','The clinician checks each mark on the original slices and can use VR visualisation for additional spatial context.']
+            ['Analyse, localise and reconstruct','The system reviews the supported thoracic bones, marks suspected fractures and creates a 3D reconstruction for spatial review.'],
+            ['Confirm on source images','The clinician checks each mark on the original slices and the linked 3D reconstruction for additional spatial context.']
           ],
           highlightHeading: 'A clearer way to review distributed chest-bone findings',
           highlightIntro: 'Coverage across several thoracic structures helps readers organise a search task that can span many images and anatomical regions.',
           highlights: [
             ['Broader thoracic coverage','Ribs, scapulae, clavicles and sternum are reviewed within the same chest CT pathway.'],
             ['Focused case reading','Localised marks help direct attention to relevant areas while preserving review of the full examination.'],
-            ['Reviewable visual context','Source-image confirmation and VR viewing provide complementary perspectives for clinician assessment.']
+            ['Longitudinal comparison','Prior and current CT examinations for the same patient can be reviewed together, with relevant interval changes presented as a trend for clinician assessment.']
           ]
         },
         'zh-cn': {
           facts: [
             ['胸部CT','来源检查'],
             ['4个区域','肋骨、肩胛骨、锁骨与胸骨'],
-            ['VR复核','以容积视图呈现标记位置的空间关系']
+            ['三维重建','胸廓骨骼及标记发现']
           ],
           capHeading: '覆盖胸廓多处骨性结构的骨折复核',
           capIntro: 'AI辅助分析将胸廓不同骨性结构中的疑似骨折集中到一条清晰的阅片路径中。',
@@ -936,28 +982,28 @@
             ['多区域分析','在胸部CT中复核肋骨、肩胛骨、锁骨与胸骨，而不是将检索范围局限于单一骨群。'],
             ['疑似骨折定位','标记可能存在骨折的位置，便于阅片人员直接返回相关原始图像进行核查。'],
             ['征象整理','整理每处疑似发现的位置与可见特征，供临床人员进一步复核。'],
-            ['容积视图复核','通过VR可视化辅助查看标记发现的分布与空间关系，并与原始CT图像结合复核。']
+            ['胸廓骨骼三维重建','根据胸部CT重建肋骨、肩胛骨、锁骨与胸骨，并将标记发现与三维模型和原始切面结合呈现，便于复核空间关系。']
           ],
           flowHeading: '从胸部CT到聚焦的骨折复核',
           flowIntro: '系统主动呈现疑似发现，同时由临床人员依据原始检查完成确认。',
           steps: [
             ['接收胸部CT','检查进入分析流程，无需额外进行专门的骨骼影像采集。'],
-            ['分析并整理','系统复核支持的胸廓骨性结构，标记疑似骨折并整理待复核发现。'],
-            ['回到原图确认','临床人员在原始层面图像中逐项核查，并可借助VR视图理解空间关系。']
+            ['分析、定位并重建','系统复核支持的胸廓骨性结构，标记疑似骨折，并生成三维重建供空间关系复核。'],
+            ['回到原图确认','临床人员在原始层面图像中逐项核查，并可结合联动的三维重建理解空间关系。']
           ],
           highlightHeading: '更清晰地复核分散于胸廓各处的骨折征象',
           highlightIntro: '对多种胸廓骨性结构的覆盖，有助于组织跨越大量图像与多个解剖区域的检索任务。',
           highlights: [
             ['覆盖多种胸廓骨骼','肋骨、肩胛骨、锁骨与胸骨可在同一胸部CT流程中复核。'],
             ['聚焦病例阅片','定位标记帮助将注意力引向相关区域，同时保留对完整检查的审阅。'],
-            ['可核查的视觉信息','原始图像确认与VR查看提供互补视角，支持临床人员进行判断。']
+            ['纵向对比','可在同一工作区对照同一患者的既往与本次CT检查，并以趋势视图呈现相关的检查间变化，供临床人员复核。']
           ]
         },
         'zh-tw': {
           facts: [
             ['胸部CT','來源檢查'],
             ['4個區域','肋骨、肩胛骨、鎖骨與胸骨'],
-            ['VR複核','以容積視圖呈現標記位置的空間關係']
+            ['三維重建','胸廓骨骼及標記發現']
           ],
           capHeading: '涵蓋胸廓多處骨性結構的骨折複核',
           capIntro: 'AI輔助分析將胸廓不同骨性結構中的疑似骨折集中到一條清晰的閱片路徑中。',
@@ -965,28 +1011,28 @@
             ['多區域分析','在胸部CT中複核肋骨、肩胛骨、鎖骨與胸骨，而不是將搜尋範圍侷限於單一骨群。'],
             ['疑似骨折定位','標記可能存在骨折的位置，方便閱片人員直接返回相關原始影像進行核查。'],
             ['徵象整理','整理每處疑似發現的位置與可見特徵，供臨床人員進一步複核。'],
-            ['容積視圖複核','透過VR視覺化協助查看標記發現的分布與空間關係，並與原始CT影像結合複核。']
+            ['胸廓骨骼三維重建','根據胸部CT重建肋骨、肩胛骨、鎖骨與胸骨，並將標記發現與三維模型和原始切面結合呈現，便於複核空間關係。']
           ],
           flowHeading: '從胸部CT到聚焦的骨折複核',
           flowIntro: '系統主動呈現疑似發現，同時由臨床人員依據原始檢查完成確認。',
           steps: [
             ['接收胸部CT','檢查進入分析流程，無需額外進行專門的骨骼影像採集。'],
-            ['分析並整理','系統複核支援的胸廓骨性結構，標記疑似骨折並整理待複核發現。'],
-            ['返回原圖確認','臨床人員在原始切面影像中逐項核查，並可運用VR視圖理解空間關係。']
+            ['分析、定位並重建','系統複核支援的胸廓骨性結構，標記疑似骨折，並產生三維重建供空間關係複核。'],
+            ['返回原圖確認','臨床人員在原始切面影像中逐項核查，並可結合聯動的三維重建理解空間關係。']
           ],
           highlightHeading: '更清晰地複核分散於胸廓各處的骨折徵象',
           highlightIntro: '對多種胸廓骨性結構的涵蓋，有助於組織跨越大量影像與多個解剖區域的搜尋任務。',
           highlights: [
             ['涵蓋多種胸廓骨骼','肋骨、肩胛骨、鎖骨與胸骨可在同一胸部CT流程中複核。'],
             ['聚焦病例閱片','定位標記協助將注意力引向相關區域，同時保留對完整檢查的審閱。'],
-            ['可核查的視覺資訊','原始影像確認與VR查看提供互補視角，支援臨床人員進行判斷。']
+            ['縱向比較','可在同一工作區對照同一患者的既往與本次CT檢查，並以趨勢視圖呈現相關的檢查間變化，供臨床人員複核。']
           ]
         },
         ms: {
           facts: [
             ['CT dada','Pemeriksaan sumber'],
             ['4 kawasan','Rusuk, skapula, klavikel dan sternum'],
-            ['Semakan VR','Konteks volumetrik bagi penemuan bertanda']
+            ['Pembinaan semula 3D','Rangka toraks dan penemuan bertanda']
           ],
           capHeading: 'Semakan patah tulang merentas rangka toraks',
           capIntro: 'Semakan berbantu AI menghimpunkan patah tulang yang disyaki pada beberapa tulang toraks dalam satu aliran pembacaan yang tertumpu.',
@@ -994,28 +1040,28 @@
             ['Analisis pelbagai kawasan','Menyemak rusuk, skapula, klavikel dan sternum pada CT dada tanpa mengehadkan carian kepada satu kumpulan tulang.'],
             ['Penyetempatan patah tulang disyaki','Menandakan lokasi yang mungkin menunjukkan patah tulang supaya pembaca boleh kembali terus kepada imej sumber berkaitan.'],
             ['Pencirian penemuan','Menyusun lokasi dan ciri yang kelihatan bagi setiap penemuan disyaki untuk semakan klinikal.'],
-            ['Semakan volumetrik','Menambah visualisasi VR untuk membantu menilai taburan dan konteks ruang penemuan bertanda bersama CT sumber.']
+            ['Pembinaan semula 3D tulang toraks','Membina semula tulang rusuk, skapula, klavikel dan sternum daripada CT dada, serta memaparkan penemuan bertanda bersama model 3D dan imej keratan sumber untuk semakan hubungan ruang.']
           ],
           flowHeading: 'Daripada CT dada kepada semakan patah tulang tertumpu',
           flowIntro: 'Aliran ini menyerlahkan penemuan disyaki sambil mengekalkan pengesahan oleh klinisian berdasarkan pemeriksaan asal.',
           steps: [
             ['Terima CT dada','Pemeriksaan memasuki aliran analisis tanpa memerlukan pemerolehan khusus tulang yang berasingan.'],
-            ['Analisis dan susun','Sistem menyemak tulang toraks yang disokong, menandakan patah tulang disyaki dan menyusun penemuan untuk semakan.'],
-            ['Sahkan pada imej sumber','Klinisian memeriksa setiap tanda pada hirisan asal dan boleh menggunakan VR untuk konteks ruang tambahan.']
+            ['Analisis, tentukan lokasi dan bina semula','Sistem menyemak tulang toraks yang disokong, menandakan patah tulang yang disyaki dan menghasilkan pembinaan semula 3D untuk semakan hubungan ruang.'],
+            ['Sahkan pada imej sumber','Klinisian memeriksa setiap tanda pada hirisan asal dan pembinaan semula 3D yang berkaitan untuk konteks ruang tambahan.']
           ],
           highlightHeading: 'Cara lebih jelas untuk menyemak penemuan tulang dada yang berselerak',
           highlightIntro: 'Liputan beberapa struktur toraks membantu pembaca menyusun tugas carian yang merentasi banyak imej dan kawasan anatomi.',
           highlights: [
             ['Liputan toraks lebih luas','Rusuk, skapula, klavikel dan sternum disemak dalam aliran CT dada yang sama.'],
             ['Pembacaan kes tertumpu','Tanda setempat menghalakan perhatian ke kawasan berkaitan sambil mengekalkan semakan keseluruhan pemeriksaan.'],
-            ['Konteks visual boleh disemak','Pengesahan imej sumber dan pandangan VR memberi perspektif saling melengkapi untuk penilaian klinikal.']
+            ['Perbandingan longitudinal','Pemeriksaan CT terdahulu dan semasa bagi pesakit yang sama boleh disemak bersama, dengan perubahan antara pemeriksaan yang berkaitan dipaparkan sebagai trend untuk penilaian klinikal.']
           ]
         },
         th: {
           facts: [
             ['CT ทรวงอก','การตรวจต้นทาง'],
             ['4 บริเวณ','ซี่โครง สะบัก ไหปลาร้า และกระดูกอก'],
-            ['การทบทวน VR','บริบทเชิงปริมาตรของจุดที่ทำเครื่องหมาย']
+            ['การสร้างภาพ 3 มิติ','โครงกระดูกทรวงอกและจุดที่ทำเครื่องหมาย']
           ],
           capHeading: 'ทบทวนกระดูกหักครอบคลุมโครงกระดูกทรวงอก',
           capIntro: 'การวิเคราะห์ด้วย AI รวบรวมจุดที่สงสัยว่ากระดูกหักในกระดูกทรวงอกหลายส่วนไว้ในขั้นตอนการอ่านที่ชัดเจน',
@@ -1023,21 +1069,21 @@
             ['วิเคราะห์หลายบริเวณ','ทบทวนซี่โครง สะบัก ไหปลาร้า และกระดูกอกจาก CT ทรวงอก โดยไม่จำกัดการค้นหาไว้ที่กระดูกกลุ่มเดียว'],
             ['ระบุตำแหน่งที่สงสัยว่าหัก','ทำเครื่องหมายตำแหน่งที่อาจเป็นกระดูกหัก เพื่อให้ผู้อ่านกลับไปยังภาพต้นทางที่เกี่ยวข้องได้โดยตรง'],
             ['จัดลักษณะสิ่งที่พบ','จัดระเบียบตำแหน่งและลักษณะที่มองเห็นของแต่ละจุดที่สงสัย เพื่อให้บุคลากรทางคลินิกทบทวน'],
-            ['ทบทวนเชิงปริมาตร','เพิ่มภาพ VR เพื่อช่วยดูการกระจายและความสัมพันธ์เชิงพื้นที่ของจุดที่ทำเครื่องหมายควบคู่กับ CT ต้นทาง']
+            ['การสร้างภาพ 3 มิติของกระดูกทรวงอก','สร้างภาพ 3 มิติของซี่โครง สะบัก ไหปลาร้า และกระดูกอกจาก CT ทรวงอก พร้อมแสดงจุดที่ทำเครื่องหมายร่วมกับแบบจำลอง 3 มิติและภาพตัดต้นทาง เพื่อช่วยทบทวนความสัมพันธ์เชิงพื้นที่']
           ],
           flowHeading: 'จาก CT ทรวงอกสู่การทบทวนกระดูกหักแบบเจาะจง',
           flowIntro: 'ระบบแสดงจุดที่สงสัย ขณะที่การยืนยันยังอยู่กับบุคลากรทางคลินิกและการตรวจต้นฉบับ',
           steps: [
             ['รับ CT ทรวงอก','การตรวจเข้าสู่ขั้นตอนวิเคราะห์โดยไม่ต้องถ่ายภาพเฉพาะกระดูกเพิ่มเติม'],
-            ['วิเคราะห์และจัดระเบียบ','ระบบทบทวนกระดูกทรวงอกที่รองรับ ทำเครื่องหมายจุดที่สงสัยว่าหัก และจัดรายการเพื่อทบทวน'],
-            ['ยืนยันบนภาพต้นทาง','บุคลากรทางคลินิกตรวจแต่ละจุดบนภาพตัดต้นฉบับ และใช้ VR เพื่อดูบริบทเชิงพื้นที่เพิ่มเติมได้']
+            ['วิเคราะห์ ระบุตำแหน่ง และสร้างภาพ 3 มิติ','ระบบทบทวนกระดูกทรวงอกที่รองรับ ทำเครื่องหมายจุดที่สงสัยว่ากระดูกหัก และสร้างภาพ 3 มิติเพื่อช่วยทบทวนความสัมพันธ์เชิงพื้นที่'],
+            ['ยืนยันบนภาพต้นทาง','บุคลากรทางคลินิกตรวจแต่ละจุดบนภาพตัดต้นฉบับ และใช้ภาพ 3 มิติที่เชื่อมโยงกันเพื่อทบทวนความสัมพันธ์เชิงพื้นที่เพิ่มเติม']
           ],
           highlightHeading: 'ทบทวนจุดกระดูกทรวงอกที่กระจายอยู่ได้ชัดเจนขึ้น',
           highlightIntro: 'การครอบคลุมโครงสร้างทรวงอกหลายส่วนช่วยจัดระบบงานค้นหาที่ต้องดูภาพจำนวนมากและหลายบริเวณกายวิภาค',
           highlights: [
             ['ครอบคลุมกระดูกทรวงอกกว้างขึ้น','ทบทวนซี่โครง สะบัก ไหปลาร้า และกระดูกอกในขั้นตอน CT ทรวงอกเดียวกัน'],
             ['อ่านเคสอย่างมีจุดเน้น','เครื่องหมายตำแหน่งช่วยนำความสนใจไปยังบริเวณที่เกี่ยวข้อง โดยยังคงการทบทวนภาพตรวจทั้งหมด'],
-            ['บริบทภาพที่ตรวจสอบได้','การยืนยันบนภาพต้นทางและมุมมอง VR ให้ข้อมูลเสริมกันสำหรับการประเมินทางคลินิก']
+            ['การเปรียบเทียบระยะยาว','สามารถทบทวน CT ครั้งก่อนและครั้งปัจจุบันของผู้ป่วยรายเดียวกันร่วมกัน พร้อมแสดงการเปลี่ยนแปลงระหว่างการตรวจที่เกี่ยวข้องเป็นแนวโน้มเพื่อให้บุคลากรทางคลินิกประเมิน']
           ]
         }
       }
@@ -1055,6 +1101,22 @@
         'assets/products/visual-ct-stroke-priority.webp',
         'assets/products/visual-ct-stroke-review.webp'
       ],
+      secondaryType: 'followup',
+      secondaryImage: 'assets/products/visual-ct-stroke-longitudinal-workstation.webp',
+      secondaryHeadings: {
+        en: 'Review intracranial findings across CT examinations',
+        'zh-cn': '跨次CT检查复核颅内发现',
+        'zh-tw': '跨次CT檢查複核顱內發現',
+        ms: 'Semak penemuan intrakranium merentas pemeriksaan CT',
+        th: 'ทบทวนสิ่งที่พบในกะโหลกศีรษะระหว่างการตรวจ CT'
+      },
+      secondaryDescriptions: {
+        en: 'Compare prior and current non-contrast brain CT examinations for the same patient in one workspace, review potentially corresponding suspected-haemorrhage findings, and see relevant interval changes presented as a trend.',
+        'zh-cn': '在同一工作区对照同一患者的既往与本次非增强脑部CT，复核可能相对应的疑似颅内出血发现，并以趋势视图呈现相关的检查间变化。',
+        'zh-tw': '在同一工作區對照同一患者的既往與本次非增強腦部CT，複核可能相對應的疑似顱內出血發現，並以趨勢視圖呈現相關的檢查間變化。',
+        ms: 'Bandingkan CT otak tanpa kontras terdahulu dan semasa bagi pesakit yang sama dalam satu ruang kerja, semak penemuan pendarahan intrakranium disyaki yang berkemungkinan sepadan, dan lihat perubahan berkaitan antara pemeriksaan sebagai trend.',
+        th: 'เปรียบเทียบ CT สมองแบบไม่ฉีดสารทึบรังสีครั้งก่อนและครั้งปัจจุบันของผู้ป่วยรายเดียวกันในพื้นที่ทำงานเดียว ทบทวนจุดที่สงสัยว่าเป็นเลือดออกในกะโหลกศีรษะซึ่งอาจสอดคล้องกัน และดูการเปลี่ยนแปลงระหว่างการตรวจที่เกี่ยวข้องในรูปแบบแนวโน้ม'
+      },
       tags: [{key:'brainCT'},{key:'ceMarked'},{key:'fdaCleared'},{key:'ukcaMarked'},{key:'nmpaApproved'}],
       accent: '#b6a7ff',
       glow: '#7d67ee38',
@@ -1220,6 +1282,22 @@
         'assets/products/visual-ct-coronary-plaque.webp',
         'assets/products/visual-ct-coronary-modules.webp'
       ],
+      secondaryType: 'followup',
+      secondaryImage: 'assets/products/visual-ct-coronary-longitudinal-workstation.webp',
+      secondaryHeadings: {
+        en: 'Follow coronary findings across CT examinations',
+        'zh-cn': '跨次CT检查追踪冠脉发现',
+        'zh-tw': '跨次CT檢查追蹤冠脈發現',
+        ms: 'Jejaki penemuan koronari merentas pemeriksaan CT',
+        th: 'ติดตามสิ่งที่พบในหลอดเลือดหัวใจระหว่างการตรวจ CT'
+      },
+      secondaryDescriptions: {
+        en: 'Review prior and current coronary CT examinations for the same patient together, compare potentially corresponding stenosis and plaque findings with relevant quantitative outputs, and see interval changes presented as a trend.',
+        'zh-cn': '在同一工作区对照同一患者的既往与本次冠状动脉CT，比较可能相对应的狭窄、斑块发现及相关定量结果，并以趋势视图呈现检查间变化。',
+        'zh-tw': '在同一工作區對照同一患者的既往與本次冠狀動脈CT，比較可能相對應的狹窄、斑塊發現及相關定量結果，並以趨勢視圖呈現檢查間變化。',
+        ms: 'Semak CT koronari terdahulu dan semasa bagi pesakit yang sama bersama-sama, bandingkan penemuan stenosis dan plak yang berkemungkinan sepadan serta hasil kuantitatif berkaitan, dan lihat perubahan antara pemeriksaan sebagai trend.',
+        th: 'ทบทวน CT หลอดเลือดหัวใจครั้งก่อนและครั้งปัจจุบันของผู้ป่วยรายเดียวกันร่วมกัน เปรียบเทียบภาวะตีบและคราบพลัคที่อาจสอดคล้องกันพร้อมผลเชิงปริมาณที่เกี่ยวข้อง และดูการเปลี่ยนแปลงระหว่างการตรวจในรูปแบบแนวโน้ม'
+      },
       tags: [{key:'coronaryCT'},{key:'ceMarked'},{key:'ukcaMarked'},{key:'nmpaApproved'}],
       accent: '#ff8f82',
       glow: '#e6574a36',
@@ -1385,6 +1463,22 @@
         'assets/products/visual-ct-lung-quantification.webp',
         'assets/products/visual-ct-lung-followup.webp'
       ],
+      secondaryType: 'followup',
+      secondaryImage: 'assets/products/visual-ct-lung-longitudinal-workstation.webp',
+      secondaryHeadings: {
+        en: 'Follow pulmonary findings across CT examinations',
+        'zh-cn': '跨次CT检查追踪肺部发现',
+        'zh-tw': '跨次CT檢查追蹤肺部發現',
+        ms: 'Jejaki penemuan paru-paru merentas pemeriksaan CT',
+        th: 'ติดตามสิ่งที่พบในปอดระหว่างการตรวจ CT'
+      },
+      secondaryDescriptions: {
+        en: 'Review prior and current chest CT examinations for the same patient in one workstation view, compare potentially corresponding nodules and quantitative findings, and see interval changes presented as a clear trend.',
+        'zh-cn': '在同一工作站视图中对照同一患者的既往与本次胸部CT，比较可能相对应的结节及定量结果，并以清晰趋势呈现检查间变化。',
+        'zh-tw': '在同一工作站視圖中對照同一患者的既往與本次胸部CT，比較可能相對應的結節及定量結果，並以清晰趨勢呈現檢查間變化。',
+        ms: 'Semak CT dada terdahulu dan semasa bagi pesakit yang sama dalam satu paparan stesen kerja, bandingkan nodul serta dapatan kuantitatif yang berkemungkinan sepadan, dan lihat perubahan antara pemeriksaan sebagai trend yang jelas.',
+        th: 'ทบทวน CT ทรวงอกครั้งก่อนและครั้งปัจจุบันของผู้ป่วยรายเดียวกันในมุมมองเวิร์กสเตชันเดียว เปรียบเทียบก้อนปอดและผลเชิงปริมาณที่อาจสอดคล้องกัน พร้อมแสดงการเปลี่ยนแปลงระหว่างการตรวจเป็นแนวโน้มที่ชัดเจน'
+      },
       tags: [{key:'chestCT'},{key:'ceMarked'},{key:'fdaCleared'},{key:'nmpaApproved'},{key:'ukcaMarked'}],
       accent: '#6ce6d0',
       glow: '#22d6b33c',
@@ -2552,7 +2646,8 @@
     renderCards('#capability-grid',detail.caps,([heading,text],index)=>{
       const dedicatedImage=product.capabilityImages?.[index];
       const capabilityImage=dedicatedImage || product.focusImage;
-      const visualClass=`capability-visual capability-visual-${index}${dedicatedImage?' capability-visual-dedicated':''}`;
+      const workstationImage=dedicatedImage?.includes('-workstation.');
+      const visualClass=`capability-visual capability-visual-${index}${dedicatedImage?' capability-visual-dedicated':''}${workstationImage?' capability-visual-workstation':''}`;
       return `
       <article>
         <div class="${visualClass}" role="img" aria-label="${escapeHtml(heading)}">
@@ -2569,12 +2664,45 @@
 
     const secondarySection=document.querySelector('#product-secondary-visual');
     if(product.secondaryImage){
-      document.querySelector('#secondary-visual-heading').textContent=product.secondaryHeadings[lang] || product.secondaryHeadings.en;
+      const isFollowUp=product.secondaryType==='followup';
+      const secondaryHeading=product.secondaryHeadings[lang] || product.secondaryHeadings.en;
+      const secondaryIntro=product.secondaryDescriptions?.[lang] || product.secondaryDescriptions?.en || '';
+      const secondaryEyebrow=document.querySelector('#secondary-visual-eyebrow');
+      const secondaryIntroElement=document.querySelector('#secondary-visual-intro');
+      const secondaryPoints=document.querySelector('#secondary-visual-points');
+
+      secondarySection.classList.toggle('is-follow-up',isFollowUp);
+      secondaryEyebrow.textContent=isFollowUp?uiText(lang,'followUpEyebrow'):uiText(lang,'secondaryVisualEyebrow');
+      document.querySelector('#secondary-visual-heading').textContent=secondaryHeading;
+      secondaryIntroElement.textContent=secondaryIntro;
+      secondaryIntroElement.hidden=!secondaryIntro;
+
+      if(isFollowUp){
+        const points=uiCopy[lang]?.followUpPoints || uiCopy.en.followUpPoints;
+        renderCards('#secondary-visual-points',points,([heading,text],index)=>`
+          <article>
+            <b>${String(index+1).padStart(2,'0')}</b>
+            <h3>${escapeHtml(heading)}</h3>
+            <p>${escapeHtml(text)}</p>
+          </article>
+        `);
+        secondaryPoints.hidden=false;
+      }else{
+        secondaryPoints.innerHTML='';
+        secondaryPoints.hidden=true;
+      }
+
       const secondaryImage=document.querySelector('#secondary-visual-image');
       secondaryImage.src=product.secondaryImage;
       secondaryImage.alt=alt;
       secondarySection.hidden=false;
     }else{
+      secondarySection.classList.remove('is-follow-up');
+      document.querySelector('#secondary-visual-image').removeAttribute('src');
+      document.querySelector('#secondary-visual-intro').textContent='';
+      document.querySelector('#secondary-visual-intro').hidden=true;
+      document.querySelector('#secondary-visual-points').innerHTML='';
+      document.querySelector('#secondary-visual-points').hidden=true;
       secondarySection.hidden=true;
     }
 

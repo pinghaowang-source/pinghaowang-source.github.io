@@ -229,6 +229,11 @@
   object-position: center;
 }
 
+.capability-visual.capability-visual-workstation img {
+  object-fit: contain;
+  background: #061326;
+}
+
 .capability-copy {
   padding: 28px 30px 32px;
 }
@@ -261,6 +266,10 @@
 }
 
 .detail-secondary-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(280px, .75fr);
+  gap: 54px;
+  align-items: end;
   margin-bottom: 30px;
 }
 
@@ -270,6 +279,14 @@
   font-size: clamp(34px, 4vw, 52px);
   line-height: 1.04;
   letter-spacing: -.05em;
+}
+
+.detail-secondary-heading > p {
+  max-width: 470px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.7;
 }
 
 .detail-secondary-visual {
@@ -288,11 +305,57 @@
   object-fit: cover;
 }
 
+.detail-secondary-section.is-follow-up .detail-secondary-visual img {
+  object-fit: contain;
+}
+
 .secondary-visual-origin {
   margin: 12px 3px 0;
   color: #718696;
   font-size: 11px;
   line-height: 1.45;
+}
+
+.detail-secondary-points {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-top: 30px;
+  overflow: hidden;
+  border: 1px solid #d5e2eb;
+  border-radius: 22px;
+  background: #f8fbfd;
+}
+
+.detail-secondary-points article {
+  min-height: 220px;
+  padding: 28px;
+  border-right: 1px solid #d5e2eb;
+}
+
+.detail-secondary-points article:last-child {
+  border-right: 0;
+}
+
+.detail-secondary-points b {
+  display: block;
+  margin-bottom: 34px;
+  color: var(--product-accent);
+  font-size: 12px;
+  letter-spacing: .12em;
+}
+
+.detail-secondary-points h3 {
+  margin: 0 0 12px;
+  font-size: clamp(20px, 2vw, 26px);
+  line-height: 1.16;
+  letter-spacing: -.035em;
+}
+
+.detail-secondary-points p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
 }
 
 .workflow-band {
@@ -457,6 +520,14 @@
   .detail-heading > p {
     margin-top: 18px;
   }
+
+  .detail-secondary-heading {
+    display: block;
+  }
+
+  .detail-secondary-heading > p {
+    margin-top: 18px;
+  }
 }
 
 @media (max-width: 780px) {
@@ -483,10 +554,21 @@
   }
 
   .detail-capability-grid,
+  .detail-secondary-points,
   .workflow-flow,
   .deployment-grid,
   .detail-facts {
     grid-template-columns: 1fr;
+  }
+
+  .detail-secondary-points article {
+    min-height: 0;
+    border-right: 0;
+    border-bottom: 1px solid #d5e2eb;
+  }
+
+  .detail-secondary-points article:last-child {
+    border-bottom: 0;
   }
 
   .workflow-flow article {
