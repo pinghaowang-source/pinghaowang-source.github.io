@@ -169,6 +169,40 @@ const languageAliases={zh:'zh-tw'};
 function enhanceNavigation(){document.querySelectorAll('.links').forEach((nav,index)=>{const link=[...nav.children].find(el=>el.matches&&el.matches('a[data-i18n="solutions"]'));if(!link||link.closest('.nav-dropdown'))return;const wrap=document.createElement('div');wrap.className='nav-dropdown';link.parentNode.insertBefore(wrap,link);wrap.appendChild(link);const menu=document.createElement('div');menu.className='solution-menu';menu.id=`solution-menu-${index+1}`;menu.innerHTML='<a href="ai-healthcare.html"><b data-i18n="health">AI Healthcare</b><small data-i18n="menuHealthDesc">Imaging, devices, planning and agents</small></a><a href="custom-ai-solutions.html"><b data-i18n="customSolutionsNav">Custom AI Solutions</b><small data-i18n="menuCustomDesc">Deep-learning solutions built to your needs</small></a>';link.setAttribute('aria-haspopup','true');link.setAttribute('aria-controls',menu.id);wrap.appendChild(menu)})}
 document.addEventListener('DOMContentLoaded',enhanceNavigation);
 function normalizeHeadingPunctuation(){document.querySelectorAll('h1,h2').forEach(el=>{el.style.removeProperty('font-size');el.style.removeProperty('white-space');el.style.removeProperty('max-width');el.textContent=el.textContent.replace(/[.。]+$/u,'')})}
+const homepageHeadlineGroups=[
+  ['.home-page .hero h1','display-hero',2],
+  ['.home-page .solution-chapter .chapter-heading h2,.home-page .section-head h2,.home-page .band h2,.home-page .cta h2','display-section',2],
+  ['.home-page .agent-preview-copy h3,.home-page .featured-copy h3','display-feature',2]
+];
+let headlineResizeFrame=0;
+function headlineLineCount(element){const styles=getComputedStyle(element);const lineHeight=parseFloat(styles.lineHeight);return lineHeight>0?Math.round(element.getBoundingClientRect().height/lineHeight):1}
+function headlineLengthClass(element){
+  const length=Array.from(element.textContent.trim()).length;
+  const language=document.documentElement.lang;
+  const multiplier=language==='ms'?1.16:language==='th'?1.1:1;
+  const tier=element.classList.contains('display-hero')?'hero':element.classList.contains('display-section')?'section':'feature';
+  const thresholds={hero:[40,58],section:[43,63],feature:[30,46]}[tier];
+  if(length*multiplier>thresholds[1])return 'headline-xlong';
+  if(length*multiplier>thresholds[0])return 'headline-long';
+  return ''
+}
+function updateHomepageHeadlines(){
+  if(!document.body.classList.contains('home-page'))return;
+  homepageHeadlineGroups.forEach(([selector,tier,maxLines])=>document.querySelectorAll(selector).forEach(heading=>{
+    heading.classList.remove('display-hero','display-section','display-feature','headline-long','headline-xlong');
+    heading.classList.add(tier);
+    if(window.innerWidth<=780)return;
+    const lengthClass=headlineLengthClass(heading);
+    if(lengthClass)heading.classList.add(lengthClass);
+    if(headlineLineCount(heading)>maxLines&&!heading.classList.contains('headline-xlong')){
+      if(heading.classList.contains('headline-long')){heading.classList.remove('headline-long');heading.classList.add('headline-xlong')}
+      else heading.classList.add('headline-long')
+    }
+    if(headlineLineCount(heading)>maxLines){heading.classList.remove('headline-long');heading.classList.add('headline-xlong')}
+  }))
+}
+function scheduleHomepageHeadlineUpdate(){cancelAnimationFrame(headlineResizeFrame);headlineResizeFrame=requestAnimationFrame(updateHomepageHeadlines)}
+window.addEventListener('resize',scheduleHomepageHeadlineUpdate,{passive:true});
 function readLanguage(){try{return localStorage.getItem('scovion-lang')}catch{return null}}
 function saveLanguage(lang){try{localStorage.setItem('scovion-lang',lang)}catch{}}
 function resolveLanguage(value){const normalized=String(value||'en').toLowerCase();const lang=languageAliases[normalized]||normalized;return copy[lang]?lang:'en'}
@@ -267,6 +301,7 @@ function init(requestedLanguage){
   }
   document.querySelectorAll('[data-year]').forEach(e=>e.textContent=new Date().getFullYear());
   normalizeHeadingPunctuation();
+  scheduleHomepageHeadlineUpdate();
   setupHorizontalRails();
   if(typeof CustomEvent==='function')document.dispatchEvent(new CustomEvent('scovion:languagechange',{detail:{lang}}))
 }

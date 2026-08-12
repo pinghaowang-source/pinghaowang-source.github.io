@@ -75,21 +75,34 @@ body > .nav .links a.active {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, .82fr) minmax(520px, 1.18fr);
-  gap: clamp(48px, 7vw, 100px);
-  align-items: center;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 34px 24px;
+  align-items: start;
+}
+
+.healthcare-hero-copy {
+  grid-column: 1 / -1;
+}
+
+.healthcare-hero-intro {
+  grid-column: 1 / 5;
+  align-self: start;
+}
+
+.healthcare-hero-visual {
+  grid-column: 5 / -1;
 }
 
 .healthcare-hero-copy h1 {
-  max-width: 670px;
-  margin: 19px 0 28px;
-  font-size: clamp(53px, 6.25vw, 86px);
-  line-height: .93;
-  letter-spacing: -.067em;
+  max-width: 1120px;
+  margin: 19px 0 0;
+  font-size: clamp(56px, 5vw, 72px);
+  line-height: .96;
+  letter-spacing: -.058em;
 }
 
-.healthcare-hero-copy > p {
-  max-width: 570px;
+.healthcare-hero-intro > p {
+  max-width: 360px;
   margin: 0;
   color: #526778;
   font-size: 18px;
@@ -301,14 +314,14 @@ body > .nav .links a.active {
 
 .healthcare-chapter-head {
   display: grid;
-  grid-template-columns: 72px minmax(0, 1fr) minmax(260px, 360px);
-  gap: 28px;
-  align-items: end;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: 18px 28px;
+  align-items: start;
   margin-bottom: clamp(42px, 5vw, 60px);
 }
 
 .healthcare-chapter-head > div:nth-child(2):last-child {
-  grid-column: span 2;
+  grid-column: 2;
 }
 
 .chapter-number {
@@ -322,17 +335,36 @@ body > .nav .links a.active {
 
 .healthcare-chapter-head h2,
 .healthcare-agent-copy h2 {
-  max-width: 780px;
+  max-width: 1000px;
   margin: 10px 0 0;
-  font-size: clamp(42px, 5vw, 66px);
-  line-height: .97;
-  letter-spacing: -.056em;
+  font-size: clamp(44px, 4.4vw, 60px);
+  line-height: .99;
+  letter-spacing: -.052em;
 }
 
 .healthcare-chapter-head .section-intro {
+  grid-column: 2;
+  max-width: 680px;
   margin: 0;
   color: #5b7080;
   line-height: 1.68;
+}
+
+/* Editorial headline system: keep phrases intact and distribute unavoidable
+   line breaks evenly across every supported language. */
+.healthcare-hero-copy h1,
+.healthcare-chapter-head h2,
+.healthcare-agent-copy h2,
+.imaging-services-head h3,
+.planning-panel-copy h3,
+.device-story h3,
+.prosthetic-story-copy h3,
+.specialty-product-card h3,
+.healthcare-cta h2 {
+  overflow-wrap: normal;
+  word-break: normal;
+  hyphens: none;
+  text-wrap: balance;
 }
 
 /* Imaging portfolio: equal-weight product rail followed by implementation support. */
@@ -342,6 +374,7 @@ body > .nav .links a.active {
 
 .imaging-rail-meta {
   display: flex;
+  grid-column: 2;
   min-width: 0;
   flex-direction: column;
   gap: 24px;
@@ -523,8 +556,8 @@ body > .nav .links a.active {
 
 .imaging-services-head {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(300px, 430px);
-  gap: clamp(36px, 6vw, 78px);
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 390px);
+  gap: clamp(34px, 4vw, 56px);
   align-items: end;
   margin-bottom: 45px;
 }
@@ -533,7 +566,7 @@ body > .nav .links a.active {
   max-width: 760px;
   margin: 13px 0 0;
   color: #102033;
-  font-size: clamp(38px, 5vw, 60px);
+  font-size: clamp(38px, 4.2vw, 56px);
   line-height: .99;
   letter-spacing: -.052em;
   text-wrap: balance;
@@ -906,7 +939,7 @@ body > .nav .links a.active {
 
 .healthcare-agent-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.1fr) minmax(360px, .9fr);
+  grid-template-columns: minmax(0, .82fr) minmax(500px, 1.18fr);
   min-height: 0;
 }
 
@@ -929,7 +962,11 @@ body > .nav .links a.active {
 
 .healthcare-agent-copy {
   align-self: center;
-  padding: 80px 0 80px clamp(48px, 7vw, 90px);
+  padding: 80px 0 80px clamp(44px, 5vw, 64px);
+}
+
+.healthcare-agent-copy h2 {
+  font-size: clamp(42px, 3.8vw, 48px);
 }
 
 .healthcare-agent-copy .chapter-number {
@@ -1008,15 +1045,15 @@ body > .nav .links a.active {
 
 .device-story {
   display: grid;
-  grid-template-columns: minmax(0, 1.18fr) minmax(340px, .82fr);
-  gap: clamp(44px, 7vw, 96px);
+  grid-template-columns: minmax(0, .98fr) minmax(500px, 1.02fr);
+  gap: clamp(40px, 4vw, 58px);
   align-items: center;
   padding: 52px 0;
   border-bottom: 1px solid #cad8de;
 }
 
 .device-story-reverse {
-  grid-template-columns: minmax(340px, .82fr) minmax(0, 1.18fr);
+  grid-template-columns: minmax(500px, 1.02fr) minmax(0, .98fr);
 }
 
 .device-story-reverse .device-story-media {
@@ -1039,7 +1076,7 @@ body > .nav .links a.active {
 }
 
 .device-story h3 {
-  font-size: clamp(38px, 4.5vw, 59px);
+  font-size: clamp(38px, 3.8vw, 48px);
 }
 
 .device-meta-line {
@@ -1244,8 +1281,15 @@ body > .nav .links a.active {
 
 @media (max-width: 1100px) {
   .healthcare-hero-grid {
-    grid-template-columns: minmax(0, .88fr) minmax(450px, 1.12fr);
-    gap: 48px;
+    gap: 30px 22px;
+  }
+
+  .healthcare-hero-intro {
+    grid-column: 1 / 5;
+  }
+
+  .healthcare-hero-visual {
+    grid-column: 5 / -1;
   }
 
   .healthcare-index a {
@@ -1261,16 +1305,24 @@ body > .nav .links a.active {
 }
 
 @media (max-width: 1020px) {
-  .healthcare-hero-grid,
   .healthcare-agent-grid,
   .device-story,
-  .device-story-reverse,
-  .healthcare-hero-copy {
+  .device-story-reverse {
+    grid-template-columns: 1fr;
     max-width: 720px;
   }
 
+  .healthcare-hero-copy h1 {
+    font-size: clamp(54px, 6.2vw, 60px);
+  }
+
+  .healthcare-hero-intro {
+    grid-column: 1 / 5;
+  }
+
   .healthcare-hero-visual {
-    max-width: 760px;
+    grid-column: 5 / -1;
+    max-width: none;
   }
 
   .healthcare-chapter-head {
@@ -1279,7 +1331,7 @@ body > .nav .links a.active {
 
   .healthcare-chapter-head .section-intro {
     grid-column: 2;
-    max-width: 580px;
+    max-width: 680px;
   }
 
   .healthcare-chapter-head > div:nth-child(2):last-child {
@@ -1288,7 +1340,7 @@ body > .nav .links a.active {
 
   .imaging-rail-meta {
     grid-column: 2;
-    max-width: 620px;
+    max-width: 680px;
   }
 
   .imaging-services-head {
@@ -1330,13 +1382,34 @@ body > .nav .links a.active {
   }
 }
 
-@media (min-width: 681px) and (max-width: 1020px) {
+@media (min-width: 781px) and (max-width: 1020px) {
   .imaging-chapter .healthcare-chapter-head {
     align-items: start;
   }
 }
 
 @media (max-width: 780px) {
+  .healthcare-hero-grid {
+    display: block;
+  }
+
+  .healthcare-hero-copy h1 {
+    margin-bottom: 25px;
+    font-size: clamp(44px, 7.2vw, 48px);
+  }
+
+  .healthcare-hero-intro {
+    max-width: 600px;
+  }
+
+  .healthcare-hero-intro > p {
+    max-width: 570px;
+  }
+
+  .healthcare-hero-visual {
+    margin-top: 42px;
+  }
+
   body > .nav .links.open {
     color: #405168;
   }
@@ -1353,11 +1426,11 @@ body > .nav .links a.active {
   }
 
   .healthcare-hero-copy h1 {
-    font-size: clamp(44px, 13.5vw, 61px);
-    letter-spacing: -.052em;
+    font-size: clamp(38px, 10.7vw, 44px);
+    letter-spacing: -.047em;
   }
 
-  .healthcare-hero-copy > p {
+  .healthcare-hero-intro > p {
     font-size: 16px;
   }
 
@@ -1409,7 +1482,7 @@ body > .nav .links a.active {
 
   .healthcare-chapter-head h2,
   .healthcare-agent-copy h2 {
-    font-size: clamp(38px, 11vw, 50px);
+    font-size: clamp(34px, 9.7vw, 42px);
     letter-spacing: -.045em;
   }
 
@@ -1462,7 +1535,7 @@ body > .nav .links a.active {
   }
 
   .imaging-services-head h3 {
-    font-size: clamp(36px, 10vw, 48px);
+    font-size: clamp(34px, 9.5vw, 42px);
   }
 
   .imaging-service-viewport {
@@ -1544,7 +1617,7 @@ body > .nav .links a.active {
   }
 
   .planning-panel-copy h3 {
-    font-size: 39px;
+    font-size: 36px;
   }
 
   .planning-panel-actions {
@@ -1574,7 +1647,7 @@ body > .nav .links a.active {
   }
 
   .device-story h3 {
-    font-size: 38px;
+    font-size: 36px;
   }
 
   .prosthetic-story .capability-row {
@@ -1614,7 +1687,22 @@ body > .nav .links a.active {
 }
 
 :lang(zh-cn) .healthcare-hero-copy h1,
-:lang(zh-tw) .healthcare-hero-copy h1,
+:lang(zh-tw) .healthcare-hero-copy h1 {
+  font-size: clamp(50px, 4.5vw, 62px);
+  letter-spacing: -.035em;
+}
+
+:lang(ms) .healthcare-hero-copy h1 {
+  font-size: clamp(50px, 4.4vw, 62px);
+  letter-spacing: -.045em;
+}
+
+:lang(th) .healthcare-hero-copy h1 {
+  font-size: clamp(48px, 4.2vw, 60px);
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
 :lang(zh-cn) .healthcare-chapter-head h2,
 :lang(zh-tw) .healthcare-chapter-head h2,
 :lang(zh-cn) .healthcare-agent-copy h2,
@@ -1638,11 +1726,84 @@ body > .nav .links a.active {
   letter-spacing: 0;
 }
 
-:lang(th) .healthcare-hero-copy h1,
 :lang(th) .healthcare-chapter-head h2,
 :lang(th) .healthcare-agent-copy h2 {
   line-height: 1.08;
   letter-spacing: 0;
+}
+
+@media (min-width: 1021px) {
+  :lang(ms) .imaging-services-head h3,
+  :lang(th) .imaging-services-head h3 {
+    font-size: 48px;
+  }
+
+  :lang(ms) .healthcare-agent-copy h2 {
+    font-size: 42px;
+  }
+
+  :lang(th) .healthcare-agent-copy h2 {
+    font-size: 40px;
+  }
+
+  :lang(ms) .device-story h3 {
+    font-size: 42px;
+  }
+
+  :lang(th) .device-story h3 {
+    font-size: 40px;
+    line-height: 1.1;
+    letter-spacing: 0;
+  }
+}
+
+@media (max-width: 1020px) {
+  :lang(zh-cn) .healthcare-hero-copy h1,
+  :lang(zh-tw) .healthcare-hero-copy h1 {
+    font-size: clamp(50px, 5.8vw, 58px);
+  }
+
+  :lang(ms) .healthcare-hero-copy h1 {
+    font-size: clamp(48px, 5.5vw, 56px);
+  }
+
+  :lang(th) .healthcare-hero-copy h1 {
+    font-size: clamp(46px, 5.3vw, 54px);
+  }
+}
+
+@media (max-width: 780px) {
+  :lang(zh-cn) .healthcare-hero-copy h1,
+  :lang(zh-tw) .healthcare-hero-copy h1 {
+    font-size: clamp(40px, 6.7vw, 44px);
+  }
+
+  :lang(ms) .healthcare-hero-copy h1,
+  :lang(th) .healthcare-hero-copy h1 {
+    font-size: clamp(40px, 6.5vw, 44px);
+  }
+}
+
+@media (max-width: 480px) {
+  .healthcare-hero-copy h1 {
+    font-size: clamp(38px, 10.2vw, 40px);
+  }
+
+  :lang(zh-cn) .healthcare-hero-copy h1,
+  :lang(zh-tw) .healthcare-hero-copy h1 {
+    font-size: clamp(34px, 9.2vw, 36px);
+  }
+
+  :lang(ms) .healthcare-hero-copy h1,
+  :lang(th) .healthcare-hero-copy h1 {
+    font-size: clamp(32px, 8.8vw, 35px);
+  }
+
+  .healthcare-chapter-head h2,
+  .healthcare-agent-copy h2,
+  .imaging-services-head h3 {
+    font-size: clamp(34px, 9.2vw, 38px);
+  }
 }
 
 @media (hover: none) {

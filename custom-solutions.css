@@ -36,9 +36,9 @@
 }
 
 .custom-hero h1 {
-  max-width: 16ch;
+  max-width: 20ch;
   margin: 20px auto 27px;
-  font-size: clamp(48px, 6.3vw, 84px);
+  font-size: clamp(48px, 5.7vw, 76px);
   font-weight: 700;
   line-height: .96;
   letter-spacing: -.045em;
@@ -304,7 +304,7 @@
 .rnd-layout {
   min-height: 710px;
   display: grid;
-  grid-template-columns: .9fr 1.1fr;
+  grid-template-columns: minmax(360px, .78fr) minmax(0, 1.22fr);
   gap: 80px;
   align-items: center;
 }
@@ -365,7 +365,7 @@
 
 .rnd-copy h2 {
   margin: 18px 0 25px;
-  font-size: clamp(40px, 4.2vw, 56px);
+  font-size: clamp(38px, 3.8vw, 50px);
 }
 
 .rnd-copy > p {
@@ -427,7 +427,7 @@
 
 .case-study {
   display: grid;
-  grid-template-columns: 1.08fr .92fr;
+  grid-template-columns: .92fr 1.08fr;
   min-height: 610px;
   margin-top: 20px;
   overflow: hidden;
@@ -436,7 +436,7 @@
   box-shadow: 0 25px 70px #16334d0e;
 }
 
-.case-study.reverse { grid-template-columns: .92fr 1.08fr; }
+.case-study.reverse { grid-template-columns: 1.08fr .92fr; }
 .case-study.reverse .case-image { order: 2; }
 .case-study.reverse .case-copy { order: 1; }
 
@@ -452,7 +452,7 @@
 
 .case-number { color: #52677c; font-size: 12px; font-weight: 800; letter-spacing: .1em; }
 .case-copy .custom-section-label { margin-top: 32px; }
-.case-copy h3 { margin: 16px 0 23px; font-size: clamp(40px, 4.3vw, 60px); line-height: .98; letter-spacing: -.055em; }
+.case-copy h3 { margin: 16px 0 23px; font-size: clamp(36px, 3.7vw, 50px); line-height: 1.02; letter-spacing: -.045em; text-wrap: balance; }
 .case-copy > p { margin: 0; color: #617386; font-size: 15px; line-height: 1.72; }
 .case-copy ul { margin: 28px 0 0; padding: 22px 0 0; list-style: none; border-top: 1px solid #e0e6eb; }
 .case-copy li { position: relative; padding: 8px 0 8px 20px; color: #354b5f; font-size: 13px; line-height: 1.5; }
@@ -538,7 +538,13 @@
 :lang(zh-tw) .custom-hero h1 { letter-spacing: 0; line-height: 1.08; }
 
 :lang(th) .custom-hero h1 { font-size: clamp(38px, 4.2vw, 54px); letter-spacing: 0; line-height: 1.12; }
-:lang(ms) .custom-hero h1 { font-size: clamp(44px, 5.2vw, 72px); }
+:lang(ms) .custom-hero h1 { font-size: clamp(43px, 4.8vw, 64px); }
+:lang(ms) .rnd-copy h2 { font-size: clamp(35px, 3.35vw, 44px); }
+:lang(th) .rnd-copy h2 { font-size: clamp(34px, 3.2vw, 42px); line-height: 1.14; }
+:lang(ms) .case-copy h3 { font-size: clamp(34px, 3.3vw, 44px); }
+:lang(th) .case-copy h3 { font-size: clamp(33px, 3.15vw, 42px); line-height: 1.14; }
+:lang(ms) .architecture-copy h2 { font-size: clamp(36px, 4vw, 52px); }
+:lang(th) .architecture-copy h2 { font-size: clamp(34px, 3.7vw, 48px); line-height: 1.14; }
 :lang(th) .custom-section-label { letter-spacing: .06em; }
 :lang(th) .custom-heading-row h2 { font-size: clamp(33px, 3.2vw, 42px); }
 :lang(th) .case-copy > p,
@@ -550,7 +556,7 @@
   .principles-grid { grid-template-columns: 1fr 1fr; }
   .custom-process { grid-template-columns: repeat(3, 1fr); }
   .custom-process article:nth-child(3) { border-right: 0; }
-  .rnd-layout { grid-template-columns: 1fr 1fr; gap: 45px; }
+  .rnd-layout { grid-template-columns: minmax(300px, .8fr) minmax(0, 1.2fr); gap: 45px; }
   .case-study,
   .case-study.reverse { grid-template-columns: 1fr; }
   .case-study.reverse .case-image,
@@ -563,7 +569,7 @@
   .custom-hero { padding-top: 70px; }
   .custom-hero h1,
   :lang(th) .custom-hero h1,
-  :lang(ms) .custom-hero h1 { font-size: clamp(42px, 13vw, 64px); white-space: normal; }
+  :lang(ms) .custom-hero h1 { max-width: 18ch; font-size: clamp(40px, 11.5vw, 54px); white-space: normal; }
   .custom-hero p { font-size: 17px; }
   .custom-hero-actions { flex-direction: column; gap: 18px; }
   .system-stage { height: 460px; margin-top: 28px; }
@@ -605,6 +611,25 @@
   .architecture-flow p { grid-column: 2; }
   .custom-cta { margin-bottom: 70px; padding: 38px 28px; display: block; }
   .custom-cta .button { margin-top: 28px; }
+}
+
+@media (max-width: 560px) {
+  .custom-hero h1,
+  :lang(ms) .custom-hero h1,
+  :lang(th) .custom-hero h1 { font-size: clamp(37px, 10.8vw, 47px); }
+  .custom-intro-grid h2,
+  .custom-heading-row h2,
+  .architecture-copy h2,
+  .principles-section > h2,
+  .custom-cta h2,
+  .rnd-copy h2,
+  :lang(ms) .rnd-copy h2,
+  :lang(th) .rnd-copy h2,
+  :lang(ms) .architecture-copy h2,
+  :lang(th) .architecture-copy h2 { font-size: clamp(32px, 8.8vw, 41px); }
+  .case-copy h3,
+  :lang(ms) .case-copy h3,
+  :lang(th) .case-copy h3 { font-size: clamp(31px, 8.5vw, 39px); }
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -133,6 +133,8 @@
   .privacy-aside {
     position: static;
   }
+
+  .privacy-card h2 { font-size: clamp(24px, 7.4vw, 30px); }
 }
 
 @media (prefers-reduced-motion: reduce) {

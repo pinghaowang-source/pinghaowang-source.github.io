@@ -193,8 +193,8 @@
 
 .contact-form-layout {
   display: grid;
-  grid-template-columns: .72fr 1.28fr;
-  gap: 80px;
+  grid-template-columns: minmax(360px, .92fr) minmax(0, 1.08fr);
+  gap: 56px;
   align-items: start;
 }
 
@@ -205,8 +205,9 @@
 }
 
 .contact-form-intro h2 {
+  max-width: 520px;
   margin: 17px 0 23px;
-  font-size: clamp(43px, 4.9vw, 64px);
+  font-size: clamp(40px, 4vw, 52px);
   line-height: 1.02;
   letter-spacing: -.035em;
   text-wrap: balance;
@@ -407,9 +408,9 @@
 }
 
 .contact-next > h2 {
-  max-width: 820px;
+  max-width: 1000px;
   margin: 15px 0 0;
-  font-size: clamp(42px, 5vw, 66px);
+  font-size: clamp(40px, 4.4vw, 58px);
   line-height: 1.02;
   letter-spacing: -.035em;
   text-wrap: balance;
@@ -444,6 +445,12 @@
 :lang(th) .field > span,
 :lang(th) .contact-routes p,
 :lang(th) .contact-form-intro > p { line-height: 1.8; }
+:lang(ms) .contact-form-intro h2 { font-size: clamp(37px, 3.6vw, 46px); }
+:lang(th) .contact-form-intro h2 { font-size: clamp(36px, 3.45vw, 44px); line-height: 1.14; }
+:lang(ms) .contact-next > h2 { font-size: clamp(37px, 4vw, 50px); }
+:lang(th) .contact-next > h2 { font-size: clamp(36px, 3.8vw, 48px); line-height: 1.14; }
+:lang(ms) .contact-routes h2 { font-size: 26px; }
+:lang(th) .contact-routes h2 { font-size: 24px; line-height: 1.18; }
 
 @media (max-width: 900px) {
   .contact-hero-grid { grid-template-columns: 1fr 340px; gap: 35px; }
@@ -465,7 +472,11 @@
   .contact-routes { margin-top: -28px; }
   .contact-form-band { margin-top: 75px; padding: 78px 0; }
   .contact-form-intro h2,
-  .contact-next > h2 { font-size: clamp(38px, 10vw, 52px); }
+  .contact-next > h2,
+  :lang(ms) .contact-form-intro h2,
+  :lang(th) .contact-form-intro h2,
+  :lang(ms) .contact-next > h2,
+  :lang(th) .contact-next > h2 { font-size: clamp(34px, 9vw, 46px); }
   .contact-expectations { grid-template-columns: 1fr; }
   .contact-expectations span { display: grid; grid-template-columns: 38px 1fr; }
   .enquiry-card { padding: 28px 20px; border-radius: 12px; }
