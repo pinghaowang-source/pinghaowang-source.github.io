@@ -977,9 +977,9 @@ body > .nav .links a.active {
 }
 
 .healthcare-agent-copy .agent-feature-list span::before {
-  color: #087d78;
+  color: #05736e;
   content: counter(agent-feature, decimal-leading-zero);
-  font-size: 9px;
+  font-size: 10px;
   font-weight: 800;
   letter-spacing: .1em;
 }
