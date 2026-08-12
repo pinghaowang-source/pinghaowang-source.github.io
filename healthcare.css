@@ -539,48 +539,98 @@ body > .nav .links a.active {
   text-wrap: balance;
 }
 
-.imaging-services-head > p {
+.imaging-services-meta {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.imaging-services-meta > p {
   margin: 0;
   color: #52677c;
   font-size: 15px;
   line-height: 1.7;
 }
 
-.imaging-service-grid {
+.imaging-service-viewport {
+  margin-inline: calc((100vw - min(1160px, calc(100vw - 48px))) / -2);
+  overflow: hidden;
+}
+
+.imaging-service-rail {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  border-top: 1px solid #c7d6dc;
-  border-bottom: 1px solid #c7d6dc;
+  grid-auto-columns: clamp(310px, 30vw, 370px);
+  grid-auto-flow: column;
+  gap: 18px;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  padding: 4px max(24px, calc((100vw - 1160px) / 2)) 30px;
+  scroll-padding-inline: max(24px, calc((100vw - 1160px) / 2));
+  scroll-snap-type: inline mandatory;
+  scrollbar-color: #91a7b3 transparent;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}
+
+.imaging-service-rail::-webkit-scrollbar {
+  height: 6px;
+}
+
+.imaging-service-rail::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: #91a7b3;
 }
 
 .imaging-service-card {
+  display: flex;
   min-width: 0;
-  padding: 28px 25px 31px;
-  border-right: 1px solid #c7d6dc;
+  min-height: 330px;
+  flex-direction: column;
+  padding: 25px 25px 29px;
+  border: 1px solid #d1dde2;
+  border-radius: 16px;
+  background: #fff;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
-.imaging-service-card:last-child {
-  border-right: 0;
+.imaging-service-label {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 11px;
+  align-items: start;
+  min-height: 84px;
+  padding: 13px 14px;
+  border: 1px solid #d7e3e8;
+  border-radius: 10px;
+  background: #eef5f7;
 }
 
-.imaging-service-card > span {
-  color: #39728c;
-  font-size: 11px;
+.imaging-service-label > span {
+  display: grid;
+  min-width: 31px;
+  height: 28px;
+  place-items: center;
+  border-radius: 6px;
+  background: #0d4054;
+  color: #d9fff8;
+  font-size: 10px;
   font-weight: 780;
-  letter-spacing: .12em;
+  letter-spacing: .08em;
 }
 
-.imaging-service-card h4 {
-  min-height: 56px;
-  margin: 34px 0 15px;
+.imaging-service-label h4 {
+  margin: 2px 0 0;
   color: #102033;
-  font-size: 22px;
-  line-height: 1.18;
+  font-size: 19px;
+  line-height: 1.24;
   letter-spacing: -.035em;
 }
 
 .imaging-service-card p {
-  margin: 0;
+  margin: 25px 1px 0;
   color: #52677c;
   font-size: 13px;
   line-height: 1.68;
@@ -1088,17 +1138,6 @@ body > .nav .links a.active {
     min-width: 168px;
   }
 
-  .imaging-service-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .imaging-service-card:nth-child(2) {
-    border-right: 0;
-  }
-
-  .imaging-service-card:nth-child(-n+2) {
-    border-bottom: 1px solid #c7d6dc;
-  }
 }
 
 @media (max-width: 1020px) {
@@ -1141,7 +1180,7 @@ body > .nav .links a.active {
     gap: 24px;
   }
 
-  .imaging-services-head > p {
+  .imaging-services-meta > p {
     max-width: 680px;
   }
 
@@ -1301,7 +1340,8 @@ body > .nav .links a.active {
     margin-bottom: 32px;
   }
 
-  .imaging-services-head > p {
+  .imaging-services-meta {
+    gap: 20px;
     margin-top: 22px;
   }
 
@@ -1309,24 +1349,25 @@ body > .nav .links a.active {
     font-size: clamp(36px, 10vw, 48px);
   }
 
-  .imaging-service-grid {
-    grid-template-columns: 1fr;
+  .imaging-service-viewport {
+    margin-inline: -16px;
   }
 
-  .imaging-service-card,
-  .imaging-service-card:nth-child(2) {
-    padding: 26px 0 29px;
-    border-right: 0;
-    border-bottom: 1px solid #c7d6dc;
+  .imaging-service-rail {
+    grid-auto-columns: min(84vw, 350px);
+    gap: 14px;
+    padding-right: 16px;
+    padding-left: 16px;
+    scroll-padding-inline: 16px;
   }
 
-  .imaging-service-card:last-child {
-    border-bottom: 0;
+  .imaging-service-card {
+    min-height: 320px;
+    padding: 23px 22px 27px;
   }
 
-  .imaging-service-card h4 {
+  .imaging-service-label {
     min-height: 0;
-    margin-top: 22px;
   }
 
   .planning-selector {
