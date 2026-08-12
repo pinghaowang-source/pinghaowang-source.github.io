@@ -5,6 +5,8 @@
       discussProduct: 'Discuss this product',
       exploreCapabilities: 'Explore capabilities',
       visualNotice: 'Image for reference only.',
+      regulatoryEyebrow: 'Regulatory status',
+      profileEyebrow: 'Product profile',
       capabilityEyebrow: 'Clinical focus',
       secondaryVisualEyebrow: 'Analysis view',
       followUpEyebrow: 'Longitudinal follow-up',
@@ -15,6 +17,9 @@
       ],
       workflowEyebrow: 'Product workflow',
       highlightEyebrow: 'Application value',
+      relatedEyebrow: 'Continue exploring',
+      relatedHeading: 'Related products',
+      viewProduct: 'View product',
       ctaEyebrow: 'Explore the fit',
       ctaHeading: 'Discuss the workflow, setting and outcome you need',
       ctaText: 'We can help clarify product fit, deployment considerations and the appropriate next step for your market.',
@@ -25,6 +30,8 @@
       discussProduct: '咨询此产品',
       exploreCapabilities: '查看核心能力',
       visualNotice: '图像仅供参考。',
+      regulatoryEyebrow: '认证状态',
+      profileEyebrow: '产品概览',
       capabilityEyebrow: '临床重点',
       secondaryVisualEyebrow: '分析视图',
       followUpEyebrow: '纵向随访',
@@ -35,6 +42,9 @@
       ],
       workflowEyebrow: '产品流程',
       highlightEyebrow: '应用价值',
+      relatedEyebrow: '继续探索',
+      relatedHeading: '相关产品',
+      viewProduct: '查看产品',
       ctaEyebrow: '评估适配性',
       ctaHeading: '沟通您需要的流程、环境与成果',
       ctaText: '我们可以协助明确产品适配、部署考虑事项及所在市场合适的下一步。',
@@ -45,6 +55,8 @@
       discussProduct: '諮詢此產品',
       exploreCapabilities: '查看核心能力',
       visualNotice: '圖像僅供參考。',
+      regulatoryEyebrow: '認證狀態',
+      profileEyebrow: '產品概覽',
       capabilityEyebrow: '臨床重點',
       secondaryVisualEyebrow: '分析視圖',
       followUpEyebrow: '縱向追蹤',
@@ -55,6 +67,9 @@
       ],
       workflowEyebrow: '產品流程',
       highlightEyebrow: '應用價值',
+      relatedEyebrow: '繼續探索',
+      relatedHeading: '相關產品',
+      viewProduct: '查看產品',
       ctaEyebrow: '評估適配性',
       ctaHeading: '溝通您需要的流程、環境與成果',
       ctaText: '我們可以協助明確產品適配、部署考量及所在市場合適的下一步。',
@@ -65,6 +80,8 @@
       discussProduct: 'Bincangkan produk ini',
       exploreCapabilities: 'Teroka keupayaan',
       visualNotice: 'Imej untuk rujukan sahaja.',
+      regulatoryEyebrow: 'Status pengawalseliaan',
+      profileEyebrow: 'Profil produk',
       capabilityEyebrow: 'Fokus klinikal',
       secondaryVisualEyebrow: 'Paparan analisis',
       followUpEyebrow: 'Susulan longitudinal',
@@ -75,6 +92,9 @@
       ],
       workflowEyebrow: 'Aliran produk',
       highlightEyebrow: 'Nilai aplikasi',
+      relatedEyebrow: 'Teruskan penerokaan',
+      relatedHeading: 'Produk berkaitan',
+      viewProduct: 'Lihat produk',
       ctaEyebrow: 'Nilai kesesuaian',
       ctaHeading: 'Bincangkan aliran kerja, persekitaran dan hasil yang anda perlukan',
       ctaText: 'Kami boleh membantu menjelaskan kesesuaian produk, pertimbangan pelaksanaan dan langkah seterusnya untuk pasaran anda.',
@@ -85,6 +105,8 @@
       discussProduct: 'ปรึกษาเกี่ยวกับผลิตภัณฑ์นี้',
       exploreCapabilities: 'สำรวจความสามารถ',
       visualNotice: 'ภาพใช้เพื่อการอ้างอิงเท่านั้น',
+      regulatoryEyebrow: 'สถานะการรับรอง',
+      profileEyebrow: 'ภาพรวมผลิตภัณฑ์',
       capabilityEyebrow: 'จุดเน้นทางคลินิก',
       secondaryVisualEyebrow: 'มุมมองการวิเคราะห์',
       followUpEyebrow: 'การติดตามผลตามช่วงเวลา',
@@ -95,6 +117,9 @@
       ],
       workflowEyebrow: 'ขั้นตอนการทำงานของผลิตภัณฑ์',
       highlightEyebrow: 'คุณค่าการใช้งาน',
+      relatedEyebrow: 'สำรวจต่อ',
+      relatedHeading: 'ผลิตภัณฑ์ที่เกี่ยวข้อง',
+      viewProduct: 'ดูผลิตภัณฑ์',
       ctaEyebrow: 'ประเมินความเหมาะสม',
       ctaHeading: 'พูดคุยเกี่ยวกับขั้นตอนงาน สภาพแวดล้อม และผลลัพธ์ที่คุณต้องการ',
       ctaText: 'เราช่วยชี้แจงความเหมาะสมของผลิตภัณฑ์ ข้อพิจารณาในการติดตั้ง และขั้นตอนถัดไปสำหรับตลาดของคุณได้',
@@ -578,11 +603,16 @@
     },
 
     'bone-age-analyser': {
+      layout: 'device',
       titleKey: 'boneAgeTitle',
       categoryKey: 'devicesEyebrow',
       summaryKey: 'boneAgeDesc',
       images: ['assets/products/visual-bone-age-device-v2.jpg'],
+      heroFit: 'contain',
+      storyFit: 'contain',
+      capabilityFit: 'quadrant',
       secondaryImage: 'assets/products/visual-bone-age-analysis.webp',
+      secondaryFit: 'contain',
       secondaryHeadings: {
         en: 'AI bone-age assessment, presented at full scale',
         'zh-cn': '完整呈现AI骨龄评估视图',
@@ -744,11 +774,16 @@
     },
 
     'bone-density-analyser': {
+      layout: 'device',
       titleKey: 'boneDensityTitle',
       categoryKey: 'devicesEyebrow',
       summaryKey: 'boneDensityDesc',
       images: ['assets/products/visual-bone-density-device.webp'],
+      heroFit: 'contain',
+      storyFit: 'contain',
+      capabilityFit: 'quadrant',
       secondaryImage: 'assets/products/visual-bone-density-analysis.webp',
+      secondaryFit: 'contain',
       secondaryHeadings: {
         en: 'Automated bone-density analysis, shown in detail',
         'zh-cn': '大图展示自动骨密度分析',
@@ -910,10 +945,14 @@
     },
 
     'ct-bone': {
+      layout: 'bone',
       title: 'CT Bone',
       categoryKey: 'screeningDiagnosis',
       summaryKey: 'boneDesc',
       images: ['assets/products/visual-ct-bone.webp'],
+      heroFit: 'cover',
+      storyImage: 'assets/products/visual-ct-bone-3d-reconstruction-workstation.webp',
+      storyFit: 'contain',
       focusImage: 'assets/products/visual-ct-bone.webp',
       capabilityImages: [
         'assets/products/visual-ct-bone-regions.webp',
@@ -921,8 +960,10 @@
         'assets/products/visual-ct-bone-characterisation.webp',
         'assets/products/visual-ct-bone-3d-reconstruction-workstation.webp'
       ],
+      capabilityFits: ['cover','cover','cover','contain'],
       secondaryType: 'followup',
       secondaryImage: 'assets/products/visual-ct-bone-longitudinal-workstation.webp',
+      secondaryFit: 'contain',
       secondaryHeadings: {
         en: 'Compare thoracic-bone findings over time',
         'zh-cn': '对比胸廓骨骼发现的时间变化',
@@ -1090,10 +1131,14 @@
     },
 
     'ct-stroke': {
+      layout: 'stroke',
       title: 'CT Stroke',
       categoryKey: 'screeningDiagnosis',
       summaryKey: 'strokeDesc',
       images: ['assets/products/visual-ct-stroke.webp'],
+      heroFit: 'cover',
+      storyImage: 'assets/products/visual-ct-stroke-priority.webp',
+      storyFit: 'cover',
       focusImage: 'assets/products/visual-ct-stroke.webp',
       capabilityImages: [
         'assets/products/visual-ct-stroke-ncct.webp',
@@ -1101,8 +1146,10 @@
         'assets/products/visual-ct-stroke-priority.webp',
         'assets/products/visual-ct-stroke-review.webp'
       ],
+      capabilityFits: ['cover','cover','cover','cover'],
       secondaryType: 'followup',
       secondaryImage: 'assets/products/visual-ct-stroke-longitudinal-workstation.webp',
+      secondaryFit: 'contain',
       secondaryHeadings: {
         en: 'Review intracranial findings across CT examinations',
         'zh-cn': '跨次CT检查复核颅内发现',
@@ -1275,6 +1322,8 @@
       categoryKey: 'screeningDiagnosis',
       summaryKey: 'coronaryDesc',
       images: ['assets/products/visual-ct-coronary.webp'],
+      heroFit: 'cover',
+      storyFit: 'cover',
       focusImage: 'assets/products/focus-cardiovascular-ai.jpg',
       capabilityImages: [
         'assets/products/visual-ct-coronary-reconstruction.webp',
@@ -1282,8 +1331,10 @@
         'assets/products/visual-ct-coronary-plaque.webp',
         'assets/products/visual-ct-coronary-modules.webp'
       ],
+      capabilityFits: ['cover','cover','cover','cover'],
       secondaryType: 'followup',
       secondaryImage: 'assets/products/visual-ct-coronary-longitudinal-workstation.webp',
+      secondaryFit: 'contain',
       secondaryHeadings: {
         en: 'Follow coronary findings across CT examinations',
         'zh-cn': '跨次CT检查追踪冠脉发现',
@@ -1456,6 +1507,8 @@
       categoryKey: 'screeningDiagnosis',
       summaryKey: 'ctLungDesc',
       images: ['assets/products/visual-ct-lung.webp'],
+      heroFit: 'cover',
+      storyFit: 'cover',
       focusImage: 'assets/products/focus-ct-lung.jpg',
       capabilityImages: [
         'assets/products/visual-ct-lung-nodules.webp',
@@ -1463,8 +1516,10 @@
         'assets/products/visual-ct-lung-quantification.webp',
         'assets/products/visual-ct-lung-followup.webp'
       ],
+      capabilityFits: ['cover','cover','cover','cover'],
       secondaryType: 'followup',
       secondaryImage: 'assets/products/visual-ct-lung-longitudinal-workstation.webp',
+      secondaryFit: 'contain',
       secondaryHeadings: {
         en: 'Follow pulmonary findings across CT examinations',
         'zh-cn': '跨次CT检查追踪肺部发现',
@@ -1807,7 +1862,10 @@
         ms: 'Membina semula lobus, segmen, subsegmen, salur dan bronkus secara automatik daripada CT dada dengan atau tanpa kontras untuk menyokong kedudukan lesi dan perancangan margin reseksi.',
         th: 'สร้างภาพกลีบปอด ส่วนปอด ส่วนย่อย หลอดเลือด และหลอดลมโดยอัตโนมัติจาก CT ทรวงอกทั้งแบบฉีดและไม่ฉีดสารทึบรังสี เพื่อช่วยระบุตำแหน่งรอยโรคและวางแผนขอบเขตการตัด'
       },
-      images: ['assets/products/visual-thorax-planning-workstation.webp'],
+      images: ['assets/products/visual-thorax-planning-workstation-v2.webp'],
+      heroFit: 'contain',
+      storyFit: 'cover',
+      capabilityFit: 'quadrant',
       storyImage: 'assets/products/visual-thorax-planning.webp',
       focusImage: 'assets/products/focus-thorax-planning-v2.jpg',
       tags: [{key:'chestCT'},{key:'ceMarked'},{key:'fdaCleared'},{key:'ukcaMarked'},{key:'nmpaApproved'},{key:'reconstruction'},{key:'preoperativePlanning'}],
@@ -1974,7 +2032,10 @@
         ms: 'Membina semula segmen Couinaud, salur dan sistem biliari secara automatik daripada CT abdomen, dengan pengiraan isipadu serta perancangan maya lesi dan margin reseksi.',
         th: 'สร้างภาพส่วนตับ Couinaud หลอดเลือด และระบบท่อน้ำดีโดยอัตโนมัติจาก CT ช่องท้อง พร้อมคำนวณปริมาตร ระบุตำแหน่งรอยโรค และวางแผนขอบเขตการตัดเสมือน'
       },
-      images: ['assets/products/visual-liver-planning-workstation.webp'],
+      images: ['assets/products/visual-liver-planning-workstation-v2.webp'],
+      heroFit: 'contain',
+      storyFit: 'cover',
+      capabilityFit: 'quadrant',
       storyImage: 'assets/products/visual-liver-planning.webp',
       focusImage: 'assets/products/focus-liver-planning.jpg',
       tags: [{key:'abdominalCT'},{key:'ceMarked'},{key:'fdaCleared'},{key:'ukcaMarked'},{key:'nmpaApproved'},{key:'reconstruction'},{key:'preoperativePlanning'}],
@@ -2141,7 +2202,10 @@
         ms: 'Membina semula buah pinggang, salur renal, ureter, pundi kencing dan kelenjar adrenal secara automatik daripada CT abdomen, dengan kuantifikasi lesi dan perancangan nefrektomi separa.',
         th: 'สร้างภาพไต หลอดเลือดไต ท่อไต กระเพาะปัสสาวะ และต่อมหมวกไตโดยอัตโนมัติจาก CT ช่องท้อง พร้อมวัดรอยโรคและวางแผนผ่าตัดไตบางส่วน'
       },
-      images: ['assets/products/visual-urology-planning-workstation.webp'],
+      images: ['assets/products/visual-urology-planning-workstation-v2.webp'],
+      heroFit: 'contain',
+      storyFit: 'cover',
+      capabilityFit: 'quadrant',
       storyImage: 'assets/products/visual-urology-planning.webp',
       focusImage: 'assets/products/focus-urology-planning.jpg',
       tags: [{key:'abdominalCT'},{key:'ceMarked'},{key:'fdaCleared'},{key:'ukcaMarked'},{key:'nmpaApproved'},{key:'reconstruction'},{key:'preoperativePlanning'}],
@@ -2471,6 +2535,33 @@
     'prosthetic-hand'
   ]);
 
+  const certificationTagKeys = new Set([
+    'ceMarked',
+    'fdaCleared',
+    'ukcaMarked',
+    'nmpaApproved',
+    'fda510k',
+    'fdaClassI',
+    'exemptionFiling',
+    'qualityReport'
+  ]);
+
+  const relatedProductIds = {
+    'cardiovascular-ai': ['ct-coronary','head-neck-ai','ct-lung'],
+    'head-neck-ai': ['ct-stroke','cardiovascular-ai','ct-lung'],
+    'bone-age-analyser': ['bone-density-analyser'],
+    'bone-density-analyser': ['bone-age-analyser'],
+    'ct-lung': ['ct-bone','ct-coronary','dr-chest'],
+    'ct-bone': ['ct-lung','ct-stroke','dr-chest'],
+    'ct-stroke': ['ct-lung','ct-bone','dr-chest'],
+    'dr-chest': ['ct-lung','ct-bone','ct-stroke'],
+    'ct-coronary': ['ct-lung','thorax-planning','liver-planning'],
+    'thorax-planning': ['liver-planning','urology-planning'],
+    'liver-planning': ['thorax-planning','urology-planning'],
+    'urology-planning': ['liver-planning','thorax-planning'],
+    'prosthetic-hand': ['bone-age-analyser','bone-density-analyser']
+  };
+
   const escapeHtml = value => String(value).replace(/[&<>"']/g, character => ({
     '&':'&amp;',
     '<':'&lt;',
@@ -2487,8 +2578,24 @@
     return uiCopy[lang]?.[key] || uiCopy.en[key] || key;
   }
 
+  function localizedProductTitle(product,lang){
+    return product.title || mainText(lang,product.titleKey);
+  }
+
+  function localizedProductSummary(product,lang){
+    return product.summaries?.[lang] || mainText(lang,product.summaryKey);
+  }
+
   function renderCards(target,items,renderer){
     document.querySelector(target).innerHTML=items.map(renderer).join('');
+  }
+
+  function productImageFit(product,index,dedicated){
+    return product.capabilityFits?.[index] || product.capabilityFit || (dedicated?'cover':'quadrant');
+  }
+
+  function imageFitClass(value){
+    return `fit-${['contain','cover','quadrant'].includes(value)?value:'cover'}`;
   }
 
   function renderProductStory(product,detail,alt){
@@ -2519,11 +2626,11 @@
         <div><div class="eyebrow">${escapeHtml(uiText(document.documentElement.lang,'capabilityEyebrow'))}</div><h2>${escapeHtml(detail.capHeading)}</h2></div>
         <p>${escapeHtml(detail.capIntro)}</p>
       </div>`;
-    const visual=`<figure class="story-primary-visual"><img src="${escapeHtml(product.storyImage || product.images[0])}" alt="${escapeHtml(alt)}" loading="lazy"></figure>`;
+    const visual=`<figure class="story-primary-visual ${imageFitClass(product.storyFit || product.heroFit || 'cover')}"><img src="${escapeHtml(product.storyImage || product.images[0])}" alt="${escapeHtml(alt)}" loading="lazy"></figure>`;
     const capabilityCards=detail.caps.map(([title,text],index)=>{
       const dedicatedImage=product.capabilityImages?.[index];
       const capabilityImage=dedicatedImage || product.focusImage;
-      const visualClass=`story-point-visual story-point-visual-${index}${dedicatedImage?' story-point-visual-dedicated':''}`;
+      const visualClass=`story-point-visual story-point-visual-${index} ${imageFitClass(productImageFit(product,index,dedicatedImage))}${dedicatedImage?' story-point-visual-dedicated':''}`;
       return `
       <article>
         <div class="${visualClass}" role="img" aria-label="${escapeHtml(title)}"><img src="${escapeHtml(capabilityImage)}" alt="" loading="lazy"></div>
@@ -2533,7 +2640,53 @@
           <p>${escapeHtml(text)}</p>
         </div>
       </article>`;
-    }).join('');
+    });
+    const capabilityCopy=index=>{
+      const [title,text]=detail.caps[index];
+      return `<article class="signature-primary-copy"><b>${String(index+1).padStart(2,'0')}</b><h3>${escapeHtml(title)}</h3><p>${escapeHtml(text)}</p></article>`;
+    };
+
+    if(layout==='bone'){
+      story.innerHTML=`
+        <section class="product-story-section story-bone">
+          <div class="container detail-section">
+            ${heading}
+            <div class="bone-signature-stage">
+              <div class="bone-signature-primary">${visual}${capabilityCopy(3)}</div>
+              <div class="bone-signature-rail">${capabilityCards.slice(0,3).join('')}</div>
+            </div>
+          </div>
+        </section>`;
+      return;
+    }
+
+    if(layout==='stroke'){
+      story.innerHTML=`
+        <section class="product-story-section story-stroke">
+          <div class="container detail-section">
+            ${heading}
+            <div class="stroke-signature-stage">
+              <div class="stroke-signature-primary">${visual}${capabilityCopy(2)}</div>
+              <div class="stroke-signature-rail">${[0,1,3].map(index=>capabilityCards[index]).join('')}</div>
+            </div>
+          </div>
+        </section>`;
+      return;
+    }
+
+    if(layout==='device'){
+      story.innerHTML=`
+        <section class="product-story-section story-device">
+          <div class="container detail-section">
+            ${heading}
+            <div class="device-story-stage">
+              <div class="device-story-product">${visual}</div>
+              <div class="device-story-capabilities">${capabilityCards.join('')}</div>
+            </div>
+          </div>
+        </section>`;
+      return;
+    }
 
     if(layout==='lung'){
       const temporalRail=detail.steps.map(([title],index)=>`<span><b>${String(index+1).padStart(2,'0')}</b>${escapeHtml(title)}</span>`).join('');
@@ -2543,7 +2696,7 @@
             ${heading}
             <div class="lung-story-stage">
               <div class="lung-story-visual">${visual}<div class="lung-temporal-rail">${temporalRail}</div></div>
-              <div class="lung-story-paths">${capabilityCards}</div>
+              <div class="lung-story-paths">${capabilityCards.join('')}</div>
             </div>
           </div>
         </section>`;
@@ -2557,7 +2710,7 @@
             ${heading}
             <div class="thorax-anatomy-map">
               ${visual}
-              <div class="thorax-anatomy-rail">${capabilityCards}</div>
+              <div class="thorax-anatomy-rail">${capabilityCards.join('')}</div>
             </div>
           </div>
         </section>`;
@@ -2570,7 +2723,7 @@
           <div class="container detail-section">
             ${heading}
             <div class="liver-planning-layers">
-              <div class="liver-layer-list">${capabilityCards}</div>
+              <div class="liver-layer-list">${capabilityCards.join('')}</div>
               ${visual}
             </div>
           </div>
@@ -2585,7 +2738,7 @@
             ${heading}
             <div class="urology-focus-map">
               ${visual}
-              <div class="urology-focus-points">${capabilityCards}</div>
+              <div class="urology-focus-points">${capabilityCards.join('')}</div>
             </div>
           </div>
         </section>`;
@@ -2597,10 +2750,16 @@
         <section class="product-story-section story-coronary">
           <div class="container detail-section">
             ${heading}
-            <div class="coronary-analysis-stage">${visual}<div class="coronary-analysis-track">${capabilityCards}</div></div>
+            <div class="coronary-analysis-stage">${visual}<div class="coronary-analysis-track">${capabilityCards.join('')}</div></div>
           </div>
         </section>`;
+      return;
     }
+
+    story.hidden=true;
+    story.innerHTML='';
+    capabilitySection.hidden=false;
+    exploreLink.href='#capabilities';
   }
 
   function renderProduct(requestedLanguage){
@@ -2617,8 +2776,8 @@
       element.textContent=uiText(lang,element.dataset.productUi);
     });
 
-    const title=product.title || mainText(lang,product.titleKey);
-    const summary=product.summaries?.[lang] || mainText(lang,product.summaryKey);
+    const title=localizedProductTitle(product,lang);
+    const summary=localizedProductSummary(product,lang);
     document.querySelector('#product-title').textContent=title;
     document.querySelector('#product-summary').textContent=summary;
     document.querySelector('#product-category').textContent=mainText(lang,product.categoryKey);
@@ -2628,12 +2787,19 @@
 
     const alt=uiText(lang,'imageAlt').replace('{product}',title);
     const gallery=document.querySelector('#product-gallery');
-    gallery.innerHTML=product.images.map(image=>`<figure><img src="${escapeHtml(image)}" alt="${escapeHtml(alt)}"></figure>`).join('');
+    gallery.innerHTML=product.images.map(image=>`<figure class="${imageFitClass(product.heroFit || 'cover')}"><img src="${escapeHtml(image)}" alt="${escapeHtml(alt)}"></figure>`).join('');
 
-    renderCards('#product-tags',product.tags,tag=>{
+    const certificationTags=product.tags.filter(tag=>tag.key && certificationTagKeys.has(tag.key));
+    const profileTags=product.tags.filter(tag=>!tag.key || !certificationTagKeys.has(tag.key));
+    const renderTag=tag=>{
       const label=tag.key?mainText(lang,tag.key):tag.text;
       return `<span>${escapeHtml(label)}</span>`;
-    });
+    };
+    renderCards('#product-certifications',certificationTags,renderTag);
+    renderCards('#product-tags',profileTags,renderTag);
+    document.querySelector('#product-regulatory-group').hidden=!certificationTags.length;
+    document.querySelector('#product-profile-group').hidden=!profileTags.length;
+    document.querySelector('.detail-meta-band').classList.toggle('is-single',!certificationTags.length || !profileTags.length);
 
     renderCards('#product-facts',detail.facts,([value,label])=>`
       <article><strong>${escapeHtml(value)}</strong><span>${escapeHtml(label)}</span></article>
@@ -2646,8 +2812,8 @@
     renderCards('#capability-grid',detail.caps,([heading,text],index)=>{
       const dedicatedImage=product.capabilityImages?.[index];
       const capabilityImage=dedicatedImage || product.focusImage;
-      const workstationImage=dedicatedImage?.includes('-workstation.');
-      const visualClass=`capability-visual capability-visual-${index}${dedicatedImage?' capability-visual-dedicated':''}${workstationImage?' capability-visual-workstation':''}`;
+      const fit=productImageFit(product,index,dedicatedImage);
+      const visualClass=`capability-visual capability-visual-${index} ${imageFitClass(fit)}${dedicatedImage?' capability-visual-dedicated':''}`;
       return `
       <article>
         <div class="${visualClass}" role="img" aria-label="${escapeHtml(heading)}">
@@ -2693,6 +2859,9 @@
       }
 
       const secondaryImage=document.querySelector('#secondary-visual-image');
+      const secondaryVisual=document.querySelector('.detail-secondary-visual');
+      secondaryVisual.classList.remove('fit-contain','fit-cover');
+      secondaryVisual.classList.add(imageFitClass(product.secondaryFit || (isFollowUp?'contain':'cover')));
       secondaryImage.src=product.secondaryImage;
       secondaryImage.alt=alt;
       secondarySection.hidden=false;
@@ -2726,6 +2895,28 @@
         <p>${escapeHtml(text)}</p>
       </article>
     `);
+
+    const relatedSection=document.querySelector('#related-products');
+    const relatedIds=(relatedProductIds[productId] || []).filter(id=>currentProductIds.has(id) && productCatalog[id]);
+    if(relatedIds.length){
+      renderCards('#related-product-grid',relatedIds,id=>{
+        const relatedProduct=productCatalog[id];
+        const relatedTitle=localizedProductTitle(relatedProduct,lang);
+        const relatedAlt=uiText(lang,'imageAlt').replace('{product}',relatedTitle);
+        return `<a class="detail-related-card" href="product.html?product=${encodeURIComponent(id)}">
+          <figure class="${imageFitClass(relatedProduct.heroFit || 'cover')}"><img src="${escapeHtml(relatedProduct.images[0])}" alt="${escapeHtml(relatedAlt)}" loading="lazy"></figure>
+          <div class="detail-related-copy">
+            <span>${escapeHtml(mainText(lang,relatedProduct.categoryKey))}</span>
+            <h3>${escapeHtml(relatedTitle)}</h3>
+            <b>${escapeHtml(uiText(lang,'viewProduct'))} <span aria-hidden="true">→</span></b>
+          </div>
+        </a>`;
+      });
+      relatedSection.hidden=false;
+    }else{
+      document.querySelector('#related-product-grid').innerHTML='';
+      relatedSection.hidden=true;
+    }
 
     const enquiryUrl=`contact.html?product=${encodeURIComponent(title)}#enquiry`;
     document.querySelector('#product-enquiry').href=enquiryUrl;

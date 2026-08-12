@@ -145,15 +145,48 @@ Object.assign(copy['zh-tw'],{medicalTitle:'圍繞臨床工作流程設計的AI�
 Object.assign(copy.ms,{medicalTitle:'AI kesihatan yang direka mengikut aliran kerja klinikal.',medicalText:'Portfolio terfokus merangkumi analisis imej, perancangan pembedahan 3D, peranti pintar, AI hospital dan teknologi bantuan.',ctLungDesc:'Mengenal pasti dan mengukur nodul paru-paru, membandingkan pemeriksaan semasa dengan terdahulu, serta menyusun hasil untuk semakan klinikal.'});
 Object.assign(copy.th,{medicalTitle:'AI ด้านสุขภาพที่ออกแบบตามขั้นตอนงานทางคลินิก',medicalText:'พอร์ตโฟลิโอที่มุ่งเน้นการวิเคราะห์ภาพ การวางแผนผ่าตัด 3 มิติ อุปกรณ์อัจฉริยะ AI โรงพยาบาล และเทคโนโลยีช่วยเหลือ',ctLungDesc:'ระบุและวัดก้อนปอด เปรียบเทียบการตรวจปัจจุบันกับครั้งก่อน และจัดระเบียบผลเพื่อให้บุคลากรทางคลินิกทบทวน'});
 
+Object.assign(copy.en,{privacyLink:'Privacy',languageLabel:'Language',menuLabel:'Menu'});
+Object.assign(copy['zh-cn'],{privacyLink:'隐私',languageLabel:'语言',menuLabel:'菜单'});
+Object.assign(copy['zh-tw'],{privacyLink:'私隱',languageLabel:'語言',menuLabel:'選單'});
+Object.assign(copy.ms,{privacyLink:'Privasi',languageLabel:'Bahasa',menuLabel:'Menu'});
+Object.assign(copy.th,{privacyLink:'ความเป็นส่วนตัว',languageLabel:'ภาษา',menuLabel:'เมนู'});
+
 const languages=[['en','English'],['zh-cn','简体中文'],['zh-tw','繁體中文'],['ms','Bahasa Melayu'],['th','ไทย']];
 const languageAliases={zh:'zh-tw'};
 
-function enhanceNavigation(){document.querySelectorAll('.links').forEach(nav=>{const link=[...nav.children].find(el=>el.matches&&el.matches('a[data-i18n="solutions"]'));if(!link||link.closest('.nav-dropdown'))return;const wrap=document.createElement('div');wrap.className='nav-dropdown';link.parentNode.insertBefore(wrap,link);wrap.appendChild(link);const menu=document.createElement('div');menu.className='solution-menu';menu.innerHTML='<a href="ai-healthcare.html"><b data-i18n="health">AI Healthcare</b><small data-i18n="menuHealthDesc">Imaging, devices, planning and agents</small></a><a href="custom-ai-solutions.html"><b data-i18n="customSolutionsNav">Custom AI Solutions</b><small data-i18n="menuCustomDesc">Deep-learning solutions built to your needs</small></a>';wrap.appendChild(menu)})}
+function enhanceNavigation(){document.querySelectorAll('.links').forEach((nav,index)=>{const link=[...nav.children].find(el=>el.matches&&el.matches('a[data-i18n="solutions"]'));if(!link||link.closest('.nav-dropdown'))return;const wrap=document.createElement('div');wrap.className='nav-dropdown';link.parentNode.insertBefore(wrap,link);wrap.appendChild(link);const menu=document.createElement('div');menu.className='solution-menu';menu.id=`solution-menu-${index+1}`;menu.innerHTML='<a href="ai-healthcare.html"><b data-i18n="health">AI Healthcare</b><small data-i18n="menuHealthDesc">Imaging, devices, planning and agents</small></a><a href="custom-ai-solutions.html"><b data-i18n="customSolutionsNav">Custom AI Solutions</b><small data-i18n="menuCustomDesc">Deep-learning solutions built to your needs</small></a>';link.setAttribute('aria-haspopup','true');link.setAttribute('aria-controls',menu.id);wrap.appendChild(menu)})}
 document.addEventListener('DOMContentLoaded',enhanceNavigation);
 function normalizeHeadingPunctuation(){document.querySelectorAll('h1,h2').forEach(el=>{el.style.removeProperty('font-size');el.style.removeProperty('white-space');el.style.removeProperty('max-width');el.textContent=el.textContent.replace(/[.。]+$/u,'')})}
 function readLanguage(){try{return localStorage.getItem('scovion-lang')}catch{return null}}
 function saveLanguage(lang){try{localStorage.setItem('scovion-lang',lang)}catch{}}
 function resolveLanguage(value){const normalized=String(value||'en').toLowerCase();const lang=languageAliases[normalized]||normalized;return copy[lang]?lang:'en'}
+function closeMobileNavigation(menu,links,restoreFocus=false){
+  if(!menu||!links)return;
+  links.classList.remove('open');
+  menu.setAttribute('aria-expanded','false');
+  if(restoreFocus)menu.focus();
+}
+function setupMobileNavigation(menu,links){
+  if(!menu||!links||menu.dataset.navigationBound==='true')return;
+  menu.dataset.navigationBound='true';
+  if(!menu.querySelector('.menu-lines')){
+    menu.textContent='';
+    const icon=document.createElement('span');
+    icon.className='menu-lines';
+    icon.setAttribute('aria-hidden','true');
+    icon.append(document.createElement('i'),document.createElement('i'));
+    menu.appendChild(icon);
+  }
+  menu.addEventListener('click',()=>{
+    const isOpen=links.classList.toggle('open');
+    menu.setAttribute('aria-expanded',String(isOpen));
+    if(isOpen){const firstLink=links.querySelector('a');if(firstLink)firstLink.focus()}
+  });
+  links.addEventListener('click',event=>{if(event.target.closest('a'))closeMobileNavigation(menu,links)});
+  document.addEventListener('keydown',event=>{if(event.key==='Escape'&&links.classList.contains('open'))closeMobileNavigation(menu,links,true)});
+  document.addEventListener('pointerdown',event=>{const nav=menu.closest('.nav');if(links.classList.contains('open')&&nav&&!nav.contains(event.target))closeMobileNavigation(menu,links)});
+  window.addEventListener('resize',()=>{if(window.innerWidth>780)closeMobileNavigation(menu,links)});
+}
 function init(requestedLanguage){
   const lang=resolveLanguage(typeof requestedLanguage==='string'?requestedLanguage:readLanguage());
   document.documentElement.lang=lang;
@@ -161,6 +194,7 @@ function init(requestedLanguage){
   document.querySelectorAll('[data-i18n-placeholder]').forEach(e=>e.placeholder=copy[lang][e.dataset.i18nPlaceholder]||copy.en[e.dataset.i18nPlaceholder]||e.placeholder);
   const sel=document.querySelector('#language');
   if(sel){
+    sel.setAttribute('aria-label',copy[lang].languageLabel||copy.en.languageLabel);
     sel.innerHTML=languages.map(([value,label])=>`<option value="${value}">${label}</option>`).join('');
     sel.value=lang;
     sel.onchange=()=>{
@@ -174,11 +208,9 @@ function init(requestedLanguage){
   if(menu&&links){
     if(!links.id)links.id='primary-navigation';
     menu.setAttribute('aria-controls',links.id);
+    menu.setAttribute('aria-label',copy[lang].menuLabel||copy.en.menuLabel);
     menu.setAttribute('aria-expanded',String(links.classList.contains('open')));
-    menu.onclick=()=>{
-      const isOpen=links.classList.toggle('open');
-      menu.setAttribute('aria-expanded',String(isOpen));
-    }
+    setupMobileNavigation(menu,links);
   }
   document.querySelectorAll('[data-year]').forEach(e=>e.textContent=new Date().getFullYear());
   normalizeHeadingPunctuation();

@@ -1,10 +1,33 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="SCOVION Medical AI Agent appliance for hospital workflows."><title>Medical AI Agent — SCOVION</title><link rel="icon" type="image/png" href="assets/scovion-logo-mark.png"><link rel="apple-touch-icon" href="assets/scovion-logo-mark.png"><link rel="stylesheet" href="styles.css?v=1.5.0"></head>
-<body>
-  <header class="container nav"><a class="brand" href="index.html">SCO<i>V</i>ION</a><nav class="links"><a href="index.html" data-i18n="home">Home</a><a class="active" href="index.html#solutions" data-i18n="solutions">Solutions</a><a href="about.html" data-i18n="about">About</a><a href="contact.html" data-i18n="contact">Contact</a></nav><div class="nav-actions"><select id="language" class="lang" aria-label="Language"></select><a class="button" href="contact.html" data-i18n="navCta">Talk to us</a><button class="menu" aria-label="Menu">☰</button></div></header>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="SCOVION Medical AI Agent appliance for hospital workflows.">
+  <title>Medical AI Agent — SCOVION</title>
+  <link rel="icon" type="image/png" href="assets/scovion-logo-mark.png">
+  <link rel="apple-touch-icon" href="assets/scovion-logo-mark.png">
+  <link rel="stylesheet" href="styles.css?v=1.7.0">
+  <style>
+    .agent-detail-page .button{border-radius:6px;box-shadow:none}
+    .agent-detail-page .agent-hero h1{max-width:13ch;font-weight:700;letter-spacing:-.045em;text-wrap:balance}
+    .agent-detail-page .agent-hero-media,.agent-detail-page .agent-scenario{border-radius:12px}
+    .agent-detail-page .agent-hero-media img{height:auto}
+    .agent-detail-page .agent-visual-origin{color:#52677c!important;font-size:12px!important}
+    .agent-detail-page .agent-scenario>span{font-size:12px}
+    .agent-detail-page .agent-scenario p{color:#52677c;font-size:15px;line-height:1.65}
+    .agent-detail-page .agent-scenario li{font-size:14px;line-height:1.5}
+    .agent-detail-page .cta{border-radius:16px}
+    :lang(zh-cn) .agent-detail-page .agent-hero h1,:lang(zh-tw) .agent-detail-page .agent-hero h1,:lang(th) .agent-detail-page .agent-hero h1{line-height:1.1;letter-spacing:0}
+    :lang(zh-cn) .agent-detail-page :is(h1,h2,h3),:lang(zh-tw) .agent-detail-page :is(h1,h2,h3),:lang(th) .agent-detail-page :is(h1,h2,h3){letter-spacing:0}
+    :lang(zh-cn) .agent-detail-page :is(h1,h2),:lang(zh-tw) .agent-detail-page :is(h1,h2),:lang(th) .agent-detail-page :is(h1,h2){line-height:1.1}
+    @media(prefers-reduced-motion:reduce){.agent-detail-page *,.agent-detail-page *::before,.agent-detail-page *::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}
+  </style>
+</head>
+<body class="agent-detail-page">
+  <header class="container nav site-header"><a class="brand brand-lockup" href="index.html" aria-label="SCOVION home"><img class="brand-mark" src="assets/scovion-logo-mark.png" width="28" height="28" alt=""><span class="brand-wordmark">SCO<i>V</i>ION</span></a><nav class="links" aria-label="Primary navigation"><a href="index.html" data-i18n="home">Home</a><a class="active" href="index.html#solutions" data-i18n="solutions" aria-current="location">Solutions</a><a href="about.html" data-i18n="about">About</a><a href="contact.html" data-i18n="contact">Contact</a></nav><div class="nav-actions"><select id="language" class="lang" aria-label="Language"></select><a class="button" href="contact.html" data-i18n="navCta">Talk to us</a><button class="menu" type="button" aria-label="Menu">☰</button></div></header>
   <main>
-    <section class="agent-hero"><div class="container agent-hero-grid"><div><div class="eyebrow" data-i18n="medicalAiInfrastructure">Medical AI infrastructure</div><h1 data-i18n="agentDetailTitle">One appliance. Intelligence across the hospital.</h1><p data-i18n="agentDetailText">A locally deployed multimodal medical AI platform supporting clinical documentation, quality control, decision assistance and health screening.</p><div class="hero-buttons"><a class="button" href="#scenarios" data-i18n="exploreScenarios">Explore scenarios</a><a class="button outline" href="contact.html" data-i18n="ctaButton">Start a conversation</a></div></div><div><div class="agent-hero-media"><img src="assets/products/visual-medical-ai-appliance-v3.webp" alt="Reference image of an on-premise medical AI appliance"></div><p class="agent-visual-origin" data-i18n="conceptVisualNotice">Image for reference only.</p></div></div></section>
+    <section class="agent-hero"><div class="container agent-hero-grid"><div><div class="eyebrow" data-i18n="medicalAiInfrastructure">Medical AI infrastructure</div><h1 data-i18n="agentDetailTitle">One appliance. Intelligence across the hospital.</h1><p data-i18n="agentDetailText">A locally deployed multimodal medical AI platform supporting clinical documentation, quality control, decision assistance and health screening.</p><div class="hero-buttons"><a class="button" href="#scenarios" data-i18n="exploreScenarios">Explore scenarios</a><a class="button outline" href="contact.html" data-i18n="ctaButton">Start a conversation</a></div></div><div><div class="agent-hero-media"><img src="assets/products/visual-medical-ai-appliance-v3.webp" width="1919" height="820" alt="Reference image of an on-premise medical AI appliance" decoding="async"></div><p class="agent-visual-origin" data-i18n="conceptVisualNotice">Image for reference only.</p></div></div></section>
 
     <section id="scenarios" class="container section">
       <div class="section-head"><div><div class="eyebrow" data-i18n="fourScenarios">Four core scenarios</div><h2 data-i18n="agentScenarioHeading">Built around everyday hospital work</h2></div><p class="section-intro" data-i18n="agentScenarioIntro">Modular capabilities can be selected and combined according to hospital workflow, budget and deployment needs.</p></div>
@@ -19,8 +42,14 @@
     <section class="agent-foundation"><div class="container section"><div class="section-head"><div><div class="eyebrow" data-i18n="deploymentFoundation">Deployment foundation</div><h2 data-i18n="agentFoundationHeading">Designed to fit hospital infrastructure</h2></div></div><div class="steps"><div class="step"><b>01</b><h3 data-i18n="localDeployment">Local deployment</h3><p data-i18n="localDeploymentDesc">Keep clinical data within the hospital environment and reduce dependence on cloud services.</p></div><div class="step"><b>02</b><h3 data-i18n="modularServices">Modular services</h3><p data-i18n="modularServicesDesc">Select and combine documentation, quality, screening and decision-support modules.</p></div><div class="step"><b>03</b><h3 data-i18n="elasticCompute">Elastic computing</h3><p data-i18n="elasticComputeDesc">Scale computing resources as concurrency and application coverage grow.</p></div></div></div></section>
     <div class="container cta"><div><div class="eyebrow">MEDICAL AI AGENT</div><h2 data-i18n="agentCta">Bring practical AI into the clinical workflow.</h2></div><a class="button" href="contact.html" data-i18n="ctaButton">Start a conversation</a></div>
   </main>
-  <footer class="container footer"><p>© <span data-year></span> SCOVION. All rights reserved.</p><p>Applied AI for real-world outcomes.</p></footer>
-  <script src="main.js?v=1.5.0"></script>
+  <footer class="site-footer">
+    <div class="container footer site-footer-inner">
+      <div class="footer-brand"><a class="brand brand-lockup footer-logo" href="index.html" aria-label="SCOVION home"><img class="brand-mark" src="assets/scovion-logo-mark.png" width="28" height="28" alt=""><span class="brand-wordmark">SCO<i>V</i>ION</span></a><p data-i18n="contactFooterLine">Applied AI for real-world outcomes</p></div>
+      <nav class="footer-nav" aria-label="Footer navigation"><a href="ai-healthcare.html" data-i18n="health">AI Healthcare</a><a href="custom-ai-solutions.html" data-i18n="customSolutionsNav">Custom AI Solutions</a><a href="about.html" data-i18n="about">About</a><a href="contact.html" data-i18n="contact">Contact</a></nav>
+      <div class="footer-meta"><p>© <span data-year></span> SCOVION Technology Sdn. Bhd.</p><a href="privacy.html" data-i18n="privacyLink">Privacy</a></div>
+    </div>
+  </footer>
+  <script src="main.js?v=1.7.0"></script>
   <script src="analytics.js?v=1.0.1"></script>
 </body>
 </html>

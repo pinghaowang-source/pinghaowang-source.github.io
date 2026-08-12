@@ -41,7 +41,7 @@
   position: relative;
   min-height: 520px;
   border: 1px solid #28445f;
-  border-radius: 20px;
+  border-radius: 12px;
   overflow: hidden;
   background-color: #0a2139;
   background-image:
@@ -56,7 +56,7 @@
   position: absolute;
   inset: 18px;
   border: 1px solid #ffffff0d;
-  border-radius: 13px;
+  border-radius: 8px;
   pointer-events: none;
 }
 
@@ -64,8 +64,8 @@
   position: absolute;
   left: 28px;
   top: 24px;
-  color: #93acbd;
-  font-size: 10px;
+  color: #b8c9d7;
+  font-size: 12px;
   font-weight: 800;
   letter-spacing: .16em;
   text-transform: uppercase;
@@ -74,8 +74,8 @@
 .map-coordinate {
   position: absolute;
   right: 25px;
-  color: #7791a5;
-  font: 10px/1 monospace;
+  color: #9db0c0;
+  font: 11px/1 monospace;
 }
 
 .map-coordinate-top { top: 27px; }
@@ -136,14 +136,14 @@
   box-shadow: 0 0 0 6px #68e8c218, 0 0 20px #68e8c288;
 }
 
-.map-node b { font-size: 12px; }
+.map-node b { font-size: 13px; }
 
 .map-node small {
   padding: 3px 5px;
-  border-radius: 4px;
+  border-radius: 3px;
   background: var(--mint);
   color: #062118;
-  font-size: 8px;
+  font-size: 10px;
   font-weight: 900;
   letter-spacing: .08em;
 }
@@ -171,7 +171,7 @@
   gap: 18px;
   align-items: center;
   border: 1px solid #28445f;
-  border-radius: 16px;
+  border-radius: 12px;
   padding: 20px;
   background: #0a2139;
 }
@@ -185,7 +185,7 @@
   border: 1px solid #3f607b;
   border-radius: 50%;
   color: #8fa9bb;
-  font-size: 10px;
+  font-size: 11px;
   font-weight: 800;
   letter-spacing: .08em;
 }
@@ -219,7 +219,7 @@
 
 .office-card p {
   color: #9db0c0;
-  font-size: 12px;
+  font-size: 13px;
   margin: 0;
 }
 
@@ -230,9 +230,10 @@
 }
 
 .leadership-grid {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 16px;
+  gap: 20px;
 }
 
 .leadership-card {
@@ -242,9 +243,10 @@
   padding: 34px;
   overflow: hidden;
   border: 1px solid #d7e3eb;
-  border-radius: 20px;
-  background: #fff;
-  box-shadow: 0 22px 48px #173f5c0d;
+  border-top: 3px solid var(--blue);
+  border-radius: 12px;
+  background: linear-gradient(180deg, #fff, #f8fbfd);
+  box-shadow: 0 18px 42px #173f5c0b;
 }
 
 .leadership-card-top {
@@ -258,18 +260,18 @@
 
 .leadership-card-top span {
   color: var(--blue);
-  font-size: 11px;
-  font-weight: 850;
-  letter-spacing: .12em;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .1em;
   text-transform: uppercase;
 }
 
 .leadership-card-top b {
   padding: 7px 10px;
-  border-radius: 100px;
+  border-radius: 6px;
   background: #e8f3ff;
   color: #24567e;
-  font-size: 10px;
+  font-size: 12px;
   letter-spacing: .05em;
   white-space: nowrap;
 }
@@ -278,8 +280,9 @@
   max-width: 470px;
   margin: 30px 0 15px;
   font-size: clamp(29px, 3vw, 39px);
-  line-height: 1.04;
-  letter-spacing: -.045em;
+  line-height: 1.08;
+  letter-spacing: -.03em;
+  text-wrap: balance;
 }
 
 .leadership-summary {
@@ -328,11 +331,12 @@
   border: 1px solid #d5e3ed;
   border-radius: 8px;
   color: #48627a;
-  font-size: 11px;
+  font-size: 12px;
   font-weight: 700;
 }
 
 .technology-card {
+  border-top-color: var(--mint);
   border-color: #173c5b;
   background:
     radial-gradient(circle at 88% 10%, #0d86e74a, transparent 30%),
@@ -374,7 +378,7 @@
   .leadership-card { min-height: 0; padding: 26px; }
   .map-panel { min-height: 430px; }
   .map-region { left: 20px; }
-  .map-node b { font-size: 10px; }
+  .map-node b { font-size: 11px; }
   .map-node.wuhan { left: 45%; }
   .map-node.shenzhen { left: 57%; }
   .map-node.hongkong { left: 67%; }
@@ -389,9 +393,75 @@
 @media (max-width: 480px) {
   .leadership-card-top { align-items: flex-start; flex-direction: column; }
   .office-list { grid-template-columns: 1fr; }
-  .map-panel { min-height: 390px; }
-  .map-node { gap: 6px; }
-  .map-node b { font-size: 9px; }
-  .map-node.hongkong { left: 63%; top: 54%; }
-  .map-node.kualalumpur { left: 38%; top: 79%; }
+  .map-panel {
+    display: grid;
+    min-height: 0;
+    gap: 0;
+    padding: 64px 18px 16px;
+  }
+  .map-panel::after,
+  .map-coordinate,
+  .map-landmass,
+  .map-route { display: none; }
+  .map-node,
+  .map-node.wuhan,
+  .map-node.shenzhen,
+  .map-node.hongkong,
+  .map-node.kualalumpur {
+    position: relative;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    gap: 9px;
+    padding: 14px 0;
+    border-top: 1px solid #28445f;
+  }
+  .map-node.kualalumpur { order: -1; }
+  .map-node b { font-size: 12px; }
+}
+
+.about-page .cta {
+  border-radius: 16px;
+}
+
+.about-page .location-image,
+.about-page .team-card {
+  border-radius: 12px;
+}
+
+.about-page .location-image img {
+  height: auto;
+}
+
+.dual-core-section .section-head {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #cfdce4;
+}
+
+.about-page .button {
+  border-radius: 6px;
+  box-shadow: none;
+}
+
+:lang(zh-cn) .about-hero h1,
+:lang(zh-tw) .about-hero h1 {
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+:lang(th) .about-hero h1 {
+  line-height: 1.12;
+  letter-spacing: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-page *,
+  .about-page *::before,
+  .about-page *::after {
+    scroll-behavior: auto !important;
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+  }
 }

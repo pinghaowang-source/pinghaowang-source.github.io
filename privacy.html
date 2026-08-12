@@ -7,14 +7,14 @@
   <title>Privacy &amp; Analytics — SCOVION</title>
   <link rel="icon" type="image/png" href="assets/scovion-logo-mark.png">
   <link rel="apple-touch-icon" href="assets/scovion-logo-mark.png">
-  <link rel="stylesheet" href="styles.css?v=1.5.0">
-  <link rel="stylesheet" href="privacy.css?v=1.0.0">
+  <link rel="stylesheet" href="styles.css?v=1.7.0">
+  <link rel="stylesheet" href="privacy.css?v=1.2.0">
 </head>
-<body>
-  <header class="container nav">
-    <a class="brand" href="index.html">SCO<i>V</i>ION</a>
-    <nav class="links"><a href="index.html" data-i18n="home">Home</a><a href="index.html#solutions" data-i18n="solutions">Solutions</a><a href="about.html" data-i18n="about">About</a><a href="contact.html" data-i18n="contact">Contact</a></nav>
-    <div class="nav-actions"><select id="language" class="lang" aria-label="Language"></select><a class="button" href="contact.html" data-i18n="navCta">Talk to us</a><button class="menu" aria-label="Menu">☰</button></div>
+<body class="privacy-page">
+  <header class="container nav site-header">
+    <a class="brand brand-lockup" href="index.html" aria-label="SCOVION home"><img class="brand-mark" src="assets/scovion-logo-mark.png" width="28" height="28" alt=""><span class="brand-wordmark">SCO<i>V</i>ION</span></a>
+    <nav class="links" aria-label="Primary navigation"><a href="index.html" data-i18n="home">Home</a><a href="index.html#solutions" data-i18n="solutions">Solutions</a><a href="about.html" data-i18n="about">About</a><a href="contact.html" data-i18n="contact">Contact</a></nav>
+    <div class="nav-actions"><select id="language" class="lang" aria-label="Language"></select><a class="button" href="contact.html" data-i18n="navCta">Talk to us</a><button class="menu" type="button" aria-label="Menu">☰</button></div>
   </header>
 
   <main class="container">
@@ -73,8 +73,14 @@
     </div>
   </main>
 
-  <footer class="container footer"><p>© <span data-year></span> SCOVION Technology Sdn. Bhd.</p><p>Applied AI for real-world outcomes.</p></footer>
-  <script src="main.js?v=1.5.0"></script>
+  <footer class="site-footer">
+    <div class="container footer site-footer-inner">
+      <div class="footer-brand"><a class="brand brand-lockup footer-logo" href="index.html" aria-label="SCOVION home"><img class="brand-mark" src="assets/scovion-logo-mark.png" width="28" height="28" alt=""><span class="brand-wordmark">SCO<i>V</i>ION</span></a><p data-i18n="contactFooterLine">Applied AI for real-world outcomes</p></div>
+      <nav class="footer-nav" aria-label="Footer navigation"><a href="ai-healthcare.html" data-i18n="health">AI Healthcare</a><a href="custom-ai-solutions.html" data-i18n="customSolutionsNav">Custom AI Solutions</a><a href="about.html" data-i18n="about">About</a><a href="contact.html" data-i18n="contact">Contact</a></nav>
+      <div class="footer-meta"><p>© <span data-year></span> SCOVION Technology Sdn. Bhd.</p><a href="privacy.html" data-i18n="privacyLink" aria-current="page">Privacy</a></div>
+    </div>
+  </footer>
+  <script src="main.js?v=1.7.0"></script>
   <script>
     (() => {
       const showLanguage = requested => {

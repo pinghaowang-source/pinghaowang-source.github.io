@@ -1090,3 +1090,575 @@ body:is(.product-layout-thorax, .product-layout-liver, .product-layout-urology) 
     border-bottom: 0;
   }
 }
+
+/* Product metadata hierarchy */
+.detail-hero h1 {
+  text-wrap: balance;
+}
+
+.detail-meta-band {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+  margin-top: 34px;
+  padding-top: 22px;
+  border-top: 1px solid #ffffff24;
+}
+
+.detail-meta-band.is-single {
+  grid-template-columns: 1fr;
+}
+
+.detail-meta-group {
+  min-width: 0;
+}
+
+.detail-meta-label {
+  margin-bottom: 12px;
+  color: #83a9c3;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
+.detail-meta-group .detail-tags {
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.detail-tags-regulatory span {
+  position: relative;
+  padding: 8px 12px 8px 25px;
+  border-color: color-mix(in srgb, var(--product-accent) 48%, transparent);
+  background: color-mix(in srgb, var(--product-accent) 10%, transparent);
+  color: #f2fbff;
+}
+
+.detail-tags-regulatory span::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 11px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--product-accent);
+  box-shadow: 0 0 12px var(--product-accent);
+  transform: translateY(-50%);
+}
+
+.detail-tags-profile span {
+  border-color: #ffffff20;
+  background: transparent;
+  color: #bcd0dc;
+}
+
+/* Explicit image-fit modes */
+.detail-gallery figure.fit-contain img,
+.story-primary-visual.fit-contain img,
+.story-point-visual.fit-contain img,
+.capability-visual.fit-contain img,
+.detail-secondary-visual.fit-contain img,
+.detail-related-card figure.fit-contain img {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: contain;
+  object-position: center;
+}
+
+.detail-gallery figure.fit-cover img,
+.story-primary-visual.fit-cover img,
+.story-point-visual.fit-cover img,
+.capability-visual.fit-cover img,
+.detail-secondary-visual.fit-cover img,
+.detail-related-card figure.fit-cover img {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  max-width: none;
+  object-fit: cover;
+  object-position: center;
+}
+
+.story-point-visual.fit-contain,
+.capability-visual.fit-contain {
+  background: #061326;
+}
+
+.story-point-visual.fit-quadrant,
+.capability-visual.fit-quadrant {
+  aspect-ratio: 1;
+}
+
+.story-point-visual.fit-quadrant img,
+.capability-visual.fit-quadrant img {
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  object-fit: fill;
+}
+
+/* Elevated longitudinal workstation */
+.detail-secondary-stage {
+  position: relative;
+}
+
+.detail-secondary-section.is-follow-up .detail-secondary-stage {
+  padding: 16px;
+  overflow: hidden;
+  border: 1px solid #183b56;
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at 88% 4%, color-mix(in srgb, var(--product-accent) 18%, transparent), transparent 30%),
+    linear-gradient(145deg, #061326, #0a2137);
+  box-shadow: 0 32px 78px #102f4929;
+}
+
+.detail-secondary-section.is-follow-up .detail-secondary-stage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 9%;
+  width: 82%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--product-accent), transparent);
+  opacity: .7;
+}
+
+.detail-secondary-section.is-follow-up .detail-secondary-visual {
+  border-color: #ffffff1c;
+  border-radius: 18px;
+  box-shadow: none;
+}
+
+.detail-secondary-section.is-follow-up .secondary-visual-origin {
+  margin: 10px 4px 0;
+  color: #7f9caf;
+}
+
+.detail-secondary-section.is-follow-up .detail-secondary-points {
+  position: relative;
+  margin-top: 16px;
+  border-color: #ffffff1b;
+  border-radius: 18px;
+  background: #ffffff08;
+}
+
+.detail-secondary-section.is-follow-up .detail-secondary-points article {
+  min-height: 195px;
+  border-color: #ffffff16;
+  color: #fff;
+}
+
+.detail-secondary-section.is-follow-up .detail-secondary-points b {
+  display: grid;
+  width: 34px;
+  height: 34px;
+  margin-bottom: 28px;
+  place-items: center;
+  border: 1px solid color-mix(in srgb, var(--product-accent) 55%, transparent);
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--product-accent) 10%, transparent);
+}
+
+.detail-secondary-section.is-follow-up .detail-secondary-points p {
+  color: #a9c0cf;
+}
+
+/* CT Bone: spatial reconstruction-led story */
+.product-layout-bone .detail-hero {
+  background:
+    radial-gradient(circle at 83% 14%, #66c8ff38, transparent 30%),
+    linear-gradient(145deg, #06182d, #0d304a);
+}
+
+.story-bone {
+  background: #eef4f7;
+}
+
+.bone-signature-stage {
+  display: grid;
+  grid-template-columns: minmax(0, 1.16fr) minmax(350px, .84fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.bone-signature-primary {
+  display: flex;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #cbdbe4;
+  border-radius: 24px;
+  background: #fff;
+  flex-direction: column;
+  box-shadow: 0 26px 65px #173f5c16;
+}
+
+.bone-signature-primary .story-primary-visual {
+  aspect-ratio: 16 / 9;
+  border: 0;
+  box-shadow: none;
+}
+
+.signature-primary-copy {
+  padding: 27px 30px 31px;
+}
+
+.signature-primary-copy h3 {
+  margin: 14px 0 9px;
+  font-size: clamp(24px, 2.5vw, 34px);
+}
+
+.bone-signature-rail {
+  display: grid;
+  overflow: hidden;
+  border: 1px solid #cbdbe4;
+  border-radius: 24px;
+  background: #fff;
+}
+
+.bone-signature-rail article {
+  display: grid;
+  grid-template-columns: 146px minmax(0, 1fr);
+  gap: 22px;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #d7e3e9;
+}
+
+.bone-signature-rail article:last-child {
+  border-bottom: 0;
+}
+
+.bone-signature-rail .story-point-visual {
+  width: 146px;
+  aspect-ratio: 16 / 10;
+  border-radius: 12px;
+}
+
+.bone-signature-rail article h3 {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+/* CT Stroke: time-sensitive review story */
+.product-layout-stroke .detail-hero {
+  background:
+    radial-gradient(circle at 82% 12%, #a38cff3c, transparent 30%),
+    linear-gradient(145deg, #071327, #17254b 58%, #0b273e);
+}
+
+.story-stroke {
+  background:
+    radial-gradient(circle at 82% 12%, #745af322, transparent 26%),
+    #081527;
+  color: #fff;
+}
+
+.story-stroke .detail-heading > p,
+.story-stroke article p {
+  color: #a9bdcc;
+}
+
+.stroke-signature-stage {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(350px, .92fr);
+  gap: 18px;
+}
+
+.stroke-signature-primary {
+  display: flex;
+  overflow: hidden;
+  border: 1px solid #ffffff1f;
+  border-radius: 24px;
+  background: #0d1d33;
+  flex-direction: column;
+}
+
+.stroke-signature-primary .story-primary-visual {
+  aspect-ratio: 16 / 9;
+  border: 0;
+  box-shadow: none;
+}
+
+.stroke-signature-rail {
+  display: grid;
+  gap: 12px;
+}
+
+.stroke-signature-rail article {
+  display: grid;
+  grid-template-columns: 164px minmax(0, 1fr);
+  gap: 22px;
+  align-items: center;
+  padding: 14px;
+  border: 1px solid #ffffff1c;
+  border-radius: 18px;
+  background: #ffffff08;
+}
+
+.stroke-signature-rail .story-point-visual {
+  width: 164px;
+  aspect-ratio: 16 / 10;
+  border-radius: 11px;
+}
+
+.stroke-signature-rail article h3 {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+.product-layout-stroke .workflow-band {
+  background: #101c3b;
+}
+
+/* Hardware: device-led editorial layout */
+.product-layout-device .detail-hero {
+  background:
+    radial-gradient(circle at 82% 15%, #77dfe33d, transparent 30%),
+    linear-gradient(145deg, #eaf2f4, #f8fbfc 58%, #e7eef3);
+  color: #102033;
+}
+
+.product-layout-device .detail-back,
+.product-layout-device .detail-hero-copy > p,
+.product-layout-device .detail-facts span,
+.product-layout-device .detail-tags-profile span {
+  color: #587180;
+}
+
+.product-layout-device .detail-hero .button.outline {
+  border-color: #839aa8;
+  color: #183349;
+}
+
+.product-layout-device .detail-gallery {
+  border-color: #c4d3da;
+  background: #f5f8f9;
+  box-shadow: 0 34px 80px #23485422;
+}
+
+.product-layout-device .detail-meta-band {
+  border-top-color: #bdcfd6;
+}
+
+.product-layout-lung .detail-meta-band {
+  border-top-color: #b9cdd3;
+}
+
+.product-layout-device .detail-meta-label,
+.product-layout-lung .detail-meta-label {
+  color: #688493;
+}
+
+.product-layout-device .detail-tags-regulatory span,
+.product-layout-lung .detail-tags-regulatory span {
+  color: #17384a;
+}
+
+.product-layout-device .detail-tags-profile span,
+.product-layout-lung .detail-tags-profile span {
+  border-color: #b8cbd3;
+  color: #587180;
+}
+
+.product-layout-device .detail-facts {
+  border-color: #c2d2d8;
+  background: #c2d2d8;
+}
+
+.product-layout-device .detail-facts article {
+  background: #f8fbfb;
+}
+
+.product-layout-device .detail-hero h1 {
+  font-size: clamp(42px, 5.2vw, 68px);
+}
+
+.story-device {
+  background: #fff;
+}
+
+.device-story-stage {
+  display: grid;
+  grid-template-columns: minmax(350px, .82fr) minmax(0, 1.18fr);
+  gap: clamp(34px, 5vw, 72px);
+  align-items: start;
+}
+
+.device-story-product {
+  position: sticky;
+  top: 96px;
+}
+
+.device-story-product .story-primary-visual {
+  aspect-ratio: 4 / 3;
+  border-color: #d3e0e5;
+  border-radius: 26px;
+  background: #f3f7f8;
+  box-shadow: 0 30px 70px #173f5c18;
+}
+
+.device-story-capabilities {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.device-story-capabilities article {
+  overflow: hidden;
+  border: 1px solid #d6e2e7;
+  border-radius: 18px;
+  background: #f8fbfc;
+}
+
+.device-story-capabilities .story-point-copy {
+  padding: 24px 25px 28px;
+}
+
+.device-story-capabilities article h3 {
+  min-height: 2.24em;
+}
+
+/* Related products use existing titles and artwork only. */
+.detail-related-section {
+  padding-top: 10px;
+  padding-bottom: 52px;
+}
+
+.detail-related-section + .detail-cta {
+  margin-top: 0;
+}
+
+.detail-related-section .detail-heading {
+  margin-bottom: 30px;
+}
+
+.detail-related-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.detail-related-card {
+  overflow: hidden;
+  border: 1px solid #d6e1e8;
+  border-radius: 20px;
+  background: #fff;
+  color: #102033;
+  box-shadow: 0 18px 44px #173f5c0d;
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.detail-related-card:hover {
+  border-color: color-mix(in srgb, var(--product-accent) 46%, #d6e1e8);
+  box-shadow: 0 26px 58px #173f5c1a;
+  transform: translateY(-4px);
+}
+
+.detail-related-card figure {
+  height: 190px;
+  margin: 0;
+  overflow: hidden;
+  background: #07182b;
+}
+
+.detail-related-card figure img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.detail-related-card figure.fit-contain {
+  background: #edf3f5;
+}
+
+.detail-related-copy {
+  padding: 23px 24px 25px;
+}
+
+.detail-related-copy > span {
+  color: #718696;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: .11em;
+  text-transform: uppercase;
+}
+
+.detail-related-copy h3 {
+  min-height: 2.35em;
+  margin: 12px 0 24px;
+  font-size: 23px;
+  line-height: 1.16;
+  letter-spacing: -.035em;
+}
+
+.detail-related-copy b {
+  color: #1b638d;
+  font-size: 12px;
+}
+
+@media (max-width: 900px) {
+  .bone-signature-stage,
+  .stroke-signature-stage,
+  .device-story-stage {
+    grid-template-columns: 1fr;
+  }
+
+  .device-story-product {
+    position: static;
+  }
+
+  .detail-related-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 780px) {
+  .detail-meta-band,
+  .device-story-capabilities,
+  .detail-related-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-meta-band {
+    gap: 22px;
+  }
+
+  .detail-secondary-section.is-follow-up .detail-secondary-stage {
+    padding: 10px;
+    border-radius: 22px;
+  }
+
+  .detail-related-card figure {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+}
+
+@media (max-width: 620px) {
+  .bone-signature-rail article,
+  .stroke-signature-rail article {
+    grid-template-columns: 1fr;
+  }
+
+  .bone-signature-rail .story-point-visual,
+  .stroke-signature-rail .story-point-visual {
+    width: 100%;
+  }
+
+  .signature-primary-copy {
+    padding: 24px;
+  }
+
+  .product-layout-device .detail-hero h1 {
+    font-size: clamp(38px, 12vw, 54px);
+  }
+}

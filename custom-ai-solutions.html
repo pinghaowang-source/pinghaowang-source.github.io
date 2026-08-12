@@ -7,22 +7,22 @@
   <title>Custom AI Solutions — SCOVION</title>
   <link rel="icon" type="image/png" href="assets/scovion-logo-mark.png">
   <link rel="apple-touch-icon" href="assets/scovion-logo-mark.png">
-  <link rel="stylesheet" href="styles.css?v=1.5.0">
-  <link rel="stylesheet" href="custom-solutions.css">
+  <link rel="stylesheet" href="styles.css?v=1.7.0">
+  <link rel="stylesheet" href="custom-solutions.css?v=1.2.0">
 </head>
 <body class="custom-solutions-page">
-  <header class="container nav">
-    <a class="brand" href="index.html">SCO<i>V</i>ION</a>
-    <nav class="links">
+  <header class="container nav site-header">
+    <a class="brand brand-lockup" href="index.html" aria-label="SCOVION home"><img class="brand-mark" src="assets/scovion-logo-mark.png" width="28" height="28" alt=""><span class="brand-wordmark">SCO<i>V</i>ION</span></a>
+    <nav class="links" aria-label="Primary navigation">
       <a href="index.html" data-i18n="home">Home</a>
-      <a class="active" href="index.html#solutions" data-i18n="solutions">Solutions</a>
+      <a class="active" href="index.html#solutions" data-i18n="solutions" aria-current="location">Solutions</a>
       <a href="about.html" data-i18n="about">About</a>
       <a href="contact.html" data-i18n="contact">Contact</a>
     </nav>
     <div class="nav-actions">
       <select id="language" class="lang" aria-label="Language"></select>
       <a class="button" href="contact.html" data-i18n="navCta">Talk to us</a>
-      <button class="menu" aria-label="Menu">☰</button>
+      <button class="menu" type="button" aria-label="Menu">☰</button>
     </div>
   </header>
 
@@ -96,7 +96,7 @@
         </div>
 
         <article class="case-study">
-          <div class="case-image"><img src="assets/custom-ai/digital-human-livestream.jpg" alt="Original concept illustration of an AI digital human livestream" loading="lazy"></div>
+          <div class="case-image"><img src="assets/custom-ai/digital-human-livestream.jpg" width="1586" height="992" alt="Original concept illustration of an AI digital human livestream" loading="lazy" decoding="async"></div>
           <div class="case-copy">
             <span class="case-number">CASE 01</span>
             <div class="custom-section-label" data-i18n="digitalHumanLabel">Multimodal content automation</div>
@@ -107,7 +107,7 @@
         </article>
 
         <article class="case-study reverse">
-          <div class="case-image"><img src="assets/custom-ai/licence-plate-recognition.jpg" alt="Original concept illustration of road traffic licence plate recognition" loading="lazy"></div>
+          <div class="case-image"><img src="assets/custom-ai/licence-plate-recognition.jpg" width="1586" height="992" alt="Original concept illustration of road traffic licence plate recognition" loading="lazy" decoding="async"></div>
           <div class="case-copy">
             <span class="case-number">CASE 02</span>
             <div class="custom-section-label" data-i18n="trafficLabel">Computer vision at the edge</div>
@@ -148,11 +148,14 @@
     </section>
   </main>
 
-  <footer class="container footer">
-    <p>© <span data-year></span> SCOVION Technology Sdn. Bhd.</p>
-    <p data-i18n="contactFooterLine">Applied AI for real-world outcomes</p>
+  <footer class="site-footer">
+    <div class="container footer site-footer-inner">
+      <div class="footer-brand"><a class="brand brand-lockup footer-logo" href="index.html" aria-label="SCOVION home"><img class="brand-mark" src="assets/scovion-logo-mark.png" width="28" height="28" alt=""><span class="brand-wordmark">SCO<i>V</i>ION</span></a><p data-i18n="contactFooterLine">Applied AI for real-world outcomes</p></div>
+      <nav class="footer-nav" aria-label="Footer navigation"><a href="ai-healthcare.html" data-i18n="health">AI Healthcare</a><a href="custom-ai-solutions.html" data-i18n="customSolutionsNav" aria-current="page">Custom AI Solutions</a><a href="about.html" data-i18n="about">About</a><a href="contact.html" data-i18n="contact">Contact</a></nav>
+      <div class="footer-meta"><p>© <span data-year></span> SCOVION Technology Sdn. Bhd.</p><a href="privacy.html" data-i18n="privacyLink">Privacy</a></div>
+    </div>
   </footer>
-  <script src="main.js?v=1.5.0"></script>
+  <script src="main.js?v=1.7.0"></script>
   <script src="analytics.js?v=1.0.1"></script>
 </body>
 </html>

@@ -7,13 +7,13 @@
   <title>AI Healthcare Product — SCOVION</title>
   <link rel="icon" type="image/png" href="assets/scovion-logo-mark.png">
   <link rel="apple-touch-icon" href="assets/scovion-logo-mark.png">
-  <link rel="stylesheet" href="styles.css?v=1.5.0">
-  <link rel="stylesheet" href="product-detail.css?v=1.4.4">
+  <link rel="stylesheet" href="styles.css?v=1.7.0">
+  <link rel="stylesheet" href="product-detail.css?v=2.0.0">
 </head>
 <body class="product-detail-page">
-  <header class="container nav">
-    <a class="brand" href="index.html">SCO<i>V</i>ION</a>
-    <nav class="links">
+  <header class="container nav site-header">
+    <a class="brand brand-lockup" href="index.html" aria-label="SCOVION home"><img class="brand-mark" src="assets/scovion-logo-mark.png" width="28" height="28" alt=""><span class="brand-wordmark">SCO<i>V</i>ION</span></a>
+    <nav class="links" aria-label="Primary navigation">
       <a href="index.html" data-i18n="home">Home</a>
       <a class="active" href="index.html#solutions" data-i18n="solutions">Solutions</a>
       <a href="about.html" data-i18n="about">About</a>
@@ -22,7 +22,7 @@
     <div class="nav-actions">
       <select id="language" class="lang" aria-label="Language"></select>
       <a class="button" href="contact.html" data-i18n="navCta">Talk to us</a>
-      <button class="menu" aria-label="Menu">☰</button>
+      <button class="menu" type="button" aria-label="Menu"><span class="menu-lines" aria-hidden="true"><i></i><i></i></span></button>
     </div>
   </header>
 
@@ -45,7 +45,16 @@
             <p class="visual-origin" data-product-ui="visualNotice">Image for reference only.</p>
           </div>
         </div>
-        <div id="product-tags" class="detail-tags"></div>
+        <div class="detail-meta-band">
+          <section id="product-regulatory-group" class="detail-meta-group" hidden>
+            <div class="detail-meta-label" data-product-ui="regulatoryEyebrow">Regulatory status</div>
+            <div id="product-certifications" class="detail-tags detail-tags-regulatory"></div>
+          </section>
+          <section id="product-profile-group" class="detail-meta-group" hidden>
+            <div class="detail-meta-label" data-product-ui="profileEyebrow">Product profile</div>
+            <div id="product-tags" class="detail-tags detail-tags-profile"></div>
+          </section>
+        </div>
         <div id="product-facts" class="detail-facts"></div>
       </div>
     </section>
@@ -68,11 +77,13 @@
         </div>
         <p id="secondary-visual-intro" hidden></p>
       </div>
-      <figure class="detail-secondary-visual">
-        <img id="secondary-visual-image" src="" alt="" loading="lazy" decoding="async">
-      </figure>
-      <p class="secondary-visual-origin" data-product-ui="visualNotice">Image for reference only.</p>
-      <div id="secondary-visual-points" class="detail-secondary-points" hidden></div>
+      <div class="detail-secondary-stage">
+        <figure class="detail-secondary-visual">
+          <img id="secondary-visual-image" src="" alt="" loading="lazy" decoding="async">
+        </figure>
+        <p class="secondary-visual-origin" data-product-ui="visualNotice">Image for reference only.</p>
+        <div id="secondary-visual-points" class="detail-secondary-points" hidden></div>
+      </div>
     </section>
 
     <section class="workflow-band">
@@ -93,6 +104,13 @@
       <div id="highlight-grid" class="deployment-grid"></div>
     </section>
 
+    <section id="related-products" class="container detail-related-section" hidden>
+      <div class="detail-heading">
+        <div><div class="eyebrow" data-product-ui="relatedEyebrow">Continue exploring</div><h2 data-product-ui="relatedHeading">Related products</h2></div>
+      </div>
+      <div id="related-product-grid" class="detail-related-grid"></div>
+    </section>
+
     <section class="container detail-cta">
       <div><div class="eyebrow" data-product-ui="ctaEyebrow">Explore the fit</div><h2 data-product-ui="ctaHeading">Discuss the workflow, setting and outcome you need</h2><p data-product-ui="ctaText">We can help clarify product fit, deployment considerations and the appropriate next step for your market.</p></div>
       <a id="product-cta" class="button" href="contact.html" data-product-ui="discussProduct">Discuss this product</a>
@@ -101,12 +119,15 @@
 
   <noscript><main class="container detail-noscript"><h1>AI Healthcare product details</h1><p>JavaScript is required to display this product page. Please return to the <a href="ai-healthcare.html">AI Healthcare portfolio</a>.</p></main></noscript>
 
-  <footer class="container footer">
-    <p>© <span data-year></span> SCOVION. All rights reserved.</p>
-    <p data-i18n="availabilityFooter">Product availability varies by market.</p>
+  <footer class="site-footer">
+    <div class="container footer site-footer-inner">
+      <div class="footer-brand"><a class="brand brand-lockup footer-logo" href="index.html" aria-label="SCOVION home"><img class="brand-mark" src="assets/scovion-logo-mark.png" width="28" height="28" alt=""><span class="brand-wordmark">SCO<i>V</i>ION</span></a><p data-i18n="contactFooterLine">Applied AI for real-world outcomes</p></div>
+      <nav class="footer-nav" aria-label="Footer navigation"><a href="ai-healthcare.html" data-i18n="health" aria-current="page">AI Healthcare</a><a href="custom-ai-solutions.html" data-i18n="customSolutionsNav">Custom AI Solutions</a><a href="about.html" data-i18n="about">About</a><a href="contact.html" data-i18n="contact">Contact</a></nav>
+      <div class="footer-meta"><p>© <span data-year></span> SCOVION Technology Sdn. Bhd.</p><p data-i18n="availabilityFooter">Product availability varies by market.</p><a href="privacy.html" data-i18n="privacyLink">Privacy</a></div>
+    </div>
   </footer>
-  <script src="main.js?v=1.5.1"></script>
-  <script src="product-details.js?v=1.5.4"></script>
+  <script src="main.js?v=1.7.0"></script>
+  <script src="product-details.js?v=2.1.0"></script>
   <script src="analytics.js?v=1.0.1"></script>
 </body>
 </html>
