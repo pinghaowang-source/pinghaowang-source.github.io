@@ -8,6 +8,10 @@ body > .nav {
   color: #f4fbff;
 }
 
+body > .nav .brand-wordmark i {
+  color: #72e5c9;
+}
+
 body > .nav::before {
   content: "";
   position: absolute;
@@ -128,6 +132,7 @@ body > .nav .links a.active {
   border: 1px solid #abc1ca;
   border-radius: 2px;
   background: #061526;
+  aspect-ratio: 16 / 9;
   box-shadow: 0 36px 80px #123c5330;
 }
 
@@ -143,8 +148,8 @@ body > .nav .links a.active {
 .healthcare-hero-visual img {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
+  height: 100%;
+  object-fit: contain;
   filter: saturate(.86) contrast(1.035);
 }
 
@@ -171,8 +176,8 @@ body > .nav .links a.active {
 
 .healthcare-hero-visual > p {
   margin: 10px 0 0;
-  color: #758994;
-  font-size: 10px;
+  color: #52677c;
+  font-size: 12px;
 }
 
 .healthcare-availability {
@@ -181,8 +186,8 @@ body > .nav .links a.active {
   margin-top: clamp(46px, 7vw, 84px);
   padding-top: 17px;
   border-top: 1px solid #ccd9de;
-  color: #617783;
-  font-size: 11px;
+  color: #52677c;
+  font-size: 12px;
   line-height: 1.55;
 }
 
@@ -250,8 +255,8 @@ body > .nav .links a.active {
 }
 
 .healthcare-index span {
-  color: #68808e;
-  font-size: 9px;
+  color: #52677c;
+  font-size: 11px;
   font-weight: 800;
   letter-spacing: .1em;
 }
@@ -309,8 +314,8 @@ body > .nav .links a.active {
 .chapter-number {
   align-self: start;
   padding-top: 3px;
-  color: #6d8794;
-  font-size: 11px;
+  color: #52677c;
+  font-size: 12px;
   font-weight: 780;
   letter-spacing: .16em;
 }
@@ -376,7 +381,7 @@ body > .nav .links a.active {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   filter: saturate(.77) contrast(1.035);
   transition: transform .5s ease, filter .5s ease;
 }
@@ -552,7 +557,11 @@ body > .nav .links a.active {
   position: absolute;
   width: 1px;
   height: 1px;
+  margin: -1px;
   overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
   opacity: 0;
 }
 
@@ -736,7 +745,7 @@ body > .nav .links a.active {
 .healthcare-agent-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(360px, .9fr);
-  min-height: 690px;
+  min-height: 0;
 }
 
 .healthcare-agent-media {
@@ -744,13 +753,15 @@ body > .nav .links a.active {
   margin-left: calc((100vw - min(1160px, calc(100vw - 48px))) / -2);
   overflow: hidden;
   background: #cfdee8;
+  align-self: center;
+  aspect-ratio: 1919 / 820;
 }
 
 .healthcare-agent-media img {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   filter: saturate(.74) contrast(1.03);
 }
 
@@ -820,7 +831,7 @@ body > .nav .links a.active {
   display: block;
   width: 100%;
   aspect-ratio: 16 / 10;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
 }
 
@@ -869,8 +880,8 @@ body > .nav .links a.active {
 .prosthetic-story-media img {
   display: block;
   width: 100%;
-  aspect-ratio: 1;
-  object-fit: cover;
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
   filter: saturate(.72) contrast(1.03);
 }
 
@@ -1081,7 +1092,7 @@ body > .nav .links a.active {
   }
 
   .healthcare-agent-media {
-    min-height: 470px;
+    min-height: 0;
     margin-right: calc((100vw - min(1160px, calc(100vw - 48px))) / -2);
   }
 
@@ -1095,7 +1106,7 @@ body > .nav .links a.active {
   }
 }
 
-@media (max-width: 680px) {
+@media (max-width: 780px) {
   body > .nav .links.open {
     color: #405168;
   }
@@ -1104,7 +1115,9 @@ body > .nav .links a.active {
   body > .nav .links.open a.active {
     color: #0966df;
   }
+}
 
+@media (max-width: 680px) {
   .healthcare-hero {
     padding-top: 56px;
   }
@@ -1197,17 +1210,35 @@ body > .nav .links a.active {
   }
 
   .planning-selector {
-    overflow-x: auto;
-    grid-template-columns: repeat(3, minmax(190px, 1fr));
-    scrollbar-width: none;
-  }
-
-  .planning-selector::-webkit-scrollbar {
-    display: none;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
   .planning-selector label {
-    padding: 17px 16px;
+    display: flex;
+    min-height: 76px;
+    flex-direction: column;
+    gap: 5px;
+    justify-content: center;
+    padding: 13px 10px;
+  }
+
+  .planning-selector label > span {
+    display: none;
+  }
+
+  .planning-selector strong {
+    overflow: visible;
+    font-size: 12px;
+    line-height: 1.25;
+    text-align: center;
+    text-overflow: clip;
+    white-space: normal;
+  }
+
+  .planning-selector small {
+    font-size: 9px;
+    line-height: 1.25;
+    text-align: center;
   }
 
   .planning-panel-info {
@@ -1225,7 +1256,7 @@ body > .nav .links a.active {
   }
 
   .healthcare-agent-media {
-    min-height: 350px;
+    min-height: 0;
     margin-right: -16px;
     margin-left: -16px;
   }

@@ -610,7 +610,6 @@
       images: ['assets/products/visual-bone-age-device-v2.jpg'],
       heroFit: 'contain',
       storyFit: 'contain',
-      capabilityFit: 'quadrant',
       secondaryImage: 'assets/products/visual-bone-age-analysis.webp',
       secondaryFit: 'contain',
       secondaryHeadings: {
@@ -781,7 +780,6 @@
       images: ['assets/products/visual-bone-density-device.webp'],
       heroFit: 'contain',
       storyFit: 'contain',
-      capabilityFit: 'quadrant',
       secondaryImage: 'assets/products/visual-bone-density-analysis.webp',
       secondaryFit: 'contain',
       secondaryHeadings: {
@@ -950,7 +948,7 @@
       categoryKey: 'screeningDiagnosis',
       summaryKey: 'boneDesc',
       images: ['assets/products/visual-ct-bone.webp'],
-      heroFit: 'cover',
+      heroFit: 'contain',
       storyImage: 'assets/products/visual-ct-bone-3d-reconstruction-workstation.webp',
       storyFit: 'contain',
       focusImage: 'assets/products/visual-ct-bone.webp',
@@ -960,7 +958,7 @@
         'assets/products/visual-ct-bone-characterisation.webp',
         'assets/products/visual-ct-bone-3d-reconstruction-workstation.webp'
       ],
-      capabilityFits: ['cover','cover','cover','contain'],
+      capabilityFits: ['contain','contain','contain','contain'],
       secondaryType: 'followup',
       secondaryImage: 'assets/products/visual-ct-bone-longitudinal-workstation.webp',
       secondaryFit: 'contain',
@@ -1136,9 +1134,9 @@
       categoryKey: 'screeningDiagnosis',
       summaryKey: 'strokeDesc',
       images: ['assets/products/visual-ct-stroke.webp'],
-      heroFit: 'cover',
+      heroFit: 'contain',
       storyImage: 'assets/products/visual-ct-stroke-priority.webp',
-      storyFit: 'cover',
+      storyFit: 'contain',
       focusImage: 'assets/products/visual-ct-stroke.webp',
       capabilityImages: [
         'assets/products/visual-ct-stroke-ncct.webp',
@@ -1146,7 +1144,7 @@
         'assets/products/visual-ct-stroke-priority.webp',
         'assets/products/visual-ct-stroke-review.webp'
       ],
-      capabilityFits: ['cover','cover','cover','cover'],
+      capabilityFits: ['contain','contain','contain','contain'],
       secondaryType: 'followup',
       secondaryImage: 'assets/products/visual-ct-stroke-longitudinal-workstation.webp',
       secondaryFit: 'contain',
@@ -1322,8 +1320,8 @@
       categoryKey: 'screeningDiagnosis',
       summaryKey: 'coronaryDesc',
       images: ['assets/products/visual-ct-coronary.webp'],
-      heroFit: 'cover',
-      storyFit: 'cover',
+      heroFit: 'contain',
+      storyFit: 'contain',
       focusImage: 'assets/products/focus-cardiovascular-ai.jpg',
       capabilityImages: [
         'assets/products/visual-ct-coronary-reconstruction.webp',
@@ -1331,7 +1329,7 @@
         'assets/products/visual-ct-coronary-plaque.webp',
         'assets/products/visual-ct-coronary-modules.webp'
       ],
-      capabilityFits: ['cover','cover','cover','cover'],
+      capabilityFits: ['contain','contain','contain','contain'],
       secondaryType: 'followup',
       secondaryImage: 'assets/products/visual-ct-coronary-longitudinal-workstation.webp',
       secondaryFit: 'contain',
@@ -1507,8 +1505,8 @@
       categoryKey: 'screeningDiagnosis',
       summaryKey: 'ctLungDesc',
       images: ['assets/products/visual-ct-lung.webp'],
-      heroFit: 'cover',
-      storyFit: 'cover',
+      heroFit: 'contain',
+      storyFit: 'contain',
       focusImage: 'assets/products/focus-ct-lung.jpg',
       capabilityImages: [
         'assets/products/visual-ct-lung-nodules.webp',
@@ -1516,7 +1514,7 @@
         'assets/products/visual-ct-lung-quantification.webp',
         'assets/products/visual-ct-lung-followup.webp'
       ],
-      capabilityFits: ['cover','cover','cover','cover'],
+      capabilityFits: ['contain','contain','contain','contain'],
       secondaryType: 'followup',
       secondaryImage: 'assets/products/visual-ct-lung-longitudinal-workstation.webp',
       secondaryFit: 'contain',
@@ -1864,8 +1862,7 @@
       },
       images: ['assets/products/visual-thorax-planning-workstation-v2.webp'],
       heroFit: 'contain',
-      storyFit: 'cover',
-      capabilityFit: 'quadrant',
+      storyFit: 'contain',
       storyImage: 'assets/products/visual-thorax-planning.webp',
       focusImage: 'assets/products/focus-thorax-planning-v2.jpg',
       tags: [{key:'chestCT'},{key:'ceMarked'},{key:'fdaCleared'},{key:'ukcaMarked'},{key:'nmpaApproved'},{key:'reconstruction'},{key:'preoperativePlanning'}],
@@ -2034,8 +2031,7 @@
       },
       images: ['assets/products/visual-liver-planning-workstation-v2.webp'],
       heroFit: 'contain',
-      storyFit: 'cover',
-      capabilityFit: 'quadrant',
+      storyFit: 'contain',
       storyImage: 'assets/products/visual-liver-planning.webp',
       focusImage: 'assets/products/focus-liver-planning.jpg',
       tags: [{key:'abdominalCT'},{key:'ceMarked'},{key:'fdaCleared'},{key:'ukcaMarked'},{key:'nmpaApproved'},{key:'reconstruction'},{key:'preoperativePlanning'}],
@@ -2204,8 +2200,7 @@
       },
       images: ['assets/products/visual-urology-planning-workstation-v2.webp'],
       heroFit: 'contain',
-      storyFit: 'cover',
-      capabilityFit: 'quadrant',
+      storyFit: 'contain',
       storyImage: 'assets/products/visual-urology-planning.webp',
       focusImage: 'assets/products/focus-urology-planning.jpg',
       tags: [{key:'abdominalCT'},{key:'ceMarked'},{key:'fdaCleared'},{key:'ukcaMarked'},{key:'nmpaApproved'},{key:'reconstruction'},{key:'preoperativePlanning'}],
@@ -2590,12 +2585,13 @@
     document.querySelector(target).innerHTML=items.map(renderer).join('');
   }
 
-  function productImageFit(product,index,dedicated){
-    return product.capabilityFits?.[index] || product.capabilityFit || (dedicated?'cover':'quadrant');
+  function productImageFit(product,index){
+    const requested=product.capabilityFits?.[index] || product.capabilityFit || 'contain';
+    return ['contain','cover'].includes(requested)?requested:'contain';
   }
 
   function imageFitClass(value){
-    return `fit-${['contain','cover','quadrant'].includes(value)?value:'cover'}`;
+    return `fit-${['contain','cover'].includes(value)?value:'contain'}`;
   }
 
   function renderProductStory(product,detail,alt){
@@ -2626,14 +2622,13 @@
         <div><div class="eyebrow">${escapeHtml(uiText(document.documentElement.lang,'capabilityEyebrow'))}</div><h2>${escapeHtml(detail.capHeading)}</h2></div>
         <p>${escapeHtml(detail.capIntro)}</p>
       </div>`;
-    const visual=`<figure class="story-primary-visual ${imageFitClass(product.storyFit || product.heroFit || 'cover')}"><img src="${escapeHtml(product.storyImage || product.images[0])}" alt="${escapeHtml(alt)}" loading="lazy"></figure>`;
+    const visual=`<figure class="story-primary-visual ${imageFitClass(product.storyFit || product.heroFit || 'contain')}"><img src="${escapeHtml(product.storyImage || product.images[0])}" alt="${escapeHtml(alt)}" loading="lazy" decoding="async"></figure>`;
     const capabilityCards=detail.caps.map(([title,text],index)=>{
       const dedicatedImage=product.capabilityImages?.[index];
-      const capabilityImage=dedicatedImage || product.focusImage;
-      const visualClass=`story-point-visual story-point-visual-${index} ${imageFitClass(productImageFit(product,index,dedicatedImage))}${dedicatedImage?' story-point-visual-dedicated':''}`;
+      const capabilityVisual=dedicatedImage?`<div class="story-point-visual story-point-visual-dedicated ${imageFitClass(productImageFit(product,index))}" role="img" aria-label="${escapeHtml(title)}"><img src="${escapeHtml(dedicatedImage)}" alt="" loading="lazy" decoding="async"></div>`:'';
       return `
-      <article>
-        <div class="${visualClass}" role="img" aria-label="${escapeHtml(title)}"><img src="${escapeHtml(capabilityImage)}" alt="" loading="lazy"></div>
+      <article class="${dedicatedImage?'has-visual':'is-text-only'}">
+        ${capabilityVisual}
         <div class="story-point-copy">
           <b>${String(index+1).padStart(2,'0')}</b>
           <h3>${escapeHtml(title)}</h3>
@@ -2787,7 +2782,7 @@
 
     const alt=uiText(lang,'imageAlt').replace('{product}',title);
     const gallery=document.querySelector('#product-gallery');
-    gallery.innerHTML=product.images.map(image=>`<figure class="${imageFitClass(product.heroFit || 'cover')}"><img src="${escapeHtml(image)}" alt="${escapeHtml(alt)}"></figure>`).join('');
+    gallery.innerHTML=product.images.map(image=>`<figure class="${imageFitClass(product.heroFit || 'contain')}"><img src="${escapeHtml(image)}" alt="${escapeHtml(alt)}" decoding="async"></figure>`).join('');
 
     const certificationTags=product.tags.filter(tag=>tag.key && certificationTagKeys.has(tag.key));
     const profileTags=product.tags.filter(tag=>!tag.key || !certificationTagKeys.has(tag.key));
@@ -2811,14 +2806,10 @@
     document.querySelector('#capability-intro').textContent=detail.capIntro;
     renderCards('#capability-grid',detail.caps,([heading,text],index)=>{
       const dedicatedImage=product.capabilityImages?.[index];
-      const capabilityImage=dedicatedImage || product.focusImage;
-      const fit=productImageFit(product,index,dedicatedImage);
-      const visualClass=`capability-visual capability-visual-${index} ${imageFitClass(fit)}${dedicatedImage?' capability-visual-dedicated':''}`;
+      const capabilityVisual=dedicatedImage?`<div class="capability-visual capability-visual-dedicated ${imageFitClass(productImageFit(product,index))}" role="img" aria-label="${escapeHtml(heading)}"><img src="${escapeHtml(dedicatedImage)}" alt="" loading="lazy" decoding="async"></div>`:'';
       return `
-      <article>
-        <div class="${visualClass}" role="img" aria-label="${escapeHtml(heading)}">
-          <img src="${escapeHtml(capabilityImage)}" alt="" loading="lazy">
-        </div>
+      <article class="${dedicatedImage?'has-visual':'is-text-only'}">
+        ${capabilityVisual}
         <div class="capability-copy">
           <b>${String(index+1).padStart(2,'0')}</b>
           <h3>${escapeHtml(heading)}</h3>
@@ -2904,7 +2895,7 @@
         const relatedTitle=localizedProductTitle(relatedProduct,lang);
         const relatedAlt=uiText(lang,'imageAlt').replace('{product}',relatedTitle);
         return `<a class="detail-related-card" href="product.html?product=${encodeURIComponent(id)}">
-          <figure class="${imageFitClass(relatedProduct.heroFit || 'cover')}"><img src="${escapeHtml(relatedProduct.images[0])}" alt="${escapeHtml(relatedAlt)}" loading="lazy"></figure>
+          <figure class="${imageFitClass(relatedProduct.heroFit || 'contain')}"><img src="${escapeHtml(relatedProduct.images[0])}" alt="${escapeHtml(relatedAlt)}" loading="lazy" decoding="async"></figure>
           <div class="detail-related-copy">
             <span>${escapeHtml(mainText(lang,relatedProduct.categoryKey))}</span>
             <h3>${escapeHtml(relatedTitle)}</h3>

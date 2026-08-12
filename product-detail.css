@@ -1,6 +1,8 @@
 .product-detail-page {
   --product-accent: #68e8c2;
   --product-accent-glow: #0a79df2b;
+  --product-accent-ink: #24566d;
+  --product-accent-ink: color-mix(in srgb, var(--product-accent) 30%, #0b3b51);
   background: #f6f9fc;
 }
 
@@ -59,7 +61,8 @@
 
 .detail-gallery {
   display: grid;
-  min-height: 390px;
+  min-height: 0;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   border: 1px solid #ffffff26;
   border-radius: 22px;
@@ -78,8 +81,8 @@
   display: block;
   width: 100%;
   height: 100%;
-  min-height: 390px;
-  object-fit: cover;
+  min-height: 0;
+  object-fit: contain;
   object-position: center;
 }
 
@@ -188,44 +191,16 @@
 
 .capability-visual {
   position: relative;
-  aspect-ratio: 1;
+  aspect-ratio: 16 / 10;
   overflow: hidden;
   background: #071a31;
 }
 
 .capability-visual img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 200%;
-  height: 200%;
-  max-width: none;
-  object-fit: fill;
-}
-
-.capability-visual-1 img {
-  left: -100%;
-}
-
-.capability-visual-2 img {
-  top: -100%;
-}
-
-.capability-visual-3 img {
-  top: -100%;
-  left: -100%;
-}
-
-.capability-visual.capability-visual-dedicated {
-  aspect-ratio: 16 / 10;
-}
-
-.capability-visual.capability-visual-dedicated img {
-  top: 0;
-  left: 0;
+  display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
 }
 
@@ -238,10 +213,23 @@
   padding: 28px 30px 32px;
 }
 
+.detail-capability-grid article.is-text-only {
+  display: grid;
+  min-height: 235px;
+  align-items: start;
+  border-top: 3px solid color-mix(in srgb, var(--product-accent) 42%, #c9d8e1);
+  background: linear-gradient(145deg, #fff, #f4f8fa);
+}
+
+.detail-capability-grid article.is-text-only .capability-copy {
+  width: 100%;
+  padding: 34px;
+}
+
 .detail-capability-grid b {
   display: block;
   margin-bottom: 30px;
-  color: var(--product-accent);
+  color: var(--product-accent-ink);
   font-size: 12px;
 }
 
@@ -311,7 +299,7 @@
 
 .secondary-visual-origin {
   margin: 12px 3px 0;
-  color: #718696;
+  color: #52677c;
   font-size: 11px;
   line-height: 1.45;
 }
@@ -339,7 +327,7 @@
 .detail-secondary-points b {
   display: block;
   margin-bottom: 34px;
-  color: var(--product-accent);
+  color: var(--product-accent-ink);
   font-size: 12px;
   letter-spacing: .12em;
 }
@@ -451,7 +439,7 @@
 }
 
 .deployment-grid span {
-  color: var(--product-accent);
+  color: var(--product-accent-ink);
   font-size: 11px;
   font-weight: 800;
 }
@@ -537,11 +525,6 @@
 
   .detail-back {
     margin-bottom: 28px;
-  }
-
-  .detail-gallery,
-  .detail-gallery img {
-    min-height: 280px;
   }
 
   .detail-section {
@@ -635,7 +618,7 @@
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .story-point-visual {
@@ -646,34 +629,10 @@
 }
 
 .story-point-visual img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 200%;
-  height: 200%;
-  max-width: none;
-  object-fit: fill;
-}
-
-.story-point-visual-1 img {
-  left: -100%;
-}
-
-.story-point-visual-2 img {
-  top: -100%;
-}
-
-.story-point-visual-3 img {
-  top: -100%;
-  left: -100%;
-}
-
-.story-point-visual.story-point-visual-dedicated img {
-  top: 0;
-  left: 0;
+  display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
 }
 
@@ -683,7 +642,7 @@
 
 .product-story-section article b {
   display: block;
-  color: var(--product-accent);
+  color: var(--product-accent-ink);
   font-size: 10px;
   letter-spacing: .1em;
 }
@@ -707,6 +666,13 @@
     radial-gradient(circle at 83% 12%, #6ce6d040, transparent 29%),
     linear-gradient(145deg, #edf7f6, #f8fbfb 57%, #e6f1f3);
   color: #102033;
+}
+
+.product-layout-lung .detail-hero .eyebrow,
+.product-layout-lung .detail-facts strong,
+.product-layout-device .detail-hero .eyebrow,
+.product-layout-device .detail-facts strong {
+  color: var(--product-accent-ink);
 }
 
 .product-layout-lung .detail-back,
@@ -825,13 +791,14 @@
 
 .thorax-anatomy-map {
   display: grid;
-  grid-template-columns: minmax(0, 1.18fr) minmax(340px, .82fr);
+  grid-template-columns: minmax(0, 1.45fr) minmax(300px, .55fr);
   border-top: 1px solid #bdced5;
   border-bottom: 1px solid #bdced5;
 }
 
 .thorax-anatomy-map .story-primary-visual {
-  min-height: 650px;
+  min-height: 0;
+  aspect-ratio: 16 / 9;
   border-width: 0 1px 0 0;
   box-shadow: none;
 }
@@ -844,8 +811,8 @@
 .thorax-anatomy-rail article {
   position: relative;
   display: grid;
-  grid-template-columns: 92px minmax(0, 1fr);
-  gap: 22px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
   align-items: center;
   flex: 1;
   padding: 18px 0 18px 25px;
@@ -883,13 +850,13 @@
 
 .liver-planning-layers {
   display: grid;
-  grid-template-columns: minmax(360px, .78fr) minmax(0, 1.22fr);
+  grid-template-columns: minmax(300px, .58fr) minmax(0, 1.42fr);
   gap: clamp(46px, 7vw, 92px);
   align-items: center;
 }
 
 .liver-planning-layers .story-primary-visual {
-  aspect-ratio: 1;
+  aspect-ratio: 16 / 9;
   order: 2;
   border-color: #dac7b6;
   box-shadow: 0 30px 70px #6e42221d;
@@ -901,8 +868,8 @@
 
 .liver-layer-list article {
   display: grid;
-  grid-template-columns: 104px minmax(0, 1fr);
-  gap: 22px;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0;
   align-items: center;
   padding: 18px 0;
   border-bottom: 1px solid #d8c6b6;
@@ -934,14 +901,14 @@
 
 .urology-focus-map {
   display: grid;
-  grid-template-columns: minmax(380px, .9fr) minmax(0, 1.1fr);
+  grid-template-columns: minmax(0, 1.35fr) minmax(360px, .65fr);
   gap: clamp(42px, 6vw, 78px);
   align-items: center;
 }
 
 .urology-focus-map .story-primary-visual {
-  aspect-ratio: 1;
-  border-radius: 50%;
+  aspect-ratio: 16 / 9;
+  border-radius: 18px;
   border-color: #aebdd6;
   box-shadow: 0 30px 75px #2438662a;
 }
@@ -953,7 +920,7 @@
 }
 
 .urology-focus-points article {
-  min-height: 245px;
+  min-height: 210px;
   padding: 0;
   border: 1px solid #c4cfdf;
   background: #f8faff;
@@ -1031,7 +998,7 @@ body:is(.product-layout-thorax, .product-layout-liver, .product-layout-urology) 
 
   .thorax-anatomy-map .story-primary-visual {
     min-height: 0;
-    aspect-ratio: 1;
+    aspect-ratio: 16 / 9;
     border-right: 0;
     border-bottom: 1px solid #bdced5;
   }
@@ -1190,19 +1157,6 @@ body:is(.product-layout-thorax, .product-layout-liver, .product-layout-urology) 
 .story-point-visual.fit-contain,
 .capability-visual.fit-contain {
   background: #061326;
-}
-
-.story-point-visual.fit-quadrant,
-.capability-visual.fit-quadrant {
-  aspect-ratio: 1;
-}
-
-.story-point-visual.fit-quadrant img,
-.capability-visual.fit-quadrant img {
-  position: absolute;
-  width: 200%;
-  height: 200%;
-  object-fit: fill;
 }
 
 /* Elevated longitudinal workstation */
@@ -1367,6 +1321,11 @@ body:is(.product-layout-thorax, .product-layout-liver, .product-layout-urology) 
   color: #a9bdcc;
 }
 
+.story-stroke article b,
+.detail-secondary-section.is-follow-up .detail-secondary-points b {
+  color: var(--product-accent);
+}
+
 .stroke-signature-stage {
   display: grid;
   grid-template-columns: minmax(0, 1.08fr) minmax(350px, .92fr);
@@ -1519,6 +1478,35 @@ body:is(.product-layout-thorax, .product-layout-liver, .product-layout-urology) 
   background: #f8fbfc;
 }
 
+.product-story-section article.is-text-only {
+  display: grid;
+  min-height: 0;
+  align-items: start;
+  padding: 24px 25px 27px;
+}
+
+.product-story-section article.is-text-only .story-point-copy {
+  padding: 0;
+}
+
+.device-story-capabilities article.is-text-only {
+  min-height: 210px;
+  padding: 28px;
+  border-top: 3px solid color-mix(in srgb, var(--product-accent) 42%, #c9d8e1);
+  background: linear-gradient(145deg, #fff, #f3f8fa);
+}
+
+.thorax-anatomy-rail article.is-text-only,
+.liver-layer-list article.is-text-only {
+  padding: 24px 26px;
+}
+
+.urology-focus-points article.is-text-only {
+  display: grid;
+  align-items: start;
+  padding: 26px;
+}
+
 .device-story-capabilities .story-point-copy {
   padding: 24px 25px 28px;
 }
@@ -1585,7 +1573,7 @@ body:is(.product-layout-thorax, .product-layout-liver, .product-layout-urology) 
 }
 
 .detail-related-copy > span {
-  color: #718696;
+  color: #52677c;
   font-size: 10px;
   font-weight: 800;
   letter-spacing: .11em;
