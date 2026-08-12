@@ -945,16 +945,23 @@ body > .nav .links a.active {
 .healthcare-agent-copy .agent-feature-list {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 0 22px;
+  gap: 10px 14px;
   margin-top: 32px;
-  border-top: 1px solid #a9c3c4;
+  border-top: 0;
 }
 
 .healthcare-agent-copy .agent-feature-list span {
-  padding: 13px 0;
-  border-bottom: 1px solid #a9c3c4;
-  color: #34525b;
-  font-size: 11px;
+  display: flex;
+  min-height: 50px;
+  align-items: center;
+  padding: 12px 16px;
+  border: 1px solid #285a70;
+  border-radius: 9px;
+  background: #123f5c;
+  color: #f4fbff;
+  font-size: 12px;
+  font-weight: 650;
+  line-height: 1.35;
 }
 
 .devices-chapter {
