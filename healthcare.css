@@ -1045,15 +1045,15 @@ body > .nav .links a.active {
 
 .device-story {
   display: grid;
-  grid-template-columns: minmax(0, .98fr) minmax(500px, 1.02fr);
-  gap: clamp(40px, 4vw, 58px);
+  grid-template-columns: minmax(0, 1.12fr) minmax(400px, .88fr);
+  gap: clamp(42px, 4.4vw, 64px);
   align-items: center;
-  padding: 52px 0;
+  padding: clamp(58px, 7vw, 84px) 0;
   border-bottom: 1px solid #cad8de;
 }
 
 .device-story-reverse {
-  grid-template-columns: minmax(500px, 1.02fr) minmax(0, .98fr);
+  grid-template-columns: minmax(400px, .88fr) minmax(0, 1.12fr);
 }
 
 .device-story-reverse .device-story-media {
@@ -1064,14 +1064,17 @@ body > .nav .links a.active {
 .device-story-media {
   overflow: hidden;
   border: 1px solid #d2dfe4;
-  background: #eef2f3;
+  border-radius: 24px;
+  aspect-ratio: 8 / 5;
+  background: linear-gradient(145deg, #eaf1f5, #f8fafb);
+  box-shadow: 0 28px 64px #173f5c18;
 }
 
 .device-story-media img {
   display: block;
   width: 100%;
-  aspect-ratio: 16 / 10;
-  object-fit: contain;
+  height: 100%;
+  object-fit: cover;
   object-position: center;
 }
 
