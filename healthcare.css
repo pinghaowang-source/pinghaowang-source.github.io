@@ -585,8 +585,9 @@ body > .nav .links a.active {
 
 .imaging-service-card {
   display: flex;
+  overflow: hidden;
   min-width: 0;
-  min-height: 430px;
+  min-height: 520px;
   flex-direction: column;
   padding: 25px 25px 29px;
   border: 1px solid #d1dde2;
@@ -629,40 +630,42 @@ body > .nav .links a.active {
   letter-spacing: -.035em;
 }
 
-.imaging-service-symbol {
-  display: grid;
-  min-height: 112px;
-  margin-bottom: 18px;
-  place-items: center;
-  border: 1px solid #dbe7ea;
-  border-radius: 10px;
-  background:
-    radial-gradient(circle at 50% 50%, #a7f1e527, transparent 54%),
-    linear-gradient(145deg, #071b2d, #0b3144);
-}
-
-.imaging-service-symbol svg {
-  width: min(72%, 156px);
-  height: auto;
-  overflow: visible;
-  fill: none;
-  stroke: #92e6da;
-  stroke-linecap: round;
-  stroke-linejoin: round;
-  stroke-width: 2;
-  vector-effect: non-scaling-stroke;
-}
-
-.imaging-service-symbol circle,
-.imaging-service-symbol rect {
-  fill: #0d4054;
-}
-
 .imaging-service-card p {
+  flex: 1;
   margin: 22px 1px 0;
   color: #52677c;
   font-size: 13px;
   line-height: 1.68;
+}
+
+.imaging-service-media {
+  overflow: hidden;
+  aspect-ratio: 3 / 2;
+  flex: 0 0 auto;
+  margin: 25px -25px -29px;
+  border-top: 1px solid #d7e3e8;
+  background: #e6eef2;
+}
+
+.imaging-service-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 53% 50%;
+  filter: saturate(.9) contrast(1.02);
+}
+
+.imaging-service-card:nth-child(2) .imaging-service-media img {
+  object-position: 51% 52%;
+}
+
+.imaging-service-card:nth-child(3) .imaging-service-media img {
+  object-position: 52% 48%;
+}
+
+.imaging-service-card:nth-child(4) .imaging-service-media img {
+  object-position: 55% 50%;
 }
 
 /* Full-size surgical workstations with a native, CSS-only product selector. */
@@ -1391,7 +1394,7 @@ body > .nav .links a.active {
   }
 
   .imaging-service-card {
-    min-height: 430px;
+    min-height: 520px;
     padding: 23px 22px 27px;
   }
 
@@ -1399,8 +1402,10 @@ body > .nav .links a.active {
     min-height: 96px;
   }
 
-  .imaging-service-symbol {
-    min-height: 108px;
+  .imaging-service-media {
+    margin-right: -22px;
+    margin-bottom: -27px;
+    margin-left: -22px;
   }
 
   .planning-selector {
