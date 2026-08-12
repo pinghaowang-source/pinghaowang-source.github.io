@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" href="assets/scovion-logo-mark.png">
   <link rel="apple-touch-icon" href="assets/scovion-logo-mark.png">
   <link rel="stylesheet" href="styles.css?v=1.7.2">
-  <link rel="stylesheet" href="healthcare.css?v=2.1.0">
+  <link rel="stylesheet" href="healthcare.css?v=2.2.0">
 </head>
 <body>
   <header class="container nav site-header">
@@ -66,33 +66,40 @@
         <div class="healthcare-chapter-head">
           <div class="chapter-number">01</div>
           <div><div class="eyebrow" data-i18n="screeningDiagnosis">Screening &amp; diagnosis</div><h2 data-i18n="imagingPortfolio">Imaging intelligence portfolio</h2></div>
+          <div class="imaging-rail-meta">
+            <p class="section-intro" data-i18n="imagingRailIntro">Five focused imaging workflows, presented side by side for clear comparison.</p>
+            <div class="imaging-rail-controls" role="group" aria-label="Product navigation" data-i18n-aria-label="imagingRailControls">
+              <button class="imaging-rail-control" type="button" data-imaging-direction="prev" aria-controls="imaging-product-rail" aria-label="Previous products" data-i18n-aria-label="previousProducts" disabled><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 6.5 9 12l5.5 5.5"></path></svg></button>
+              <button class="imaging-rail-control" type="button" data-imaging-direction="next" aria-controls="imaging-product-rail" aria-label="Next products" data-i18n-aria-label="nextProducts"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9.5 6.5 5.5 5.5-5.5 5.5"></path></svg></button>
+            </div>
+          </div>
         </div>
-        <div class="imaging-editorial-grid">
-          <article id="ct-lung" class="health-product-card health-product-feature">
-            <div class="health-product-media"><img src="assets/products/visual-ct-lung.webp" alt="Lung CT nodule analysis visualization" loading="lazy"></div>
-            <div class="health-product-copy">
-              <div class="health-product-modality" data-i18n="chestCT">Chest CT</div>
-              <h3>CT Lung</h3>
-              <p data-i18n="ctLungDesc">Detects small pulmonary nodules in chest CT images, compares nodule development and supports clinical decision-making.</p>
-              <div class="product-regulations"><span data-i18n="ceMarked">CE marked</span><span data-i18n="fdaCleared">FDA cleared</span><span data-i18n="ukcaMarked">UKCA marked</span><span data-i18n="nmpaApproved">NMPA approved</span></div>
-              <a class="product-detail-link" href="product.html?product=ct-lung" data-i18n="learnMore">View details →</a>
-            </div>
-          </article>
+        <div class="imaging-rail-viewport">
+          <div id="imaging-product-rail" class="imaging-product-rail" data-imaging-rail role="list" tabindex="0" aria-label="Imaging intelligence products" data-i18n-aria-label="imagingRailLabel">
+            <article id="ct-lung" class="health-product-card imaging-product-card" role="listitem">
+              <div class="health-product-media"><img src="assets/products/visual-ct-lung.webp" width="1672" height="941" alt="Lung CT nodule analysis visualization" loading="lazy" decoding="async"></div>
+              <div class="health-product-copy">
+                <div class="health-product-modality" data-i18n="chestCT">Chest CT</div>
+                <h3>CT Lung</h3>
+                <p data-i18n="ctLungDesc">Detects small pulmonary nodules in chest CT images, compares nodule development and supports clinical decision-making.</p>
+                <div class="product-regulations"><span data-i18n="ceMarked">CE marked</span><span data-i18n="fdaCleared">FDA cleared</span><span data-i18n="ukcaMarked">UKCA marked</span><span data-i18n="nmpaApproved">NMPA approved</span></div>
+                <a class="product-detail-link" href="product.html?product=ct-lung" data-i18n="learnMore">View details →</a>
+              </div>
+            </article>
 
-          <article class="health-product-card health-product-tall">
-            <div class="health-product-media"><img src="assets/products/visual-ct-bone.webp" alt="Chest CT fracture assessment visualization" loading="lazy"></div>
-            <div class="health-product-copy">
-              <div class="health-product-modality" data-i18n="chestCT">Chest CT</div>
-              <h3>CT Bone</h3>
-              <p data-i18n="boneDesc">Identifies suspected chest fractures in chest CT images and provides timely alerts.</p>
-              <div class="product-regulations"><span data-i18n="ceMarked">CE marked</span><span data-i18n="ukcaMarked">UKCA marked</span><span data-i18n="nmpaApproved">NMPA approved</span></div>
-              <a class="product-detail-link" href="product.html?product=ct-bone" data-i18n="learnMore">View details →</a>
-            </div>
-          </article>
+            <article class="health-product-card imaging-product-card" role="listitem">
+              <div class="health-product-media"><img src="assets/products/visual-ct-bone.webp" width="1672" height="941" alt="Chest CT fracture assessment visualization" loading="lazy" decoding="async"></div>
+              <div class="health-product-copy">
+                <div class="health-product-modality" data-i18n="chestCT">Chest CT</div>
+                <h3>CT Bone</h3>
+                <p data-i18n="boneDesc">Identifies suspected chest fractures in chest CT images and provides timely alerts.</p>
+                <div class="product-regulations"><span data-i18n="ceMarked">CE marked</span><span data-i18n="ukcaMarked">UKCA marked</span><span data-i18n="nmpaApproved">NMPA approved</span></div>
+                <a class="product-detail-link" href="product.html?product=ct-bone" data-i18n="learnMore">View details →</a>
+              </div>
+            </article>
 
-          <div class="imaging-secondary-stack">
-            <article class="health-product-card health-product-horizontal health-product-urgent">
-              <div class="health-product-media"><img src="assets/products/visual-ct-stroke.webp" alt="Brain CT haemorrhage assessment visualization" loading="lazy"></div>
+            <article class="health-product-card imaging-product-card" role="listitem">
+              <div class="health-product-media"><img src="assets/products/visual-ct-stroke.webp" width="1672" height="941" alt="Brain CT haemorrhage assessment visualization" loading="lazy" decoding="async"></div>
               <div class="health-product-copy">
                 <div class="health-product-modality" data-i18n="brainCT">Brain CT</div>
                 <h3>CT Stroke</h3>
@@ -102,8 +109,8 @@
               </div>
             </article>
 
-            <article class="health-product-card health-product-horizontal health-product-screening">
-              <div class="health-product-media"><img src="assets/products/visual-dr-chest.webp" alt="Chest X-ray screening visualization" loading="lazy"></div>
+            <article class="health-product-card imaging-product-card" role="listitem">
+              <div class="health-product-media"><img src="assets/products/visual-dr-chest.webp" width="1672" height="941" alt="Chest X-ray screening visualization" loading="lazy" decoding="async"></div>
               <div class="health-product-copy">
                 <div class="health-product-modality" data-i18n="chestXray">Chest X-ray</div>
                 <h3>DR Chest</h3>
@@ -112,19 +119,35 @@
                 <a class="product-detail-link" href="product.html?product=dr-chest" data-i18n="learnMore">View details →</a>
               </div>
             </article>
-          </div>
 
-          <article class="health-product-card health-product-coronary">
-            <div class="health-product-media"><img src="assets/products/visual-ct-coronary.webp" alt="Coronary CT analysis visualization" loading="lazy"></div>
-            <div class="health-product-copy">
-              <div class="health-product-modality" data-i18n="coronaryCT">Coronary CT</div>
-              <h3>CT Coronary</h3>
-              <p data-i18n="coronaryDesc">Segments and reconstructs coronary vessels from CT images and identifies coronary artery stenosis.</p>
-              <div class="product-regulations"><span data-i18n="ceMarked">CE marked</span><span data-i18n="ukcaMarked">UKCA marked</span><span data-i18n="nmpaApproved">NMPA approved</span></div>
-              <a class="product-detail-link" href="product.html?product=ct-coronary" data-i18n="learnMore">View details →</a>
-            </div>
-          </article>
+            <article class="health-product-card imaging-product-card" role="listitem">
+              <div class="health-product-media"><img src="assets/products/visual-ct-coronary.webp" width="1672" height="941" alt="Coronary CT analysis visualization" loading="lazy" decoding="async"></div>
+              <div class="health-product-copy">
+                <div class="health-product-modality" data-i18n="coronaryCT">Coronary CT</div>
+                <h3>CT Coronary</h3>
+                <p data-i18n="coronaryDesc">Segments and reconstructs coronary vessels from CT images and identifies coronary artery stenosis.</p>
+                <div class="product-regulations"><span data-i18n="ceMarked">CE marked</span><span data-i18n="ukcaMarked">UKCA marked</span><span data-i18n="nmpaApproved">NMPA approved</span></div>
+                <a class="product-detail-link" href="product.html?product=ct-coronary" data-i18n="learnMore">View details →</a>
+              </div>
+            </article>
+          </div>
         </div>
+
+        <section class="imaging-services" aria-labelledby="imaging-services-heading">
+          <div class="imaging-services-head">
+            <div>
+              <div class="eyebrow" data-i18n="healthcareServicesEyebrow">Implementation services</div>
+              <h3 id="imaging-services-heading" data-i18n="healthcareServicesHeading">From product evaluation to everyday use</h3>
+            </div>
+            <p data-i18n="healthcareServicesIntro">SCOVION works with hospital leaders, clinical teams and IT teams across product evaluation, implementation, training and ongoing operation.</p>
+          </div>
+          <div class="imaging-service-grid">
+            <article class="imaging-service-card"><span>01</span><h4 data-i18n="healthcareServiceSelectionTitle">Product selection</h4><p data-i18n="healthcareServiceSelectionText">We assess clinical priorities, existing systems, infrastructure and local availability to help identify an appropriate product and configuration.</p></article>
+            <article class="imaging-service-card"><span>02</span><h4 data-i18n="healthcareServiceDeploymentTitle">Local deployment &amp; commissioning</h4><p data-i18n="healthcareServiceDeploymentText">Our specialists coordinate installation, system configuration, integration checks where required and go-live preparation with hospital teams and local partners.</p></article>
+            <article class="imaging-service-card"><span>03</span><h4 data-i18n="healthcareServiceTrainingTitle">Online &amp; on-site training</h4><p data-i18n="healthcareServiceTrainingText">Role-based sessions cover product use, workflow adoption and routine administration for clinical, operational and IT teams.</p></article>
+            <article class="imaging-service-card"><span>04</span><h4 data-i18n="healthcareServiceSupportTitle">Ongoing support &amp; upgrades</h4><p data-i18n="healthcareServiceSupportText">We coordinate technical support, maintenance and software-update planning so deployments can evolve with operational needs.</p></article>
+          </div>
+        </section>
       </div>
     </section>
 
@@ -283,7 +306,7 @@
       <div class="footer-meta"><p>© <span data-year></span> SCOVION Technology Sdn. Bhd.</p><p data-i18n="availabilityFooter">Product availability varies by market.</p><a href="privacy.html" data-i18n="privacyLink">Privacy</a></div>
     </div>
   </footer>
-  <script src="main.js?v=1.7.0"></script>
+  <script src="main.js?v=1.7.1"></script>
   <script src="analytics.js?v=1.0.1"></script>
 </body>
 </html>

@@ -151,6 +151,12 @@ Object.assign(copy['zh-tw'],{privacyLink:'私隱',languageLabel:'語言',menuLab
 Object.assign(copy.ms,{privacyLink:'Privasi',languageLabel:'Bahasa',menuLabel:'Menu'});
 Object.assign(copy.th,{privacyLink:'ความเป็นส่วนตัว',languageLabel:'ภาษา',menuLabel:'เมนู'});
 
+Object.assign(copy.en,{imagingRailIntro:'Five focused imaging workflows, presented side by side for clear comparison.',imagingRailControls:'Product navigation',imagingRailLabel:'Imaging intelligence products',previousProducts:'Previous products',nextProducts:'Next products',healthcareServicesEyebrow:'Implementation services',healthcareServicesHeading:'From product evaluation to everyday use',healthcareServicesIntro:'SCOVION works with hospital leaders, clinical teams and IT teams across product evaluation, implementation, training and ongoing operation.',healthcareServiceSelectionTitle:'Product selection',healthcareServiceSelectionText:'We assess clinical priorities, existing systems, infrastructure and local availability to help identify an appropriate product and configuration.',healthcareServiceDeploymentTitle:'Local deployment & commissioning',healthcareServiceDeploymentText:'Our specialists coordinate installation, system configuration, integration checks where required and go-live preparation with hospital teams and local partners.',healthcareServiceTrainingTitle:'Online & on-site training',healthcareServiceTrainingText:'Role-based sessions cover product use, workflow adoption and routine administration for clinical, operational and IT teams.',healthcareServiceSupportTitle:'Ongoing support & upgrades',healthcareServiceSupportText:'We coordinate technical support, maintenance and software-update planning so deployments can evolve with operational needs.'});
+Object.assign(copy['zh-cn'],{imagingRailIntro:'五款影像智能产品以一致、清晰的方式并列呈现，便于逐一了解与比较。',imagingRailControls:'产品浏览',imagingRailLabel:'影像智能产品',previousProducts:'上一组产品',nextProducts:'下一组产品',healthcareServicesEyebrow:'实施与服务',healthcareServicesHeading:'从产品评估到日常使用',healthcareServicesIntro:'SCOVION与医院管理、临床及信息技术团队协作，为产品评估、部署实施、人员培训和持续运行提供支持。',healthcareServiceSelectionTitle:'产品选型',healthcareServiceSelectionText:'根据临床需求、现有系统、基础设施和本地供应情况，协助评估合适的产品及配置。',healthcareServiceDeploymentTitle:'本地部署与调试',healthcareServiceDeploymentText:'由专业团队协同医院及本地合作伙伴，推进安装、系统配置、必要的系统对接检查和上线准备。',healthcareServiceTrainingTitle:'线上与线下培训',healthcareServiceTrainingText:'面向临床、操作和信息技术人员提供分角色培训，涵盖产品使用、流程应用和日常管理。',healthcareServiceSupportTitle:'持续支持与升级',healthcareServiceSupportText:'协调技术支持、维护和软件更新规划，使系统可根据实际运行需求持续完善。'});
+Object.assign(copy['zh-tw'],{imagingRailIntro:'五款影像智能產品以一致、清晰的方式並列呈現，便於逐一了解與比較。',imagingRailControls:'產品瀏覽',imagingRailLabel:'影像智能產品',previousProducts:'上一組產品',nextProducts:'下一組產品',healthcareServicesEyebrow:'實施與服務',healthcareServicesHeading:'從產品評估到日常使用',healthcareServicesIntro:'SCOVION與醫院管理、臨床及資訊科技團隊協作，為產品評估、部署實施、人員培訓與持續運行提供支援。',healthcareServiceSelectionTitle:'產品選型',healthcareServiceSelectionText:'根據臨床需求、現有系統、基礎設施與在地供應情況，協助評估合適的產品及配置。',healthcareServiceDeploymentTitle:'在地部署與調校',healthcareServiceDeploymentText:'由專業團隊協同醫院及在地合作夥伴，推進安裝、系統設定、必要的系統整合檢查與上線準備。',healthcareServiceTrainingTitle:'線上與實體培訓',healthcareServiceTrainingText:'面向臨床、操作及資訊科技人員提供依角色設計的培訓，涵蓋產品使用、流程應用與日常管理。',healthcareServiceSupportTitle:'持續支援與升級',healthcareServiceSupportText:'協調技術支援、維護與軟體更新規劃，讓系統可隨實際營運需求持續完善。'});
+Object.assign(copy.ms,{imagingRailIntro:'Lima aliran kerja pengimejan khusus dipersembahkan secara konsisten untuk penerokaan dan perbandingan yang jelas.',imagingRailControls:'Navigasi produk',imagingRailLabel:'Produk kecerdasan pengimejan',previousProducts:'Produk sebelumnya',nextProducts:'Produk seterusnya',healthcareServicesEyebrow:'Pelaksanaan & perkhidmatan',healthcareServicesHeading:'Daripada penilaian produk kepada penggunaan harian',healthcareServicesIntro:'SCOVION bekerjasama dengan pihak pengurusan hospital, pasukan klinikal dan IT untuk menyokong penilaian produk, pelaksanaan, latihan dan operasi berterusan.',healthcareServiceSelectionTitle:'Pemilihan produk',healthcareServiceSelectionText:'Kami menilai keutamaan klinikal, sistem sedia ada, infrastruktur dan ketersediaan tempatan untuk membantu mengenal pasti produk serta konfigurasi yang sesuai.',healthcareServiceDeploymentTitle:'Pelaksanaan & pentauliahan tempatan',healthcareServiceDeploymentText:'Pakar kami menyelaras pemasangan, konfigurasi sistem, semakan integrasi apabila diperlukan dan persediaan penggunaan bersama pasukan hospital serta rakan tempatan.',healthcareServiceTrainingTitle:'Latihan dalam talian & di lokasi',healthcareServiceTrainingText:'Sesi mengikut peranan merangkumi penggunaan produk, penerapan dalam aliran kerja dan pengurusan rutin untuk pasukan klinikal, operasi dan IT.',healthcareServiceSupportTitle:'Sokongan & naik taraf berterusan',healthcareServiceSupportText:'Kami menyelaras sokongan teknikal, penyelenggaraan dan perancangan kemas kini perisian agar sistem dapat berkembang seiring keperluan operasi.'});
+Object.assign(copy.th,{imagingRailIntro:'นำเสนอเวิร์กโฟลว์ด้านภาพทางการแพทย์ 5 รายการในรูปแบบที่สม่ำเสมอ เพื่อให้สำรวจและเปรียบเทียบได้ชัดเจน',imagingRailControls:'การนำทางผลิตภัณฑ์',imagingRailLabel:'ผลิตภัณฑ์อัจฉริยะด้านภาพทางการแพทย์',previousProducts:'ผลิตภัณฑ์ก่อนหน้า',nextProducts:'ผลิตภัณฑ์ถัดไป',healthcareServicesEyebrow:'การนำไปใช้และบริการ',healthcareServicesHeading:'ตั้งแต่การประเมินผลิตภัณฑ์จนถึงการใช้งานประจำวัน',healthcareServicesIntro:'SCOVION ทำงานร่วมกับผู้บริหารโรงพยาบาล ทีมคลินิก และทีมไอที เพื่อสนับสนุนการประเมินผลิตภัณฑ์ การนำระบบไปใช้ การฝึกอบรม และการดำเนินงานอย่างต่อเนื่อง',healthcareServiceSelectionTitle:'การคัดเลือกผลิตภัณฑ์',healthcareServiceSelectionText:'เราประเมินความต้องการทางคลินิก ระบบเดิม โครงสร้างพื้นฐาน และความพร้อมในพื้นที่ เพื่อช่วยระบุผลิตภัณฑ์และการกำหนดค่าที่เหมาะสม',healthcareServiceDeploymentTitle:'การติดตั้งและทดสอบระบบในพื้นที่',healthcareServiceDeploymentText:'ผู้เชี่ยวชาญของเราประสานงานด้านการติดตั้ง การกำหนดค่าระบบ การตรวจสอบการเชื่อมต่อเมื่อจำเป็น และการเตรียมความพร้อมก่อนใช้งานจริง ร่วมกับทีมโรงพยาบาลและพันธมิตรในพื้นที่',healthcareServiceTrainingTitle:'การฝึกอบรมออนไลน์และ ณ สถานที่จริง',healthcareServiceTrainingText:'จัดการฝึกอบรมตามบทบาทสำหรับทีมคลินิก ทีมปฏิบัติการ และทีมไอที ครอบคลุมการใช้ผลิตภัณฑ์ การนำเข้าสู่ขั้นตอนงาน และการจัดการประจำวัน',healthcareServiceSupportTitle:'การสนับสนุนและการอัปเกรดอย่างต่อเนื่อง',healthcareServiceSupportText:'เราประสานงานด้านการสนับสนุนทางเทคนิค การบำรุงรักษา และแผนการอัปเดตซอฟต์แวร์ เพื่อให้ระบบปรับตามความต้องการในการปฏิบัติงานได้'});
+
 const languages=[['en','English'],['zh-cn','简体中文'],['zh-tw','繁體中文'],['ms','Bahasa Melayu'],['th','ไทย']];
 const languageAliases={zh:'zh-tw'};
 
@@ -187,11 +193,48 @@ function setupMobileNavigation(menu,links){
   document.addEventListener('pointerdown',event=>{const nav=menu.closest('.nav');if(links.classList.contains('open')&&nav&&!nav.contains(event.target))closeMobileNavigation(menu,links)});
   window.addEventListener('resize',()=>{if(window.innerWidth>780)closeMobileNavigation(menu,links)});
 }
+function setupImagingRail(){
+  const rail=document.querySelector('[data-imaging-rail]');
+  if(!rail||rail.dataset.railBound==='true')return;
+  const controls=[...document.querySelectorAll('[data-imaging-direction]')];
+  if(!controls.length)return;
+  rail.dataset.railBound='true';
+  const reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
+  const updateControls=()=>{
+    const maxScroll=Math.max(0,rail.scrollWidth-rail.clientWidth);
+    controls.forEach(control=>{
+      const atStart=rail.scrollLeft<=3;
+      const atEnd=rail.scrollLeft>=maxScroll-3;
+      const disabled=control.dataset.imagingDirection==='prev'?atStart:atEnd;
+      control.disabled=disabled;
+      control.setAttribute('aria-disabled',String(disabled));
+    });
+  };
+  const scrollOneCard=direction=>{
+    const card=rail.querySelector('.imaging-product-card');
+    if(!card)return;
+    const styles=getComputedStyle(rail);
+    const gap=parseFloat(styles.columnGap||styles.gap)||0;
+    rail.scrollBy({left:(card.getBoundingClientRect().width+gap)*direction,behavior:reducedMotion.matches?'auto':'smooth'});
+  };
+  controls.forEach(control=>control.addEventListener('click',()=>scrollOneCard(control.dataset.imagingDirection==='prev'?-1:1)));
+  rail.addEventListener('keydown',event=>{
+    if(event.altKey||event.ctrlKey||event.metaKey||event.shiftKey)return;
+    if(event.key==='ArrowLeft'||event.key==='ArrowRight'){
+      event.preventDefault();
+      scrollOneCard(event.key==='ArrowLeft'?-1:1);
+    }
+  });
+  rail.addEventListener('scroll',updateControls,{passive:true});
+  window.addEventListener('resize',updateControls);
+  updateControls();
+}
 function init(requestedLanguage){
   const lang=resolveLanguage(typeof requestedLanguage==='string'?requestedLanguage:readLanguage());
   document.documentElement.lang=lang;
   document.querySelectorAll('[data-i18n]').forEach(e=>e.textContent=copy[lang][e.dataset.i18n]||copy.en[e.dataset.i18n]||e.textContent);
   document.querySelectorAll('[data-i18n-placeholder]').forEach(e=>e.placeholder=copy[lang][e.dataset.i18nPlaceholder]||copy.en[e.dataset.i18nPlaceholder]||e.placeholder);
+  document.querySelectorAll('[data-i18n-aria-label]').forEach(e=>e.setAttribute('aria-label',copy[lang][e.dataset.i18nAriaLabel]||copy.en[e.dataset.i18nAriaLabel]||e.getAttribute('aria-label')||''));
   const sel=document.querySelector('#language');
   if(sel){
     sel.setAttribute('aria-label',copy[lang].languageLabel||copy.en.languageLabel);
@@ -214,6 +257,7 @@ function init(requestedLanguage){
   }
   document.querySelectorAll('[data-year]').forEach(e=>e.textContent=new Date().getFullYear());
   normalizeHeadingPunctuation();
+  setupImagingRail();
   if(typeof CustomEvent==='function')document.dispatchEvent(new CustomEvent('scovion:languagechange',{detail:{lang}}))
 }
 document.addEventListener('DOMContentLoaded',()=>init());

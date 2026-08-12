@@ -335,72 +335,133 @@ body > .nav .links a.active {
   line-height: 1.68;
 }
 
-/* Imaging portfolio: one lead story, one vertical study, two clinical strips,
-   and a full-width closing story. */
+/* Imaging portfolio: equal-weight product rail followed by implementation support. */
 .imaging-chapter {
   background: #f4f7f8;
 }
 
-.imaging-editorial-grid {
+.imaging-rail-meta {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.imaging-rail-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.imaging-rail-control {
   display: grid;
-  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
-  gap: 1px;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  place-items: center;
+  border: 1px solid #bacbd3;
+  border-radius: 50%;
+  background: #fff;
+  color: #102033;
+  cursor: pointer;
+  font: inherit;
+  font-size: 20px;
+  transition: color .2s ease, border-color .2s ease, background-color .2s ease;
+}
+
+.imaging-rail-control:hover:not(:disabled) {
+  border-color: #0966df;
+  color: #0966df;
+  background: #f9fcff;
+}
+
+.imaging-rail-control:disabled {
+  border-color: #d9e2e7;
+  color: #9aabb5;
+  background: #eef2f4;
+  cursor: default;
+}
+
+.imaging-rail-control svg {
+  width: 21px;
+  height: 21px;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.7;
+}
+
+.imaging-rail-viewport {
+  margin-inline: calc((100vw - min(1160px, calc(100vw - 48px))) / -2);
+  overflow: hidden;
+}
+
+.imaging-product-rail {
+  display: grid;
+  grid-auto-columns: clamp(350px, 35vw, 440px);
+  grid-auto-flow: column;
+  gap: 20px;
+  overflow-x: auto;
+  overscroll-behavior-inline: contain;
+  padding: 4px max(24px, calc((100vw - 1160px) / 2)) 30px;
+  scroll-padding-inline: max(24px, calc((100vw - 1160px) / 2));
+  scroll-snap-type: inline mandatory;
+  scrollbar-color: #91a7b3 transparent;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+}
+
+.imaging-product-rail::-webkit-scrollbar {
+  height: 6px;
+}
+
+.imaging-product-rail::-webkit-scrollbar-thumb {
+  border-radius: 999px;
+  background: #91a7b3;
+}
+
+.imaging-product-card {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
   overflow: hidden;
   border: 1px solid #d1dde2;
-  background: #d1dde2;
-}
-
-.health-product-card {
-  min-width: 0;
+  border-radius: 16px;
   background: #fff;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
 }
 
-.health-product-feature,
-.health-product-coronary {
-  display: grid;
-  grid-column: 1 / -1;
-  grid-template-columns: minmax(0, 1.22fr) minmax(340px, .78fr);
-}
-
-.health-product-media {
+.imaging-product-card .health-product-media {
   position: relative;
   overflow: hidden;
+  aspect-ratio: 16 / 9;
   background: #07172b;
 }
 
-.health-product-media::after {
+.imaging-product-card .health-product-media::after {
   content: "";
   position: absolute;
   inset: 0;
   border: 1px solid #ffffff12;
-  background: linear-gradient(180deg, transparent 60%, #0414241a);
   pointer-events: none;
 }
 
-.health-product-media img {
+.imaging-product-card .health-product-media img {
   display: block;
   width: 100%;
   height: 100%;
   object-fit: contain;
-  filter: saturate(.77) contrast(1.035);
-  transition: transform .5s ease, filter .5s ease;
+  filter: saturate(.84) contrast(1.025);
 }
 
-.health-product-card:hover .health-product-media img,
-.specialty-product-card:hover .health-product-media img {
-  transform: scale(1.014);
-  filter: saturate(.88) contrast(1.035);
-}
-
-.health-product-feature .health-product-media {
-  min-height: 520px;
-}
-
-.health-product-copy {
+.imaging-product-card .health-product-copy {
   display: flex;
-  min-width: 0;
+  min-height: 360px;
+  flex: 1;
   flex-direction: column;
-  padding: clamp(30px, 4vw, 50px);
+  padding: 31px 30px 32px;
 }
 
 .health-product-modality {
@@ -412,17 +473,17 @@ body > .nav .links a.active {
   text-transform: uppercase;
 }
 
-.health-product-card h3,
+.imaging-product-card h3,
 .specialty-product-card h3,
 .device-story h3 {
   margin: 17px 0 16px;
   color: #102033;
-  font-size: clamp(31px, 3.8vw, 50px);
+  font-size: clamp(31px, 3.2vw, 42px);
   line-height: .99;
   letter-spacing: -.05em;
 }
 
-.health-product-card p,
+.imaging-product-card p,
 .specialty-product-card p,
 .device-story p {
   margin: 0;
@@ -454,79 +515,75 @@ body > .nav .links a.active {
   color: #9aabb3;
 }
 
-.health-product-tall {
-  display: flex;
-  min-height: 100%;
-  flex-direction: column;
+.imaging-services {
+  margin-top: clamp(90px, 10vw, 132px);
+  padding-top: clamp(58px, 7vw, 82px);
+  border-top: 1px solid #c7d6dc;
 }
 
-.health-product-tall .health-product-media {
-  aspect-ratio: 4 / 3;
-}
-
-.health-product-tall .health-product-copy {
-  flex: 1;
-  min-height: 425px;
-}
-
-.health-product-tall .health-product-modality {
-  color: #197e73;
-}
-
-.imaging-secondary-stack {
+.imaging-services-head {
   display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 430px);
+  gap: clamp(36px, 6vw, 78px);
+  align-items: end;
+  margin-bottom: 45px;
+}
+
+.imaging-services-head h3 {
+  max-width: 760px;
+  margin: 13px 0 0;
+  color: #102033;
+  font-size: clamp(38px, 5vw, 60px);
+  line-height: .99;
+  letter-spacing: -.052em;
+  text-wrap: balance;
+}
+
+.imaging-services-head > p {
+  margin: 0;
+  color: #52677c;
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.imaging-service-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid #c7d6dc;
+  border-bottom: 1px solid #c7d6dc;
+}
+
+.imaging-service-card {
   min-width: 0;
-  gap: 1px;
-  background: #d1dde2;
+  padding: 28px 25px 31px;
+  border-right: 1px solid #c7d6dc;
 }
 
-.health-product-horizontal {
-  display: grid;
-  grid-template-columns: minmax(230px, .88fr) minmax(270px, 1.12fr);
+.imaging-service-card:last-child {
+  border-right: 0;
 }
 
-.health-product-horizontal .health-product-copy {
-  min-height: 414px;
-  padding: clamp(25px, 3vw, 37px);
+.imaging-service-card > span {
+  color: #39728c;
+  font-size: 11px;
+  font-weight: 780;
+  letter-spacing: .12em;
 }
 
-.health-product-horizontal h3 {
-  font-size: clamp(30px, 3vw, 40px);
+.imaging-service-card h4 {
+  min-height: 56px;
+  margin: 34px 0 15px;
+  color: #102033;
+  font-size: 22px;
+  line-height: 1.18;
+  letter-spacing: -.035em;
 }
 
-.health-product-horizontal p {
+.imaging-service-card p {
+  margin: 0;
+  color: #52677c;
   font-size: 13px;
-}
-
-.health-product-horizontal .product-regulations {
-  padding-top: 20px;
-}
-
-.health-product-horizontal .product-detail-link {
-  margin-top: 20px;
-}
-
-.health-product-urgent .health-product-modality {
-  color: #b75046;
-}
-
-.health-product-screening .health-product-modality {
-  color: #4266b5;
-}
-
-.health-product-coronary {
-  grid-template-columns: minmax(340px, .72fr) minmax(0, 1.28fr);
-}
-
-.health-product-coronary .health-product-media {
-  grid-column: 2;
-  grid-row: 1;
-  min-height: 500px;
-}
-
-.health-product-coronary .health-product-copy {
-  grid-column: 1;
-  grid-row: 1;
+  line-height: 1.68;
 }
 
 /* Full-size surgical workstations with a native, CSS-only product selector. */
@@ -950,7 +1007,33 @@ body > .nav .links a.active {
 }
 
 .specialty-product-card .health-product-media {
+  position: relative;
+  overflow: hidden;
   aspect-ratio: 16 / 9;
+  background: #07172b;
+}
+
+.specialty-product-card .health-product-media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border: 1px solid #ffffff12;
+  background: linear-gradient(180deg, transparent 60%, #0414241a);
+  pointer-events: none;
+}
+
+.specialty-product-card .health-product-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: saturate(.77) contrast(1.035);
+  transition: transform .5s ease, filter .5s ease;
+}
+
+.specialty-product-card:hover .health-product-media img {
+  transform: scale(1.014);
+  filter: saturate(.88) contrast(1.035);
 }
 
 .specialty-product-card h3 {
@@ -1005,19 +1088,21 @@ body > .nav .links a.active {
     min-width: 168px;
   }
 
-  .health-product-horizontal {
-    grid-template-columns: minmax(190px, .78fr) minmax(250px, 1.22fr);
+  .imaging-service-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
-  .health-product-horizontal .health-product-copy {
-    min-height: 430px;
+  .imaging-service-card:nth-child(2) {
+    border-right: 0;
+  }
+
+  .imaging-service-card:nth-child(-n+2) {
+    border-bottom: 1px solid #c7d6dc;
   }
 }
 
 @media (max-width: 1020px) {
   .healthcare-hero-grid,
-  .health-product-feature,
-  .health-product-coronary,
   .healthcare-agent-grid,
   .device-story,
   .device-story-reverse,
@@ -1046,34 +1131,18 @@ body > .nav .links a.active {
     grid-column: auto;
   }
 
-  .imaging-editorial-grid {
+  .imaging-rail-meta {
+    grid-column: 2;
+    max-width: 620px;
+  }
+
+  .imaging-services-head {
     grid-template-columns: 1fr;
+    gap: 24px;
   }
 
-  .health-product-feature,
-  .health-product-coronary {
-    grid-column: auto;
-  }
-
-  .health-product-feature .health-product-media,
-  .health-product-coronary .health-product-media {
-    grid-column: auto;
-    grid-row: auto;
-    min-height: 0;
-    aspect-ratio: 16 / 10;
-  }
-
-  .health-product-coronary .health-product-copy {
-    grid-column: auto;
-    grid-row: auto;
-  }
-
-  .health-product-tall .health-product-media {
-    aspect-ratio: 16 / 10;
-  }
-
-  .health-product-tall .health-product-copy {
-    min-height: 0;
+  .imaging-services-head > p {
+    max-width: 680px;
   }
 
   .planning-panel-info {
@@ -1103,6 +1172,12 @@ body > .nav .links a.active {
   .device-story-reverse .device-story-media {
     grid-column: auto;
     grid-row: auto;
+  }
+}
+
+@media (min-width: 681px) and (max-width: 1020px) {
+  .imaging-chapter .healthcare-chapter-head {
+    align-items: start;
   }
 }
 
@@ -1183,30 +1258,75 @@ body > .nav .links a.active {
     letter-spacing: -.045em;
   }
 
-  .health-product-feature,
-  .health-product-coronary,
-  .health-product-horizontal {
-    grid-template-columns: 1fr;
-  }
-
-  .health-product-horizontal .health-product-media {
-    aspect-ratio: 16 / 10;
-  }
-
-  .health-product-horizontal .health-product-copy {
-    min-height: 0;
-  }
-
-  .health-product-copy {
-    padding: 29px 24px 33px;
-  }
-
-  .health-product-card h3 {
+  .imaging-product-card h3 {
     font-size: 36px;
   }
 
   .product-regulations {
     margin-top: 25px;
+  }
+
+  .imaging-rail-meta {
+    max-width: none;
+    margin-top: 24px;
+  }
+
+  .imaging-rail-controls {
+    margin-top: 3px;
+  }
+
+  .imaging-rail-viewport {
+    margin-inline: -16px;
+  }
+
+  .imaging-product-rail {
+    grid-auto-columns: min(86vw, 390px);
+    gap: 14px;
+    padding-right: 16px;
+    padding-left: 16px;
+    scroll-padding-inline: 16px;
+  }
+
+  .imaging-product-card .health-product-copy {
+    min-height: 345px;
+    padding: 28px 24px 30px;
+  }
+
+  .imaging-services {
+    margin-top: 82px;
+  }
+
+  .imaging-services-head {
+    display: block;
+    margin-bottom: 32px;
+  }
+
+  .imaging-services-head > p {
+    margin-top: 22px;
+  }
+
+  .imaging-services-head h3 {
+    font-size: clamp(36px, 10vw, 48px);
+  }
+
+  .imaging-service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .imaging-service-card,
+  .imaging-service-card:nth-child(2) {
+    padding: 26px 0 29px;
+    border-right: 0;
+    border-bottom: 1px solid #c7d6dc;
+  }
+
+  .imaging-service-card:last-child {
+    border-bottom: 0;
+  }
+
+  .imaging-service-card h4 {
+    min-height: 0;
+    margin-top: 22px;
   }
 
   .planning-selector {
@@ -1325,7 +1445,6 @@ body > .nav .links a.active {
 }
 
 @media (hover: none) {
-  .health-product-card:hover .health-product-media img,
   .specialty-product-card:hover .health-product-media img {
     transform: none;
     filter: saturate(.77) contrast(1.035);
