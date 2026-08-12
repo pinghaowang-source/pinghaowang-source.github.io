@@ -943,25 +943,59 @@ body > .nav .links a.active {
 }
 
 .healthcare-agent-copy .agent-feature-list {
+  counter-reset: agent-feature;
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px 14px;
+  grid-template-columns: 1fr;
+  gap: 0;
   margin-top: 32px;
-  border-top: 0;
+  padding: 8px 18px;
+  border: 1px solid #ffffffd6;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #ffffffb8, #eaf7f789);
+  box-shadow: inset 0 1px 0 #fff, 0 18px 44px #153d4914;
+  -webkit-backdrop-filter: blur(18px) saturate(1.16);
+  backdrop-filter: blur(18px) saturate(1.16);
 }
 
 .healthcare-agent-copy .agent-feature-list span {
-  display: flex;
+  counter-increment: agent-feature;
+  display: grid;
+  grid-template-columns: 34px minmax(0, 1fr) 8px;
+  gap: 12px;
   min-height: 50px;
   align-items: center;
-  padding: 12px 16px;
-  border: 1px solid #285a70;
-  border-radius: 9px;
-  background: #123f5c;
-  color: #f4fbff;
-  font-size: 12px;
+  padding: 0 4px;
+  border: 0;
+  border-bottom: 1px solid #456d761f;
+  border-radius: 0;
+  background: transparent;
+  color: #173b48;
+  font-size: 13px;
   font-weight: 650;
   line-height: 1.35;
+  white-space: nowrap;
+}
+
+.healthcare-agent-copy .agent-feature-list span::before {
+  color: #087d78;
+  content: counter(agent-feature, decimal-leading-zero);
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: .1em;
+}
+
+.healthcare-agent-copy .agent-feature-list span::after {
+  width: 6px;
+  height: 6px;
+  border: 1px solid #087d78;
+  border-radius: 50%;
+  background: #ffffffb8;
+  box-shadow: 0 0 0 3px #66d6c621;
+  content: "";
+}
+
+.healthcare-agent-copy .agent-feature-list span:last-child {
+  border-bottom: 0;
 }
 
 .devices-chapter {
@@ -1505,6 +1539,14 @@ body > .nav .links a.active {
 
   .healthcare-agent-copy .agent-feature-list {
     grid-template-columns: 1fr;
+    padding: 7px 14px;
+  }
+
+  .healthcare-agent-copy .agent-feature-list span {
+    grid-template-columns: 30px minmax(0, 1fr) 8px;
+    gap: 10px;
+    min-height: 48px;
+    font-size: 12.5px;
   }
 
   .device-story {
