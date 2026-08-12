@@ -586,7 +586,7 @@ body > .nav .links a.active {
 .imaging-service-card {
   display: flex;
   min-width: 0;
-  min-height: 330px;
+  min-height: 430px;
   flex-direction: column;
   padding: 25px 25px 29px;
   border: 1px solid #d1dde2;
@@ -601,7 +601,7 @@ body > .nav .links a.active {
   grid-template-columns: auto minmax(0, 1fr);
   gap: 11px;
   align-items: start;
-  min-height: 84px;
+  min-height: 96px;
   padding: 13px 14px;
   border: 1px solid #d7e3e8;
   border-radius: 10px;
@@ -629,8 +629,37 @@ body > .nav .links a.active {
   letter-spacing: -.035em;
 }
 
+.imaging-service-symbol {
+  display: grid;
+  min-height: 112px;
+  margin-bottom: 18px;
+  place-items: center;
+  border: 1px solid #dbe7ea;
+  border-radius: 10px;
+  background:
+    radial-gradient(circle at 50% 50%, #a7f1e527, transparent 54%),
+    linear-gradient(145deg, #071b2d, #0b3144);
+}
+
+.imaging-service-symbol svg {
+  width: min(72%, 156px);
+  height: auto;
+  overflow: visible;
+  fill: none;
+  stroke: #92e6da;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
+  vector-effect: non-scaling-stroke;
+}
+
+.imaging-service-symbol circle,
+.imaging-service-symbol rect {
+  fill: #0d4054;
+}
+
 .imaging-service-card p {
-  margin: 25px 1px 0;
+  margin: 22px 1px 0;
   color: #52677c;
   font-size: 13px;
   line-height: 1.68;
@@ -1362,12 +1391,16 @@ body > .nav .links a.active {
   }
 
   .imaging-service-card {
-    min-height: 320px;
+    min-height: 430px;
     padding: 23px 22px 27px;
   }
 
   .imaging-service-label {
-    min-height: 0;
+    min-height: 96px;
+  }
+
+  .imaging-service-symbol {
+    min-height: 108px;
   }
 
   .planning-selector {
