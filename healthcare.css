@@ -298,7 +298,7 @@ body > .nav .links a.active {
 .healthcare-page:has(#agents:target) .healthcare-index a[href="#agents"]::after,
 .healthcare-page:has(#devices:target) .healthcare-index a[href="#devices"]::after,
 .healthcare-page:has(#prosthetics:target) .healthcare-index a[href="#prosthetics"]::after,
-.healthcare-page:has(#specialty:target) .healthcare-index a[href="#specialty"]::after {
+.healthcare-page:has(#specialty:target) .healthcare-index a[href="#imaging"]::after {
   transform: scaleX(1);
 }
 
