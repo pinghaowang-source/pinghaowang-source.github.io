@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-17T10:20:41.279Z",
+  "generatedAt": "2026-08-17T10:44:06.762Z",
   "publicBase": "https://www.scovion.com/valued-partners-preview",
   "files": [
     {
@@ -149,8 +149,8 @@
     },
     {
       "path": "images/work/asia-pacific-map.webp",
-      "bytes": 49168,
-      "sha256": "0f7764b4905025b2e0d4245fe6721da85a9b893a17026d30b01793645b952cf1"
+      "bytes": 41552,
+      "sha256": "e00aa11c63519fb3bf7bb48469e11735ea4b333e4865e3da4f5a1d2d65a35712"
     },
     {
       "path": "images/work/bellsouth.webp",
