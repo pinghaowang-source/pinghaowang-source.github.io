@@ -1,0 +1,216 @@
+{
+  "generatedAt": "2026-08-17T09:56:04.243Z",
+  "publicBase": "https://www.scovion.com/valued-partners-preview",
+  "files": [
+    {
+      "path": "about-us/index.html",
+      "bytes": 73143,
+      "sha256": "a1a5cf8653f015b317bcd019ec7273730af32c3d6bd201730b492fd225627cf2"
+    },
+    {
+      "path": "china-southeast-asia/index.html",
+      "bytes": 73288,
+      "sha256": "4bfb1b8df43d306bf2c4343589d513aa90c14f66963b6a50ec477c4d29926459"
+    },
+    {
+      "path": "contact/index.html",
+      "bytes": 70900,
+      "sha256": "27b199c50be5ec35058435f4a8719e1d214f316ed1eecb504a3057bacb41468f"
+    },
+    {
+      "path": "images/about/about-1.jpg",
+      "bytes": 125964,
+      "sha256": "7163299ec9640644639361eae5323a672783a8550670e3879a3eb3f3c002ea3d"
+    },
+    {
+      "path": "images/about/about-2.jpg",
+      "bytes": 189375,
+      "sha256": "a91f9f06d71ad88f287fe48502f6a3213a5d5e9a862dea1ea880c6778688d47f"
+    },
+    {
+      "path": "images/about/about-3.jpg",
+      "bytes": 192405,
+      "sha256": "e13e09ec9564ff73cb24686a52269c588b44d6daf86904a9fbcfb3f82a6f382c"
+    },
+    {
+      "path": "images/about/about-4.webp",
+      "bytes": 47472,
+      "sha256": "782b5de34b4b1d14da3f2b54b7c6ba6fdf7ae16cc1a9d6856b0e9a6c9f46ff67"
+    },
+    {
+      "path": "images/brand/logo-original.webp",
+      "bytes": 41922,
+      "sha256": "be8a3aca8731f92b71d52884b5e7c1ffc5a453647d5865e16155fb0e5b0016c3"
+    },
+    {
+      "path": "images/case-study/binh-duong.webp",
+      "bytes": 75628,
+      "sha256": "055aa864e31a9746024972fa9abc78a8600bf051ee969e8ebd564b65eabc16bf"
+    },
+    {
+      "path": "images/case-study/bukit-rimau.webp",
+      "bytes": 66750,
+      "sha256": "bbfa81f54bd0eea19caa5ac153f943f94f6e9238c172e6c3b940b12bf2f5b020"
+    },
+    {
+      "path": "images/case-study/klang.webp",
+      "bytes": 70486,
+      "sha256": "8f859a4454c450bbd3289145f1eb868e8d7076d11c39e8f698a9292cb7bc73ca"
+    },
+    {
+      "path": "images/case-study/semarang.webp",
+      "bytes": 70246,
+      "sha256": "5cb346b3581935552b1a8fbc79a8a615c97061de0cadc2bb36fe10a08a0ea788"
+    },
+    {
+      "path": "images/china-southeast-asia/pinghao-wang.jpg",
+      "bytes": 208110,
+      "sha256": "b7582b55962b9eb4f8b89c9eb663c3346609026da374104718fed7b7c0b16cf3"
+    },
+    {
+      "path": "images/home/albert-hong.webp",
+      "bytes": 82536,
+      "sha256": "9574fd3df3dd1763f61079fd4192b776a85dd38e1d4726a63b52bb97df0f55a8"
+    },
+    {
+      "path": "images/home/hero.jpg",
+      "bytes": 178581,
+      "sha256": "9e7e132f8a0a172ddca2ee45b44654a40c3036e0e0e731dab51d627b9c6564ca"
+    },
+    {
+      "path": "images/people/ashley-rocque.webp",
+      "bytes": 21378,
+      "sha256": "c290dbac10a9aca58577304d0929472447df3bbaf85afebaba5e6b889278ee93"
+    },
+    {
+      "path": "images/people/francis-yap.webp",
+      "bytes": 15360,
+      "sha256": "148a6ffff0db46b2a16f4498612e7672016938ce3dcca5b7b28f36918edc2f00"
+    },
+    {
+      "path": "images/people/handoko-tanuadji.webp",
+      "bytes": 52432,
+      "sha256": "01c71f7fd59f40f0f6cdcc3d1ae5ed0ded8046f8931b32cc8c47b3173f6f4a33"
+    },
+    {
+      "path": "images/people/michael-chow.webp",
+      "bytes": 49282,
+      "sha256": "7c55ae26b95d6d5b59ce3d51b1d320a449c5ab8a8048d97406f1798bd016bcf4"
+    },
+    {
+      "path": "images/people/paul-barker.webp",
+      "bytes": 20260,
+      "sha256": "71df497da066d889e407286bd96ac9fc0f7ee49f56b0ccbf15261155d7b13150"
+    },
+    {
+      "path": "images/people/sanjaya-de-silva.webp",
+      "bytes": 31342,
+      "sha256": "b3b90e7977227f165706ef5c9348d6caecd57b4ac20a0b169353a64e15795f1a"
+    },
+    {
+      "path": "images/people/satwant-singh.jpg",
+      "bytes": 156899,
+      "sha256": "5c7216148523a0b733c262b7937fcb2bffa8c72df2a581f6c3962dafa7618e6e"
+    },
+    {
+      "path": "images/people/shahid-sangani.webp",
+      "bytes": 6150,
+      "sha256": "236f0c75fe1563511466709177ef7610b1b956f7212f5f11968cdb1392b78502"
+    },
+    {
+      "path": "images/people/sss-ew.webp",
+      "bytes": 27528,
+      "sha256": "7be83b97921b617acd3db3d756daaadc06984107813b5163842b3bad880e4aa4"
+    },
+    {
+      "path": "images/people/stanley-lee.webp",
+      "bytes": 47056,
+      "sha256": "ed9634bbb613de211c19256effea61fa3f9f10b51254260ef87d552ebaa22f04"
+    },
+    {
+      "path": "images/people/stewart-lee.webp",
+      "bytes": 38368,
+      "sha256": "a1d7caf722426889cb4dc192d79b22d1d133bd30c6be1daf41ab44130866601f"
+    },
+    {
+      "path": "images/people/vincent-tan.webp",
+      "bytes": 42956,
+      "sha256": "8032abdd88cadcd526328629e5933e49522743f6f70b6aaef6d031c0a188e532"
+    },
+    {
+      "path": "images/work/afridizi.webp",
+      "bytes": 191828,
+      "sha256": "572dc304d5774e89f3fa7c8364dd5122581fe4faee25adb0ba79f9638c68433f"
+    },
+    {
+      "path": "images/work/asia-pacific-map.webp",
+      "bytes": 49168,
+      "sha256": "0f7764b4905025b2e0d4245fe6721da85a9b893a17026d30b01793645b952cf1"
+    },
+    {
+      "path": "images/work/bellsouth.webp",
+      "bytes": 96978,
+      "sha256": "8aceaf1037f6c3f51a4fd0657b4853fa9eb136e32701e8997146826d857796fb"
+    },
+    {
+      "path": "images/work/capital.webp",
+      "bytes": 92774,
+      "sha256": "c34f364c0d380e9fa50705ff6a3649f47a9180ea196cb064565a88a98bf4b91e"
+    },
+    {
+      "path": "images/work/deal-closure.webp",
+      "bytes": 94344,
+      "sha256": "6cd1188c6229f7b0d105164c6f1fca4f63bfa29aeb199440f37ab555ea0f5a87"
+    },
+    {
+      "path": "images/work/dragon-tales.webp",
+      "bytes": 116064,
+      "sha256": "0622a7731aab5b71e76932cff885fe205e1832f9854f0026cbfcdfdfa99c607b"
+    },
+    {
+      "path": "images/work/esg.webp",
+      "bytes": 169882,
+      "sha256": "2e27a3475b067d73bd17be351a2acd8a8172e0876128078ecb9a93b8f907d75d"
+    },
+    {
+      "path": "images/work/expertise.webp",
+      "bytes": 149794,
+      "sha256": "92bfbe1516e201bde96898c7063a3e6acbce644d61b280d534e7b6db8a95b593"
+    },
+    {
+      "path": "images/work/private-equity-evening.webp",
+      "bytes": 148860,
+      "sha256": "e0dbdebd849f5dee492c8dc5cacc13fbaed271a992b45c87c8a7aedb83370789"
+    },
+    {
+      "path": "images/work/relationships.webp",
+      "bytes": 169312,
+      "sha256": "a81d80928cbe4cec6b20b7f76ec552a01c4444bef959dc060b2eabd2f38a5dae"
+    },
+    {
+      "path": "index.html",
+      "bytes": 74855,
+      "sha256": "1a738868aa6114f316b303dcd9136d1d8b6f66588c363335cea456ed6dc3ae9d"
+    },
+    {
+      "path": "og.jpg",
+      "bytes": 218424,
+      "sha256": "30d6fd7ca1f8e6a27cdd22086bfb4f5b9af731a847703e55fc72c28d70365221"
+    },
+    {
+      "path": "people/index.html",
+      "bytes": 80589,
+      "sha256": "91b34bec3a1643f16bff11b199d8f2ec5f0e4c3650f50cfa311526f0a29d7a9b"
+    },
+    {
+      "path": "robots.txt",
+      "bytes": 26,
+      "sha256": "331ea9090db0c9f6f597bd9840fd5b171830f6e0b3ba1cb24dfa91f0c95aedc1"
+    },
+    {
+      "path": "what-we-do/index.html",
+      "bytes": 77091,
+      "sha256": "e3114b8262690e2823a2a6e6a10edee93d686704ba8cdbee4a629bc32dd540c2"
+    }
+  ]
+}
