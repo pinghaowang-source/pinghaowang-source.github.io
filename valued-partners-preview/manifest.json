@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-17T10:44:06.762Z",
+  "generatedAt": "2026-08-17T10:59:43.081Z",
   "publicBase": "https://www.scovion.com/valued-partners-preview",
   "files": [
     {
@@ -9,8 +9,8 @@
     },
     {
       "path": "china-southeast-asia/index.html",
-      "bytes": 73278,
-      "sha256": "f7dcc06e846b2bbec339d420d1a8972fa095a0e17bc27808b5e92a9516cb1f11"
+      "bytes": 73334,
+      "sha256": "f6fff389890ed79a87872c0f24ce62730b8f5710c63d80fe50d1b5585350b850"
     },
     {
       "path": "contact/index.html",
@@ -149,8 +149,8 @@
     },
     {
       "path": "images/work/asia-pacific-map.webp",
-      "bytes": 41552,
-      "sha256": "e00aa11c63519fb3bf7bb48469e11735ea4b333e4865e3da4f5a1d2d65a35712"
+      "bytes": 39272,
+      "sha256": "3c1b1188c49c097d7db924fe9a8935ca6f8dfcd5d570a77e7a7d3b1be98b31e1"
     },
     {
       "path": "images/work/bellsouth.webp",
