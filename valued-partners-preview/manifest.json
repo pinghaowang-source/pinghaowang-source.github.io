@@ -1,21 +1,21 @@
 {
-  "generatedAt": "2026-08-17T09:56:04.243Z",
+  "generatedAt": "2026-08-17T10:20:41.279Z",
   "publicBase": "https://www.scovion.com/valued-partners-preview",
   "files": [
     {
       "path": "about-us/index.html",
-      "bytes": 73143,
-      "sha256": "a1a5cf8653f015b317bcd019ec7273730af32c3d6bd201730b492fd225627cf2"
+      "bytes": 73133,
+      "sha256": "33dad4974ace958f8e2e9990149f5f76a9877b8f85a4d4720d2208afe4f0e4e5"
     },
     {
       "path": "china-southeast-asia/index.html",
-      "bytes": 73288,
-      "sha256": "4bfb1b8df43d306bf2c4343589d513aa90c14f66963b6a50ec477c4d29926459"
+      "bytes": 73278,
+      "sha256": "f7dcc06e846b2bbec339d420d1a8972fa095a0e17bc27808b5e92a9516cb1f11"
     },
     {
       "path": "contact/index.html",
-      "bytes": 70900,
-      "sha256": "27b199c50be5ec35058435f4a8719e1d214f316ed1eecb504a3057bacb41468f"
+      "bytes": 70890,
+      "sha256": "a115acdfa67a16c9dd1c256f58083986e160dfac0ceb9a9bf91e390a073e1eb4"
     },
     {
       "path": "images/about/about-1.jpg",
@@ -36,6 +36,11 @@
       "path": "images/about/about-4.webp",
       "bytes": 47472,
       "sha256": "782b5de34b4b1d14da3f2b54b7c6ba6fdf7ae16cc1a9d6856b0e9a6c9f46ff67"
+    },
+    {
+      "path": "images/brand/logo-dark.png",
+      "bytes": 72634,
+      "sha256": "fffe8c48ef6528cbae07ffb3cd5cb1b5140f9a0de42d8398677db9abad77b584"
     },
     {
       "path": "images/brand/logo-original.webp",
@@ -189,8 +194,8 @@
     },
     {
       "path": "index.html",
-      "bytes": 74855,
-      "sha256": "1a738868aa6114f316b303dcd9136d1d8b6f66588c363335cea456ed6dc3ae9d"
+      "bytes": 74845,
+      "sha256": "9917d0f96e4744c9e232055a24f9574d7d8b0b9de3fa9bba8a5776d0ceae6b79"
     },
     {
       "path": "og.jpg",
@@ -199,8 +204,8 @@
     },
     {
       "path": "people/index.html",
-      "bytes": 80589,
-      "sha256": "91b34bec3a1643f16bff11b199d8f2ec5f0e4c3650f50cfa311526f0a29d7a9b"
+      "bytes": 80579,
+      "sha256": "7f9cb12b7cf6dbc081ec674a82fab81179480e3fb8b8a9b9490dc31e76f9fa38"
     },
     {
       "path": "robots.txt",
@@ -209,8 +214,8 @@
     },
     {
       "path": "what-we-do/index.html",
-      "bytes": 77091,
-      "sha256": "e3114b8262690e2823a2a6e6a10edee93d686704ba8cdbee4a629bc32dd540c2"
+      "bytes": 77081,
+      "sha256": "8e0b88e4e6194bb42f9c6f7a9720dafe66d31c2f40e3314602e101d686013d93"
     }
   ]
 }
