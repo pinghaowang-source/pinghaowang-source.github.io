@@ -196,6 +196,12 @@ Object.assign(copy['zh-tw'],{mdaFrameworkDesc:'馬來西亞依據《2012年醫�
 Object.assign(copy.ms,{mdaFrameworkDesc:'Rangka kerja kawal selia dan pendaftaran peranti perubatan Malaysia di bawah Akta Peranti Perubatan 2012 (Akta 737), yang ditadbir oleh Pihak Berkuasa Peranti Perubatan (MDA), Kementerian Kesihatan Malaysia.'});
 Object.assign(copy.th,{mdaFrameworkDesc:'กรอบการกำกับดูแลและขึ้นทะเบียนเครื่องมือแพทย์ของมาเลเซียภายใต้ Medical Device Act 2012 (Act 737) ซึ่งบริหารโดย MDA สังกัดกระทรวงสาธารณสุขมาเลเซีย'});
 
+Object.assign(copy.en,{pmdaFrameworkDesc:'Under Japan’s PMD Act framework, PMDA conducts scientific product reviews and post-market safety activities, while the Ministry of Health, Labour and Welfare makes applicable approval decisions.'});
+Object.assign(copy['zh-cn'],{pmdaFrameworkDesc:'在日本 PMD Act 监管框架下，PMDA负责产品科学审评和上市后安全工作；适用的批准决定由厚生劳动省作出。'});
+Object.assign(copy['zh-tw'],{pmdaFrameworkDesc:'在日本 PMD Act 監管框架下，PMDA負責產品科學審查與上市後安全工作；適用的核准決定由厚生勞動省作出。'});
+Object.assign(copy.ms,{pmdaFrameworkDesc:'Di bawah rangka kerja Akta PMD Jepun, PMDA menjalankan semakan saintifik produk dan aktiviti keselamatan selepas pemasaran, manakala keputusan kelulusan yang berkenaan dibuat oleh Kementerian Kesihatan, Buruh dan Kebajikan (MHLW).'});
+Object.assign(copy.th,{pmdaFrameworkDesc:'ภายใต้กรอบกฎหมาย PMD ของญี่ปุ่น PMDA ดำเนินการทบทวนผลิตภัณฑ์เชิงวิทยาศาสตร์และงานด้านความปลอดภัยหลังวางตลาด ส่วนการตัดสินใจอนุมัติที่เกี่ยวข้องเป็นหน้าที่ของกระทรวงสาธารณสุข แรงงาน และสวัสดิการ (MHLW)'});
+
 const languages=[['en','English'],['zh-cn','简体中文'],['zh-tw','繁體中文'],['ms','Bahasa Melayu'],['th','ไทย']];
 const languageAliases={zh:'zh-tw'};
 
