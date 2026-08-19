@@ -1,0 +1,793 @@
+.solution-category-page {
+  --category-accent: #1268f3;
+  --category-accent-ink: #0959c6;
+  --category-accent-soft: #dcecff;
+  --category-ink: #07192c;
+  --category-muted: #5d7185;
+  --category-canvas: #f4f8fb;
+  --category-panel: #ffffff;
+  --category-line: rgba(25, 56, 86, .14);
+  --category-shadow: 0 36px 90px rgba(26, 57, 88, .12);
+  background: var(--category-canvas);
+  color: var(--category-ink);
+}
+
+.solution-category-page.category-surgery {
+  --category-accent: #69d7cd;
+  --category-accent-ink: #087a74;
+  --category-accent-soft: #d9f3ef;
+  --category-ink: #0b1e25;
+  --category-muted: #5c7073;
+  --category-canvas: #f2f7f5;
+  --category-line: rgba(29, 71, 69, .14);
+}
+
+.solution-category-page.category-hospital {
+  --category-accent: #13a7c7;
+  --category-accent-ink: #08758e;
+  --category-accent-soft: #d8f3f7;
+  --category-ink: #081c2e;
+  --category-muted: #5c7280;
+  --category-canvas: #f1f8fa;
+  --category-line: rgba(16, 78, 95, .13);
+}
+
+.solution-category-page.category-bone {
+  --category-accent: #c56d37;
+  --category-accent-ink: #9d4c20;
+  --category-accent-soft: #f8e4d6;
+  --category-ink: #24170f;
+  --category-muted: #79675a;
+  --category-canvas: #faf7f2;
+  --category-line: rgba(102, 74, 51, .14);
+}
+
+.solution-category-page.category-rehab {
+  --category-accent: #7d61d8;
+  --category-accent-ink: #6848bd;
+  --category-accent-soft: #e9e1fa;
+  --category-ink: #171327;
+  --category-muted: #6c657d;
+  --category-canvas: #f7f5fb;
+  --category-line: rgba(66, 50, 103, .14);
+}
+
+.solution-category-main {
+  overflow: clip;
+}
+
+.category-switch-shell {
+  position: sticky;
+  top: 0;
+  z-index: 24;
+  border-block: 1px solid var(--category-line);
+  background: color-mix(in srgb, var(--category-canvas) 86%, transparent);
+  -webkit-backdrop-filter: blur(22px) saturate(1.3);
+  backdrop-filter: blur(22px) saturate(1.3);
+}
+
+.category-switcher {
+  display: flex;
+  gap: .45rem;
+  align-items: center;
+  min-height: 4.3rem;
+  overflow-x: auto;
+  scrollbar-width: none;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: inline proximity;
+}
+
+.category-switcher::-webkit-scrollbar {
+  display: none;
+}
+
+.category-switcher a {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  padding: .68rem 1rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  color: var(--category-muted);
+  font-size: .82rem;
+  font-weight: 720;
+  letter-spacing: -.01em;
+  line-height: 1;
+  text-decoration: none;
+  transition: color .2s ease, background .2s ease, border-color .2s ease, transform .2s ease;
+}
+
+.category-switcher a:hover,
+.category-switcher a:focus-visible {
+  border-color: var(--category-line);
+  color: var(--category-ink);
+  outline: none;
+  transform: translateY(-1px);
+}
+
+.category-switcher a[aria-current="page"] {
+  border-color: var(--category-ink);
+  background: var(--category-ink);
+  color: #fff;
+}
+
+.category-hero {
+  --category-hero-size: clamp(3.7rem, 5.65vw, 6.65rem);
+  position: relative;
+  padding: clamp(5.5rem, 10vw, 10.5rem) 0 clamp(5rem, 9vw, 9rem);
+  isolation: isolate;
+}
+
+.category-hero::before {
+  position: absolute;
+  z-index: -1;
+  top: -18rem;
+  right: -20rem;
+  width: 48rem;
+  height: 48rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--category-accent) 21%, transparent), transparent 69%);
+  content: "";
+  pointer-events: none;
+}
+
+.category-hero-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: clamp(1.4rem, 2.5vw, 2.7rem);
+  align-items: start;
+}
+
+.category-hero-copy {
+  display: contents;
+}
+
+.category-hero-copy > .category-kicker {
+  grid-column: 1 / -1;
+  grid-row: 1;
+}
+
+.category-kicker,
+.category-product-index,
+.category-product-modality {
+  color: var(--category-accent-ink);
+  font-size: .73rem;
+  font-weight: 780;
+  letter-spacing: .17em;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.category-hero h1 {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  max-width: none;
+  margin: .25rem 0 clamp(1.2rem, 2.4vw, 2.6rem);
+  font-size: var(--category-hero-size);
+  font-weight: 720;
+  letter-spacing: -.064em;
+  line-height: .94;
+  text-wrap: balance;
+}
+
+.category-hero-copy > p {
+  grid-column: 1 / span 4;
+  grid-row: 3;
+  max-width: 35rem;
+  margin: .55rem 0 0;
+  color: var(--category-muted);
+  font-size: clamp(1.05rem, 1.35vw, 1.35rem);
+  letter-spacing: -.022em;
+  line-height: 1.58;
+}
+
+.category-hero-visual {
+  grid-column: 5 / -1;
+  grid-row: 3;
+  position: relative;
+  margin: 0;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border: 1px solid var(--category-line);
+  border-radius: clamp(1.7rem, 3.5vw, 3.2rem);
+  background:
+    linear-gradient(145deg, color-mix(in srgb, var(--category-accent-soft) 76%, white), #fff 62%);
+  box-shadow: var(--category-shadow);
+}
+
+.category-hero-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.category-hero-visual.media-contain img {
+  object-fit: contain;
+}
+
+.category-radiology .category-hero-visual,
+.category-surgery .category-hero-visual {
+  aspect-ratio: 16 / 9;
+}
+
+.category-hero-visual figcaption {
+  position: absolute;
+  right: 1.15rem;
+  bottom: 1rem;
+  padding: .48rem .72rem;
+  border: 1px solid rgba(255, 255, 255, .58);
+  border-radius: 999px;
+  background: rgba(5, 23, 39, .68);
+  color: rgba(255, 255, 255, .86);
+  font-size: .66rem;
+  letter-spacing: .07em;
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+}
+
+.category-surgery .category-hero {
+  background: #07191d;
+  color: #f4fffd;
+}
+
+.category-surgery .category-hero::before {
+  background: radial-gradient(circle, rgba(73, 202, 188, .22), transparent 68%);
+}
+
+.category-surgery .category-hero-copy > p {
+  color: rgba(229, 247, 243, .67);
+}
+
+.category-surgery .category-hero .category-kicker {
+  color: var(--category-accent);
+}
+
+.category-surgery .category-hero-visual {
+  border-color: rgba(132, 222, 213, .22);
+  background: #061316;
+  box-shadow: 0 42px 120px rgba(0, 0, 0, .38);
+}
+
+.category-hospital .category-hero-visual {
+  aspect-ratio: 1919 / 820;
+}
+
+.category-bone .category-hero-copy > p,
+.category-rehab .category-hero-copy > p {
+  grid-column: 9 / -1;
+}
+
+.category-bone .category-hero-visual {
+  grid-column: 1 / span 8;
+  aspect-ratio: 8 / 5;
+}
+
+.category-rehab .category-hero-visual {
+  grid-column: 1 / span 8;
+  aspect-ratio: 3 / 2;
+}
+
+html:is([lang="ms"], [lang="th"], [lang="vi"], [lang="id"], [lang="fil"], [lang="lo"], [lang="my"], [lang="km"], [lang="tet"]) .category-hero {
+  --category-hero-size: clamp(3.35rem, 5.1vw, 5.9rem);
+}
+
+html:is([lang="th"], [lang="lo"], [lang="my"], [lang="km"]) .category-hero h1 {
+  letter-spacing: -.04em;
+  line-height: 1.04;
+}
+
+html:is([lang="th"], [lang="lo"], [lang="my"], [lang="km"]) :is(
+  .category-kicker,
+  .category-product-index,
+  .category-product-modality,
+  .category-principle-marker
+) {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.category-principle {
+  padding: clamp(6rem, 11vw, 12rem) 0;
+  border-bottom: 1px solid var(--category-line);
+  background: var(--category-panel);
+}
+
+.category-principle-grid {
+  display: grid;
+  grid-template-columns: minmax(10rem, 3fr) minmax(0, 9fr);
+  gap: clamp(2rem, 7vw, 8rem);
+}
+
+.category-principle-marker {
+  display: flex;
+  gap: .8rem;
+  align-items: flex-start;
+  color: var(--category-muted);
+  font-size: .76rem;
+  font-weight: 720;
+  letter-spacing: .15em;
+  text-transform: uppercase;
+}
+
+.category-principle-marker::before {
+  width: 2.8rem;
+  height: 2px;
+  margin-top: .48rem;
+  background: var(--category-accent);
+  content: "";
+}
+
+.category-principle-copy h2 {
+  max-width: 14ch;
+  margin: 0;
+  font-size: clamp(3rem, 5.6vw, 6.8rem);
+  font-weight: 690;
+  letter-spacing: -.065em;
+  line-height: .98;
+  text-wrap: balance;
+}
+
+.category-principle-copy p {
+  max-width: 46rem;
+  margin: 2rem 0 0;
+  color: var(--category-muted);
+  font-size: clamp(1.08rem, 1.6vw, 1.45rem);
+  letter-spacing: -.025em;
+  line-height: 1.62;
+}
+
+.category-products {
+  padding: clamp(6rem, 10vw, 11rem) 0;
+}
+
+.category-products-heading {
+  display: grid;
+  grid-template-columns: 3fr 9fr;
+  gap: clamp(2rem, 7vw, 8rem);
+  margin-bottom: clamp(3rem, 7vw, 7rem);
+}
+
+.category-products-heading h2 {
+  max-width: 15ch;
+  margin: 0;
+  font-size: clamp(2.65rem, 4.7vw, 5.5rem);
+  font-weight: 690;
+  letter-spacing: -.06em;
+  line-height: 1;
+  text-wrap: balance;
+}
+
+.category-product-list,
+.category-scenario-list {
+  border-top: 1px solid var(--category-line);
+}
+
+.category-product-story {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(17rem, 5fr);
+  gap: clamp(2.5rem, 6vw, 7rem);
+  align-items: center;
+  min-height: min(78rem, 78vh);
+  padding: clamp(4rem, 8vw, 8.5rem) 0;
+  border-bottom: 1px solid var(--category-line);
+}
+
+.category-product-story.is-reverse {
+  grid-template-columns: minmax(17rem, 5fr) minmax(0, 7fr);
+}
+
+.category-product-story.is-reverse .category-product-media {
+  order: 2;
+}
+
+.category-product-story.is-reverse .category-product-copy {
+  order: 1;
+}
+
+.category-product-media {
+  position: relative;
+  margin: 0;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border: 1px solid var(--category-line);
+  border-radius: clamp(1.5rem, 3vw, 2.8rem);
+  background:
+    radial-gradient(circle at 72% 20%, color-mix(in srgb, var(--category-accent) 13%, transparent), transparent 42%),
+    linear-gradient(145deg, color-mix(in srgb, var(--category-accent-soft) 58%, white), white 68%);
+  box-shadow: 0 28px 70px rgba(32, 57, 78, .09);
+}
+
+.category-product-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.category-product-media.media-cover img {
+  object-fit: cover;
+}
+
+.category-radiology .category-product-media,
+.category-surgery .category-product-media {
+  aspect-ratio: 16 / 9;
+}
+
+.category-product-copy {
+  max-width: 35rem;
+}
+
+.category-product-index {
+  display: flex;
+  gap: .85rem;
+  align-items: center;
+  margin-bottom: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.category-product-index::after {
+  width: 3rem;
+  height: 1px;
+  background: currentColor;
+  content: "";
+  opacity: .48;
+}
+
+.category-product-modality {
+  margin-bottom: .8rem;
+  color: var(--category-muted);
+  letter-spacing: .12em;
+}
+
+.category-product-copy h3 {
+  margin: 0;
+  font-size: clamp(2.5rem, 4.25vw, 5rem);
+  font-weight: 690;
+  letter-spacing: -.06em;
+  line-height: .98;
+  text-wrap: balance;
+}
+
+.category-bone .category-product-story:first-child .category-product-copy h3 {
+  font-size: clamp(2.15rem, 3.15vw, 3.7rem);
+  line-height: 1.04;
+}
+
+html:is([lang="ms"], [lang="th"], [lang="vi"], [lang="id"], [lang="fil"], [lang="lo"], [lang="my"], [lang="km"], [lang="tet"]) .category-product-copy h3 {
+  font-size: clamp(2.15rem, 3.55vw, 4.2rem);
+  letter-spacing: -.048em;
+  line-height: 1.05;
+}
+
+html:is([lang="ms"], [lang="th"], [lang="vi"], [lang="id"], [lang="fil"], [lang="lo"], [lang="my"], [lang="km"], [lang="tet"]) .category-bone .category-product-story:first-child .category-product-copy h3 {
+  font-size: clamp(1.95rem, 2.75vw, 3.15rem);
+  line-height: 1.1;
+}
+
+.category-product-copy > p {
+  margin: 1.55rem 0 0;
+  color: var(--category-muted);
+  font-size: clamp(1.04rem, 1.35vw, 1.27rem);
+  letter-spacing: -.018em;
+  line-height: 1.68;
+}
+
+.category-product-link {
+  display: inline-flex;
+  gap: .65rem;
+  align-items: center;
+  margin-top: 2rem;
+  color: var(--category-ink);
+  font-size: .94rem;
+  font-weight: 750;
+  text-decoration: none;
+}
+
+.category-product-link::after {
+  width: 2.25rem;
+  height: 2.25rem;
+  border: 1px solid var(--category-line);
+  border-radius: 50%;
+  content: "↗";
+  display: grid;
+  place-items: center;
+  transition: background .2s ease, color .2s ease, transform .2s ease;
+}
+
+.category-product-link:hover::after,
+.category-product-link:focus-visible::after {
+  background: var(--category-ink);
+  color: #fff;
+  transform: translate(2px, -2px);
+}
+
+.category-scenario-section {
+  padding: 0 0 clamp(6rem, 10vw, 11rem);
+}
+
+.category-scenario-heading {
+  display: grid;
+  grid-template-columns: 3fr 9fr;
+  gap: clamp(2rem, 7vw, 8rem);
+  padding-bottom: clamp(2.6rem, 5vw, 5rem);
+}
+
+.category-scenario-heading h2 {
+  max-width: 15ch;
+  margin: 0;
+  font-size: clamp(2.4rem, 4vw, 4.7rem);
+  font-weight: 690;
+  letter-spacing: -.055em;
+  line-height: 1;
+}
+
+.category-scenario-story {
+  min-height: min(66rem, 68vh);
+}
+
+.category-hospital .category-product-media {
+  aspect-ratio: 3 / 2;
+  background: #e9f3f5;
+}
+
+.category-hospital .category-appliance-story .category-product-media {
+  aspect-ratio: 1919 / 820;
+}
+
+.category-bone .category-product-media {
+  aspect-ratio: 8 / 5;
+}
+
+.category-rehab .category-product-media {
+  aspect-ratio: 3 / 2;
+}
+
+.category-closing {
+  padding: 0 0 clamp(5rem, 9vw, 9rem);
+}
+
+.category-closing-panel {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1.35fr) auto;
+  gap: 3rem;
+  align-items: end;
+  overflow: hidden;
+  padding: clamp(3rem, 6vw, 6.5rem);
+  border-radius: clamp(2rem, 4vw, 4rem);
+  background: var(--category-ink);
+  color: #fff;
+  isolation: isolate;
+}
+
+.category-closing-panel::after {
+  position: absolute;
+  z-index: -1;
+  right: -8rem;
+  bottom: -11rem;
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, color-mix(in srgb, var(--category-accent) 74%, transparent), transparent 67%);
+  content: "";
+}
+
+.category-closing-panel h2 {
+  max-width: 15ch;
+  margin: 0;
+  font-size: clamp(2.8rem, 5vw, 5.7rem);
+  font-weight: 680;
+  letter-spacing: -.065em;
+  line-height: .98;
+  text-wrap: balance;
+}
+
+html:is([lang="ms"], [lang="th"], [lang="vi"], [lang="id"], [lang="fil"], [lang="lo"], [lang="my"], [lang="km"], [lang="tet"]) :is(
+  .category-principle-copy h2,
+  .category-products-heading h2,
+  .category-scenario-heading h2,
+  .category-closing-panel h2
+) {
+  max-width: 18ch;
+  font-size: clamp(2.6rem, 4.2vw, 4rem);
+  letter-spacing: -.04em;
+  line-height: 1.05;
+}
+
+html:is([lang="th"], [lang="lo"], [lang="my"], [lang="km"]) :is(
+  .category-principle-copy h2,
+  .category-products-heading h2,
+  .category-scenario-heading h2,
+  .category-closing-panel h2
+) {
+  letter-spacing: 0;
+  line-height: 1.12;
+}
+
+.category-closing-panel p {
+  max-width: 44rem;
+  margin: 1.5rem 0 0;
+  color: rgba(255, 255, 255, .67);
+  font-size: clamp(1rem, 1.25vw, 1.22rem);
+  line-height: 1.65;
+}
+
+.category-closing-panel .button {
+  flex: 0 0 auto;
+  min-width: 10.5rem;
+  background: #fff;
+  color: var(--category-ink);
+  white-space: nowrap;
+}
+
+@media (max-width: 1040px) {
+  .category-hero-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .category-hero-copy > .category-kicker,
+  .category-hero h1,
+  .category-hero-copy > p,
+  .category-hero-visual,
+  .category-bone .category-hero-copy > p,
+  .category-rehab .category-hero-copy > p,
+  .category-bone .category-hero-visual,
+  .category-rehab .category-hero-visual {
+    grid-column: 1;
+    grid-row: auto;
+  }
+
+  .category-hero h1 {
+    margin-bottom: .2rem;
+  }
+
+  .category-hero-visual {
+    margin-top: 1.6rem;
+  }
+
+  .category-product-story,
+  .category-product-story.is-reverse {
+    grid-template-columns: 1fr;
+    gap: 2.8rem;
+    min-height: 0;
+  }
+
+  .category-product-story.is-reverse .category-product-media,
+  .category-product-story.is-reverse .category-product-copy {
+    order: initial;
+  }
+
+  .category-product-copy {
+    max-width: 46rem;
+  }
+}
+
+@media (max-width: 760px) {
+  .category-switch-shell {
+    top: 0;
+  }
+
+  .category-switcher {
+    min-height: 3.85rem;
+    padding-inline: 1rem;
+  }
+
+  .category-switcher a {
+    padding: .62rem .85rem;
+    font-size: .76rem;
+  }
+
+  .category-hero {
+    padding: 4.5rem 0 5rem;
+  }
+
+  .category-hero h1 {
+    margin-top: .9rem;
+    font-size: clamp(2.85rem, 13.4vw, 4.65rem);
+    line-height: .94;
+  }
+
+  html:is([lang="ms"], [lang="th"], [lang="vi"], [lang="id"], [lang="fil"], [lang="lo"], [lang="my"], [lang="km"], [lang="tet"]) .category-hero h1 {
+    font-size: clamp(2.15rem, 9.4vw, 3.5rem);
+    line-height: 1.07;
+  }
+
+  .category-hero-grid {
+    gap: .95rem;
+  }
+
+  .category-hero-visual {
+    margin-top: 1.25rem;
+  }
+
+  .category-hero-visual,
+  .category-bone .category-hero-visual,
+  .category-rehab .category-hero-visual {
+    aspect-ratio: 4 / 3;
+    border-radius: 1.6rem;
+  }
+
+  .category-hospital .category-hero-visual {
+    aspect-ratio: 16 / 9;
+  }
+
+  .category-radiology .category-hero-visual,
+  .category-surgery .category-hero-visual,
+  .category-radiology .category-product-media,
+  .category-surgery .category-product-media {
+    aspect-ratio: 16 / 9;
+  }
+
+  .category-bone .category-hero-visual,
+  .category-bone .category-product-media {
+    aspect-ratio: 8 / 5;
+  }
+
+  .category-rehab .category-hero-visual,
+  .category-rehab .category-product-media,
+  .category-hospital .category-product-media {
+    aspect-ratio: 3 / 2;
+  }
+
+  .category-hospital .category-appliance-story .category-product-media {
+    aspect-ratio: 16 / 9;
+  }
+
+  .category-principle-grid,
+  .category-products-heading,
+  .category-scenario-heading {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .category-principle-copy h2,
+  .category-products-heading h2,
+  .category-scenario-heading h2 {
+    max-width: none;
+    font-size: clamp(2.25rem, 9vw, 3.35rem);
+  }
+
+  .category-product-story,
+  .category-scenario-story {
+    padding: 3.6rem 0 4rem;
+  }
+
+  .category-product-media,
+  .category-hospital .category-product-media,
+  .category-hospital .category-appliance-story .category-product-media,
+  .category-bone .category-product-media,
+  .category-rehab .category-product-media {
+    border-radius: 1.5rem;
+  }
+
+  .category-product-copy h3 {
+    font-size: clamp(2.4rem, 11vw, 3.6rem);
+  }
+
+  .category-bone .category-product-story:first-child .category-product-copy h3,
+  html:is([lang="ms"], [lang="th"], [lang="vi"], [lang="id"], [lang="fil"], [lang="lo"], [lang="my"], [lang="km"], [lang="tet"]) .category-bone .category-product-story:first-child .category-product-copy h3 {
+    font-size: clamp(2rem, 9.6vw, 2.9rem);
+  }
+
+  .category-closing-panel {
+    grid-template-columns: 1fr;
+    align-items: start;
+    padding: 2.4rem;
+    border-radius: 2rem;
+  }
+
+  .category-closing-panel .button {
+    justify-self: start;
+  }
+
+  .category-closing-panel h2,
+  html:is([lang="ms"], [lang="th"], [lang="vi"], [lang="id"], [lang="fil"], [lang="lo"], [lang="my"], [lang="km"], [lang="tet"]) .category-closing-panel h2 {
+    max-width: none;
+    font-size: clamp(2.1rem, 8.5vw, 3rem);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .category-switcher a,
+  .category-product-link::after {
+    transition: none;
+  }
+}

@@ -285,20 +285,15 @@ body > .nav .links a.active {
 }
 
 .healthcare-index a:hover,
-.healthcare-index a:focus-visible {
+.healthcare-index a:focus-visible,
+.healthcare-index a[aria-current="page"] {
   color: #0966df;
   background: #eef5f7;
 }
 
 .healthcare-index a:hover::after,
 .healthcare-index a:focus-visible::after,
-.healthcare-page:not(:has(.healthcare-chapter:target)) .healthcare-index a:first-child::after,
-.healthcare-page:has(#imaging:target) .healthcare-index a[href="#imaging"]::after,
-.healthcare-page:has(#planning:target) .healthcare-index a[href="#planning"]::after,
-.healthcare-page:has(#agents:target) .healthcare-index a[href="#agents"]::after,
-.healthcare-page:has(#devices:target) .healthcare-index a[href="#devices"]::after,
-.healthcare-page:has(#prosthetics:target) .healthcare-index a[href="#prosthetics"]::after,
-.healthcare-page:has(#specialty:target) .healthcare-index a[href="#imaging"]::after {
+.healthcare-index a[aria-current="page"]::after {
   transform: scaleX(1);
 }
 
