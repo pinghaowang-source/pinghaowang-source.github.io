@@ -248,7 +248,7 @@
 }
 
 .category-hospital .category-hero-visual {
-  aspect-ratio: 1919 / 820;
+  aspect-ratio: 16 / 9;
 }
 
 .category-bone .category-hero-copy > p,
@@ -539,6 +539,511 @@ html:is([lang="ms"], [lang="th"], [lang="vi"], [lang="id"], [lang="fil"], [lang=
   aspect-ratio: 3 / 2;
 }
 
+/* Hospital AI category: hospital-level operating model, not a duplicate product page. */
+.hospital-operating-model {
+  position: relative;
+  padding: clamp(6.5rem, 11vw, 11rem) 0;
+  overflow: hidden;
+  background: #061a2b;
+  color: #f1fbff;
+  isolation: isolate;
+}
+
+.hospital-operating-model::before {
+  position: absolute;
+  z-index: -1;
+  top: -18rem;
+  left: 47%;
+  width: 46rem;
+  height: 46rem;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(24, 172, 193, .17), transparent 68%);
+  content: "";
+  pointer-events: none;
+}
+
+.hospital-section-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(18rem, 5fr);
+  gap: clamp(2.5rem, 6vw, 7rem);
+  align-items: end;
+  margin-bottom: clamp(3.5rem, 7vw, 6.5rem);
+}
+
+.hospital-section-heading .category-kicker {
+  margin-bottom: 1.1rem;
+}
+
+.hospital-operating-model .category-kicker {
+  color: #72e5db;
+}
+
+.hospital-section-heading h2 {
+  max-width: 13ch;
+  margin: 0;
+  font-size: clamp(3rem, 5vw, 5.65rem);
+  font-weight: 690;
+  letter-spacing: -.06em;
+  line-height: .98;
+  text-wrap: balance;
+}
+
+.hospital-section-heading > p {
+  max-width: 38rem;
+  margin: 0;
+  color: var(--category-muted);
+  font-size: clamp(1.02rem, 1.35vw, 1.25rem);
+  letter-spacing: -.018em;
+  line-height: 1.68;
+}
+
+.hospital-operating-model .hospital-section-heading > p {
+  color: rgba(220, 241, 247, .69);
+}
+
+html:is([lang="ms"], [lang="th"], [lang="vi"], [lang="id"], [lang="fil"], [lang="lo"], [lang="my"], [lang="km"], [lang="tet"]) .hospital-section-heading h2 {
+  max-width: 100%;
+  font-size: clamp(2.35rem, 3vw, 3.25rem);
+  letter-spacing: -.04em;
+  line-height: 1.06;
+  text-wrap: pretty;
+}
+
+html:is([lang="ms"], [lang="th"], [lang="vi"], [lang="id"], [lang="fil"], [lang="lo"], [lang="my"], [lang="km"], [lang="tet"]) .hospital-section-heading {
+  grid-template-columns: minmax(0, 8fr) minmax(16rem, 4fr);
+  gap: clamp(2.5rem, 4.5vw, 5rem);
+}
+
+html:is([lang="th"], [lang="lo"], [lang="my"], [lang="km"]) .hospital-section-heading h2 {
+  letter-spacing: 0;
+  line-height: 1.14;
+}
+
+html[lang="fil"] .hospital-section-heading h2 {
+  font-size: clamp(2.35rem, 2.7vw, 3.1rem);
+}
+
+html:is([lang="th"], [lang="lo"], [lang="my"], [lang="km"]) .hospital-boundary-label {
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.hospital-system-boundary {
+  position: relative;
+  padding: clamp(1.5rem, 3.5vw, 3.2rem);
+  border: 1px solid rgba(126, 210, 222, .28);
+  border-radius: clamp(1.5rem, 3vw, 2.8rem);
+  background:
+    linear-gradient(135deg, rgba(18, 54, 75, .88), rgba(6, 25, 42, .92)),
+    radial-gradient(circle at 50% 10%, rgba(31, 178, 194, .15), transparent 54%);
+  box-shadow: inset 0 1px rgba(255, 255, 255, .06), 0 34px 90px rgba(0, 0, 0, .2);
+}
+
+.hospital-boundary-label {
+  display: flex;
+  gap: .75rem;
+  align-items: center;
+  padding-bottom: clamp(1.4rem, 2.7vw, 2.4rem);
+  border-bottom: 1px solid rgba(158, 222, 231, .14);
+  color: rgba(229, 249, 252, .82);
+  font-size: .75rem;
+  font-weight: 730;
+  letter-spacing: .09em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.hospital-boundary-label span {
+  width: .62rem;
+  height: .62rem;
+  border: 2px solid #7ce3d9;
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px rgba(124, 227, 217, .08);
+}
+
+.hospital-system-flow {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(3.2rem, .22fr) minmax(0, 1.12fr) minmax(3.2rem, .22fr) minmax(0, 1fr);
+  gap: clamp(.8rem, 2vw, 1.8rem);
+  align-items: center;
+  padding: clamp(2.4rem, 5vw, 4.7rem) 0;
+}
+
+.hospital-system-node {
+  min-width: 0;
+  min-height: 14.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: clamp(1.25rem, 2.5vw, 2rem);
+  border: 1px solid rgba(150, 220, 230, .18);
+  border-radius: 1.4rem;
+  background: rgba(255, 255, 255, .035);
+  box-shadow: inset 0 1px rgba(255, 255, 255, .055);
+}
+
+.hospital-system-core {
+  border-color: rgba(112, 226, 218, .48);
+  background: linear-gradient(150deg, rgba(20, 139, 153, .2), rgba(255, 255, 255, .045));
+  box-shadow: inset 0 1px rgba(255, 255, 255, .08), 0 0 45px rgba(20, 166, 181, .1);
+}
+
+.hospital-system-node small {
+  margin: auto 0 .75rem;
+  color: #7ee5db;
+  font-size: .66rem;
+  font-weight: 760;
+  letter-spacing: .16em;
+}
+
+.hospital-system-node b {
+  max-width: 13rem;
+  color: #f4fdff;
+  font-size: clamp(1.05rem, 1.45vw, 1.35rem);
+  letter-spacing: -.022em;
+  line-height: 1.25;
+  text-wrap: balance;
+}
+
+.hospital-node-visual,
+.hospital-core-visual,
+.hospital-output-visual {
+  width: 100%;
+  height: 5.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.hospital-node-visual {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .42rem;
+  align-items: end;
+}
+
+.hospital-node-visual i {
+  display: block;
+  height: 72%;
+  border: 1px solid rgba(137, 217, 228, .34);
+  border-radius: .4rem .4rem .16rem .16rem;
+  background: linear-gradient(180deg, rgba(80, 202, 214, .18), rgba(255, 255, 255, .02));
+}
+
+.hospital-node-visual i:nth-child(2) {
+  height: 100%;
+}
+
+.hospital-node-visual i:nth-child(3) {
+  height: 84%;
+}
+
+.hospital-core-visual {
+  display: grid;
+  gap: .42rem;
+}
+
+.hospital-core-visual i {
+  position: relative;
+  display: block;
+  border: 1px solid rgba(126, 224, 220, .4);
+  border-radius: .32rem;
+  background: linear-gradient(90deg, rgba(50, 195, 200, .2), rgba(255, 255, 255, .035));
+}
+
+.hospital-core-visual i::before,
+.hospital-core-visual i::after {
+  position: absolute;
+  top: 50%;
+  width: .32rem;
+  height: .32rem;
+  border-radius: 50%;
+  background: #7ae1d8;
+  content: "";
+  transform: translateY(-50%);
+}
+
+.hospital-core-visual i::before {
+  left: .75rem;
+}
+
+.hospital-core-visual i::after {
+  left: 1.35rem;
+  opacity: .36;
+}
+
+.hospital-output-visual {
+  display: grid;
+  grid-template-columns: 1.15fr .85fr;
+  grid-template-rows: repeat(2, 1fr);
+  gap: .42rem;
+}
+
+.hospital-output-visual i {
+  display: block;
+  border: 1px solid rgba(137, 217, 228, .3);
+  border-radius: .35rem;
+  background: linear-gradient(145deg, rgba(34, 159, 175, .15), rgba(255, 255, 255, .025));
+}
+
+.hospital-output-visual i:first-child {
+  grid-row: 1 / -1;
+}
+
+.hospital-system-connector {
+  position: relative;
+  display: block;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(96, 214, 211, .2), #65d8d3 70%, rgba(96, 214, 211, .2));
+}
+
+.hospital-system-connector::after {
+  position: absolute;
+  top: 50%;
+  right: -.1rem;
+  width: .45rem;
+  height: .45rem;
+  border-top: 1px solid #77e0da;
+  border-right: 1px solid #77e0da;
+  content: "";
+  transform: translateY(-50%) rotate(45deg);
+}
+
+.hospital-boundary-statement {
+  max-width: 58rem;
+  margin: 0;
+  padding-top: clamp(1.4rem, 2.7vw, 2.4rem);
+  border-top: 1px solid rgba(158, 222, 231, .14);
+  color: rgba(222, 244, 248, .72);
+  font-size: clamp(.94rem, 1.1vw, 1.08rem);
+  line-height: 1.65;
+}
+
+.hospital-benefit-ledger {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  margin-top: clamp(3.8rem, 7vw, 6.5rem);
+  border-block: 1px solid rgba(155, 219, 229, .18);
+}
+
+.hospital-benefit-ledger article {
+  min-width: 0;
+  padding: clamp(1.6rem, 3vw, 2.7rem);
+}
+
+.hospital-benefit-ledger article + article {
+  border-left: 1px solid rgba(155, 219, 229, .18);
+}
+
+.hospital-benefit-ledger span,
+.hospital-readiness-story > div > span,
+.hospital-adoption-ledger > article > span {
+  display: block;
+  margin-bottom: 1.4rem;
+  color: #087c88;
+  font-size: .68rem;
+  font-weight: 760;
+  letter-spacing: .15em;
+}
+
+.hospital-operating-model .hospital-benefit-ledger span {
+  color: #74e0d8;
+}
+
+.hospital-benefit-ledger h3,
+.hospital-readiness-story h3,
+.hospital-adoption-ledger h3 {
+  margin: 0;
+  font-size: clamp(1.15rem, 1.55vw, 1.45rem);
+  font-weight: 690;
+  letter-spacing: -.03em;
+  line-height: 1.24;
+  text-wrap: balance;
+}
+
+.hospital-benefit-ledger p,
+.hospital-readiness-story p,
+.hospital-adoption-ledger p {
+  margin: 1rem 0 0;
+  color: var(--category-muted);
+  font-size: .96rem;
+  line-height: 1.68;
+}
+
+.hospital-operating-model .hospital-benefit-ledger p {
+  color: rgba(214, 238, 243, .64);
+}
+
+.hospital-deployment-note {
+  margin: 1.25rem 0 0;
+  color: rgba(208, 233, 239, .56);
+  font-size: .74rem;
+  line-height: 1.55;
+}
+
+.hospital-readiness-section {
+  padding: clamp(6.5rem, 11vw, 11rem) 0;
+  border-bottom: 1px solid var(--category-line);
+  background: #f8fbfc;
+}
+
+.hospital-readiness-list {
+  border-top: 1px solid var(--category-line);
+}
+
+.hospital-readiness-story {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(18rem, 5fr);
+  gap: clamp(2.5rem, 6vw, 7rem);
+  align-items: center;
+  padding: clamp(4rem, 8vw, 7rem) 0;
+  border-bottom: 1px solid var(--category-line);
+}
+
+.hospital-readiness-story.is-reverse {
+  grid-template-columns: minmax(18rem, 5fr) minmax(0, 7fr);
+}
+
+.hospital-readiness-story.is-reverse figure {
+  order: 2;
+}
+
+.hospital-readiness-story figure {
+  margin: 0;
+  aspect-ratio: 3 / 2;
+  overflow: hidden;
+  border: 1px solid var(--category-line);
+  border-radius: clamp(1.4rem, 2.7vw, 2.4rem);
+  background: #e8f2f4;
+  box-shadow: 0 26px 64px rgba(24, 69, 82, .1);
+}
+
+.hospital-readiness-story figure img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hospital-readiness-story > div {
+  max-width: 34rem;
+}
+
+.hospital-readiness-story h3 {
+  font-size: clamp(2rem, 3.5vw, 4rem);
+  letter-spacing: -.055em;
+  line-height: 1;
+}
+
+html:is([lang="ms"], [lang="th"], [lang="vi"], [lang="id"], [lang="fil"], [lang="lo"], [lang="my"], [lang="km"], [lang="tet"]) .hospital-readiness-story h3 {
+  font-size: clamp(2rem, 2.6vw, 2.8rem);
+  line-height: 1.08;
+}
+
+.hospital-readiness-story p {
+  font-size: clamp(1rem, 1.25vw, 1.18rem);
+}
+
+.hospital-adoption-ledger {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-bottom: 1px solid var(--category-line);
+}
+
+.hospital-adoption-ledger article {
+  display: grid;
+  grid-template-columns: 3rem minmax(0, 1fr);
+  gap: clamp(1.2rem, 2.5vw, 2.4rem);
+  padding: clamp(2rem, 4vw, 3.5rem);
+}
+
+.hospital-adoption-ledger article + article {
+  border-left: 1px solid var(--category-line);
+}
+
+.hospital-adoption-ledger > article > span {
+  margin: .25rem 0 0;
+}
+
+.hospital-concept-note {
+  margin: 1.25rem 0 0;
+  color: var(--category-muted);
+  font-size: .72rem;
+}
+
+.hospital-product-spotlight {
+  padding: clamp(6.5rem, 11vw, 11rem) 0;
+  border-bottom: 1px solid var(--category-line);
+  background: linear-gradient(150deg, #e2f1f4, #f4f9fa 64%);
+}
+
+.hospital-agent-story {
+  display: grid;
+  grid-template-columns: minmax(0, 7fr) minmax(20rem, 5fr);
+  gap: clamp(2.5rem, 6vw, 6.5rem);
+  align-items: center;
+}
+
+.hospital-agent-story figure {
+  margin: 0;
+  aspect-ratio: 1919 / 820;
+  overflow: hidden;
+  border: 1px solid rgba(15, 80, 96, .14);
+  border-radius: clamp(1.4rem, 2.8vw, 2.6rem);
+  background: rgba(255, 255, 255, .52);
+  box-shadow: 0 30px 76px rgba(23, 69, 84, .11);
+}
+
+.hospital-agent-story figure img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.hospital-agent-copy h3 {
+  margin: 0;
+  font-size: clamp(2.4rem, 4.4vw, 5rem);
+  font-weight: 690;
+  letter-spacing: -.06em;
+  line-height: .98;
+  text-wrap: balance;
+}
+
+.hospital-agent-copy > p {
+  margin: 1.5rem 0 0;
+  color: var(--category-muted);
+  font-size: clamp(1rem, 1.25vw, 1.18rem);
+  line-height: 1.68;
+}
+
+.hospital-agent-capabilities {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 2rem;
+  border-block: 1px solid var(--category-line);
+}
+
+.hospital-agent-capabilities span {
+  min-width: 0;
+  padding: .9rem .85rem;
+  color: #244e5d;
+  font-size: .75rem;
+  font-weight: 680;
+  line-height: 1.35;
+}
+
+.hospital-agent-capabilities span:nth-child(odd) {
+  border-right: 1px solid var(--category-line);
+}
+
+.hospital-agent-capabilities span:nth-child(-n + 2) {
+  border-bottom: 1px solid var(--category-line);
+}
+
+html:is([lang="ms"], [lang="th"], [lang="vi"], [lang="id"], [lang="fil"], [lang="lo"], [lang="my"], [lang="km"], [lang="tet"]) .category-hospital .category-closing-panel h2 {
+  max-width: 48rem;
+  font-size: clamp(2.5rem, 3.7vw, 3.5rem);
+}
+
 .category-closing {
   padding: 0 0 clamp(5rem, 9vw, 9rem);
 }
@@ -658,6 +1163,49 @@ html:is([lang="th"], [lang="lo"], [lang="my"], [lang="km"]) :is(
   .category-product-copy {
     max-width: 46rem;
   }
+
+  .hospital-section-heading {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+    align-items: start;
+  }
+
+  html:is([lang="ms"], [lang="th"], [lang="vi"], [lang="id"], [lang="fil"], [lang="lo"], [lang="my"], [lang="km"], [lang="tet"]) .hospital-section-heading {
+    grid-template-columns: 1fr;
+    gap: 1.6rem;
+  }
+
+  .hospital-section-heading h2 {
+    max-width: 16ch;
+  }
+
+  .hospital-benefit-ledger {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hospital-benefit-ledger article:nth-child(3) {
+    border-left: 0;
+  }
+
+  .hospital-benefit-ledger article:nth-child(n + 3) {
+    border-top: 1px solid rgba(155, 219, 229, .18);
+  }
+
+  .hospital-readiness-story,
+  .hospital-readiness-story.is-reverse,
+  .hospital-agent-story {
+    grid-template-columns: 1fr;
+    gap: 2.8rem;
+  }
+
+  .hospital-readiness-story.is-reverse figure {
+    order: initial;
+  }
+
+  .hospital-readiness-story > div,
+  .hospital-agent-copy {
+    max-width: 46rem;
+  }
 }
 
 @media (max-width: 760px) {
@@ -767,6 +1315,126 @@ html:is([lang="th"], [lang="lo"], [lang="my"], [lang="km"]) :is(
     font-size: clamp(2rem, 9.6vw, 2.9rem);
   }
 
+  .hospital-operating-model,
+  .hospital-readiness-section,
+  .hospital-product-spotlight {
+    padding: 5rem 0;
+  }
+
+  .hospital-section-heading {
+    margin-bottom: 3.2rem;
+  }
+
+  .hospital-section-heading h2,
+  html:is([lang="ms"], [lang="th"], [lang="vi"], [lang="id"], [lang="fil"], [lang="lo"], [lang="my"], [lang="km"], [lang="tet"]) .hospital-section-heading h2 {
+    max-width: none;
+    font-size: clamp(2.25rem, 9vw, 3.2rem);
+  }
+
+  .hospital-system-boundary {
+    padding: 1.35rem;
+    border-radius: 1.5rem;
+  }
+
+  .hospital-system-flow {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding: 1.8rem 0;
+  }
+
+  .hospital-system-node {
+    min-height: 11.5rem;
+    padding: 1.35rem;
+  }
+
+  .hospital-system-connector {
+    justify-self: center;
+    width: 1px;
+    height: 2.5rem;
+    background: linear-gradient(180deg, rgba(96, 214, 211, .2), #65d8d3 70%, rgba(96, 214, 211, .2));
+  }
+
+  .hospital-system-connector::after {
+    top: auto;
+    right: auto;
+    bottom: -.05rem;
+    left: 50%;
+    transform: translateX(-50%) rotate(135deg);
+  }
+
+  .hospital-node-visual,
+  .hospital-core-visual,
+  .hospital-output-visual {
+    height: 4.5rem;
+  }
+
+  .hospital-benefit-ledger {
+    grid-template-columns: 1fr;
+    margin-top: 3.5rem;
+  }
+
+  .hospital-benefit-ledger article + article,
+  .hospital-benefit-ledger article:nth-child(3) {
+    border-left: 0;
+    border-top: 1px solid rgba(155, 219, 229, .18);
+  }
+
+  .hospital-readiness-story,
+  .hospital-readiness-story.is-reverse {
+    gap: 2rem;
+    padding: 3.5rem 0;
+  }
+
+  .hospital-readiness-story figure {
+    border-radius: 1.4rem;
+  }
+
+  .hospital-readiness-story h3 {
+    font-size: clamp(2.2rem, 9vw, 3.15rem);
+  }
+
+  .hospital-adoption-ledger {
+    grid-template-columns: 1fr;
+  }
+
+  .hospital-adoption-ledger article {
+    grid-template-columns: 2.5rem minmax(0, 1fr);
+    padding: 2rem 0;
+  }
+
+  .hospital-adoption-ledger article + article {
+    border-top: 1px solid var(--category-line);
+    border-left: 0;
+  }
+
+  .hospital-agent-story {
+    gap: 2.2rem;
+  }
+
+  .hospital-agent-story figure {
+    border-radius: 1.4rem;
+  }
+
+  .hospital-agent-copy h3 {
+    font-size: clamp(2.35rem, 10vw, 3.5rem);
+  }
+
+  .hospital-agent-capabilities {
+    grid-template-columns: 1fr;
+  }
+
+  .hospital-agent-capabilities span:nth-child(odd) {
+    border-right: 0;
+  }
+
+  .hospital-agent-capabilities span:nth-child(-n + 2) {
+    border-bottom: 0;
+  }
+
+  .hospital-agent-capabilities span + span {
+    border-top: 1px solid var(--category-line);
+  }
+
   .category-closing-panel {
     grid-template-columns: 1fr;
     align-items: start;
@@ -782,6 +1450,10 @@ html:is([lang="th"], [lang="lo"], [lang="my"], [lang="km"]) :is(
   html:is([lang="ms"], [lang="th"], [lang="vi"], [lang="id"], [lang="fil"], [lang="lo"], [lang="my"], [lang="km"], [lang="tet"]) .category-closing-panel h2 {
     max-width: none;
     font-size: clamp(2.1rem, 8.5vw, 3rem);
+  }
+
+  html:is([lang="ms"], [lang="th"], [lang="vi"], [lang="id"], [lang="fil"], [lang="lo"], [lang="my"], [lang="km"], [lang="tet"]) .category-hospital .category-closing-panel h2 {
+    font-size: clamp(2.05rem, 8vw, 2.65rem);
   }
 }
 

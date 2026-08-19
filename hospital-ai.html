@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Explore SCOVION Medical AI Agent for locally deployed clinical documentation, quality control, decision support and health screening.">
+  <meta name="description" content="Explore SCOVION Hospital AI across on-premises infrastructure, data control, system integration, validation, training and locally deployed clinical workflows.">
   <title>Hospital AI — SCOVION</title>
   <link rel="icon" type="image/png" href="assets/scovion-logo-mark.png">
   <link rel="apple-touch-icon" href="assets/scovion-logo-mark.png">
   <link rel="stylesheet" href="styles.css?v=2.2.1">
-  <link rel="stylesheet" href="solution-category.css?v=1.0.1">
+  <link rel="stylesheet" href="solution-category.css?v=1.1.0">
 </head>
 <body class="solution-category-page category-hospital" data-solution-category="hospital">
   <header class="container nav site-header">
@@ -20,50 +20,73 @@
   <div class="category-switch-shell"><nav class="container category-switcher" aria-label="Medical solution categories"><a href="ai-healthcare.html" data-solution-i18n="allSolutions">All medical solutions</a><a href="radiology.html" data-i18n="disciplineRadiology">Radiology</a><a href="surgery.html" data-i18n="disciplineSurgery">Surgery</a><a href="hospital-ai.html" aria-current="page" data-i18n="disciplineHospitalAi">Hospital AI</a><a href="bone-health.html" data-i18n="disciplineBoneHealth">Paediatrics &amp; Bone Health</a><a href="rehabilitation.html" data-i18n="disciplineRehabilitation">Rehabilitation</a></nav></div>
 
   <main class="solution-category-main">
-    <section class="category-hero">
+    <section class="category-hero hospital-category-hero">
       <div class="container category-hero-grid">
-        <div class="category-hero-copy"><div class="category-kicker" data-i18n="disciplineHospitalAi">Hospital AI</div><h1 data-solution-i18n="hospitalHeroTitle">Hospital AI, built to work where care happens.</h1><p data-solution-i18n="hospitalHeroText">A locally deployed multimodal AI platform supports clinical documentation, record quality, decision assistance and health screening without moving core workflows away from the hospital.</p></div>
-        <figure class="category-hero-visual media-contain"><img src="assets/products/visual-medical-ai-appliance-v3.webp" width="1919" height="820" alt="Medical AI appliance deployed within a hospital environment" decoding="async"><figcaption data-i18n="conceptVisualNotice">Image for reference only.</figcaption></figure>
+        <div class="category-hero-copy"><div class="category-kicker" data-i18n="disciplineHospitalAi">Hospital AI</div><h1 data-solution-i18n="hospitalHeroTitle">Medical AI for hospital workflows</h1><p data-solution-i18n="hospitalHeroText">Local infrastructure and workflow tools that help hospitals introduce medical AI with attention to data control, latency and operational fit.</p></div>
+        <figure class="category-hero-visual"><img src="assets/hospital-ai/hospital-ai-operations-hero-v1.webp" width="1672" height="941" alt="Conceptual hospital-wide AI operations environment connecting clinical and local IT teams" decoding="async"><figcaption data-i18n="conceptVisualNotice">Image for reference only.</figcaption></figure>
       </div>
     </section>
 
     <section class="category-principle">
-      <div class="container category-principle-grid"><div class="category-principle-marker"><span>01</span><span data-i18n="deploymentFoundation">Deployment foundation</span></div><div class="category-principle-copy"><h2 data-solution-i18n="hospitalPrincipleTitle">Local data. Local computing. Practical response times.</h2><p data-solution-i18n="hospitalPrincipleText">On-premise deployment keeps supported clinical data inside the hospital environment while giving teams a modular foundation that can grow with usage.</p></div></div>
+      <div class="container category-principle-grid"><div class="category-principle-marker"><span>01</span><span data-i18n="deploymentFoundation">Deployment foundation</span></div><div class="category-principle-copy"><h2 data-solution-i18n="hospitalPrincipleTitle">Built around the hospital</h2><p data-solution-i18n="hospitalPrincipleText">Deployment planning considers local computing, information flows, system integration, security responsibilities and staff adoption.</p></div></div>
     </section>
 
-    <section class="category-products">
+    <section class="hospital-operating-model" aria-labelledby="hospital-operating-model-title">
       <div class="container">
-        <header class="category-products-heading"><div class="category-kicker">02 · <span data-i18n="medicalAiInfrastructure">Medical AI infrastructure</span></div><h2 data-solution-i18n="hospitalProductsTitle">One local platform across hospital workflows.</h2></header>
-        <div class="category-product-list">
-          <article class="category-product-story category-appliance-story">
-            <figure class="category-product-media"><img src="assets/products/visual-medical-ai-appliance-v3.webp" width="1919" height="820" alt="SCOVION Medical AI Agent appliance" loading="lazy" decoding="async"></figure>
-            <div class="category-product-copy"><div class="category-product-index">01</div><div class="category-product-modality" data-i18n="localDeployment">Local deployment</div><h3 data-i18n="agentApplianceShort">Medical AI Agent</h3><p data-i18n="agentPreviewDesc">Combines multimodal medical models with local computing to support voice documentation, structured record generation, content quality checks, decision support and integrated health reports.</p><a class="category-product-link" href="ai-agent.html" data-i18n="learn">Explore solution</a></div>
-          </article>
+        <header class="hospital-section-heading"><div><div class="category-kicker">02 · <span data-i18n="deploymentEyebrow">On-premises deployment</span></div><h2 id="hospital-operating-model-title" data-i18n="deploymentHeading">AI that works inside the hospital.</h2></div><p data-i18n="deploymentIntro">SCOVION supports on-premises deployment, with AI inference performed on computing resources within the hospital. Patient and clinical data can remain in the institution’s controlled environment while teams retain responsive access to AI-assisted results.</p></header>
+
+        <div class="hospital-system-boundary">
+          <div class="hospital-boundary-label"><span aria-hidden="true"></span><b data-i18n="deploymentBoundary">Hospital-controlled environment</b></div>
+          <div class="hospital-system-flow" role="list">
+            <div class="hospital-system-node hospital-system-input" role="listitem"><span class="hospital-node-visual" aria-hidden="true"><i></i><i></i><i></i></span><small>01</small><b data-i18n="deploymentDataLabel">Imaging &amp; clinical data</b></div>
+            <i class="hospital-system-connector" aria-hidden="true"></i>
+            <div class="hospital-system-node hospital-system-core" role="listitem"><span class="hospital-core-visual" aria-hidden="true"><i></i><i></i><i></i></span><small>02</small><b data-i18n="deploymentComputeLabel">Local AI inference</b></div>
+            <i class="hospital-system-connector" aria-hidden="true"></i>
+            <div class="hospital-system-node hospital-system-output" role="listitem"><span class="hospital-output-visual" aria-hidden="true"><i></i><i></i><i></i></span><small>03</small><b data-i18n="deploymentOutputLabel">Results for clinical review</b></div>
+          </div>
+          <p class="hospital-boundary-statement" data-i18n="deploymentPrivacyLine">For configured on-premises workflows, AI inference is performed locally and patient and clinical data remain within the hospital environment.</p>
         </div>
+
+        <div class="hospital-benefit-ledger">
+          <article><span>01</span><h3 data-i18n="deploymentBenefitLocalTitle">Local by design</h3><p data-i18n="deploymentBenefitLocalText">AI inference runs on hospital-based computing resources, reducing reliance on external cloud processing.</p></article>
+          <article><span>02</span><h3 data-i18n="deploymentBenefitGovernanceTitle">Data under hospital governance</h3><p data-i18n="deploymentBenefitGovernanceText">Data handling can follow the hospital’s own access, retention and security policies within its controlled environment.</p></article>
+          <article><span>03</span><h3 data-i18n="deploymentBenefitLatencyTitle">Responsive at the point of care</h3><p data-i18n="deploymentBenefitLatencyText">Local processing can reduce network round trips and support low-latency access to AI-assisted results.</p></article>
+          <article><span>04</span><h3 data-i18n="deploymentBenefitContinuityTitle">Continuity around local operations</h3><p data-i18n="deploymentBenefitContinuityText">Core inference workflows can remain available during external network interruptions, subject to local infrastructure availability.</p></article>
+        </div>
+        <p class="hospital-deployment-note" data-i18n="deploymentNote">Deployment scope and system compatibility are assessed for each hospital.</p>
       </div>
     </section>
 
-    <section class="category-scenario-section">
+    <section class="hospital-readiness-section" aria-labelledby="hospital-readiness-title">
       <div class="container">
-        <header class="category-scenario-heading"><div class="category-kicker" data-i18n="fourScenarios">Four core scenarios</div><h2 data-i18n="agentScenarioHeading">Built around everyday hospital work</h2></header>
-        <div class="category-scenario-list">
-          <article class="category-product-story category-scenario-story">
-            <figure class="category-product-media"><img src="assets/agent/agent-outpatient-workstation-v1.webp" width="1536" height="1024" alt="Outpatient clinical documentation workspace" loading="lazy" decoding="async"></figure>
-            <div class="category-product-copy"><div class="category-product-index">01</div><h3 data-i18n="outpatientRecords">Outpatient records</h3><p data-i18n="outpatientDesc">Generates structured outpatient records from clinical conversations, supports pre-consultation data, real-time quality checks and common-disease decision assistance.</p></div>
+        <header class="hospital-section-heading"><div><div class="category-kicker">03 · <span data-i18n="healthcareServicesEyebrow">Implementation services</span></div><h2 id="hospital-readiness-title" data-i18n="healthcareServicesHeading">From product evaluation to everyday use</h2></div><p data-i18n="healthcareServicesIntro">SCOVION works with hospital leaders, clinical teams and IT teams across product evaluation, implementation, training and ongoing operation.</p></header>
+
+        <div class="hospital-readiness-list">
+          <article class="hospital-readiness-story">
+            <figure><img src="assets/hospital-ai/hospital-ai-clinical-alignment-v1.webp" width="1536" height="1024" alt="Conceptual clinical and IT team reviewing a hospital workflow" loading="lazy" decoding="async"></figure>
+            <div><span>01</span><h3 data-i18n="deploymentBenefitIntegrationTitle">Planned for the existing environment</h3><p data-i18n="deploymentBenefitIntegrationText">Deployment is planned around current imaging and information systems, with local configuration, validation and team training.</p></div>
           </article>
-          <article class="category-product-story category-scenario-story is-reverse">
-            <figure class="category-product-media"><img src="assets/agent/agent-inpatient-workstation-v1.webp" width="1536" height="1024" alt="Inpatient clinical documentation workspace" loading="lazy" decoding="async"></figure>
-            <div class="category-product-copy"><div class="category-product-index">02</div><h3 data-i18n="inpatientRecords">Inpatient records</h3><p data-i18n="inpatientDesc">Supports documentation throughout the admission cycle, including first progress notes, daily notes and discharge records.</p></div>
-          </article>
-          <article class="category-product-story category-scenario-story">
-            <figure class="category-product-media"><img src="assets/agent/agent-quality-workstation-v1.webp" width="1536" height="1024" alt="Medical record quality control workspace" loading="lazy" decoding="async"></figure>
-            <div class="category-product-copy"><div class="category-product-index">03</div><h3 data-i18n="recordQuality">Medical record quality control</h3><p data-i18n="qualityDesc">Checks outpatient, emergency and inpatient records for completeness, consistency, logic, compliance and clinical appropriateness.</p></div>
-          </article>
-          <article class="category-product-story category-scenario-story is-reverse">
-            <figure class="category-product-media"><img src="assets/agent/agent-screening-workstation-v1.webp" width="1536" height="1024" alt="Health screening and risk reporting workspace" loading="lazy" decoding="async"></figure>
-            <div class="category-product-copy"><div class="category-product-index">04</div><h3 data-i18n="healthScreening">Health screening</h3><p data-i18n="screeningDesc">Combines examination data into structured health reports and links imaging findings into an integrated risk view.</p></div>
+          <article class="hospital-readiness-story is-reverse">
+            <figure><img src="assets/hospital-ai/hospital-ai-local-implementation-v1.webp" width="1536" height="1024" alt="Conceptual local hospital AI infrastructure commissioning" loading="lazy" decoding="async"></figure>
+            <div><span>02</span><h3 data-i18n="healthcareServiceDeploymentTitle">Local deployment &amp; commissioning</h3><p data-i18n="healthcareServiceDeploymentText">Our specialists coordinate installation, system configuration, integration checks where required and go-live preparation with hospital teams and local partners.</p></div>
           </article>
         </div>
+
+        <div class="hospital-adoption-ledger">
+          <article><span>03</span><div><h3 data-i18n="healthcareServiceTrainingTitle">Online &amp; on-site training</h3><p data-i18n="healthcareServiceTrainingText">Role-based sessions cover product use, workflow adoption and routine administration for clinical, operational and IT teams.</p></div></article>
+          <article><span>04</span><div><h3 data-i18n="healthcareServiceSupportTitle">Ongoing support &amp; upgrades</h3><p data-i18n="healthcareServiceSupportText">We coordinate technical support, maintenance and software-update planning so deployments can evolve with operational needs.</p></div></article>
+        </div>
+        <p class="hospital-concept-note" data-i18n="conceptVisualNotice">Image for reference only.</p>
+      </div>
+    </section>
+
+    <section class="category-products hospital-product-spotlight">
+      <div class="container">
+        <header class="category-products-heading"><div class="category-kicker">04 · <span data-i18n="medicalAiInfrastructure">Medical AI infrastructure</span></div><h2 data-solution-i18n="hospitalProductsTitle">Hospital AI solutions</h2></header>
+        <article class="hospital-agent-story">
+          <figure><img src="assets/products/visual-medical-ai-appliance-v3.webp" width="1919" height="820" alt="SCOVION Medical AI Agent appliance" loading="lazy" decoding="async"></figure>
+          <div class="hospital-agent-copy"><div class="category-product-modality" data-i18n="localDeployment">Local deployment</div><h3 data-i18n="agentApplianceShort">Medical AI Agent</h3><p data-i18n="agentPreviewDesc">Combines multimodal medical models with local computing to support voice documentation, structured record generation, content quality checks, decision support and integrated health reports.</p><div class="hospital-agent-capabilities" role="list"><span role="listitem" data-i18n="outpatientRecords">Outpatient records</span><span role="listitem" data-i18n="inpatientRecords">Inpatient records</span><span role="listitem" data-i18n="recordQuality">Medical record quality control</span><span role="listitem" data-i18n="healthScreening">Health screening</span></div><a class="category-product-link" href="ai-agent.html" data-i18n="learn">Explore solution</a></div>
+        </article>
       </div>
     </section>
 
