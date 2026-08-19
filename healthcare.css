@@ -1825,3 +1825,50 @@ body > .nav .links a.active {
     transition: none !important;
   }
 }
+
+/* Locale resilience for the extended Southeast Asian language set. */
+:where(:lang(vi),:lang(id),:lang(fil),:lang(tet)) .healthcare-hero-copy h1 {
+  font-size: clamp(46px, 4.1vw, 58px);
+}
+:where(:lang(lo),:lang(my),:lang(km)) .healthcare-hero-copy h1 {
+  font-size: clamp(42px, 3.8vw, 54px);
+}
+:where(:lang(vi),:lang(id),:lang(fil),:lang(tet),:lang(lo),:lang(my),:lang(km)) .healthcare-index a {
+  min-width: 150px;
+  min-height: 70px;
+  padding-block: 11px;
+  line-height: 1.45;
+  white-space: normal;
+}
+:where(:lang(vi),:lang(id),:lang(fil),:lang(tet),:lang(lo),:lang(my),:lang(km)) .planning-selector strong {
+  overflow: visible;
+  line-height: 1.35;
+  text-overflow: clip;
+  white-space: normal;
+}
+:where(:lang(vi),:lang(id),:lang(fil),:lang(tet),:lang(lo),:lang(my),:lang(km)) .healthcare-agent-copy .agent-feature-list span {
+  min-height: 58px;
+  padding-block: 9px;
+  white-space: normal;
+}
+:where(:lang(vi),:lang(id),:lang(fil),:lang(tet),:lang(lo),:lang(my),:lang(km)) .imaging-service-label h4 {
+  font-size: clamp(24px, 2vw, 30px);
+}
+
+@media (min-width: 1021px) {
+  :where(:lang(vi),:lang(id),:lang(fil),:lang(tet)) :is(.imaging-services-head h3,.healthcare-agent-copy h2,.device-story h3) { font-size: 43px; }
+  :where(:lang(lo),:lang(my),:lang(km)) :is(.imaging-services-head h3,.healthcare-agent-copy h2,.device-story h3) { font-size: 38px; }
+}
+@media (max-width: 1020px) {
+  :where(:lang(vi),:lang(id),:lang(fil),:lang(tet)) .healthcare-hero-copy h1 { font-size: clamp(43px, 5.2vw, 53px); }
+  :where(:lang(lo),:lang(my),:lang(km)) .healthcare-hero-copy h1 { font-size: clamp(39px, 4.8vw, 49px); }
+}
+@media (max-width: 780px) {
+  :where(:lang(vi),:lang(id),:lang(fil),:lang(tet)) .healthcare-hero-copy h1 { font-size: clamp(36px, 6.4vw, 42px); }
+  :where(:lang(lo),:lang(my),:lang(km)) .healthcare-hero-copy h1 { font-size: clamp(33px, 6vw, 39px); }
+}
+@media (max-width: 480px) {
+  :where(:lang(vi),:lang(id),:lang(fil),:lang(tet)) .healthcare-hero-copy h1 { font-size: clamp(30px, 8.2vw, 34px); }
+  :where(:lang(lo),:lang(my),:lang(km)) .healthcare-hero-copy h1 { font-size: clamp(28px, 7.6vw, 32px); }
+  :where(:lang(vi),:lang(id),:lang(fil),:lang(tet),:lang(lo),:lang(my),:lang(km)) :is(.healthcare-chapter-head h2,.healthcare-agent-copy h2,.imaging-services-head h3) { font-size: clamp(30px, 8.2vw, 35px); }
+}

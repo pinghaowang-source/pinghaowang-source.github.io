@@ -756,3 +756,116 @@ h1,h2,h3{text-wrap:balance}
   .values-principles p{margin-top:15px}
   .values-closing,:lang(ms) .values-closing,:lang(th) .values-closing{margin-top:56px;font-size:clamp(29px,9vw,38px)}
 }
+
+/* Southeast Asian locale typography and resilient wrapping. */
+:root:is(:lang(vi),:lang(id),:lang(fil),:lang(tet)){
+  --type-display-hero:clamp(46px,4.8vw,65px);
+  --type-display-hero-long:clamp(43px,4.35vw,59px);
+  --type-display-hero-xlong:clamp(39px,3.95vw,54px);
+  --type-display-section:clamp(38px,3.9vw,53px);
+  --type-display-section-long:clamp(35px,3.55vw,48px);
+  --type-display-section-xlong:clamp(32px,3.2vw,44px);
+  --type-display-feature:clamp(27px,2.7vw,38px);
+  --type-display-feature-long:clamp(25px,2.4vw,34px);
+  --type-display-feature-xlong:clamp(23px,2.15vw,31px);
+  --leading-display:1.07;
+  --tracking-display:-.026em;
+}
+:root:is(:lang(lo),:lang(my),:lang(km)){
+  --type-display-hero:clamp(43px,4.45vw,60px);
+  --type-display-hero-long:clamp(40px,4vw,55px);
+  --type-display-hero-xlong:clamp(37px,3.65vw,50px);
+  --type-display-section:clamp(36px,3.65vw,49px);
+  --type-display-section-long:clamp(33px,3.3vw,45px);
+  --type-display-section-xlong:clamp(30px,3vw,41px);
+  --type-display-feature:clamp(26px,2.55vw,35px);
+  --type-display-feature-long:clamp(24px,2.3vw,32px);
+  --type-display-feature-xlong:clamp(22px,2.05vw,29px);
+  --leading-display:1.18;
+  --tracking-display:0;
+}
+html:is(:lang(vi),:lang(id),:lang(fil),:lang(tet)){
+  hyphens:auto;
+  overflow-wrap:break-word;
+  word-break:normal;
+}
+html:is(:lang(lo),:lang(my),:lang(km)){
+  line-break:auto;
+  overflow-wrap:anywhere;
+  word-break:normal;
+}
+html:lang(lo) body{font-family:"Noto Sans Lao","Phetsarath OT","Lao Sangam MN",-apple-system,sans-serif}
+html:lang(my) body{font-family:"Noto Sans Myanmar","Myanmar Text","Pyidaungsu","Myanmar Sangam MN",-apple-system,sans-serif}
+html:lang(km) body{font-family:"Noto Sans Khmer","Khmer Sangam MN","Khmer UI",-apple-system,sans-serif}
+
+:is(:lang(vi),:lang(id),:lang(fil),:lang(tet)) :is(h1,h2,h3){
+  line-height:1.07!important;
+  letter-spacing:-.026em!important;
+  overflow-wrap:break-word;
+  word-break:normal;
+}
+:is(:lang(lo),:lang(my),:lang(km)) :is(h1,h2,h3){
+  line-height:1.18!important;
+  letter-spacing:0!important;
+  overflow-wrap:anywhere;
+  word-break:normal;
+}
+:lang(my) :is(h1,h2,h3){line-height:1.22!important}
+:is(:lang(lo),:lang(my),:lang(km)) :is(p,li){line-height:1.78!important}
+:is(:lang(lo),:lang(my),:lang(km)) :is(small,label,button,a){line-height:1.5}
+:is(:lang(vi),:lang(id),:lang(fil),:lang(tet),:lang(lo),:lang(my),:lang(km)) :is(.button,button){
+  height:auto;
+  white-space:normal;
+  text-align:center;
+}
+:is(:lang(vi),:lang(id),:lang(fil),:lang(tet),:lang(lo),:lang(my),:lang(km)) .links{
+  gap:clamp(13px,1.6vw,22px);
+  font-size:13px;
+}
+:is(:lang(vi),:lang(id),:lang(fil),:lang(tet),:lang(lo),:lang(my),:lang(km)) .nav-actions{gap:10px}
+:is(:lang(vi),:lang(id),:lang(fil),:lang(tet),:lang(lo),:lang(my),:lang(km)) .nav-actions .button{
+  padding-inline:14px;
+  font-size:13px;
+}
+:is(:lang(vi),:lang(id),:lang(fil),:lang(tet),:lang(lo),:lang(my),:lang(km)) .ticker .container{
+  overflow-x:auto;
+  scrollbar-width:none;
+}
+:is(:lang(vi),:lang(id),:lang(fil),:lang(tet),:lang(lo),:lang(my),:lang(km)) .ticker .container::-webkit-scrollbar{display:none}
+:is(:lang(vi),:lang(id),:lang(fil),:lang(tet),:lang(lo),:lang(my),:lang(km)) .ticker .container>div{
+  width:max-content;
+  min-width:100%;
+  justify-content:flex-start;
+}
+:is(:lang(vi),:lang(id),:lang(fil),:lang(tet)) .values-vision p{font-size:clamp(18px,1.7vw,23px);line-height:1.45}
+:is(:lang(lo),:lang(my),:lang(km)) .values-vision p{font-size:clamp(17px,1.6vw,21px)}
+:is(:lang(vi),:lang(id),:lang(fil),:lang(tet)) .values-closing{font-size:clamp(29px,3.6vw,46px)}
+:is(:lang(lo),:lang(my),:lang(km)) .values-closing{font-size:clamp(27px,3.35vw,42px)}
+:is(:lang(lo),:lang(my),:lang(km)) :is(
+  .eyebrow,
+  .kicker,
+  .contact-kicker,
+  .contact-label,
+  .custom-section-label,
+  .privacy-aside strong,
+  .featured-copy>span,
+  .home-partner-mark>span,
+  .deployment-boundary,
+  .values-opening>span,
+  .values-vision>span,
+  .planning-selector small,
+  .agent-flow-node small,
+  .leadership-card-top span,
+  .partner-profile-copy>span,
+  .partner-route-top b
+){
+  letter-spacing:0!important;
+  text-transform:none!important;
+}
+
+@media(max-width:780px){
+  :is(:lang(vi),:lang(id),:lang(fil),:lang(tet)) .home-page :is(.display-hero,.display-hero.headline-long,.display-hero.headline-xlong){font-size:clamp(38px,10.8vw,52px)!important}
+  :is(:lang(lo),:lang(my),:lang(km)) .home-page :is(.display-hero,.display-hero.headline-long,.display-hero.headline-xlong){font-size:clamp(35px,10vw,47px)!important}
+  :is(:lang(vi),:lang(id),:lang(fil),:lang(tet),:lang(lo),:lang(my),:lang(km)) .home-page :is(.display-section,.display-section.headline-long,.display-section.headline-xlong){font-size:clamp(32px,8.8vw,43px)!important}
+  :is(:lang(vi),:lang(id),:lang(fil),:lang(tet),:lang(lo),:lang(my),:lang(km)) .home-page :is(.display-feature,.display-feature.headline-long,.display-feature.headline-xlong){font-size:clamp(25px,7.2vw,34px)!important}
+}

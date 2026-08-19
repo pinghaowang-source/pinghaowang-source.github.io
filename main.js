@@ -209,7 +209,29 @@ Object.assign(copy.ms,{valuesEyebrow:'Nilai SCOVION',valuesHeading:'Kemajuan kes
 Object.assign(copy.th,{valuesEyebrow:'ค่านิยมของ SCOVION',valuesHeading:'ขับเคลื่อนการแพทย์ โดยยึดผู้คนเป็นศูนย์กลาง',valuesIntro:'เราเชื่อว่าเทคโนโลยีการแพทย์จะสร้างคุณค่าที่ยั่งยืนได้ เมื่อสามารถตอบโจทย์ความต้องการทางคลินิกที่แท้จริง บทบาทของเราคือช่วยเปลี่ยนนวัตกรรมที่พัฒนาอย่างรับผิดชอบให้เป็นขีดความสามารถที่นำไปใช้ได้จริง สำหรับบุคลากรทางการแพทย์ โรงพยาบาล และผู้ป่วย',valuesVisionLabel:'วิสัยทัศน์ของเรา',valuesVisionText:'อนาคตที่นวัตกรรมทางการแพทย์ซึ่งได้รับการพัฒนาและนำมาใช้อย่างรอบคอบ ช่วยเสริมความเข้มแข็งของระบบสุขภาพ สนับสนุนบุคลากรทางคลินิก และช่วยให้ผู้ป่วยจำนวนมากขึ้นเข้าถึงการดูแลที่ทันท่วงที ต่อเนื่อง และเคารพในศักดิ์ศรี',valuesNeedTitle:'เริ่มจากความต้องการในการดูแลที่แท้จริง',valuesNeedText:'เราเริ่มต้นจากสภาพจริงและความท้าทายของการดูแลในปัจจุบัน โดยมุ่งเน้นการปรับปรุงที่นำไปใช้ได้จริง เพื่อช่วยให้ขั้นตอนงานทางคลินิกชัดเจน สม่ำเสมอ และตอบสนองได้รวดเร็วยิ่งขึ้น',valuesHospitalTitle:'โรงพยาบาลเข้มแข็ง ขีดความสามารถยั่งยืน',valuesHospitalText:'เราสนับสนุนโรงพยาบาลในการสร้างขีดความสามารถระยะยาว ผ่านเทคโนโลยีที่เหมาะสม การติดตั้งใช้งานในพื้นที่ การผสานเข้ากับขั้นตอนงาน และการถ่ายทอดความรู้',valuesPatientTitle:'ให้ผู้ป่วยเป็นศูนย์กลางเสมอ',valuesPatientText:'เราพิจารณาว่าทุกการตัดสินใจอาจส่งผลต่อเส้นทางของผู้ป่วยอย่างไร ตั้งแต่การเข้าถึงและระยะเวลารอ ไปจนถึงการสื่อสารและความต่อเนื่องของการดูแล พร้อมเคารพดุลยพินิจทางคลินิก',valuesInnovationTitle:'นวัตกรรมที่พัฒนาอย่างต่อเนื่อง',valuesInnovationText:'เราทุ่มเทสนับสนุนการวิจัย การตรวจสอบความถูกต้อง และการปรับปรุงอย่างต่อเนื่องด้วยความรับผิดชอบ เพื่อช่วยให้เทคโนโลยีที่มีศักยภาพเติบโตเป็นโซลูชันที่เป็นประโยชน์ต่อผู้คนในการใช้งานจริง',valuesClosing:'ความก้าวหน้าทางการแพทย์เกิดจากการปรับปรุงอย่างรอบคอบทีละขั้นและต่อเนื่องในระยะยาว SCOVION พร้อมทำงานร่วมกับบุคลากรทางคลินิก โรงพยาบาล และพันธมิตรด้านเทคโนโลยี เพื่อช่วยขับเคลื่อนความก้าวหน้านี้ต่อไป'});
 
 const languages=[['en','English'],['zh-cn','简体中文'],['zh-tw','繁體中文'],['ms','Bahasa Melayu'],['th','ไทย']];
-const languageAliases={zh:'zh-tw'};
+const aseanLanguages=[['vi','Tiếng Việt'],['id','Bahasa Indonesia'],['fil','Filipino'],['lo','ລາວ'],['my','မြန်မာ'],['km','ខ្មែរ'],['tet','Tetum']];
+const languageAliases={zh:'zh-tw',tl:'fil',in:'id'};
+const mainScriptBase=document.currentScript&&document.currentScript.src?new URL('.',document.currentScript.src).href:document.baseURI;
+
+function registerAseanLocales(){
+  const locales=globalThis.SCOVION_ASEAN_LOCALES;
+  if(!locales)return false;
+  aseanLanguages.forEach(([code])=>{if(locales[code])copy[code]=locales[code]});
+  aseanLanguages.forEach(option=>{if(copy[option[0]]&&!languages.some(([code])=>code===option[0]))languages.push(option)});
+  return aseanLanguages.every(([code])=>Boolean(copy[code]));
+}
+function loadAseanLocales(){
+  if(registerAseanLocales())return Promise.resolve(true);
+  return new Promise(resolve=>{
+    const script=document.createElement('script');
+    script.src=new URL('asean-locales.js?v=1.0.0',mainScriptBase).href;
+    script.async=true;
+    script.onload=()=>resolve(registerAseanLocales());
+    script.onerror=()=>resolve(false);
+    document.head.appendChild(script)
+  })
+}
+const aseanLocalesReady=loadAseanLocales();
 
 function enhanceNavigation(){document.querySelectorAll('.links').forEach((nav,index)=>{const link=[...nav.children].find(el=>el.matches&&el.matches('a[data-i18n="solutions"]'));if(!link||link.closest('.nav-dropdown'))return;const wrap=document.createElement('div');wrap.className='nav-dropdown';link.parentNode.insertBefore(wrap,link);wrap.appendChild(link);const menu=document.createElement('div');menu.className='solution-menu';menu.id=`solution-menu-${index+1}`;menu.innerHTML='<a href="ai-healthcare.html#imaging"><b data-i18n="disciplineRadiology">Radiology</b><small data-i18n="disciplineRadiologyText">Chest, cardiovascular and neurovascular imaging AI</small></a><a href="ai-healthcare.html#planning"><b data-i18n="disciplineSurgery">Surgery</b><small data-i18n="disciplineSurgeryText">3D planning for thoracic, liver and urology procedures</small></a><a href="ai-healthcare.html#agents"><b data-i18n="disciplineHospitalAi">Hospital AI</b><small data-i18n="disciplineHospitalAiText">Locally deployed records, quality and clinical support</small></a><a href="ai-healthcare.html#devices"><b data-i18n="disciplineBoneHealth">Paediatrics &amp; Bone Health</b><small data-i18n="disciplineBoneHealthText">Intelligent bone-age and bone-density examination</small></a><a href="ai-healthcare.html#prosthetics"><b data-i18n="disciplineRehabilitation">Rehabilitation</b><small data-i18n="disciplineRehabilitationText">Intelligent prosthetics and intent-driven control</small></a>';link.setAttribute('aria-haspopup','true');link.setAttribute('aria-controls',menu.id);wrap.appendChild(menu)})}
 document.addEventListener('DOMContentLoaded',enhanceNavigation);
@@ -224,7 +246,7 @@ function headlineLineCount(element){const styles=getComputedStyle(element);const
 function headlineLengthClass(element){
   const length=Array.from(element.textContent.trim()).length;
   const language=document.documentElement.lang;
-  const multiplier=language==='ms'?1.16:language==='th'?1.1:1;
+  const multiplier={ms:1.16,th:1.1,vi:1.04,id:1.08,fil:1.12,tet:1.12,lo:1.12,my:1.16,km:1.12}[language]||1;
   const tier=element.classList.contains('display-hero')?'hero':element.classList.contains('display-section')?'section':'feature';
   const thresholds={hero:[40,58],section:[43,63],feature:[30,46]}[tier];
   if(length*multiplier>thresholds[1])return 'headline-xlong';
@@ -350,4 +372,14 @@ function init(requestedLanguage){
   setupHorizontalRails();
   if(typeof CustomEvent==='function')document.dispatchEvent(new CustomEvent('scovion:languagechange',{detail:{lang}}))
 }
-document.addEventListener('DOMContentLoaded',()=>init());
+document.addEventListener('DOMContentLoaded',()=>{
+  const requested=readLanguage();
+  const normalized=languageAliases[String(requested||'').toLowerCase()]||String(requested||'').toLowerCase();
+  const needsAseanPack=aseanLanguages.some(([code])=>code===normalized);
+  if(needsAseanPack){
+    aseanLocalesReady.then(()=>init(requested));
+    return;
+  }
+  init(requested);
+  aseanLocalesReady.then(loaded=>{if(loaded)init(readLanguage())});
+});

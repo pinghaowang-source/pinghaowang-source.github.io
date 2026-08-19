@@ -43,6 +43,55 @@
       decline: 'ปฏิเสธ',
       privacy: 'ความเป็นส่วนตัวและการวิเคราะห์',
       settings: 'ตั้งค่าการวิเคราะห์'
+    },
+    vi: {
+      notice: 'Hãy giúp chúng tôi hiểu lượt truy cập trang và cải thiện trải nghiệm trên trang web. Chỉ bật phân tích sau khi bạn chọn cho phép.',
+      allow: 'Cho phép phân tích',
+      decline: 'Từ chối',
+      privacy: 'Quyền riêng tư & phân tích',
+      settings: 'Cài đặt phân tích'
+    },
+    id: {
+      notice: 'Bantu kami memahami kunjungan halaman dan meningkatkan pengalaman situs web. Analitik hanya diaktifkan setelah Anda memilih untuk mengizinkannya.',
+      allow: 'Izinkan analitik',
+      decline: 'Tolak',
+      privacy: 'Privasi & analitik',
+      settings: 'Pengaturan analitik'
+    },
+    fil: {
+      notice: 'Tulungan kaming maunawaan ang mga pagbisita sa pahina at mapahusay ang karanasan sa website. Ie-enable lamang ang analytics kapag pinili mong payagan ito.',
+      allow: 'Payagan ang analytics',
+      decline: 'Tanggihan',
+      privacy: 'Privacy at analytics',
+      settings: 'Mga setting ng analytics'
+    },
+    tet: {
+      notice: 'Ajuda ami komprende vizita ba pájina no hadi\'a esperiénsia iha website. Analítika sei ativa de\'it hafoin Ita hili atu permite.',
+      allow: 'Permite analítika',
+      decline: 'Rejeita',
+      privacy: 'Privasidade no analítika',
+      settings: 'Konfigurasaun analítika'
+    },
+    lo: {
+      notice: 'ຊ່ວຍໃຫ້ພວກເຮົາເຂົ້າໃຈການເຂົ້າເບິ່ງໜ້າເວັບ ແລະ ປັບປຸງປະສົບການໃຊ້ເວັບໄຊຕ໌. ການວິເຄາະຈະເປີດໃຊ້ງານຫຼັງຈາກທ່ານເລືອກອະນຸຍາດເທົ່ານັ້ນ.',
+      allow: 'ອະນຸຍາດການວິເຄາະ',
+      decline: 'ປະຕິເສດ',
+      privacy: 'ຄວາມເປັນສ່ວນຕົວ ແລະ ການວິເຄາະ',
+      settings: 'ການຕັ້ງຄ່າການວິເຄາະ'
+    },
+    my: {
+      notice: 'စာမျက်နှာများကို ဝင်ရောက်ကြည့်ရှုမှုကို နားလည်ပြီး ဝဘ်ဆိုက်အသုံးပြုမှုအတွေ့အကြုံကို တိုးတက်ကောင်းမွန်စေရန် ကူညီပေးပါ။ သင်က ခွင့်ပြုရန် ရွေးချယ်ပြီးမှသာ အသုံးပြုမှုခွဲခြမ်းစိတ်ဖြာခြင်းကို ဖွင့်ပေးမည်။',
+      allow: 'ခွဲခြမ်းစိတ်ဖြာခြင်းကို ခွင့်ပြုမည်',
+      decline: 'ငြင်းပယ်မည်',
+      privacy: 'ကိုယ်ရေးကိုယ်တာနှင့် ခွဲခြမ်းစိတ်ဖြာခြင်း',
+      settings: 'ခွဲခြမ်းစိတ်ဖြာမှု ဆက်တင်များ'
+    },
+    km: {
+      notice: 'ជួយឱ្យយើងយល់ពីការចូលមើលទំព័រ និងកែលម្អបទពិសោធន៍ប្រើប្រាស់គេហទំព័រ។ ការវិភាគនឹងត្រូវបានបើក លុះត្រាតែអ្នកជ្រើសរើសអនុញ្ញាត។',
+      allow: 'អនុញ្ញាតការវិភាគ',
+      decline: 'បដិសេធ',
+      privacy: 'ឯកជនភាព និងការវិភាគ',
+      settings: 'ការកំណត់ការវិភាគ'
     }
   };
 
@@ -239,6 +288,12 @@
       .analytics-consent{position:fixed;z-index:9999;left:clamp(16px,3vw,40px);right:clamp(16px,3vw,40px);bottom:clamp(16px,3vw,32px);display:grid;grid-template-columns:minmax(0,1fr) auto;gap:20px;align-items:center;max-width:1040px;margin:auto;padding:22px 24px;border:1px solid rgba(14,40,48,.15);border-radius:18px;background:rgba(250,252,251,.97);box-shadow:0 18px 60px rgba(8,31,38,.18);backdrop-filter:blur(14px);color:#17343b;font:500 14px/1.55 Inter,system-ui,sans-serif}
       .analytics-consent[hidden]{display:none}.analytics-consent p{margin:0;max-width:760px}.analytics-consent-actions{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.analytics-consent button{min-height:42px;padding:0 18px;border-radius:999px;border:1px solid #0e6e6e;background:#0e6e6e;color:#fff;font:700 13px/1 system-ui,sans-serif;cursor:pointer}.analytics-consent button+button{background:transparent;color:#17343b;border-color:rgba(14,40,48,.28)}
       .analytics-privacy-links{display:inline-flex;gap:12px;align-items:center;flex-wrap:wrap}.analytics-privacy-links a,.analytics-privacy-links button{border:0;padding:0;background:none;color:inherit;text-decoration:underline;text-underline-offset:3px;font:inherit;cursor:pointer}
+      :is(:lang(vi),:lang(id),:lang(fil),:lang(tet)) .analytics-consent{line-height:1.65;overflow-wrap:break-word;word-break:normal}
+      :is(:lang(lo),:lang(my),:lang(km)) .analytics-consent{line-height:1.78;overflow-wrap:anywhere;word-break:normal}
+      :lang(lo) .analytics-consent,:lang(lo) .analytics-consent button{font-family:"Noto Sans Lao","Phetsarath OT","Lao Sangam MN",sans-serif}
+      :lang(my) .analytics-consent,:lang(my) .analytics-consent button{font-family:"Noto Sans Myanmar","Myanmar Text","Pyidaungsu","Myanmar Sangam MN",sans-serif}
+      :lang(km) .analytics-consent,:lang(km) .analytics-consent button{font-family:"Noto Sans Khmer","Khmer Sangam MN","Khmer UI",sans-serif}
+      :is(:lang(vi),:lang(id),:lang(fil),:lang(tet),:lang(lo),:lang(my),:lang(km)) .analytics-consent button{height:auto;min-height:42px;padding-block:10px;line-height:1.35;white-space:normal}
       @media(max-width:720px){.analytics-consent{grid-template-columns:1fr;padding:18px}.analytics-consent-actions{justify-content:flex-start}}
     `;
     document.head.appendChild(style);

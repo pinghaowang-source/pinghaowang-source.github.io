@@ -2516,6 +2516,30 @@
     }
   };
 
+  const aseanDetailsPack=globalThis.SCOVION_PRODUCT_DETAILS_ASEAN;
+  if(aseanDetailsPack){
+    Object.assign(uiCopy,aseanDetailsPack.uiCopy || {});
+    Object.entries(aseanDetailsPack.locales || {}).forEach(([lang,products])=>{
+      Object.entries(products).forEach(([productId,localized])=>{
+        const target=productCatalog[productId];
+        if(!target || !localized || !localized.details)return;
+        target.details[lang]=localized.details;
+        if(localized.summary){
+          target.summaries=target.summaries || {};
+          target.summaries[lang]=localized.summary;
+        }
+        if(localized.secondaryHeading){
+          target.secondaryHeadings=target.secondaryHeadings || {};
+          target.secondaryHeadings[lang]=localized.secondaryHeading;
+        }
+        if(localized.secondaryDescription){
+          target.secondaryDescriptions=target.secondaryDescriptions || {};
+          target.secondaryDescriptions[lang]=localized.secondaryDescription;
+        }
+      });
+    });
+  }
+
   const currentProductIds = new Set([
     'cardiovascular-ai',
     'head-neck-ai',

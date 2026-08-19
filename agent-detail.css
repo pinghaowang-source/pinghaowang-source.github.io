@@ -93,3 +93,16 @@
   .agent-flow-output{min-height:58px}
 }
 @media(prefers-reduced-motion:reduce){.agent-detail-page *,.agent-detail-page *::before,.agent-detail-page *::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important;animation-iteration-count:1!important}}
+
+/* Locale resilience for the medical AI agent detail narrative. */
+:where(:lang(vi),:lang(id),:lang(fil),:lang(tet)) .agent-detail-page .agent-hero h1{max-width:26ch;font-size:clamp(39px,3.7vw,50px)}
+:where(:lang(lo),:lang(my),:lang(km)) .agent-detail-page .agent-hero h1{max-width:28ch;font-size:clamp(35px,3.3vw,45px)}
+:where(:lang(vi),:lang(id),:lang(fil),:lang(tet)) .agent-story-copy h3{font-size:clamp(29px,2.8vw,38px)}
+:where(:lang(lo),:lang(my),:lang(km)) .agent-story-copy h3{font-size:clamp(27px,2.55vw,35px)}
+:where(:lang(vi),:lang(id),:lang(fil),:lang(tet),:lang(lo),:lang(my),:lang(km)) :is(.agent-flow-node b,.agent-flow-output,.agent-story-copy li){overflow-wrap:anywhere;word-break:normal}
+
+@media(max-width:780px){
+  :where(:lang(vi),:lang(id),:lang(fil),:lang(tet)) .agent-detail-page .agent-hero h1{max-width:20ch;font-size:clamp(36px,10.2vw,48px)}
+  :where(:lang(lo),:lang(my),:lang(km)) .agent-detail-page .agent-hero h1{max-width:22ch;font-size:clamp(33px,9.3vw,43px)}
+  :where(:lang(vi),:lang(id),:lang(fil),:lang(tet),:lang(lo),:lang(my),:lang(km)) .agent-story-copy h3{font-size:clamp(28px,8vw,37px)}
+}
