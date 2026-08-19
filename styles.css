@@ -303,11 +303,26 @@ h1,h2,h3{text-wrap:balance}
 }
 
 /* Medical-first navigation, clinical-area rail and partner network */
-.solution-menu{width:340px;padding:10px}
+.solution-menu{width:min(390px,calc(100vw - 32px));max-height:calc(100dvh - 76px);padding:10px;overflow-y:auto;overscroll-behavior:contain}
 .solution-menu a{padding:12px 13px!important}
 .solution-menu b{display:block;color:var(--ink);font-size:13px;line-height:1.25}
-.solution-menu small{max-width:285px;line-height:1.45;white-space:normal}
+.solution-menu small{max-width:300px;line-height:1.45;white-space:normal}
 .solution-menu a:hover b{color:var(--blue)}
+.solution-menu a.solution-menu-overview{display:grid!important;grid-template-columns:minmax(0,1fr) 30px;gap:16px;align-items:center;min-height:72px;padding:15px 15px 15px 16px!important;border:1px solid #d6e3eb;border-radius:10px;background:linear-gradient(135deg,#edf5fb,#f8fbfd)}
+.solution-menu .solution-menu-overview:hover,.solution-menu .solution-menu-overview:focus-visible{background:linear-gradient(135deg,#e5f1fa,#f5f9fc)}
+.solution-menu-overview-copy{min-width:0}
+.solution-menu .solution-menu-overview b{font-size:15px;line-height:1.25}
+.solution-menu .solution-menu-overview small{margin-top:5px;color:#52677c}
+.solution-menu-overview-arrow{display:grid;width:30px;height:30px;place-items:center;border:1px solid #c5d6e1;border-radius:50%;color:var(--blue);font-size:15px;transition:transform var(--motion-fast) var(--ease-standard)}
+.solution-menu-overview:hover .solution-menu-overview-arrow,.solution-menu-overview:focus-visible .solution-menu-overview-arrow{transform:translateX(2px)}
+.solution-menu-subtree{margin:10px 4px 2px;padding-top:12px;border-top:1px solid var(--line)}
+.solution-menu-group-label{display:block;padding:0 9px 8px;color:#52677c;font-size:10px;font-weight:750;letter-spacing:.1em;line-height:1.4;text-transform:uppercase}
+.solution-menu-children{margin-left:9px;padding-left:10px;border-left:1px solid #cbd9e2}
+.solution-menu-children a{padding:10px 11px!important;border-radius:7px}
+.solution-menu-children b{font-size:12px}
+.solution-menu-children small{font-size:10px}
+.solution-menu :is(b,small){overflow-wrap:anywhere;hyphens:auto;text-wrap:pretty}
+:is(:lang(th),:lang(lo),:lang(my),:lang(km)) .solution-menu-group-label{letter-spacing:0;line-height:1.55;text-transform:none}
 
 .home-page .healthcare-capabilities{
   display:flex;
@@ -374,7 +389,11 @@ h1,h2,h3{text-wrap:balance}
   .footer-meta-links{justify-content:flex-start}
 }
 @media(max-width:780px){
-  .solution-menu{width:auto}
+  .links.open{max-height:calc(100dvh - 64px);overflow-y:auto;overscroll-behavior:contain}
+  .solution-menu{width:auto;max-height:none;padding:8px 0 3px 10px;overflow:visible}
+  .solution-menu a.solution-menu-overview{min-height:64px;padding:14px!important}
+  .solution-menu-subtree{margin-left:10px}
+  .solution-menu-children{margin-left:5px}
   .home-page .healthcare-capabilities>a{grid-template-columns:35px 1fr auto;flex-basis:min(84vw,340px);min-height:226px;padding:27px 24px;border-right:1px solid #7da2af5c;border-bottom:0}
   .home-page .healthcare-capabilities>a:last-child{border-right:0}
   .home-partner-grid{padding-top:74px;padding-bottom:74px}
