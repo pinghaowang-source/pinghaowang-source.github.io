@@ -1,5 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" href="/valued-partners-preview/images/brand/logo-dark.png" as="image"/><link rel="preload" href="/valued-partners-preview/images/work/asia-pacific-map.webp" as="image"/><link rel="preload" href="/valued-partners-preview/images/china-southeast-asia/pinghao-wang.jpg" as="image"/>
-<style>/*! tailwindcss v4.2.1 | MIT License | https://tailwindcss.com */
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>China &amp; Southeast Asia | Valued Partners</title><meta name="description" content="A trusted cross-border platform connecting companies, capital, industries, technology and strategic partners across China, ASEAN and the wider world."/><meta name="robots" content="noindex, nofollow, nocache"/><meta name="googlebot" content="noindex, nofollow, noimageindex"/><meta property="og:title" content="One trusted bridge. Multiple directions."/><meta property="og:description" content="A trusted cross-border platform connecting companies, capital, industries, technology and strategic partners across China, ASEAN and the wider world."/><meta property="og:url" content="https://www.scovion.com/valued-partners-preview/china-southeast-asia/"/><meta property="og:type" content="website"/><meta property="og:image" content="https://www.scovion.com/valued-partners-preview/images/china-southeast-asia/pinghao-wang.jpg"/><meta property="og:image:width" content="1025"/><meta property="og:image:height" content="1024"/><meta property="og:image:alt" content="Pinghao Wang, Director and Co-Founder of Scovion Technology"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="One trusted bridge. Multiple directions."/><meta name="twitter:description" content="A trusted cross-border platform connecting companies, capital, industries, technology and strategic partners across China, ASEAN and the wider world."/><meta name="twitter:image" content="https://www.scovion.com/valued-partners-preview/images/china-southeast-asia/pinghao-wang.jpg"/><link rel="preload" href="/valued-partners-preview/images/brand/logo-dark.png" as="image"/><link rel="preload" href="/valued-partners-preview/images/work/asia-pacific-map.webp" as="image"/><link rel="preload" href="/valued-partners-preview/images/china-southeast-asia/pinghao-wang.jpg" as="image"/><link rel="shortcut icon" href="/valued-partners-preview/images/brand/logo-original.webp"/><link rel="icon" href="/valued-partners-preview/images/brand/logo-original.webp"/><link rel="canonical" href="https://www.scovion.com/valued-partners-preview/china-southeast-asia/"/><style>/*! tailwindcss v4.2.1 | MIT License | https://tailwindcss.com */
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -2189,32 +2188,37 @@ h2 {
   z-index: 3;
   display: grid;
   border-top: 1px solid rgba(214, 183, 127, 0.28);
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 .bridge-route-rail > div {
   display: grid;
   min-height: 110px;
+  align-content: center;
   align-items: center;
-  padding: 22px 4vw;
-  grid-template-columns: auto 1fr auto;
-  gap: 24px;
+  padding: 20px clamp(20px, 2.3vw, 44px);
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 14px;
+  row-gap: 8px;
 }
-.bridge-route-rail > div:first-child {
+.bridge-route-rail > div:not(:last-child) {
   border-right: 1px solid rgba(214, 183, 127, 0.28);
 }
 .bridge-route-rail span {
+  grid-column: 1 / -1;
   color: rgba(244, 240, 230, 0.5);
-  font-size: 9px;
+  font-size: 8px;
   font-weight: 700;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
 }
 .bridge-route-rail strong {
+  min-width: 0;
   color: var(--paper);
   font-family: var(--display);
-  font-size: clamp(22px, 2.2vw, 34px);
+  font-size: clamp(19px, 1.75vw, 28px);
   font-weight: 400;
   letter-spacing: -0.03em;
+  line-height: 1.05;
 }
 .bridge-route-rail i {
   color: var(--gold-bright);
@@ -2247,14 +2251,14 @@ h2 {
 }
 .bridge-path {
   position: relative;
-  min-height: 510px;
+  min-height: 460px;
   padding: 42px;
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
 .bridge-path-number {
   display: block;
-  margin-bottom: 95px;
+  margin-bottom: 68px;
   color: var(--oxblood);
   font-size: 10px;
   letter-spacing: 0.16em;
@@ -2563,6 +2567,23 @@ h2 {
   }
   .bridge-hero-map {
     left: 0;
+  }
+  .bridge-hero-content {
+    padding-bottom: 260px;
+  }
+  .bridge-route-rail {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .bridge-route-rail > div {
+    min-height: 96px;
+    padding: 16px 24px;
+    border-right: 0;
+  }
+  .bridge-route-rail > div:nth-child(odd) {
+    border-right: 1px solid rgba(214, 183, 127, 0.28);
+  }
+  .bridge-route-rail > div:nth-child(-n + 2) {
+    border-bottom: 1px solid rgba(214, 183, 127, 0.28);
   }
   .bridge-path-grid {
     grid-template-columns: 1fr;
@@ -3038,7 +3059,7 @@ h2 {
   }
   .bridge-hero-content {
     justify-content: flex-start;
-    padding: 154px 0 248px;
+    padding: 154px 0 238px;
   }
   .bridge-hero h1 {
     font-size: clamp(52px, 17vw, 88px);
@@ -3051,15 +3072,21 @@ h2 {
     font-size: 15px;
   }
   .bridge-route-rail {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .bridge-route-rail > div {
-    min-height: 82px;
-    padding: 14px 18px;
+    min-height: 88px;
+    padding: 13px 15px;
   }
-  .bridge-route-rail > div:first-child {
-    border-right: 0;
-    border-bottom: 1px solid rgba(214, 183, 127, 0.28);
+  .bridge-route-rail span {
+    font-size: 7px;
+    letter-spacing: 0.08em;
+  }
+  .bridge-route-rail strong {
+    font-size: clamp(16px, 4.7vw, 20px);
+  }
+  .bridge-route-rail i {
+    font-size: 22px;
   }
   .bridge-intro-head {
     margin-bottom: 58px;
@@ -3109,4 +3136,4 @@ h2 {
     transition-duration: 0.01ms !important;
   }
 }
-</style><title>China &amp; Southeast Asia | Valued Partners</title><meta name="description" content="A trusted two-way bridge for Chinese enterprises entering Southeast Asia and international companies seeking a credible path into China."><meta name="robots" content="noindex, nofollow, nocache"><meta name="googlebot" content="noindex, nofollow, noimageindex"><meta property="og:title" content="One trusted bridge. Two directions."><meta property="og:description" content="A trusted two-way bridge for Chinese enterprises entering Southeast Asia and international companies seeking a credible path into China."><meta property="og:url" content="https://www.scovion.com/valued-partners-preview/china-southeast-asia/"><meta property="og:type" content="website"><meta property="og:image" content="https://www.scovion.com/valued-partners-preview/images/china-southeast-asia/pinghao-wang.jpg"><meta property="og:image:width" content="1025"><meta property="og:image:height" content="1024"><meta property="og:image:alt" content="Pinghao Wang, Director and Co-Founder of Scovion Technology"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="One trusted bridge. Two directions."><meta name="twitter:description" content="A trusted two-way bridge for Chinese enterprises entering Southeast Asia and international companies seeking a credible path into China."><meta name="twitter:image" content="https://www.scovion.com/valued-partners-preview/images/china-southeast-asia/pinghao-wang.jpg"><link rel="canonical" href="https://www.scovion.com/valued-partners-preview/china-southeast-asia/"><link rel="icon" href="/valued-partners-preview/images/brand/logo-original.webp"></head><body><a class="skip-link" href="#main-content">Skip to content</a><header class="site-header"><div class="header-shell"><a href="/valued-partners-preview/" class="brand" aria-label="Valued Partners — Home"><img class="brand-logo" src="/valued-partners-preview/images/brand/logo-dark.png" alt="Valued Partners"/></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/valued-partners-preview/about-us/">About</a><a href="/valued-partners-preview/people/">People</a><a href="/valued-partners-preview/what-we-do/">What we do</a><a href="/valued-partners-preview/china-southeast-asia/">China &amp; ASEAN</a></nav><a href="/valued-partners-preview/contact/" class="header-contact">Start a conversation <span aria-hidden="true">↗</span></a><details class="mobile-menu"><summary aria-label="Open navigation"><span></span><span></span></summary><nav aria-label="Mobile navigation"><a href="/valued-partners-preview/">Home</a><a href="/valued-partners-preview/about-us/">About</a><a href="/valued-partners-preview/people/">People</a><a href="/valued-partners-preview/what-we-do/">What we do</a><a href="/valued-partners-preview/china-southeast-asia/">China &amp; ASEAN</a><a href="/valued-partners-preview/contact/">Contact</a></nav></details></div></header><main id="main-content"><section class="bridge-hero"><div class="bridge-hero-map" aria-hidden="true"><img src="/valued-partners-preview/images/work/asia-pacific-map.webp" alt=""/></div><div class="bridge-hero-grid"></div><div class="content-shell bridge-hero-content"><p class="eyebrow light">China × Southeast Asia · 中国与东南亚</p><h1>One trusted bridge. <em>Two directions.</em></h1><p class="bridge-hero-intro">We help ambitious Chinese enterprises move into Southeast Asia—and welcome international companies looking for a credible path into China. One relationship-led platform, built for meaningful cross-border growth.</p></div><div class="bridge-route-rail" aria-label="Our two-way market bridge"><div><span>From China · 从中国</span><strong>Southeast Asia</strong><i aria-hidden="true">→</i></div><div><span>From the world · 从全球</span><strong>China</strong><i aria-hidden="true">→</i></div></div></section><section class="bridge-intro section-pad"><div class="content-shell"><div class="bridge-intro-head"><p class="eyebrow">The opportunity</p><h2>Growth crosses borders. Trust opens them.</h2><p>Market entry is never only about geography. It is about context, credible relationships and knowing how to move from first conversation to practical execution.</p></div><div class="bridge-path-grid"><article class="bridge-path"><span class="bridge-path-number">01</span><p class="bridge-path-route">China → Southeast Asia</p><h3>Bring Chinese ambition into the region.</h3><p>We support Chinese enterprises seeking a considered entry into Southeast Asia—connecting the opportunity with local market understanding, relevant relationships and an actionable path forward.</p><ul class="bridge-path-list" aria-label="China to Southeast Asia focus"><li>Market context</li><li>Strategic relationships</li><li>Local execution</li></ul></article><article class="bridge-path"><span class="bridge-path-number">02</span><p class="bridge-path-route">International → China</p><h3>Enter China with the right bridge beside you.</h3><p>International businesses with a serious China ambition are equally welcome. We help frame the route, understand the landscape and begin the right senior-level conversations.</p><ul class="bridge-path-list" aria-label="International to China focus"><li>Entry framing</li><li>Opportunity screening</li><li>Senior introductions</li></ul></article></div></div></section><section class="bridge-partner"><div class="content-shell bridge-partner-inner"><div><p class="eyebrow light">Exclusive strategic partner</p><h2>SCOVION<span>Technology Sdn. Bhd.</span></h2></div><div class="bridge-partner-copy"><p class="lead-copy">A dedicated partnership for one clear purpose: making the path between China and Southeast Asia more connected, credible and actionable.</p><p>Valued Partners works exclusively with SCOVION TECHNOLOGY SDN. BHD. on this market-bridge initiative, combining senior relationships with technology-minded, on-the-ground perspective.</p><div class="bridge-partner-mark" aria-label="Exclusive partnership"><span>Valued Partners</span><i aria-hidden="true">×</i><span>Scovion Technology Sdn. Bhd.</span></div></div></div></section><section class="bridge-profile"><article class="profile-feature"><div class="profile-feature-image"><img src="/valued-partners-preview/images/china-southeast-asia/pinghao-wang.jpg" alt="Pinghao Wang"/><span>Director &amp; Co-Founder</span></div><div class="profile-feature-copy"><p class="eyebrow">Director &amp; Co-Founder</p><h2>Pinghao Wang<small>SCOVION TECHNOLOGY SDN. BHD.</small></h2><p class="profile-highlight">AI-powered medical imaging · Malaysia &amp; Southeast Asia</p><div class="bridge-profile-bio"><p>Pinghao Wang is the Director and Co-Founder of SCOVION TECHNOLOGY SDN. BHD., where he focuses on expanding and implementing AI-powered medical imaging products and solutions across Malaysia and Southeast Asia, while developing partnerships with healthcare institutions and technology stakeholders.</p><p>He holds two bachelor’s degrees: a Bachelor of Engineering in Computer Science and Technology from Sichuan University of Science and Engineering, and a Bachelor of Arts in English Education from China West Normal University. He holds a Master of Science in Security in Computing from Universiti Putra Malaysia. His research interests span machine learning, deep learning, and cybersecurity, with a particular focus on intelligent intrusion detection for high-throughput network traffic. His academic work includes research on CRINET, a deep learning architecture designed to support efficient and scalable network intrusion detection.</p><p>Prior to co-founding SCOVION, he gained experience in international key account management, technical product support, and cross-border project coordination, allowing him to work effectively at the intersection of technology development, customer requirements, and commercial execution. With a multidisciplinary background spanning computer science, AI research, English education, and international business, as well as professional proficiency in both Mandarin and English, he is committed to translating advanced AI technologies into practical, scalable, and clinically valuable healthcare solutions.</p></div><div class="bridge-profile-facts" aria-label="Pinghao Wang at a glance"><div><span>Role</span><strong>Director &amp; Co-Founder</strong></div><div><span>Sector focus</span><strong>AI Medical Imaging</strong></div><div><span>Markets</span><strong>Malaysia &amp; Southeast Asia</strong></div></div></div></article></section><section class="page-end-cta"><div class="content-shell page-end-cta-inner"><p class="eyebrow">Considering your next market?</p><h2>Let the first step be the right conversation.</h2><a href="/valued-partners-preview/contact/" class="button button-dark">Start a conversation <span aria-hidden="true">↗</span></a></div></section></main><footer class="site-footer"><div class="footer-shell"><div class="footer-lead"><p class="eyebrow light">Valued Partners</p><p class="footer-statement">The right relationship can change the trajectory of a business.</p><a href="/valued-partners-preview/contact/" class="text-link light">Enter the conversation <span aria-hidden="true">↗</span></a></div><div class="footer-columns"><div><p class="footer-label">Explore</p><a href="/valued-partners-preview/about-us/">About</a><a href="/valued-partners-preview/people/">People</a><a href="/valued-partners-preview/what-we-do/">What we do</a><a href="/valued-partners-preview/china-southeast-asia/">China &amp; ASEAN</a><a href="/valued-partners-preview/contact/">Contact</a></div><div><p class="footer-label">Singapore</p><a href="tel:+6596828652">+65 9682 8652</a><p>50 Raffles Place, #27-01</p><p>Singapore</p></div><div><p class="footer-label">Malaysia</p><a href="tel:+60162065128">+60 16 206 5128</a><p>Asia Pacific network</p></div></div></div><div class="footer-base"><p>© <!-- -->2026<!-- --> Valued Partners Pte Ltd</p><p>Company No. 200914468R</p><p>Integrity · Sustainability · Transparency · Value</p></div></footer></body></html>
+</style></head><body><a class="skip-link" href="#main-content">Skip to content</a><header class="site-header"><div class="header-shell"><a href="/valued-partners-preview/" class="brand" aria-label="Valued Partners — Home"><img class="brand-logo" src="/valued-partners-preview/images/brand/logo-dark.png" alt="Valued Partners"/></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/valued-partners-preview/about-us/">About</a><a href="/valued-partners-preview/people/">People</a><a href="/valued-partners-preview/what-we-do/">What we do</a><a href="/valued-partners-preview/china-southeast-asia/">China &amp; ASEAN</a></nav><a href="/valued-partners-preview/contact/" class="header-contact">Start a conversation <span aria-hidden="true">↗</span></a><details class="mobile-menu"><summary aria-label="Open navigation"><span></span><span></span></summary><nav aria-label="Mobile navigation"><a href="/valued-partners-preview/">Home</a><a href="/valued-partners-preview/about-us/">About</a><a href="/valued-partners-preview/people/">People</a><a href="/valued-partners-preview/what-we-do/">What we do</a><a href="/valued-partners-preview/china-southeast-asia/">China &amp; ASEAN</a><a href="/valued-partners-preview/contact/">Contact</a></nav></details></div></header><main id="main-content"><section class="bridge-hero"><div class="bridge-hero-map" aria-hidden="true"><img src="/valued-partners-preview/images/work/asia-pacific-map.webp" alt=""/></div><div class="bridge-hero-grid"></div><div class="content-shell bridge-hero-content"><p class="eyebrow light">China × ASEAN × Beyond · 中国、东盟与全球</p><h1>One trusted bridge. <em>Multiple directions.</em></h1><p class="bridge-hero-intro">We connect ambitious companies, investors, operators and innovators across China, ASEAN and the wider world—opening practical pathways for market access, strategic partnerships, capital, technology and commercial growth across industries.</p></div><div class="bridge-route-rail" aria-label="Our multiple cross-border opportunity directions"><div><span>Markets · 市场</span><strong>Entry &amp; Expansion</strong><i aria-hidden="true">↗</i></div><div><span>Partnerships · 合作</span><strong>Joint Ventures</strong><i aria-hidden="true">↗</i></div><div><span>Capital · 资本</span><strong>Investment &amp; Transactions</strong><i aria-hidden="true">↗</i></div><div><span>Industries · 产业</span><strong>Industry &amp; Innovation</strong><i aria-hidden="true">↗</i></div></div></section><section class="bridge-intro section-pad"><div class="content-shell"><div class="bridge-intro-head"><p class="eyebrow">The opportunity landscape</p><h2>Opportunity moves in more than one direction.</h2><p>Cross-border growth can begin with a new market, an investor, a technology, a strategic partner or an industry need. We connect the right people and turn the right opening into a credible route forward.</p></div><div class="bridge-path-grid"><article class="bridge-path"><span class="bridge-path-number">01</span><p class="bridge-path-route">Markets · 市场</p><h3>Enter, expand and localise with confidence.</h3><p>Whether the opportunity leads into ASEAN, China or beyond, we combine market intelligence, local context and trusted relationships to shape a practical path from entry to growth.</p><ul class="bridge-path-list" aria-label="Market opportunities"><li>Market entry</li><li>Localisation</li><li>Distribution</li></ul></article><article class="bridge-path"><span class="bridge-path-number">02</span><p class="bridge-path-route">Partnerships · 合作</p><h3>Find the right people to build with.</h3><p>We bring together operators, customers, distributors and joint venture partners whose ambitions and capabilities align—then help turn senior introductions into durable collaboration.</p><ul class="bridge-path-list" aria-label="Partnership opportunities"><li>Joint ventures</li><li>Channel partners</li><li>Senior introductions</li></ul></article><article class="bridge-path"><span class="bridge-path-number">03</span><p class="bridge-path-route">Capital · 资本</p><h3>Connect opportunity with aligned capital.</h3><p>From strategic investment and acquisitions to capital raising and partnership structures, we help credible opportunities reach decision-makers with the perspective and capacity to act.</p><ul class="bridge-path-list" aria-label="Capital opportunities"><li>Investment</li><li>M&amp;A</li><li>Capital raising</li></ul></article><article class="bridge-path"><span class="bridge-path-number">04</span><p class="bridge-path-route">Industries · 产业</p><h3>Turn sector expertise into cross-border opportunity.</h3><p>Across healthcare, AI, manufacturing, infrastructure, consumer and other sectors, we support technology transfer, industrial partnerships, commercialisation and market adoption.</p><ul class="bridge-path-list" aria-label="Industry opportunities"><li>Technology transfer</li><li>Industrial partnerships</li><li>Market adoption</li></ul></article></div></div></section><section class="bridge-partner"><div class="content-shell bridge-partner-inner"><div><p class="eyebrow light">Exclusive strategic partner</p><h2>SCOVION<span>Technology Sdn. Bhd.</span></h2></div><div class="bridge-partner-copy"><p class="lead-copy">A dedicated partnership for a wider purpose: connecting markets, capital, technology, industries and relationships across borders.</p><p>Valued Partners works exclusively with SCOVION TECHNOLOGY SDN. BHD. on this cross-border platform, combining senior relationships, commercial judgment and technology-minded, on-the-ground perspective.</p><div class="bridge-partner-mark" aria-label="Exclusive partnership"><span>Valued Partners</span><i aria-hidden="true">×</i><span>Scovion Technology Sdn. Bhd.</span></div></div></div></section><section class="bridge-profile"><article class="profile-feature"><div class="profile-feature-image"><img src="/valued-partners-preview/images/china-southeast-asia/pinghao-wang.jpg" alt="Pinghao Wang"/><span>Director &amp; Co-Founder</span></div><div class="profile-feature-copy"><p class="eyebrow">Director &amp; Co-Founder</p><h2>Pinghao Wang<small>SCOVION TECHNOLOGY SDN. BHD.</small></h2><p class="profile-highlight">AI-powered medical imaging · Malaysia &amp; Southeast Asia</p><div class="bridge-profile-bio"><p>Pinghao Wang is the Director and Co-Founder of SCOVION TECHNOLOGY SDN. BHD., where he focuses on expanding and implementing AI-powered medical imaging products and solutions across Malaysia and Southeast Asia, while developing partnerships with healthcare institutions and technology stakeholders.</p><p>He holds two bachelor’s degrees: a Bachelor of Engineering in Computer Science and Technology from Sichuan University of Science and Engineering, and a Bachelor of Arts in English Education from China West Normal University. He holds a Master of Science in Security in Computing from Universiti Putra Malaysia. His research interests span machine learning, deep learning, and cybersecurity, with a particular focus on intelligent intrusion detection for high-throughput network traffic. His academic work includes research on CRINET, a deep learning architecture designed to support efficient and scalable network intrusion detection.</p><p>Prior to co-founding SCOVION, he gained experience in international key account management, technical product support, and cross-border project coordination, allowing him to work effectively at the intersection of technology development, customer requirements, and commercial execution. With a multidisciplinary background spanning computer science, AI research, English education, and international business, as well as professional proficiency in both Mandarin and English, he is committed to translating advanced AI technologies into practical, scalable, and clinically valuable healthcare solutions.</p></div><div class="bridge-profile-facts" aria-label="Pinghao Wang at a glance"><div><span>Role</span><strong>Director &amp; Co-Founder</strong></div><div><span>Sector focus</span><strong>AI Medical Imaging</strong></div><div><span>Markets</span><strong>Malaysia &amp; Southeast Asia</strong></div></div></div></article></section><section class="page-end-cta"><div class="content-shell page-end-cta-inner"><p class="eyebrow">See an opportunity across borders?</p><h2>Bring it to the right table.</h2><a href="/valued-partners-preview/contact/" class="button button-dark">Start a conversation <span aria-hidden="true">↗</span></a></div></section></main><!--$--><!--/$--><footer class="site-footer"><div class="footer-shell"><div class="footer-lead"><p class="eyebrow light">Valued Partners</p><p class="footer-statement">The right relationship can change the trajectory of a business.</p><a href="/valued-partners-preview/contact/" class="text-link light">Enter the conversation <span aria-hidden="true">↗</span></a></div><div class="footer-columns"><div><p class="footer-label">Explore</p><a href="/valued-partners-preview/about-us/">About</a><a href="/valued-partners-preview/people/">People</a><a href="/valued-partners-preview/what-we-do/">What we do</a><a href="/valued-partners-preview/china-southeast-asia/">China &amp; ASEAN</a><a href="/valued-partners-preview/contact/">Contact</a></div><div><p class="footer-label">Singapore</p><a href="tel:+6596828652">+65 9682 8652</a><p>50 Raffles Place, #27-01</p><p>Singapore</p></div><div><p class="footer-label">Malaysia</p><a href="tel:+60162065128">+60 16 206 5128</a><p>Asia Pacific network</p></div></div></div><div class="footer-base"><p>© <!-- -->2026<!-- --> Valued Partners Pte Ltd</p><p>Company No. 200914468R</p><p>Integrity · Sustainability · Transparency · Value</p></div></footer></body></html>
