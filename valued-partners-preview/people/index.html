@@ -1,5 +1,4 @@
-<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" href="/valued-partners-preview/images/brand/logo-dark.png" as="image"/><link rel="preload" href="/valued-partners-preview/images/about/about-1.jpg" as="image"/><link rel="preload" href="/valued-partners-preview/images/people/michael-chow.webp" as="image"/>
-<style>/*! tailwindcss v4.2.1 | MIT License | https://tailwindcss.com */
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>People | Valued Partners</title><meta name="description" content="Meet the senior executives, financiers, operators and advisors behind Valued Partners across Asia Pacific and beyond."/><meta name="robots" content="noindex, nofollow, nocache"/><meta name="googlebot" content="noindex, nofollow, noimageindex"/><meta property="og:title" content="People | Valued Partners"/><meta property="og:description" content="Meet the senior executives, financiers, operators and advisors behind Valued Partners across Asia Pacific and beyond."/><meta property="og:url" content="https://www.scovion.com/valued-partners-preview/people/"/><meta property="og:type" content="website"/><meta property="og:image" content="https://www.scovion.com/valued-partners-preview/og.jpg"/><meta property="og:image:width" content="1731"/><meta property="og:image:height" content="909"/><meta property="og:image:alt" content="Valued Partners — Where experience becomes shareholder value"/><meta name="twitter:card" content="summary_large_image"/><meta name="twitter:title" content="People | Valued Partners"/><meta name="twitter:description" content="Meet the senior executives, financiers, operators and advisors behind Valued Partners across Asia Pacific and beyond."/><meta name="twitter:image" content="https://www.scovion.com/valued-partners-preview/og.jpg"/><link rel="preload" href="/valued-partners-preview/images/brand/logo-dark.png" as="image"/><link rel="preload" href="/valued-partners-preview/images/about/about-1.jpg" as="image"/><link rel="preload" href="/valued-partners-preview/images/people/michael-chow.webp" as="image"/><link rel="shortcut icon" href="/valued-partners-preview/images/brand/logo-original.webp"/><link rel="icon" href="/valued-partners-preview/images/brand/logo-original.webp"/><link rel="canonical" href="https://www.scovion.com/valued-partners-preview/people/"/><style>/*! tailwindcss v4.2.1 | MIT License | https://tailwindcss.com */
 @layer theme, base, components, utilities;
 @layer theme {
   :root, :host {
@@ -1914,6 +1913,63 @@ h2 {
   margin: 0;
   color: var(--muted);
 }
+.past-interns-note {
+  padding: 72px 0 82px;
+  border-top: 1px solid var(--line);
+  background: var(--paper-bright);
+}
+.past-interns-note-inner {
+  display: grid;
+  align-items: end;
+  grid-template-columns: minmax(260px, 0.55fr) minmax(0, 1.45fr);
+  gap: 6vw;
+}
+.past-interns-note-copy > p:last-child {
+  max-width: 470px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+}
+.past-interns-row {
+  display: grid;
+  width: min(100%, 618px);
+  justify-self: end;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+.past-intern-portrait {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1;
+  background: var(--ink-muted);
+}
+.past-intern-portrait img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1) sepia(0.08) contrast(1.08) brightness(0.82);
+  transition: filter 300ms ease, transform 400ms ease;
+}
+.past-intern-person:hover .past-intern-portrait img {
+  filter: grayscale(0.35) sepia(0.05) brightness(0.9);
+  transform: scale(1.02);
+}
+.past-intern-portrait span {
+  position: absolute;
+  right: 10px;
+  bottom: 8px;
+  color: var(--gold-bright);
+  font-size: 7px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+.past-intern-name {
+  margin: 14px 0 0;
+  font-family: var(--display);
+  font-size: clamp(18px, 1.8vw, 25px);
+  line-height: 1.05;
+}
 .contact-hero {
   position: relative;
   min-height: 760px;
@@ -2189,32 +2245,37 @@ h2 {
   z-index: 3;
   display: grid;
   border-top: 1px solid rgba(214, 183, 127, 0.28);
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 .bridge-route-rail > div {
   display: grid;
   min-height: 110px;
+  align-content: center;
   align-items: center;
-  padding: 22px 4vw;
-  grid-template-columns: auto 1fr auto;
-  gap: 24px;
+  padding: 20px clamp(20px, 2.3vw, 44px);
+  grid-template-columns: minmax(0, 1fr) auto;
+  column-gap: 14px;
+  row-gap: 8px;
 }
-.bridge-route-rail > div:first-child {
+.bridge-route-rail > div:not(:last-child) {
   border-right: 1px solid rgba(214, 183, 127, 0.28);
 }
 .bridge-route-rail span {
+  grid-column: 1 / -1;
   color: rgba(244, 240, 230, 0.5);
-  font-size: 9px;
+  font-size: 8px;
   font-weight: 700;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.13em;
   text-transform: uppercase;
 }
 .bridge-route-rail strong {
+  min-width: 0;
   color: var(--paper);
   font-family: var(--display);
-  font-size: clamp(22px, 2.2vw, 34px);
+  font-size: clamp(19px, 1.75vw, 28px);
   font-weight: 400;
   letter-spacing: -0.03em;
+  line-height: 1.05;
 }
 .bridge-route-rail i {
   color: var(--gold-bright);
@@ -2247,14 +2308,14 @@ h2 {
 }
 .bridge-path {
   position: relative;
-  min-height: 510px;
+  min-height: 460px;
   padding: 42px;
   border-right: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
 }
 .bridge-path-number {
   display: block;
-  margin-bottom: 95px;
+  margin-bottom: 68px;
   color: var(--oxblood);
   font-size: 10px;
   letter-spacing: 0.16em;
@@ -2564,6 +2625,23 @@ h2 {
   .bridge-hero-map {
     left: 0;
   }
+  .bridge-hero-content {
+    padding-bottom: 260px;
+  }
+  .bridge-route-rail {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .bridge-route-rail > div {
+    min-height: 96px;
+    padding: 16px 24px;
+    border-right: 0;
+  }
+  .bridge-route-rail > div:nth-child(odd) {
+    border-right: 1px solid rgba(214, 183, 127, 0.28);
+  }
+  .bridge-route-rail > div:nth-child(-n + 2) {
+    border-bottom: 1px solid rgba(214, 183, 127, 0.28);
+  }
   .bridge-path-grid {
     grid-template-columns: 1fr;
   }
@@ -2744,6 +2822,13 @@ h2 {
   }
   .network-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  .past-interns-note-inner {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+  .past-interns-row {
+    justify-self: start;
   }
   .people-principle blockquote {
     max-width: 800px;
@@ -3003,6 +3088,22 @@ h2 {
   .network-image {
     height: 380px;
   }
+  .past-interns-note {
+    padding: 58px 0 64px;
+  }
+  .past-interns-row {
+    gap: 10px;
+  }
+  .past-intern-portrait span {
+    right: 6px;
+    bottom: 5px;
+    font-size: 6px;
+    letter-spacing: 0.06em;
+  }
+  .past-intern-name {
+    margin-top: 10px;
+    font-size: 17px;
+  }
   .people-principle blockquote {
     font-size: 52px;
   }
@@ -3038,7 +3139,7 @@ h2 {
   }
   .bridge-hero-content {
     justify-content: flex-start;
-    padding: 154px 0 248px;
+    padding: 154px 0 238px;
   }
   .bridge-hero h1 {
     font-size: clamp(52px, 17vw, 88px);
@@ -3051,15 +3152,21 @@ h2 {
     font-size: 15px;
   }
   .bridge-route-rail {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .bridge-route-rail > div {
-    min-height: 82px;
-    padding: 14px 18px;
+    min-height: 88px;
+    padding: 13px 15px;
   }
-  .bridge-route-rail > div:first-child {
-    border-right: 0;
-    border-bottom: 1px solid rgba(214, 183, 127, 0.28);
+  .bridge-route-rail span {
+    font-size: 7px;
+    letter-spacing: 0.08em;
+  }
+  .bridge-route-rail strong {
+    font-size: clamp(16px, 4.7vw, 20px);
+  }
+  .bridge-route-rail i {
+    font-size: 22px;
   }
   .bridge-intro-head {
     margin-bottom: 58px;
@@ -3109,4 +3216,4 @@ h2 {
     transition-duration: 0.01ms !important;
   }
 }
-</style><title>People | Valued Partners</title><meta name="description" content="Meet the senior executives, financiers, operators and advisors behind Valued Partners across Asia Pacific and beyond."><meta name="robots" content="noindex, nofollow, nocache"><meta name="googlebot" content="noindex, nofollow, noimageindex"><meta property="og:title" content="Valued Partners | The Corporate Doctors"><meta property="og:description" content="Senior corporate advisors connecting exceptional businesses with capital, markets and strategic partners across Asia Pacific."><meta property="og:url" content="https://www.scovion.com/valued-partners-preview/people/"><meta property="og:site_name" content="Valued Partners"><meta property="og:type" content="website"><meta property="og:image" content="https://www.scovion.com/valued-partners-preview/og.jpg"><meta property="og:image:width" content="1731"><meta property="og:image:height" content="909"><meta property="og:image:alt" content="Valued Partners — Where experience becomes shareholder value"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Valued Partners | The Corporate Doctors"><meta name="twitter:description" content="Senior corporate advisors connecting exceptional businesses with capital, markets and strategic partners across Asia Pacific."><meta name="twitter:image" content="https://www.scovion.com/valued-partners-preview/og.jpg"><link rel="icon" href="/valued-partners-preview/images/brand/logo-original.webp"></head><body><a class="skip-link" href="#main-content">Skip to content</a><header class="site-header"><div class="header-shell"><a href="/valued-partners-preview/" class="brand" aria-label="Valued Partners — Home"><img class="brand-logo" src="/valued-partners-preview/images/brand/logo-dark.png" alt="Valued Partners"/></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/valued-partners-preview/about-us/">About</a><a href="/valued-partners-preview/people/">People</a><a href="/valued-partners-preview/what-we-do/">What we do</a><a href="/valued-partners-preview/china-southeast-asia/">China &amp; ASEAN</a></nav><a href="/valued-partners-preview/contact/" class="header-contact">Start a conversation <span aria-hidden="true">↗</span></a><details class="mobile-menu"><summary aria-label="Open navigation"><span></span><span></span></summary><nav aria-label="Mobile navigation"><a href="/valued-partners-preview/">Home</a><a href="/valued-partners-preview/about-us/">About</a><a href="/valued-partners-preview/people/">People</a><a href="/valued-partners-preview/what-we-do/">What we do</a><a href="/valued-partners-preview/china-southeast-asia/">China &amp; ASEAN</a><a href="/valued-partners-preview/contact/">Contact</a></nav></details></div></header><main id="main-content"><section class="page-hero has-image"><div class="page-hero-media" aria-hidden="false"><img src="/valued-partners-preview/images/about/about-1.jpg" alt="Valued Partners and senior industry figures"/></div><div class="page-hero-shade"></div><div class="page-hero-content content-shell"><p class="eyebrow light">Our people</p><h1>A senior table. <em>Built on experience.</em></h1><div class="page-hero-lower"><p class="page-hero-intro">Corporate operators, financiers and advisors who have built businesses, served on boards, navigated public institutions and opened markets across the world.</p><p class="page-hero-detail">One partnership · Many industries · Global relationships</p></div></div></section><section class="people-intro section-pad"><div class="content-shell people-intro-grid"><p class="eyebrow">The principal partners</p><h2>Advice shaped by having carried the responsibility.</h2><p class="lead-copy">Our principal partners bring decades of hands-on leadership across international banking, corporate finance, technology, telecommunications and cross-border business operations.</p></div></section><section class="principal-profiles"><article class="profile-feature" id="michael-chow"><div class="profile-feature-image"><img src="/valued-partners-preview/images/people/michael-chow.webp" alt="Michael Chow" loading="eager"/><span>01</span></div><div class="profile-feature-copy"><p class="eyebrow">Founder &amp; Managing Partner<!-- --> <!-- -->· Malaysia</p><h2>Michael Chow<small>ACA</small></h2><p class="profile-highlight">40+ years<!-- --> of experience</p><p>An Australian Chartered Accountant with more than 40 years of corporate leadership experience across US and Asian multinationals, Michael has led Asia-Pacific businesses and managed foreign joint ventures. He has served on private and listed-company boards in Hong Kong and Singapore, advised prominent Asian corporations, and built relationships across financial institutions, government agencies and private capital. IT Asia named him among Asia&#x27;s 50 Top Guns in 2000.</p></div></article><article class="profile-feature" id="sanjaya-de-silva"><div class="profile-feature-image"><img src="/valued-partners-preview/images/people/sanjaya-de-silva.webp" alt="Sanjaya De Silva" loading="lazy"/><span>02</span></div><div class="profile-feature-copy"><p class="eyebrow">Managing Partner<!-- --> <!-- -->· Singapore</p><h2>Sanjaya De Silva<small>ACA, Singapore CPA, MBA, BSc (Economics)</small></h2><p class="profile-highlight">30+ years<!-- --> of experience</p><p>A UK Chartered Accountant with more than 30 years of largely international experience in Asia Pacific, Sanjaya specialises in corporate finance, risk management, investment evaluation and bid preparation. His work spans IPOs, due diligence, restructuring, government privatisations and regional change programmes, particularly in FMCG, manufacturing and distribution. He has served on boards in Singapore, Malaysia, Indonesia and Hong Kong.</p></div></article><article class="profile-feature" id="paul-barker"><div class="profile-feature-image"><img src="/valued-partners-preview/images/people/paul-barker.webp" alt="Paul Barker" loading="lazy"/><span>03</span></div><div class="profile-feature-copy"><p class="eyebrow">Managing Partner<!-- --> <!-- -->· Australia</p><h2>Paul Barker<small>FCA, BBus</small></h2><p class="profile-highlight">35+ years<!-- --> of experience</p><p>An Australian Chartered Accountant with more than 35 years of international banking and business experience across the UK, Hong Kong, Singapore and Australia, Paul brings deep knowledge of Asian financial markets. He has worked with major institutional clients, boards, government agencies and public-sector organisations across Asia, Europe and North America. His record includes building businesses from the ground up, improving profitability and leading culturally diverse teams through growth and change.</p></div></article></section><section class="network-section section-pad dark-section"><div class="content-shell"><div class="section-heading split-heading"><div><p class="eyebrow light">The wider network</p><h2>Deep local context. Shared standards.</h2></div><p>Associates and specialists extend the partnership’s reach across China, Indonesia, India, Sri Lanka, Malaysia and beyond.</p></div><div class="network-grid"><details class="network-card" id="stewart-lee"><summary><div class="network-image"><img src="/valued-partners-preview/images/people/stewart-lee.webp" alt="Stewart Lee" loading="lazy"/><span>04</span></div><div class="network-title"><h3>Stewart Lee<small>MBA</small></h3><p>Associate<!-- --> · Shanghai, China</p></div><span class="network-toggle" aria-hidden="true">+</span></summary><div class="network-bio"><p class="profile-highlight">35+ years<!-- --> of experience</p><p>Stewart has more than 35 years of multinational corporate experience across Greater China and Australia. He has led cross-border transactions, negotiated and established joint ventures, and developed new business and investment opportunities in China for companies from Germany, Hong Kong and the US. His network spans established businesses and regulators throughout China.</p></div></details><details class="network-card" id="handoko-tanuadji"><summary><div class="network-image"><img src="/valued-partners-preview/images/people/handoko-tanuadji.webp" alt="Handoko A. Tanuadji" loading="lazy"/><span>05</span></div><div class="network-title"><h3>Handoko A. Tanuadji<small>MBA</small></h3><p>Associate<!-- --> · Jakarta, Indonesia</p></div><span class="network-toggle" aria-hidden="true">+</span></summary><div class="network-bio"><p class="profile-highlight">35+ years<!-- --> of experience</p><p>Handoko brings more than 35 years of experience in Indonesian IT and telecommunications, including senior roles with Multipolar Corporation, Natrindo, KabelVision, LinkNet and Multifiling Mitra Indonesia. He founded or co-founded STIKOM University, Anabatic Technology, Master System Infotama and GlobalFon International, and formerly chaired KPSG. He supports Valued Partners&#x27; clients in Indonesia and Indonesian investors abroad, drawing on recognised strength in government affairs and the country&#x27;s business community.</p></div></details><details class="network-card" id="satwant-singh"><summary><div class="network-image"><img src="/valued-partners-preview/images/people/satwant-singh.jpg" alt="Satwant Singh" loading="lazy"/><span>06</span></div><div class="network-title"><h3>Satwant Singh<small>BA (Hons)</small></h3><p>Associate<!-- --> · New Delhi, India</p></div><span class="network-toggle" aria-hidden="true">+</span></summary><div class="network-bio"><p class="profile-highlight">45+ years<!-- --> of experience</p><p>Satwant has more than 45 years of corporate experience with a conglomerate and in advising or partnering with multinationals in India&#x27;s IT, telecommunications and healthcare sectors. He has deep experience in foreign joint ventures, sales, market development, board service and engagement with government agencies and the public sector. His relationships span businesses, high-net-worth individuals and regulators in India.</p></div></details><details class="network-card" id="ashley-rocque"><summary><div class="network-image"><img src="/valued-partners-preview/images/people/ashley-rocque.webp" alt="Ashley Rocque" loading="lazy"/><span>07</span></div><div class="network-title"><h3>Ashley Rocque<small>BSc</small></h3><p>Associate<!-- --> · Bangalore, India</p></div><span class="network-toggle" aria-hidden="true">+</span></summary><div class="network-bio"><p class="profile-highlight">32+ years<!-- --> of experience</p><p>Ashley has more than 32 years of experience centred on business development, real estate and project management. His work at Colliers International in Bangalore included advisory and transaction services for major multinationals, Indian groups, developers, private investors and the Government of Karnataka. He advises corporations and financial institutions on restructuring linked to real-estate assets and supports clients pursuing investments in India.</p></div></details><details class="network-card" id="shahid-sangani"><summary><div class="network-image"><img src="/valued-partners-preview/images/people/shahid-sangani.webp" alt="Shahid Sangani" loading="lazy"/><span>08</span></div><div class="network-title"><h3>Shahid Sangani<small>Attorney at Law</small></h3><p>Associate<!-- --> · Sri Lanka</p></div><span class="network-toggle" aria-hidden="true">+</span></summary><div class="network-bio"><p class="profile-highlight">30+ years<!-- --> of experience</p><p>Shahid has more than 30 years of corporate management experience, principally in apparel manufacturing and exports in Sri Lanka and Bangladesh. His expertise covers general management, human resources, manufacturing and senior-level relationships with global multinationals, complemented by service on public-company boards. His network extends across Sri Lanka, Pakistan, Bangladesh and the UAE.</p></div></details><details class="network-card" id="francis-yap"><summary><div class="network-image"><img src="/valued-partners-preview/images/people/francis-yap.webp" alt="Dr Francis Yap" loading="lazy"/><span>09</span></div><div class="network-title"><h3>Dr Francis Yap<small>MD, MBA</small></h3><p>Healthcare Advisor<!-- --> · Malaysia</p></div><span class="network-toggle" aria-hidden="true">+</span></summary><div class="network-bio"><p class="profile-highlight">35+ years<!-- --> of experience</p><p>A qualified medical doctor with more than 35 years of healthcare management experience in Malaysia and Singapore, Dr Yap helped establish Columbia Asia&#x27;s purpose-built hospital in Puchong. He served as the hospital&#x27;s General Manager and as Vice-President of Business Development for the Columbia Asia hospital group. His wider experience spans general management, business development, pharmaceuticals, healthcare technology, advisory work and board service.</p></div></details><details class="network-card" id="stanley-lee"><summary><div class="network-image"><img src="/valued-partners-preview/images/people/stanley-lee.webp" alt="Y.C. Lee (Stanley)" loading="lazy"/><span>10</span></div><div class="network-title"><h3>Y.C. Lee (Stanley)<small>Bachelor&#x27;s degree with Honours in UK Law</small></h3><p>Business Development Manager<!-- --> · Malaysia</p></div><span class="network-toggle" aria-hidden="true">+</span></summary><div class="network-bio"><p>Legally trained and strongly field-oriented, Stanley works across critical analysis, due diligence, market research, business development, operations planning and event management. He also works in CNC metal manufacturing, with a focus on semi-precision products, and maintains a keen interest in emerging technologies and continuous professional development.</p></div></details><details class="network-card" id="sss-sew"><summary><div class="network-image"><img src="/valued-partners-preview/images/people/sss-ew.webp" alt="S.S.Sew" loading="lazy"/><span>11</span></div><div class="network-title"><h3>S.S.Sew<small>Bachelor (Honours) in E-Commerce</small></h3><p>Business Development<!-- --> · Malaysia</p></div><span class="network-toggle" aria-hidden="true">+</span></summary><div class="network-bio"><p>A graduate of Southwestern University of Finance and Economics in Chengdu, S.S.Sew focuses on corporate-structure analysis and company financial evaluation. Having studied and lived abroad from the age of 16, Sew brings an independent and efficient approach to the work.</p></div></details><details class="network-card" id="vincent-tan"><summary><div class="network-image"><img src="/valued-partners-preview/images/people/vincent-tan.webp" alt="Vincent Tan" loading="lazy"/><span>12</span></div><div class="network-title"><h3>Vincent Tan<small>BCom (Corporate Finance &amp; Accounting), Master of Finance and Business Economics, BMin, MTS</small></h3><p>Director of Business Analysis &amp; Development</p></div><span class="network-toggle" aria-hidden="true">+</span></summary><div class="network-bio"><p>Vincent develops merger and acquisition proposals, tests the practicality of desired outcomes and supports strategic negotiation, corporate strategy and business transformation. Educated in corporate finance, accounting, business economics and theology, he is motivated by client achievement and by bringing people together to turn discussion into action.</p></div></details></div></div></section><section class="people-principle warm-section"><div class="content-shell people-principle-inner"><p class="eyebrow">What connects us</p><blockquote>“Experience earns a seat at the table. Integrity keeps it.”</blockquote><p>We look for the same qualities in one another that we seek in every client and partner: honesty, transparency, sustainability and the determination to create real value.</p></div></section><section class="page-end-cta"><div class="content-shell page-end-cta-inner"><p class="eyebrow">A mandate worth discussing?</p><h2>Put the right experience around it.</h2><a href="/valued-partners-preview/contact/" class="button button-dark">Start a conversation <span aria-hidden="true">↗</span></a></div></section></main><footer class="site-footer"><div class="footer-shell"><div class="footer-lead"><p class="eyebrow light">Valued Partners</p><p class="footer-statement">The right relationship can change the trajectory of a business.</p><a href="/valued-partners-preview/contact/" class="text-link light">Enter the conversation <span aria-hidden="true">↗</span></a></div><div class="footer-columns"><div><p class="footer-label">Explore</p><a href="/valued-partners-preview/about-us/">About</a><a href="/valued-partners-preview/people/">People</a><a href="/valued-partners-preview/what-we-do/">What we do</a><a href="/valued-partners-preview/china-southeast-asia/">China &amp; ASEAN</a><a href="/valued-partners-preview/contact/">Contact</a></div><div><p class="footer-label">Singapore</p><a href="tel:+6596828652">+65 9682 8652</a><p>50 Raffles Place, #27-01</p><p>Singapore</p></div><div><p class="footer-label">Malaysia</p><a href="tel:+60162065128">+60 16 206 5128</a><p>Asia Pacific network</p></div></div></div><div class="footer-base"><p>© <!-- -->2026<!-- --> Valued Partners Pte Ltd</p><p>Company No. 200914468R</p><p>Integrity · Sustainability · Transparency · Value</p></div></footer><div hidden=""><!--$?--><template id="B:0"></template></div><div hidden id="S:0"><div hidden=""></div></div></body></html>
+</style></head><body><a class="skip-link" href="#main-content">Skip to content</a><header class="site-header"><div class="header-shell"><a href="/valued-partners-preview/" class="brand" aria-label="Valued Partners — Home"><img class="brand-logo" src="/valued-partners-preview/images/brand/logo-dark.png" alt="Valued Partners"/></a><nav class="desktop-nav" aria-label="Primary navigation"><a href="/valued-partners-preview/about-us/">About</a><a href="/valued-partners-preview/people/">People</a><a href="/valued-partners-preview/what-we-do/">What we do</a><a href="/valued-partners-preview/china-southeast-asia/">China &amp; ASEAN</a></nav><a href="/valued-partners-preview/contact/" class="header-contact">Start a conversation <span aria-hidden="true">↗</span></a><details class="mobile-menu"><summary aria-label="Open navigation"><span></span><span></span></summary><nav aria-label="Mobile navigation"><a href="/valued-partners-preview/">Home</a><a href="/valued-partners-preview/about-us/">About</a><a href="/valued-partners-preview/people/">People</a><a href="/valued-partners-preview/what-we-do/">What we do</a><a href="/valued-partners-preview/china-southeast-asia/">China &amp; ASEAN</a><a href="/valued-partners-preview/contact/">Contact</a></nav></details></div></header><main id="main-content"><section class="page-hero has-image"><div class="page-hero-media" aria-hidden="false"><img src="/valued-partners-preview/images/about/about-1.jpg" alt="Valued Partners and senior industry figures"/></div><div class="page-hero-shade"></div><div class="page-hero-content content-shell"><p class="eyebrow light">Our people</p><h1>A senior table. <em>Built on experience.</em></h1><div class="page-hero-lower"><p class="page-hero-intro">Corporate operators, financiers and advisors who have built businesses, served on boards, navigated public institutions and opened markets across the world.</p><p class="page-hero-detail">One partnership · Many industries · Global relationships</p></div></div></section><section class="people-intro section-pad"><div class="content-shell people-intro-grid"><p class="eyebrow">The principal partners</p><h2>Advice shaped by having carried the responsibility.</h2><p class="lead-copy">Our principal partners bring decades of hands-on leadership across international banking, corporate finance, technology, telecommunications and cross-border business operations.</p></div></section><section class="principal-profiles"><article class="profile-feature" id="michael-chow"><div class="profile-feature-image"><img src="/valued-partners-preview/images/people/michael-chow.webp" alt="Michael Chow" loading="eager"/><span>01</span></div><div class="profile-feature-copy"><p class="eyebrow">Founder &amp; Managing Partner<!-- --> <!-- -->· Malaysia</p><h2>Michael Chow<small>ACA</small></h2><p class="profile-highlight">40+ years<!-- --> of experience</p><p>An Australian Chartered Accountant with more than 40 years of corporate leadership experience across US and Asian multinationals, Michael has led Asia-Pacific businesses and managed foreign joint ventures. He has served on private and listed-company boards in Hong Kong and Singapore, advised prominent Asian corporations, and built relationships across financial institutions, government agencies and private capital. IT Asia named him among Asia&#x27;s 50 Top Guns in 2000.</p></div></article><article class="profile-feature" id="sanjaya-de-silva"><div class="profile-feature-image"><img src="/valued-partners-preview/images/people/sanjaya-de-silva.webp" alt="Sanjaya De Silva" loading="lazy"/><span>02</span></div><div class="profile-feature-copy"><p class="eyebrow">Managing Partner<!-- --> <!-- -->· Singapore</p><h2>Sanjaya De Silva<small>ACA, Singapore CPA, MBA, BSc (Economics)</small></h2><p class="profile-highlight">30+ years<!-- --> of experience</p><p>A UK Chartered Accountant with more than 30 years of largely international experience in Asia Pacific, Sanjaya specialises in corporate finance, risk management, investment evaluation and bid preparation. His work spans IPOs, due diligence, restructuring, government privatisations and regional change programmes, particularly in FMCG, manufacturing and distribution. He has served on boards in Singapore, Malaysia, Indonesia and Hong Kong.</p></div></article><article class="profile-feature" id="paul-barker"><div class="profile-feature-image"><img src="/valued-partners-preview/images/people/paul-barker.webp" alt="Paul Barker" loading="lazy"/><span>03</span></div><div class="profile-feature-copy"><p class="eyebrow">Managing Partner<!-- --> <!-- -->· Australia</p><h2>Paul Barker<small>FCA, BBus</small></h2><p class="profile-highlight">35+ years<!-- --> of experience</p><p>An Australian Chartered Accountant with more than 35 years of international banking and business experience across the UK, Hong Kong, Singapore and Australia, Paul brings deep knowledge of Asian financial markets. He has worked with major institutional clients, boards, government agencies and public-sector organisations across Asia, Europe and North America. His record includes building businesses from the ground up, improving profitability and leading culturally diverse teams through growth and change.</p></div></article></section><section class="network-section section-pad dark-section"><div class="content-shell"><div class="section-heading split-heading"><div><p class="eyebrow light">The wider network</p><h2>Deep local context. Shared standards.</h2></div><p>Associates and specialists extend the partnership’s reach across China, Indonesia, India, Sri Lanka, Malaysia and beyond.</p></div><div class="network-grid"><details class="network-card" id="stewart-lee"><summary><div class="network-image"><img src="/valued-partners-preview/images/people/stewart-lee.webp" alt="Stewart Lee" loading="lazy"/><span>04</span></div><div class="network-title"><h3>Stewart Lee<small>MBA</small></h3><p>Associate<!-- --> · Shanghai, China</p></div><span class="network-toggle" aria-hidden="true">+</span></summary><div class="network-bio"><p class="profile-highlight">35+ years<!-- --> of experience</p><p>Stewart has more than 35 years of multinational corporate experience across Greater China and Australia. He has led cross-border transactions, negotiated and established joint ventures, and developed new business and investment opportunities in China for companies from Germany, Hong Kong and the US. His network spans established businesses and regulators throughout China.</p></div></details><details class="network-card" id="handoko-tanuadji"><summary><div class="network-image"><img src="/valued-partners-preview/images/people/handoko-tanuadji.webp" alt="Handoko A. Tanuadji" loading="lazy"/><span>05</span></div><div class="network-title"><h3>Handoko A. Tanuadji<small>MBA</small></h3><p>Associate<!-- --> · Jakarta, Indonesia</p></div><span class="network-toggle" aria-hidden="true">+</span></summary><div class="network-bio"><p class="profile-highlight">35+ years<!-- --> of experience</p><p>Handoko brings more than 35 years of experience in Indonesian IT and telecommunications, including senior roles with Multipolar Corporation, Natrindo, KabelVision, LinkNet and Multifiling Mitra Indonesia. He founded or co-founded STIKOM University, Anabatic Technology, Master System Infotama and GlobalFon International, and formerly chaired KPSG. He supports Valued Partners&#x27; clients in Indonesia and Indonesian investors abroad, drawing on recognised strength in government affairs and the country&#x27;s business community.</p></div></details><details class="network-card" id="satwant-singh"><summary><div class="network-image"><img src="/valued-partners-preview/images/people/satwant-singh.jpg" alt="Satwant Singh" loading="lazy"/><span>06</span></div><div class="network-title"><h3>Satwant Singh<small>BA (Hons)</small></h3><p>Associate<!-- --> · New Delhi, India</p></div><span class="network-toggle" aria-hidden="true">+</span></summary><div class="network-bio"><p class="profile-highlight">45+ years<!-- --> of experience</p><p>Satwant has more than 45 years of corporate experience with a conglomerate and in advising or partnering with multinationals in India&#x27;s IT, telecommunications and healthcare sectors. He has deep experience in foreign joint ventures, sales, market development, board service and engagement with government agencies and the public sector. His relationships span businesses, high-net-worth individuals and regulators in India.</p></div></details><details class="network-card" id="ashley-rocque"><summary><div class="network-image"><img src="/valued-partners-preview/images/people/ashley-rocque.webp" alt="Ashley Rocque" loading="lazy"/><span>07</span></div><div class="network-title"><h3>Ashley Rocque<small>BSc</small></h3><p>Associate<!-- --> · Bangalore, India</p></div><span class="network-toggle" aria-hidden="true">+</span></summary><div class="network-bio"><p class="profile-highlight">32+ years<!-- --> of experience</p><p>Ashley has more than 32 years of experience centred on business development, real estate and project management. His work at Colliers International in Bangalore included advisory and transaction services for major multinationals, Indian groups, developers, private investors and the Government of Karnataka. He advises corporations and financial institutions on restructuring linked to real-estate assets and supports clients pursuing investments in India.</p></div></details><details class="network-card" id="shahid-sangani"><summary><div class="network-image"><img src="/valued-partners-preview/images/people/shahid-sangani.webp" alt="Shahid Sangani" loading="lazy"/><span>08</span></div><div class="network-title"><h3>Shahid Sangani<small>Attorney at Law</small></h3><p>Associate<!-- --> · Sri Lanka</p></div><span class="network-toggle" aria-hidden="true">+</span></summary><div class="network-bio"><p class="profile-highlight">30+ years<!-- --> of experience</p><p>Shahid has more than 30 years of corporate management experience, principally in apparel manufacturing and exports in Sri Lanka and Bangladesh. His expertise covers general management, human resources, manufacturing and senior-level relationships with global multinationals, complemented by service on public-company boards. His network extends across Sri Lanka, Pakistan, Bangladesh and the UAE.</p></div></details><details class="network-card" id="francis-yap"><summary><div class="network-image"><img src="/valued-partners-preview/images/people/francis-yap.webp" alt="Dr Francis Yap" loading="lazy"/><span>09</span></div><div class="network-title"><h3>Dr Francis Yap<small>MD, MBA</small></h3><p>Healthcare Advisor<!-- --> · Malaysia</p></div><span class="network-toggle" aria-hidden="true">+</span></summary><div class="network-bio"><p class="profile-highlight">35+ years<!-- --> of experience</p><p>A qualified medical doctor with more than 35 years of healthcare management experience in Malaysia and Singapore, Dr Yap helped establish Columbia Asia&#x27;s purpose-built hospital in Puchong. He served as the hospital&#x27;s General Manager and as Vice-President of Business Development for the Columbia Asia hospital group. His wider experience spans general management, business development, pharmaceuticals, healthcare technology, advisory work and board service.</p></div></details></div></div></section><section class="people-principle warm-section"><div class="content-shell people-principle-inner"><p class="eyebrow">What connects us</p><blockquote>“Experience earns a seat at the table. Integrity keeps it.”</blockquote><p>We look for the same qualities in one another that we seek in every client and partner: honesty, transparency, sustainability and the determination to create real value.</p></div></section><aside class="past-interns-note" aria-labelledby="past-interns-title"><div class="content-shell past-interns-note-inner"><div class="past-interns-note-copy"><p class="eyebrow" id="past-interns-title">Previous Interns</p><p>Stanley, Sew and Vincent previously contributed to Valued Partners as interns. They are recognised here as part of our journey and are no longer active with VP.</p></div><div class="past-interns-row"><div class="past-intern-person" id="stanley-lee"><div class="past-intern-portrait"><img src="/valued-partners-preview/images/people/stanley-lee.webp" alt="Y.C. Lee (Stanley)" loading="lazy"/><span>Previous Intern</span></div><p class="past-intern-name">Y.C. Lee (Stanley)</p></div><div class="past-intern-person" id="sss-sew"><div class="past-intern-portrait"><img src="/valued-partners-preview/images/people/sss-ew.webp" alt="S.S.Sew" loading="lazy"/><span>Previous Intern</span></div><p class="past-intern-name">S.S.Sew</p></div><div class="past-intern-person" id="vincent-tan"><div class="past-intern-portrait"><img src="/valued-partners-preview/images/people/vincent-tan.webp" alt="Vincent Tan" loading="lazy"/><span>Previous Intern</span></div><p class="past-intern-name">Vincent Tan</p></div></div></div></aside><section class="page-end-cta"><div class="content-shell page-end-cta-inner"><p class="eyebrow">A mandate worth discussing?</p><h2>Put the right experience around it.</h2><a href="/valued-partners-preview/contact/" class="button button-dark">Start a conversation <span aria-hidden="true">↗</span></a></div></section></main><!--$--><!--/$--><footer class="site-footer"><div class="footer-shell"><div class="footer-lead"><p class="eyebrow light">Valued Partners</p><p class="footer-statement">The right relationship can change the trajectory of a business.</p><a href="/valued-partners-preview/contact/" class="text-link light">Enter the conversation <span aria-hidden="true">↗</span></a></div><div class="footer-columns"><div><p class="footer-label">Explore</p><a href="/valued-partners-preview/about-us/">About</a><a href="/valued-partners-preview/people/">People</a><a href="/valued-partners-preview/what-we-do/">What we do</a><a href="/valued-partners-preview/china-southeast-asia/">China &amp; ASEAN</a><a href="/valued-partners-preview/contact/">Contact</a></div><div><p class="footer-label">Singapore</p><a href="tel:+6596828652">+65 9682 8652</a><p>50 Raffles Place, #27-01</p><p>Singapore</p></div><div><p class="footer-label">Malaysia</p><a href="tel:+60162065128">+60 16 206 5128</a><p>Asia Pacific network</p></div></div></div><div class="footer-base"><p>© <!-- -->2026<!-- --> Valued Partners Pte Ltd</p><p>Company No. 200914468R</p><p>Integrity · Sustainability · Transparency · Value</p></div></footer></body></html>
