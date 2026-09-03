@@ -492,16 +492,16 @@
 
 .partner-network-layout {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(0, .92fr) minmax(380px, .72fr);
   grid-template-areas:
-    "intro"
-    "logos"
-    "routes";
+    "intro profile"
+    "routes routes";
+  column-gap: clamp(44px, 5vw, 70px);
   row-gap: clamp(42px, 5vw, 64px);
   align-items: start;
 }
 
-.partner-network-copy { grid-area: intro; max-width: 780px; padding-top: 4px; }
+.partner-network-copy { grid-area: intro; padding-top: 4px; }
 .partner-network-copy .eyebrow { color: var(--mint); }
 
 .partner-network-copy h2 {
@@ -524,19 +524,38 @@
 :lang(ms) .partner-network-copy h2 { font-size: clamp(36px, 3.35vw, 44px); line-height: 1.06; }
 :lang(th) .partner-network-copy h2 { font-size: clamp(34px, 3.2vw, 42px); line-height: 1.14; }
 
-.partner-network-logos {
-  grid-area: logos;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 16px;
+.partner-feature-stack {
+  grid-area: profile;
+  min-width: 0;
+  display: grid;
+  gap: 14px;
 }
 
-.partner-network-logos .partner-logo-item {
-  aspect-ratio: 16 / 10;
-  border-color: #8ba4b638;
+.partner-profile-card {
+  overflow: hidden;
+  border: 1px solid #8ba4b638;
+  border-radius: 16px;
+  background: #fff;
   box-shadow: 0 28px 70px #0000002b;
 }
 
-.partner-network-logos .partner-logo-item img { max-width: calc(100% - 80px); max-height: calc(100% - 80px); }
+.partner-logo-shell {
+  min-height: 250px;
+  display: grid;
+  place-items: center;
+  padding: 38px clamp(30px, 5vw, 68px);
+  background: #f1f3f4;
+}
+
+.partner-logo-shell img { display: block; width: 100%; height: auto; }
+.partner-profile-copy { padding: 25px 28px 28px; }
+.partner-profile-copy > span { color: #0966df; font-size: 11px; font-weight: 750; letter-spacing: .1em; text-transform: uppercase; }
+.partner-profile-copy h3 { margin: 9px 0 8px; color: #102033; font-size: clamp(27px, 2.5vw, 34px); line-height: 1.08; letter-spacing: -.035em; }
+.partner-profile-copy p { margin: 0; color: #52677c; font-size: 14px; line-height: 1.65; }
+
+.about-partner-secondary { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.about-partner-secondary .partner-logo-item { aspect-ratio: 3 / 2; border-color: #8ba4b638; box-shadow: 0 20px 46px #0002; }
+.about-partner-secondary .partner-logo-item img { max-width: calc(100% - 36px); max-height: calc(100% - 36px); }
 
 .partner-route-grid {
   grid-area: routes;
@@ -701,7 +720,14 @@
 :lang(th) .partner-support-heading h2 { font-size: clamp(34px, 3.3vw, 45px); line-height: 1.14; letter-spacing: 0; }
 
 @media (max-width: 900px) {
-  .partner-network-layout { gap: 38px; }
+  .partner-network-layout {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "intro"
+      "profile"
+      "routes";
+    gap: 38px;
+  }
   .partner-network-copy h2 { max-width: 720px; }
   .partner-support-heading { grid-template-columns: 1fr; gap: 16px; }
   .partner-support-heading h2 { max-width: 760px; }
@@ -715,16 +741,10 @@
 
 @media (max-width: 560px) {
   .partner-network-section { scroll-margin-top: 64px; }
-  .partner-network-logos {
-    display: flex;
-    gap: 12px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scrollbar-width: none;
-  }
-  .partner-network-logos::-webkit-scrollbar { display: none; }
-  .partner-network-logos .partner-logo-item { flex: 0 0 min(78vw, 310px); scroll-snap-align: start; }
-  .partner-network-logos .partner-logo-item img { max-width: calc(100% - 56px); max-height: calc(100% - 56px); }
+  .partner-logo-shell { min-height: 190px; padding: 28px 22px; }
+  .partner-profile-copy { padding: 22px; }
+  .about-partner-secondary { gap: 10px; }
+  .about-partner-secondary .partner-logo-item img { max-width: calc(100% - 28px); max-height: calc(100% - 28px); }
   .partner-route { padding: 25px 23px 27px; }
   .partner-route-top { margin-bottom: 28px; }
   .partner-route-top b { letter-spacing: .04em; }
