@@ -8,7 +8,7 @@
   <link rel="icon" type="image/png" href="assets/scovion-logo-mark.png">
   <link rel="apple-touch-icon" href="assets/scovion-logo-mark.png">
   <link rel="stylesheet" href="styles.css?v=2.2.1">
-  <link rel="stylesheet" href="product-detail.css?v=2.4.0">
+  <link rel="stylesheet" href="product-detail.css?v=2.4.1">
 </head>
 <body class="product-detail-page">
   <header class="container nav site-header">
@@ -86,6 +86,18 @@
       </div>
     </section>
 
+    <div id="product-atmosphere" class="detail-atmosphere" hidden>
+      <div class="container">
+        <figure id="product-atmosphere-frame" class="detail-atmosphere-frame fit-cover">
+          <picture>
+            <source id="product-atmosphere-mobile-source" media="(max-width: 780px)">
+            <img id="product-atmosphere-image" width="1672" height="941" alt="" loading="lazy" decoding="async">
+          </picture>
+        </figure>
+        <p class="detail-atmosphere-origin" data-product-ui="visualNotice">Image for reference only.</p>
+      </div>
+    </div>
+
     <section class="workflow-band">
       <div class="container detail-section">
         <div class="detail-heading">
@@ -128,7 +140,7 @@
   </footer>
   <script src="main.js?v=1.12.1"></script>
   <script src="product-details-asean.js?v=1.0.0"></script>
-  <script src="product-details.js?v=2.5.0"></script>
+  <script src="product-details.js?v=2.5.1"></script>
   <script src="analytics.js?v=1.1.0"></script>
 </body>
 </html>

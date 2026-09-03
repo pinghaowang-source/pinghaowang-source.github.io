@@ -291,6 +291,7 @@
       categoryKey: 'specialtyEyebrow',
       summaryKey: 'cardiovascularAiDesc',
       images: ['assets/products/visual-cardiovascular-analysis.webp'],
+      atmosphere: {image:'assets/products/atmosphere/cardiovascular-ai-atmosphere-v1.webp'},
       focusImage: 'assets/products/focus-cardiovascular-ai.jpg',
       tags: [{key:'nmpaApproved'},{key:'coronaryCTA'},{text:'CT-FFR'},{key:'calciumScoring'}],
       accent: '#ff9d7d',
@@ -449,6 +450,7 @@
       categoryKey: 'specialtyEyebrow',
       summaryKey: 'headNeckAiDesc',
       images: ['assets/products/visual-head-neck-vascular.webp'],
+      atmosphere: {image:'assets/products/atmosphere/head-neck-ai-atmosphere-v1.webp'},
       focusImage: 'assets/products/focus-head-neck-ai.jpg',
       tags: [{key:'nmpaApproved'},{key:'headNeckCTA'},{key:'aneurysmDetection'},{key:'perfusionAnalysis'}],
       accent: '#b7a6ff',
@@ -608,6 +610,7 @@
       categoryKey: 'devicesEyebrow',
       summaryKey: 'boneAgeDesc',
       images: ['assets/products/visual-bone-age-device-v4.webp'],
+      atmosphere: {image:'assets/products/atmosphere/bone-age-analyser-atmosphere-v1.webp'},
       heroFit: 'contain',
       storyImage: 'assets/products/visual-bone-age-positioning-v2.webp',
       storyFit: 'cover',
@@ -779,6 +782,7 @@
       categoryKey: 'devicesEyebrow',
       summaryKey: 'boneDensityDesc',
       images: ['assets/products/visual-bone-density-device-v3.webp'],
+      atmosphere: {image:'assets/products/atmosphere/bone-density-analyser-atmosphere-v1.webp'},
       heroFit: 'contain',
       storyImage: 'assets/products/visual-bone-density-positioning-v2.webp',
       storyFit: 'cover',
@@ -950,6 +954,7 @@
       categoryKey: 'screeningDiagnosis',
       summaryKey: 'boneDesc',
       images: ['assets/products/visual-ct-bone.webp'],
+      atmosphere: {image:'assets/products/atmosphere/ct-bone-atmosphere-v1.webp'},
       heroFit: 'contain',
       storyImage: 'assets/products/visual-ct-bone-3d-reconstruction-workstation.webp',
       storyFit: 'contain',
@@ -1136,6 +1141,7 @@
       categoryKey: 'screeningDiagnosis',
       summaryKey: 'strokeDesc',
       images: ['assets/products/visual-ct-stroke.webp'],
+      atmosphere: {image:'assets/products/atmosphere/ct-stroke-atmosphere-v1.webp'},
       heroFit: 'contain',
       storyImage: 'assets/products/visual-ct-stroke-priority.webp',
       storyFit: 'contain',
@@ -1322,6 +1328,7 @@
       categoryKey: 'screeningDiagnosis',
       summaryKey: 'coronaryDesc',
       images: ['assets/products/visual-ct-coronary.webp'],
+      atmosphere: {image:'assets/products/atmosphere/ct-coronary-atmosphere-v1.webp'},
       heroFit: 'contain',
       storyFit: 'contain',
       focusImage: 'assets/products/focus-cardiovascular-ai.jpg',
@@ -1507,6 +1514,7 @@
       categoryKey: 'screeningDiagnosis',
       summaryKey: 'ctLungDesc',
       images: ['assets/products/visual-ct-lung.webp'],
+      atmosphere: {image:'assets/products/atmosphere/ct-lung-atmosphere-v1.webp'},
       heroFit: 'contain',
       storyFit: 'contain',
       focusImage: 'assets/products/focus-ct-lung.jpg',
@@ -1691,6 +1699,7 @@
       categoryKey: 'screeningDiagnosis',
       summaryKey: 'drChestDesc',
       images: ['assets/products/visual-dr-chest.webp'],
+      atmosphere: {image:'assets/products/atmosphere/dr-chest-atmosphere-v1.webp'},
       focusImage: 'assets/products/focus-dr-chest.jpg',
       capabilityImages: [
         'assets/products/visual-dr-chest-coverage.webp',
@@ -1863,6 +1872,7 @@
         th: 'สร้างภาพกลีบปอด ส่วนปอด ส่วนย่อย หลอดเลือด และหลอดลมโดยอัตโนมัติจาก CT ทรวงอกทั้งแบบฉีดและไม่ฉีดสารทึบรังสี เพื่อช่วยระบุตำแหน่งรอยโรคและวางแผนขอบเขตการตัด'
       },
       images: ['assets/products/visual-thorax-planning-workstation-v2.webp'],
+      atmosphere: {image:'assets/products/atmosphere/thorax-planning-atmosphere-v1.webp'},
       heroFit: 'contain',
       storyFit: 'contain',
       storyImage: 'assets/products/visual-thorax-planning.webp',
@@ -2032,6 +2042,7 @@
         th: 'สร้างภาพส่วนตับ Couinaud หลอดเลือด และระบบท่อน้ำดีโดยอัตโนมัติจาก CT ช่องท้อง พร้อมคำนวณปริมาตร ระบุตำแหน่งรอยโรค และวางแผนขอบเขตการตัดเสมือน'
       },
       images: ['assets/products/visual-liver-planning-workstation-v2.webp'],
+      atmosphere: {image:'assets/products/atmosphere/liver-planning-atmosphere-v1.webp'},
       heroFit: 'contain',
       storyFit: 'contain',
       storyImage: 'assets/products/visual-liver-planning.webp',
@@ -2201,6 +2212,7 @@
         th: 'สร้างภาพไต หลอดเลือดไต ท่อไต กระเพาะปัสสาวะ และต่อมหมวกไตโดยอัตโนมัติจาก CT ช่องท้อง พร้อมวัดรอยโรคและวางแผนผ่าตัดไตบางส่วน'
       },
       images: ['assets/products/visual-urology-planning-workstation-v2.webp'],
+      atmosphere: {image:'assets/products/atmosphere/urology-planning-atmosphere-v1.webp'},
       heroFit: 'contain',
       storyFit: 'contain',
       storyImage: 'assets/products/visual-urology-planning.webp',
@@ -2362,6 +2374,7 @@
       categoryKey: 'rehabProsthetics',
       summaryKey: 'prostheticDesc',
       images: ['assets/products/visual-prosthetic-hand.webp'],
+      atmosphere: {image:'assets/products/atmosphere/prosthetic-hand-atmosphere-v1.webp'},
       focusImage: 'assets/products/focus-prosthetic-hand.jpg',
       tags: [{key:'fda510k'},{key:'fdaClassI'},{key:'qualityReport'}],
       accent: '#ffb45f',
@@ -2618,6 +2631,34 @@
 
   function imageFitClass(value){
     return `fit-${['contain','cover'].includes(value)?value:'contain'}`;
+  }
+
+  function renderProductAtmosphere(product,alt){
+    const section=document.querySelector('#product-atmosphere');
+    const frame=document.querySelector('#product-atmosphere-frame');
+    const image=document.querySelector('#product-atmosphere-image');
+    const mobileSource=document.querySelector('#product-atmosphere-mobile-source');
+    const atmosphere=product.atmosphere;
+
+    frame.classList.remove('fit-contain','fit-cover');
+    frame.style.removeProperty('--atmosphere-position');
+    frame.style.removeProperty('--atmosphere-mobile-position');
+    mobileSource.removeAttribute('srcset');
+
+    if(!atmosphere?.image){
+      image.removeAttribute('src');
+      image.alt='';
+      section.hidden=true;
+      return;
+    }
+
+    frame.classList.add(imageFitClass(atmosphere.fit || 'cover'));
+    frame.style.setProperty('--atmosphere-position',atmosphere.position || '50% 50%');
+    frame.style.setProperty('--atmosphere-mobile-position',atmosphere.mobilePosition || atmosphere.position || '50% 50%');
+    if(atmosphere.mobileImage)mobileSource.srcset=atmosphere.mobileImage;
+    image.src=atmosphere.image;
+    image.alt=alt;
+    section.hidden=false;
   }
 
   function renderProductStory(product,detail,alt){
@@ -2891,6 +2932,8 @@
       document.querySelector('#secondary-visual-points').hidden=true;
       secondarySection.hidden=true;
     }
+
+    renderProductAtmosphere(product,alt);
 
     document.querySelector('#workflow-heading').textContent=detail.flowHeading;
     document.querySelector('#workflow-intro').textContent=detail.flowIntro;

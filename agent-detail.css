@@ -27,6 +27,12 @@
 .agent-story-copy li:before{content:"";position:absolute;top:19px;left:2px;width:7px;height:7px;border:1px solid #087d78;border-radius:50%;box-shadow:inset 0 0 0 2px #f7fafc}
 .agent-story-notice{margin:16px 0 0;color:#52677c;font-size:12px;line-height:1.5}
 
+.agent-atmosphere{padding:0 0 clamp(70px,9vw,112px);background:#f7fafc}
+.agent-atmosphere-frame{position:relative;aspect-ratio:2/1;margin:0;overflow:hidden;border:1px solid #cfdce3;border-radius:24px;background:#071a31;box-shadow:0 34px 84px #173f5c1c}
+.agent-atmosphere-frame:after{position:absolute;inset:0;border:1px solid #ffffff18;border-radius:inherit;content:"";pointer-events:none}
+.agent-atmosphere-frame img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+.agent-atmosphere-origin{margin:12px 3px 0;color:#52677c;font-size:12px;line-height:1.5}
+
 .agent-foundation{position:relative;overflow:hidden;background:#071a31;color:#fff}
 .agent-foundation:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 50% 30%,#0f607447,transparent 42%),linear-gradient(90deg,transparent 49.95%,#a8fff30d 50%,transparent 50.05%);pointer-events:none}
 .agent-foundation .container{position:relative}
@@ -77,6 +83,8 @@
   .agent-detail-page .agent-hero h1,:lang(ms) .agent-detail-page .agent-hero h1,:lang(th) .agent-detail-page .agent-hero h1{max-width:18ch;font-size:clamp(40px,11.5vw,54px)}
   .agent-story-copy h3,:lang(ms) .agent-story-copy h3,:lang(th) .agent-story-copy h3{font-size:clamp(31px,8.8vw,42px)}
   .agent-flow-stage{padding:18px}
+  .agent-atmosphere{padding-bottom:70px}
+  .agent-atmosphere-frame{aspect-ratio:4/3;border-radius:18px}
 }
 @media(max-width:560px){
   .agent-detail-page .agent-hero h1,:lang(ms) .agent-detail-page .agent-hero h1,:lang(th) .agent-detail-page .agent-hero h1{font-size:clamp(37px,10.8vw,47px)}
