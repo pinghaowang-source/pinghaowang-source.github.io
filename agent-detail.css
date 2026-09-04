@@ -114,3 +114,86 @@
   :where(:lang(lo),:lang(my),:lang(km)) .agent-detail-page .agent-hero h1{max-width:22ch;font-size:clamp(33px,9.3vw,43px)}
   :where(:lang(vi),:lang(id),:lang(fil),:lang(tet),:lang(lo),:lang(my),:lang(km)) .agent-story-copy h3{font-size:clamp(28px,8vw,37px)}
 }
+
+/* The appliance story settles once; the foundation then resolves from clinical
+   inputs to local compute and finally to hospital-facing outputs. */
+.motion-ready .agent-detail-page :is(
+  .agent-hero-media.motion-story,
+  .agent-story-media.motion-story,
+  .agent-atmosphere-frame.motion-story
+) > img {
+  opacity:.94;
+  transform:scale(1.015);
+  transform-origin:50% 50%;
+  transition:opacity 480ms ease-out,transform 760ms cubic-bezier(.22,1,.36,1)
+}
+.motion-ready .agent-detail-page :is(
+  .agent-hero-media.motion-story.motion-in,
+  .agent-story-media.motion-story.motion-in,
+  .agent-atmosphere-frame.motion-story.motion-in
+) > img{opacity:1;transform:scale(1)}
+
+.motion-ready .agent-detail-page .agent-flow-stage.motion-story > .agent-flow-node{
+  opacity:0;
+  transform:translate3d(0,10px,0);
+  transition:opacity 400ms ease-out,transform 500ms cubic-bezier(.22,1,.36,1)
+}
+.motion-ready .agent-detail-page .agent-flow-stage.motion-story > .agent-flow-arrow{
+  opacity:0;
+  transform:scaleX(0);
+  transform-origin:left center;
+  transition:opacity 220ms ease-out,transform 380ms cubic-bezier(.22,1,.36,1)
+}
+.motion-ready .agent-detail-page .agent-flow-stage.motion-story .agent-flow-output{
+  opacity:0;
+  transform:translate3d(0,6px,0);
+  transition:opacity 300ms ease-out,transform 400ms cubic-bezier(.22,1,.36,1)
+}
+.motion-ready .agent-detail-page .agent-flow-stage.motion-story.motion-in > .agent-flow-node,
+.motion-ready .agent-detail-page .agent-flow-stage.motion-story.motion-in > .agent-flow-arrow,
+.motion-ready .agent-detail-page .agent-flow-stage.motion-story.motion-in .agent-flow-output{
+  opacity:1;
+  transform:none
+}
+.motion-ready .agent-detail-page .agent-flow-stage.motion-story.motion-in > .agent-flow-node:nth-of-type(1){transition-delay:50ms}
+.motion-ready .agent-detail-page .agent-flow-stage.motion-story.motion-in > .agent-flow-arrow:nth-of-type(1){transition-delay:210ms}
+.motion-ready .agent-detail-page .agent-flow-stage.motion-story.motion-in > .agent-flow-node:nth-of-type(2){transition-delay:330ms}
+.motion-ready .agent-detail-page .agent-flow-stage.motion-story.motion-in > .agent-flow-arrow:nth-of-type(2){transition-delay:490ms}
+.motion-ready .agent-detail-page .agent-flow-stage.motion-story.motion-in > .agent-flow-node:nth-of-type(3){transition-delay:610ms}
+.motion-ready .agent-detail-page .agent-flow-stage.motion-story.motion-in .agent-flow-output:nth-child(1){transition-delay:740ms}
+.motion-ready .agent-detail-page .agent-flow-stage.motion-story.motion-in .agent-flow-output:nth-child(2){transition-delay:800ms}
+.motion-ready .agent-detail-page .agent-flow-stage.motion-story.motion-in .agent-flow-output:nth-child(3){transition-delay:860ms}
+.motion-ready .agent-detail-page .agent-flow-stage.motion-story.motion-in .agent-flow-output:nth-child(4){transition-delay:920ms}
+
+@media(max-width:780px){
+  .motion-ready .agent-detail-page :is(
+    .agent-hero-media.motion-story,
+    .agent-story-media.motion-story,
+    .agent-atmosphere-frame.motion-story
+  ) > img{transform:scale(1.006);transition-duration:340ms,520ms}
+  .motion-ready .agent-detail-page :is(
+    .agent-hero-media.motion-story.motion-in,
+    .agent-story-media.motion-story.motion-in,
+    .agent-atmosphere-frame.motion-story.motion-in
+  ) > img{transform:scale(1)}
+  .motion-ready .agent-detail-page .agent-flow-stage.motion-story > :is(.agent-flow-node,.agent-flow-arrow),
+  .motion-ready .agent-detail-page .agent-flow-stage.motion-story .agent-flow-output{transform:none}
+  .motion-ready .agent-detail-page .agent-flow-stage.motion-story.motion-in > .agent-flow-node:nth-of-type(1){transition-delay:30ms}
+  .motion-ready .agent-detail-page .agent-flow-stage.motion-story.motion-in > .agent-flow-arrow:nth-of-type(1){transition-delay:120ms}
+  .motion-ready .agent-detail-page .agent-flow-stage.motion-story.motion-in > .agent-flow-node:nth-of-type(2){transition-delay:190ms}
+  .motion-ready .agent-detail-page .agent-flow-stage.motion-story.motion-in > .agent-flow-arrow:nth-of-type(2){transition-delay:280ms}
+  .motion-ready .agent-detail-page .agent-flow-stage.motion-story.motion-in > .agent-flow-node:nth-of-type(3){transition-delay:350ms}
+  .motion-ready .agent-detail-page .agent-flow-stage.motion-story.motion-in .agent-flow-output:nth-child(1){transition-delay:430ms}
+  .motion-ready .agent-detail-page .agent-flow-stage.motion-story.motion-in .agent-flow-output:nth-child(2){transition-delay:470ms}
+  .motion-ready .agent-detail-page .agent-flow-stage.motion-story.motion-in .agent-flow-output:nth-child(3){transition-delay:510ms}
+  .motion-ready .agent-detail-page .agent-flow-stage.motion-story.motion-in .agent-flow-output:nth-child(4){transition-delay:550ms}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .agent-detail-page :is(
+    .agent-hero-media.motion-story,
+    .agent-story-media.motion-story,
+    .agent-atmosphere-frame.motion-story,
+    .agent-flow-stage.motion-story
+  ) :is(img,.agent-flow-node,.agent-flow-arrow,.agent-flow-output){animation:none!important;opacity:1!important;transform:none!important;transition:none!important}
+}

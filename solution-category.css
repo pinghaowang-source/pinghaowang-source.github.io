@@ -1162,6 +1162,31 @@ html:is([lang="th"], [lang="lo"], [lang="my"], [lang="km"]) :is(
   white-space: nowrap;
 }
 
+/* Product and atmosphere visuals settle once as their story enters view.
+   The movement stays inside each media frame, so page geometry never shifts. */
+.solution-category-page .motion-story {
+  --category-story-lift: 6px;
+  --category-story-scale: 1.015;
+}
+
+.solution-category-page .motion-story img {
+  opacity: .93;
+  transform: translate3d(0, var(--category-story-lift), 0) scale(var(--category-story-scale));
+  transform-origin: 50% 50%;
+  transition:
+    transform 720ms cubic-bezier(.22, 1, .36, 1),
+    opacity 460ms ease-out;
+}
+
+.solution-category-page .category-hero-visual.motion-story img {
+  transition-duration: 820ms, 520ms;
+}
+
+.solution-category-page .motion-story.motion-in img {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) scale(1);
+}
+
 @media (max-width: 1040px) {
   .category-hero-grid {
     grid-template-columns: 1fr;
@@ -1284,6 +1309,15 @@ html:is([lang="th"], [lang="lo"], [lang="my"], [lang="km"]) :is(
 
   .category-hero-visual {
     margin-top: 1.25rem;
+  }
+
+  .solution-category-page .motion-story {
+    --category-story-lift: 3px;
+    --category-story-scale: 1.008;
+  }
+
+  .solution-category-page .motion-story img {
+    transition-duration: 540ms, 340ms;
   }
 
   .category-hero-visual,
@@ -1515,5 +1549,13 @@ html:is([lang="th"], [lang="lo"], [lang="my"], [lang="km"]) :is(
   .category-switcher a,
   .category-product-link::after {
     transition: none;
+  }
+
+  .solution-category-page .motion-story,
+  .solution-category-page .motion-story img {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
   }
 }

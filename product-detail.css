@@ -1858,3 +1858,100 @@ body:is(.product-layout-thorax, .product-layout-liver, .product-layout-urology) 
   :where(:lang(vi),:lang(id),:lang(fil),:lang(tet)) .product-detail-page :is(.detail-heading h2,.detail-secondary-heading h2,.detail-cta h2) { font-size: clamp(28px, 7.8vw, 36px); }
   :where(:lang(lo),:lang(my),:lang(km)) .product-detail-page :is(.detail-heading h2,.detail-secondary-heading h2,.detail-cta h2) { font-size: clamp(26px, 7.2vw, 33px); }
 }
+
+/* Product stories resolve once, in clinical order. The treatment is limited to
+   opacity and compositor transforms so the underlying medical view stays intact. */
+.motion-ready .product-detail-page :is(
+  .detail-hero-grid > div:last-child.motion-story,
+  .detail-secondary-stage.motion-story,
+  .detail-atmosphere-frame.motion-story
+) img {
+  opacity: .94;
+  transform: scale(1.015);
+  transform-origin: 50% 50%;
+  transition:
+    opacity 480ms ease-out,
+    transform 760ms cubic-bezier(.22, 1, .36, 1);
+}
+
+.motion-ready .product-detail-page :is(
+  .detail-hero-grid > div:last-child.motion-story.motion-in,
+  .detail-secondary-stage.motion-story.motion-in,
+  .detail-atmosphere-frame.motion-story.motion-in
+) img {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.motion-ready .product-detail-page .workflow-flow.motion-story article {
+  opacity: 0;
+  transform: translate3d(0, 12px, 0);
+  transition:
+    opacity 420ms ease-out,
+    transform 540ms cubic-bezier(.22, 1, .36, 1);
+}
+
+.motion-ready .product-detail-page .workflow-flow.motion-story article:not(:last-child)::after {
+  opacity: 0;
+  transform: translate3d(-6px, 0, 0);
+  transition:
+    opacity 260ms ease-out,
+    transform 380ms cubic-bezier(.22, 1, .36, 1);
+}
+
+.motion-ready .product-detail-page .workflow-flow.motion-story.motion-in article,
+.motion-ready .product-detail-page .workflow-flow.motion-story.motion-in article:not(:last-child)::after {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.motion-ready .product-detail-page .workflow-flow.motion-story.motion-in article:nth-child(1) { transition-delay: 60ms; }
+.motion-ready .product-detail-page .workflow-flow.motion-story.motion-in article:nth-child(1)::after { transition-delay: 210ms; }
+.motion-ready .product-detail-page .workflow-flow.motion-story.motion-in article:nth-child(2) { transition-delay: 280ms; }
+.motion-ready .product-detail-page .workflow-flow.motion-story.motion-in article:nth-child(2)::after { transition-delay: 430ms; }
+.motion-ready .product-detail-page .workflow-flow.motion-story.motion-in article:nth-child(3) { transition-delay: 500ms; }
+
+@media (max-width: 780px) {
+  .motion-ready .product-detail-page :is(
+    .detail-hero-grid > div:last-child.motion-story,
+    .detail-secondary-stage.motion-story,
+    .detail-atmosphere-frame.motion-story
+  ) img {
+    transform: scale(1.006);
+    transition-duration: 340ms, 520ms;
+  }
+
+  .motion-ready .product-detail-page :is(
+    .detail-hero-grid > div:last-child.motion-story.motion-in,
+    .detail-secondary-stage.motion-story.motion-in,
+    .detail-atmosphere-frame.motion-story.motion-in
+  ) img {
+    transform: scale(1);
+  }
+
+  .motion-ready .product-detail-page .workflow-flow.motion-story article,
+  .motion-ready .product-detail-page .workflow-flow.motion-story article:not(:last-child)::after {
+    transform: none;
+  }
+
+  .motion-ready .product-detail-page .workflow-flow.motion-story.motion-in article:nth-child(1) { transition-delay: 30ms; }
+  .motion-ready .product-detail-page .workflow-flow.motion-story.motion-in article:nth-child(1)::after { transition-delay: 130ms; }
+  .motion-ready .product-detail-page .workflow-flow.motion-story.motion-in article:nth-child(2) { transition-delay: 180ms; }
+  .motion-ready .product-detail-page .workflow-flow.motion-story.motion-in article:nth-child(2)::after { transition-delay: 280ms; }
+  .motion-ready .product-detail-page .workflow-flow.motion-story.motion-in article:nth-child(3) { transition-delay: 330ms; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .product-detail-page :is(
+    .detail-hero-grid > div:last-child.motion-story,
+    .detail-secondary-stage.motion-story,
+    .detail-atmosphere-frame.motion-story,
+    .workflow-flow.motion-story
+  ) :is(img, article),
+  .product-detail-page .workflow-flow.motion-story article:not(:last-child)::after {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}

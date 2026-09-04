@@ -340,6 +340,133 @@ function setupHorizontalRails(){
   bindHorizontalRail('[data-imaging-rail]','[data-imaging-direction]','.imaging-product-card','imagingDirection');
   bindHorizontalRail('[data-service-rail]','[data-service-direction]','.imaging-service-card','serviceDirection');
 }
+
+const motionRevealSelectors=[
+  '.home-page .hero>div:first-child',
+  '.chapter-heading',
+  '.agent-preview-copy',
+  '.section-head',
+  '.deployment-heading',
+  '.deployment-assurance',
+  '.deployment-benefits',
+  '.home-partner-copy',
+  '.values-opening',
+  '.values-vision',
+  '.values-principles',
+  '.band .steps',
+  '.cta',
+  '.healthcare-hero-copy',
+  '.healthcare-hero-intro',
+  '.healthcare-index',
+  '.healthcare-chapter-header',
+  '.planning-selector',
+  '.healthcare-agent-copy',
+  '.device-story-copy',
+  '.prosthetic-story-copy',
+  '.category-hero-copy',
+  '.category-principle-marker',
+  '.category-principle-copy',
+  '.category-products-heading',
+  '.category-product-copy',
+  '.category-closing-panel',
+  '.detail-hero-copy',
+  '.detail-meta-band',
+  '.detail-facts',
+  '.detail-heading',
+  '.detail-capability-grid',
+  '.detail-secondary-heading',
+  '.detail-secondary-points',
+  '.deployment-grid',
+  '.detail-related-grid',
+  '.agent-hero-grid>div:first-child',
+  '.agent-story-copy',
+  '.agent-foundation .steps',
+  '.contact-hero-copy',
+  '.contact-routes',
+  '.contact-form-intro',
+  '.enquiry-card',
+  '.contact-next>h2',
+  '.contact-next-grid',
+  '.about-hero-grid>div:first-child',
+  '.about-hero-mark',
+  '.location-copy',
+  '.team-grid',
+  '.leadership-grid',
+  '.partner-network-copy',
+  '.partner-feature-stack',
+  '.partner-route-grid',
+  '.partner-support-heading',
+  '.partner-support-grid'
+];
+const motionStorySelectors=[
+  '.deployment-visual',
+  '.regulation-grid',
+  '.home-partner-stack',
+  '.healthcare-hero-visual',
+  '.imaging-rail-viewport',
+  '.imaging-services',
+  '.planning-panels',
+  '.device-story-media',
+  '.prosthetic-story-media',
+  '.category-hero-visual',
+  '.category-principle-visual',
+  '.category-product-media',
+  '.detail-hero-grid>div:last-child',
+  '.detail-secondary-stage',
+  '.detail-atmosphere-frame',
+  '.workflow-flow',
+  '.agent-hero-media',
+  '.agent-story-media',
+  '.agent-atmosphere-frame',
+  '.agent-flow-stage',
+  '.regional-layout',
+  '.location-image',
+  '.contact-signal',
+  '.contact-route-visual'
+];
+let motionObserver;
+let motionMutationObserver;
+const observedMotionElements=new WeakSet();
+function matchingElements(root,selector){
+  const elements=[];
+  if(root.nodeType===1&&root.matches(selector))elements.push(root);
+  if(root.querySelectorAll)elements.push(...root.querySelectorAll(selector));
+  return elements
+}
+function registerMotionElement(element,type){
+  if(observedMotionElements.has(element))return;
+  observedMotionElements.add(element);
+  element.classList.add(type);
+  motionObserver.observe(element)
+}
+function registerMotionElements(root=document){
+  motionRevealSelectors.forEach(selector=>matchingElements(root,selector).forEach(element=>registerMotionElement(element,'motion-reveal')));
+  motionStorySelectors.forEach(selector=>matchingElements(root,selector).forEach(element=>registerMotionElement(element,'motion-story')))
+}
+function setupMotionSystem(){
+  if(document.documentElement.dataset.motionReady==='true')return;
+  if(!('IntersectionObserver' in window))return;
+  const reducedMotion=window.matchMedia?window.matchMedia('(prefers-reduced-motion: reduce)'):{matches:false};
+  if(reducedMotion.matches)return;
+  motionObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{
+    if(!entry.isIntersecting&&entry.boundingClientRect.bottom>=0)return;
+    entry.target.classList.add('motion-in');
+    motionObserver.unobserve(entry.target)
+  }),{threshold:.14,rootMargin:'0px 0px -7%'});
+  registerMotionElements();
+  document.documentElement.dataset.motionReady='true';
+  document.documentElement.classList.add('motion-ready');
+  const dynamicProduct=document.querySelector('#product-detail');
+  if(dynamicProduct&&'MutationObserver' in window){
+    motionMutationObserver=new MutationObserver(records=>records.forEach(record=>record.addedNodes.forEach(node=>{if(node.nodeType===1)registerMotionElements(node)})));
+    motionMutationObserver.observe(dynamicProduct,{childList:true,subtree:true})
+  }
+  const clinicalCore=document.querySelector('.clinical-core');
+  if(clinicalCore){
+    const coreObserver=new IntersectionObserver(([entry])=>clinicalCore.classList.toggle('motion-paused',!entry.isIntersecting),{threshold:.05});
+    coreObserver.observe(clinicalCore)
+  }
+}
 function init(requestedLanguage){
   const lang=resolveLanguage(typeof requestedLanguage==='string'?requestedLanguage:readLanguage());
   document.documentElement.lang=lang;
@@ -373,6 +500,7 @@ function init(requestedLanguage){
   if(typeof CustomEvent==='function')document.dispatchEvent(new CustomEvent('scovion:languagechange',{detail:{lang}}))
 }
 document.addEventListener('DOMContentLoaded',()=>{
+  setupMotionSystem();
   const requested=readLanguage();
   const normalized=languageAliases[String(requested||'').toLowerCase()]||String(requested||'').toLowerCase();
   const needsAseanPack=aseanLanguages.some(([code])=>code===normalized);

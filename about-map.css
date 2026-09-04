@@ -105,17 +105,19 @@
 }
 
 .map-route {
+  --route-angle: 0deg;
   position: absolute;
   display: block;
   height: 1px;
   transform-origin: left center;
+  transform: rotate(var(--route-angle));
   background: linear-gradient(90deg, #68e8c2, #68e8c211);
   box-shadow: 0 0 8px #68e8c266;
 }
 
-.route-one { left: 57%; top: 32%; width: 19%; transform: rotate(42deg); }
-.route-two { left: 69%; top: 48%; width: 7%; transform: rotate(18deg); }
-.route-three { left: 73%; top: 52%; width: 31%; transform: rotate(113deg); }
+.route-one { --route-angle: 42deg; left: 57%; top: 32%; width: 19%; }
+.route-two { --route-angle: 18deg; left: 69%; top: 48%; width: 7%; }
+.route-three { --route-angle: 113deg; left: 73%; top: 52%; width: 31%; }
 
 .map-node {
   position: absolute;
@@ -222,6 +224,48 @@
   font-size: 13px;
   margin: 0;
 }
+
+/* The regional footprint tells its story once as it enters the viewport. */
+.regional-layout.motion-story .map-route {
+  opacity: 0;
+  transform: rotate(var(--route-angle)) scaleX(0);
+  transition:
+    transform 620ms cubic-bezier(.22, 1, .36, 1),
+    opacity 180ms ease-out;
+}
+
+.regional-layout.motion-story.motion-in .map-route {
+  opacity: 1;
+  transform: rotate(var(--route-angle)) scaleX(1);
+}
+
+.regional-layout.motion-story .route-one { transition-delay: 120ms; }
+.regional-layout.motion-story .route-two { transition-delay: 320ms; }
+.regional-layout.motion-story .route-three { transition-delay: 470ms; }
+
+.regional-layout.motion-story .map-node,
+.regional-layout.motion-story .office-card {
+  opacity: 0;
+  transform: translateY(10px) scale(.985);
+  transition:
+    transform 480ms cubic-bezier(.22, 1, .36, 1),
+    opacity 360ms ease-out;
+}
+
+.regional-layout.motion-story.motion-in .map-node,
+.regional-layout.motion-story.motion-in .office-card {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.regional-layout.motion-story .map-node.wuhan { transition-delay: 170ms; }
+.regional-layout.motion-story .map-node.shenzhen { transition-delay: 350ms; }
+.regional-layout.motion-story .map-node.hongkong { transition-delay: 500ms; }
+.regional-layout.motion-story .map-node.kualalumpur { transition-delay: 650ms; }
+.regional-layout.motion-story .office-card:nth-child(1) { transition-delay: 520ms; }
+.regional-layout.motion-story .office-card:nth-child(2) { transition-delay: 600ms; }
+.regional-layout.motion-story .office-card:nth-child(3) { transition-delay: 680ms; }
+.regional-layout.motion-story .office-card:nth-child(4) { transition-delay: 760ms; }
 
 .leadership-section {
   background:
@@ -388,6 +432,15 @@
   .route-three { left: 67%; width: 38%; }
   .office-list { grid-template-columns: 1fr 1fr; grid-template-rows: none; }
   .office-card { padding: 16px; gap: 12px; }
+  .regional-layout.motion-story .map-node,
+  .regional-layout.motion-story .office-card {
+    transform: translateY(6px) scale(.992);
+    transition-duration: 380ms, 300ms;
+  }
+  .regional-layout.motion-story.motion-in .map-node,
+  .regional-layout.motion-story.motion-in .office-card {
+    transform: translateY(0) scale(1);
+  }
 }
 
 @media (max-width: 480px) {
@@ -419,6 +472,24 @@
   }
   .map-node.kualalumpur { order: -1; }
   .map-node b { font-size: 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .regional-layout.motion-story .map-route,
+  .regional-layout.motion-story.motion-in .map-route {
+    opacity: 1;
+    transform: rotate(var(--route-angle)) scaleX(1);
+    transition: none;
+  }
+
+  .regional-layout.motion-story .map-node,
+  .regional-layout.motion-story .office-card,
+  .regional-layout.motion-story.motion-in .map-node,
+  .regional-layout.motion-story.motion-in .office-card {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 .about-page .cta {

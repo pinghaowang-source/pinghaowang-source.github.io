@@ -850,7 +850,7 @@ body > .nav .links a.active {
 #planning-choice-liver:checked ~ .planning-panels .planning-panel-liver,
 #planning-choice-urology:checked ~ .planning-panels .planning-panel-urology {
   display: block;
-  animation: planning-panel-in .35s ease both;
+  animation: planning-panel-in .4s cubic-bezier(.22, 1, .36, 1) both;
 }
 
 .planning-workstation-media {
@@ -921,8 +921,14 @@ body > .nav .links a.active {
 }
 
 @keyframes planning-panel-in {
-  from { opacity: .55; }
-  to { opacity: 1; }
+  from {
+    opacity: .82;
+    transform: translate3d(0, 5px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 /* The appliance remains a full-bleed product story and separates software
@@ -1277,6 +1283,59 @@ body > .nav .links a.active {
   box-shadow: none;
 }
 
+/* Restrained story motion: images settle into place once, while the two
+   horizontal rails give a single, non-scrolling cue that more content exists. */
+.healthcare-hero-visual.motion-story img {
+  opacity: .94;
+  transform: scale(1.015);
+  transform-origin: 50% 50%;
+  transition:
+    transform 760ms cubic-bezier(.22, 1, .36, 1),
+    opacity 480ms ease-out;
+}
+
+.healthcare-hero-visual.motion-story.motion-in img {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.imaging-rail-viewport.motion-story.motion-in .imaging-product-rail,
+.imaging-services.motion-story.motion-in .imaging-service-rail {
+  --healthcare-rail-cue: -18px;
+  animation: healthcare-rail-cue 680ms cubic-bezier(.22, 1, .36, 1) 120ms both;
+}
+
+.imaging-chapter:has(.imaging-rail-viewport.motion-in)
+  .imaging-rail-meta [data-imaging-direction="next"]:not(:disabled) svg,
+.imaging-services.motion-story.motion-in
+  .imaging-services-meta [data-service-direction="next"]:not(:disabled) svg {
+  animation: healthcare-rail-arrow-cue 620ms cubic-bezier(.22, 1, .36, 1) 180ms both;
+}
+
+@keyframes healthcare-rail-cue {
+  0%,
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  46% {
+    opacity: .985;
+    transform: translate3d(var(--healthcare-rail-cue), 0, 0);
+  }
+}
+
+@keyframes healthcare-rail-arrow-cue {
+  0%,
+  100% {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  46% {
+    opacity: .76;
+    transform: translate3d(4px, 0, 0);
+  }
+}
+
 @media (max-width: 1100px) {
   .healthcare-hero-grid {
     gap: 30px 22px;
@@ -1546,6 +1605,21 @@ body > .nav .links a.active {
     padding-right: 16px;
     padding-left: 16px;
     scroll-padding-inline: 16px;
+  }
+
+  .healthcare-hero-visual.motion-story img {
+    transform: scale(1.008);
+    transition-duration: 560ms, 360ms;
+  }
+
+  .healthcare-hero-visual.motion-story.motion-in img {
+    transform: scale(1);
+  }
+
+  .imaging-rail-viewport.motion-story.motion-in .imaging-product-rail,
+  .imaging-services.motion-story.motion-in .imaging-service-rail {
+    --healthcare-rail-cue: -10px;
+    animation-duration: 520ms;
   }
 
   .imaging-service-card {
@@ -1818,6 +1892,14 @@ body > .nav .links a.active {
     scroll-behavior: auto !important;
     animation: none !important;
     transition: none !important;
+  }
+
+  .healthcare-hero-visual.motion-story img,
+  .imaging-rail-viewport.motion-story .imaging-product-rail,
+  .imaging-services.motion-story .imaging-service-rail,
+  .imaging-rail-control svg {
+    opacity: 1 !important;
+    transform: none !important;
   }
 }
 
