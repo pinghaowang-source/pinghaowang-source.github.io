@@ -2,7 +2,7 @@ import { LANGUAGES, SUPPORTED, browserLocale, countryLocale, validPreference } f
 
 const ASSET_ROOT = new URL('.', import.meta.url);
 const SITE_ROOT = ASSET_ROOT.pathname.replace(/i18n\/$/, '');
-const VERSION = '20261019-review';
+const VERSION = '20261019-business-development';
 const PREFERENCE_KEY = 'vp.language.preference.v1';
 const COUNTRY_KEY = 'vp.language.country.v1';
 const UNIT_TAGS = new Set(['H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'P', 'BLOCKQUOTE', 'FIGCAPTION', 'LI', 'A', 'BUTTON', 'SPAN', 'STRONG', 'SMALL', 'OPTION', 'LABEL', 'SUMMARY', 'DT', 'DD']);

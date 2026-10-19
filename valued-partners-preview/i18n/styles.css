@@ -125,6 +125,8 @@ html:not(:lang(en)) :is(h1, h2, h3, blockquote) { hyphens: auto; }
 .home-hero .hero-actions { flex-wrap: wrap; }
 .home-hero .home-hero-bottom { max-width: min(1020px, calc(100% - 220px)); }
 .strategy-section .principle-list li { padding-block: 22px; }
+/* The relationship section now carries a role, not a short company wordmark. */
+.bridge-partner h2 { font-size: clamp(40px, 7.6vw, 112px); line-height: 1.03; }
 
 @media (min-width: 1181px) and (max-width: 1400px) {
   .site-header .header-shell { grid-template-columns: auto minmax(0, 1fr) auto; }
