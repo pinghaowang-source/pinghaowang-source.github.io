@@ -125,8 +125,24 @@ html:not(:lang(en)) :is(h1, h2, h3, blockquote) { hyphens: auto; }
 .home-hero .hero-actions { flex-wrap: wrap; }
 .home-hero .home-hero-bottom { max-width: min(1020px, calc(100% - 220px)); }
 .strategy-section .principle-list li { padding-block: 22px; }
-/* The relationship section now carries a role, not a short company wordmark. */
-.bridge-partner h2 { font-size: clamp(40px, 7.6vw, 112px); line-height: 1.03; }
+/* A compact introduction replaces the former standalone company panel. */
+.bridge-profile { border-top: 1px solid var(--line); }
+.bridge-profile-intro {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.58fr) minmax(0, 1.42fr);
+  align-items: start;
+  gap: clamp(56px, 7vw, 112px);
+  margin-bottom: 56px;
+}
+.bridge-profile-intro .eyebrow { margin-top: 7px; }
+.bridge-profile-intro > p:last-child {
+  max-width: 740px;
+  margin: 0;
+  font-family: var(--display);
+  font-size: clamp(22px, 2vw, 30px);
+  line-height: 1.45;
+}
+.bridge-profile .profile-feature .profile-feature-image { order: 0; }
 
 @media (min-width: 1181px) and (max-width: 1400px) {
   .site-header .header-shell { grid-template-columns: auto minmax(0, 1fr) auto; }
@@ -148,6 +164,7 @@ html:not(:lang(en)) :is(h1, h2, h3, blockquote) { hyphens: auto; }
   html:not(:lang(en)) :is(.home-hero h1, .bridge-hero h1, .page-hero h1, .contact-hero h1) { font-size: clamp(40px, 11.5vw, 68px); }
 }
 @media (max-width: 900px) {
+  .bridge-profile-intro { grid-template-columns: minmax(0, 1fr); gap: 16px; margin-bottom: 40px; }
   .home-hero .home-hero-bottom { max-width: 100%; }
   .track-record-band .track-record-inner { grid-template-columns: minmax(0, 1fr); }
   .final-cta .final-cta-inner { padding-right: 0; }
