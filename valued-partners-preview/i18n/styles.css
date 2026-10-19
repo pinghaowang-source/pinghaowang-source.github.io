@@ -121,7 +121,7 @@ main, .site-footer { overflow-wrap: anywhere; }
 .track-record-band .track-record-inner .button { width: fit-content; }
 html:not(:lang(en)) :is(h1, h2, h3, blockquote) { hyphens: auto; }
 .final-cta .final-cta-inner { padding-right: 210px; }
-.final-cta .round-link { padding: 20px; text-align: center; }
+.final-cta .round-link { padding: 12px; text-align: center; letter-spacing: 0.04em; }
 .home-hero .hero-actions { flex-wrap: wrap; }
 .home-hero .home-hero-bottom { max-width: min(1020px, calc(100% - 220px)); }
 .strategy-section .principle-list li { padding-block: 22px; }
