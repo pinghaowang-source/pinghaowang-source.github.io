@@ -17,7 +17,6 @@ let english = {};
 let lookup = new Map();
 let current = 'en';
 let preference = 'auto';
-let committedPreference = 'auto';
 let dictionary = {};
 let requestId = 0;
 let queued = false;
@@ -117,7 +116,7 @@ function setStatus(source) { for (const node of document.querySelectorAll('[data
 function updateControls() {
   const name = LANGUAGES.find(([locale]) => locale === current)?.[1] || 'English';
   for (const node of document.querySelectorAll('[data-language-current]')) { node.textContent = name; node.lang = current; }
-  for (const button of document.querySelectorAll('[data-language-choice]')) button.setAttribute('aria-pressed', String(button.dataset.languageChoice === (preference === 'auto' ? 'auto' : current)));
+  for (const button of document.querySelectorAll('[data-language-choice]')) button.setAttribute('aria-pressed', String(button.dataset.languageChoice === preference));
   for (const node of document.querySelectorAll('.language-switcher summary')) node.setAttribute('aria-label', translated('Choose your language'));
   for (const node of document.querySelectorAll('.language-panel')) node.setAttribute('aria-label', translated('Language'));
   for (const node of document.querySelectorAll('[data-language-title]')) node.textContent = translated('Language');
@@ -131,7 +130,7 @@ function updateLinks() {
     if (!href || href.startsWith('#') || !/^(?:\/|https?:)/.test(href)) continue;
     const url = new URL(href, location.href);
     if (url.origin !== location.origin || !url.pathname.startsWith(SITE_ROOT) || /\.[a-z0-9]{2,5}$/i.test(url.pathname)) continue;
-    url.searchParams.set('lang', preference === 'auto' ? 'auto' : current);
+    url.searchParams.set('lang', preference);
     link.setAttribute('href', url.pathname + url.search + url.hash);
     link.setAttribute('data-vp-language-link', 'true');
   }
@@ -226,30 +225,32 @@ async function detectCountry() {
 
 function updateUrl() {
   const url = new URL(location.href);
-  url.searchParams.set('lang', preference === 'auto' ? 'auto' : current);
+  url.searchParams.set('lang', preference);
   history.replaceState(history.state, '', url.pathname + url.search + url.hash);
 }
 
-function commitPreference(persist) {
-  committedPreference = preference;
+function rememberPreference(persist) {
   if (persist) writeStorage(localStorageOrNull(), PREFERENCE_KEY, preference);
   updateUrl();
   updateLinks();
+  updateControls();
 }
 
 async function choose(value, persist = true) {
   const nextPreference = validPreference(value);
   if (!nextPreference) return;
-  if (!catalogReady) { pendingChoice = { value: nextPreference, persist }; return; }
   const id = ++requestId;
   countryRequest?.abort();
   preference = nextPreference;
+  // Save intent before any network work: reloads and navigation must carry
+  // the selected language even while its catalog is still loading.
+  rememberPreference(persist);
+  if (!catalogReady) { pendingChoice = { value: nextPreference, persist }; return; }
   if (nextPreference === 'auto') {
     const languages = navigator.languages?.length ? [...navigator.languages] : [navigator.language || 'en'];
     const preferred = browserLocale(languages);
     if (!(await show(preferred, id)) && id === requestId) await show('en', id);
     if (id !== requestId) return;
-    commitPreference(persist);
     setStatus('Detecting your region…');
     const country = await detectCountry();
     if (id !== requestId) return;
@@ -257,14 +258,11 @@ async function choose(value, persist = true) {
     if (!ok && id === requestId) ok = await show(preferred, id);
     if (!ok && id === requestId) ok = await show('en', id);
     if (ok && !country) setStatus('Using your browser language');
-  } else if (!(await show(nextPreference, id))) {
-    if (id !== requestId) return;
-    preference = committedPreference;
-    updateControls();
-    return;
+  } else {
+    // A temporary download failure must not silently opt a manual visitor
+    // back into automatic detection. Keep the preference for their retry.
+    await show(nextPreference, id);
   }
-  if (id !== requestId) return;
-  commitPreference(persist);
 }
 
 // Full document navigation keeps the static publication and React preview
@@ -301,10 +299,18 @@ document.addEventListener('keydown', event => {
   buttons[next]?.focus();
 });
 
-window.addEventListener('popstate', () => {
-  const value = validPreference(new URL(location.href).searchParams.get('lang'));
+function restorePreference() {
+  // History/BFCache can restore an older document after the visitor changed
+  // language on another page. Its old URL is not a new explicit selection.
+  const value = validPreference(readStorage(localStorageOrNull(), PREFERENCE_KEY))
+    || validPreference(new URL(location.href).searchParams.get('lang'));
   if (value && value !== preference) choose(value, false);
-  else apply();
+  else if (catalogReady) { updateUrl(); apply(); }
+}
+
+window.addEventListener('popstate', restorePreference);
+window.addEventListener('pageshow', event => {
+  if (event.persisted) restorePreference();
 });
 
 async function start() {
@@ -324,7 +330,11 @@ async function start() {
       get current() { return current; }, get preference() { return preference; },
       supported: LANGUAGES.map(([locale]) => locale), choose,
     };
-    await choose(initialChoice?.value || query || saved || 'auto', initialChoice?.persist ?? true);
+    // Fresh explicit language links still work, but an old automatic link
+    // cannot reset a saved manual choice. Only the Auto button does that.
+    const fromHistory = window.performance?.getEntriesByType?.('navigation')?.[0]?.type === 'back_forward';
+    const initialPreference = (fromHistory && saved ? saved : query && query !== 'auto' ? query : saved || query) || 'auto';
+    await choose(initialChoice?.value || initialPreference, initialChoice?.persist ?? true);
     if (alignInitialHash && location.hash === initialHash) {
       let id;
       try { id = decodeURIComponent(initialHash.slice(1)); } catch { id = initialHash.slice(1); }
