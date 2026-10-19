@@ -105,7 +105,7 @@ html:lang(lo) { --display: "Lao MN", "Noto Serif Lao", serif; --sans: "Lao Sanga
 html:lang(km) { --display: "Khmer MN", "Noto Serif Khmer", serif; --sans: "Khmer Sangam MN", "Noto Sans Khmer", sans-serif; }
 html:lang(my) { --display: "Myanmar MN", "Noto Serif Myanmar", serif; --sans: "Myanmar Sangam MN", "Noto Sans Myanmar", sans-serif; }
 html:lang(ta) { --display: "Tamil MN", "Noto Serif Tamil", serif; --sans: "Tamil Sangam MN", "Noto Sans Tamil", sans-serif; }
-:is(html:lang(zh), html:lang(ja), html:lang(ko), html:lang(th), html:lang(lo), html:lang(km), html:lang(my), html:lang(ta)) :is(h1, h2, h3, h4, blockquote) { line-height: 1.3; letter-spacing: 0; overflow-wrap: anywhere; }
+:is(html:lang(zh), html:lang(ja), html:lang(ko), html:lang(th), html:lang(lo), html:lang(km), html:lang(my), html:lang(ta)) :is(h1, h2, h3, h4, blockquote) { line-height: 1.3; letter-spacing: 0; }
 :is(html:lang(zh), html:lang(ja), html:lang(ko), html:lang(th), html:lang(lo), html:lang(km), html:lang(my), html:lang(ta)) :is(.eyebrow, .desktop-nav a, .header-contact, .button, .text-link, .footer-label, .footer-base, .bridge-route-rail span) { letter-spacing: 0.025em; }
 :is(html:lang(th), html:lang(lo), html:lang(km), html:lang(my), html:lang(ta)) body { line-height: 1.9; }
 html:not(:lang(en)) :is(.home-hero h1, .bridge-hero h1) { font-size: clamp(48px, 6.6vw, 104px); }
@@ -120,6 +120,41 @@ main, .site-footer { overflow-wrap: anywhere; }
 .track-record-band .track-record-inner { grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.75fr); }
 .track-record-band .track-record-inner .button { width: fit-content; }
 html:not(:lang(en)) :is(h1, h2, h3, blockquote) { hyphens: auto; }
+/* Balance display copy across lines instead of leaving a single trailing
+   character. Keep natural word boundaries, with emergency wrapping only for
+   a token wider than the container. Nested emphasis may form its own block. */
+:is(main, .site-footer) :is(h1, h2, h3, h4, blockquote),
+:is(main, .site-footer) :is(h1, h2, h3, h4, blockquote) > :is(em, span),
+.bridge-profile-intro > p:last-child {
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+:is(main, .site-footer) :is(h1, h2, h3, h4, blockquote) { min-width: 0; }
+:is(html:lang(zh), html:lang(ja)) :is(h1, h2, h3, h4, blockquote) { line-break: strict; }
+html:lang(ko) :is(h1, h2, h3, h4, blockquote) { word-break: keep-all; }
+
+/* A separate team category, using the same card proportions as the network. */
+.business-development-section { padding-top: 0; }
+.business-development-section > .content-shell {
+  padding-top: clamp(48px, 6vw, 80px);
+  border-top: 1px solid var(--line-light);
+}
+.business-development-heading {
+  margin: 0 0 36px;
+  color: var(--gold-bright);
+  font-size: clamp(26px, 2.5vw, 36px);
+  line-height: 1.3;
+  text-align: center;
+}
+.business-development-card {
+  width: calc(100% / 3);
+  margin-inline: auto;
+  border-top: 1px solid var(--line-light);
+  border-left: 1px solid var(--line-light);
+}
+@media (max-width: 900px) { .business-development-card { width: 50%; } }
+@media (max-width: 600px) { .business-development-card { width: 100%; } }
 .final-cta .final-cta-inner { padding-right: 210px; }
 .final-cta .round-link { padding: 12px; text-align: center; letter-spacing: 0.04em; }
 .home-hero .hero-actions { flex-wrap: wrap; }
@@ -157,6 +192,8 @@ html:not(:lang(en)) :is(h1, h2, h3, blockquote) { hyphens: auto; }
   .language-panel { position: fixed; top: 88px; right: 20px; }
 }
 @media (max-width: 600px) {
+  .services-section .service-row { grid-template-columns: 28px minmax(0, 1fr) 24px; column-gap: 16px; }
+  .services-section .service-row p { margin-left: 44px; }
   .site-header .header-shell { gap: 10px; }
   .language-switcher summary { max-width: 130px; gap: 5px; }
   .language-panel { top: 82px; right: 14px; width: min(400px, calc(100vw - 28px)); max-height: calc(100svh - 100px); padding: 20px 16px; }
