@@ -112,6 +112,25 @@ html:not(:lang(en)) :is(.home-hero h1, .bridge-hero h1) { font-size: clamp(48px,
 html:not(:lang(en)) .home-hero-seal { display: flex; }
 .language-panel button[lang] { font-family: system-ui, -apple-system, "Noto Sans", sans-serif; }
 
+/* Translation length must not become a grid's minimum width. Normal word
+   boundaries are preferred; long words can wrap as a last resort. */
+main, .site-footer { overflow-wrap: anywhere; }
+.people-principle-inner > *, .track-record-inner > *, .bridge-path-grid > * { min-width: 0; }
+.bridge-path-list li, .button, .text-link { max-width: 100%; }
+.track-record-band .track-record-inner { grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.75fr); }
+.track-record-band .track-record-inner .button { width: fit-content; }
+html:not(:lang(en)) :is(h1, h2, h3, blockquote) { hyphens: auto; }
+.final-cta .final-cta-inner { padding-right: 210px; }
+.final-cta .round-link { padding: 20px; text-align: center; }
+.home-hero .hero-actions { flex-wrap: wrap; }
+.home-hero .home-hero-bottom { max-width: min(1020px, calc(100% - 220px)); }
+.strategy-section .principle-list li { padding-block: 22px; }
+
+@media (min-width: 1181px) and (max-width: 1400px) {
+  .site-header .header-shell { grid-template-columns: auto minmax(0, 1fr) auto; }
+  .site-header .header-contact { display: none; }
+}
+
 @media (max-width: 1180px) {
   .site-header .header-shell { display: grid; grid-template-columns: minmax(0, 1fr) auto auto; gap: 20px; }
   .site-header .desktop-nav, .site-header .header-contact { display: none; }
@@ -124,7 +143,13 @@ html:not(:lang(en)) .home-hero-seal { display: flex; }
   .language-switcher summary { max-width: 130px; gap: 5px; }
   .language-panel { top: 82px; right: 14px; width: min(400px, calc(100vw - 28px)); max-height: calc(100svh - 100px); padding: 20px 16px; }
   .language-panel button { padding-inline: 8px; }
-  html:not(:lang(en)) :is(.home-hero h1, .bridge-hero h1) { font-size: clamp(40px, 11.5vw, 68px); }
+  html:not(:lang(en)) :is(.home-hero h1, .bridge-hero h1, .page-hero h1, .contact-hero h1) { font-size: clamp(40px, 11.5vw, 68px); }
+}
+@media (max-width: 900px) {
+  .home-hero .home-hero-bottom { max-width: 100%; }
+  .track-record-band .track-record-inner { grid-template-columns: minmax(0, 1fr); }
+  .final-cta .final-cta-inner { padding-right: 0; }
+  .final-cta .round-link { position: relative; inset: auto; margin: 40px 0 0 auto; }
 }
 @media (max-width: 360px) {
   .site-header .brand-logo { width: 112px; }

@@ -2,7 +2,7 @@ import { LANGUAGES, SUPPORTED, browserLocale, countryLocale, validPreference } f
 
 const ASSET_ROOT = new URL('.', import.meta.url);
 const SITE_ROOT = ASSET_ROOT.pathname.replace(/i18n\/$/, '');
-const VERSION = '20261019';
+const VERSION = '20261019-review';
 const PREFERENCE_KEY = 'vp.language.preference.v1';
 const COUNTRY_KEY = 'vp.language.country.v1';
 const UNIT_TAGS = new Set(['H1', 'H2', 'H3', 'H4', 'H5', 'H6', 'P', 'BLOCKQUOTE', 'FIGCAPTION', 'LI', 'A', 'BUTTON', 'SPAN', 'STRONG', 'SMALL', 'OPTION', 'LABEL', 'SUMMARY', 'DT', 'DD']);
@@ -28,6 +28,13 @@ let originalTitle = document.title;
 let originalDescription = document.querySelector('meta[name="description"]')?.getAttribute('content') || '';
 let renderedTitle = originalTitle;
 let renderedDescription = originalDescription;
+const initialHash = location.hash;
+let alignInitialHash = Boolean(initialHash);
+// Wait for translation reflow before positioning a linked section. Never
+// override a visitor who has already started scrolling or interacting.
+for (const event of ['pointerdown', 'keydown', 'wheel', 'touchstart']) {
+  window.addEventListener(event, () => { alignInitialHash = false; }, { once: true, passive: true });
+}
 
 function readStorage(storage, key) { try { return storage.getItem(key); } catch { return null; } }
 function writeStorage(storage, key, value) { try { storage.setItem(key, value); } catch { /* Private browsing still supports a session choice. */ } }
@@ -318,6 +325,14 @@ async function start() {
       supported: LANGUAGES.map(([locale]) => locale), choose,
     };
     await choose(initialChoice?.value || query || saved || 'auto', initialChoice?.persist ?? true);
+    if (alignInitialHash && location.hash === initialHash) {
+      let id;
+      try { id = decodeURIComponent(initialHash.slice(1)); } catch { id = initialHash.slice(1); }
+      requestAnimationFrame(() => {
+        if (alignInitialHash) document.getElementById(id)?.scrollIntoView({ behavior: 'instant', block: 'start' });
+        alignInitialHash = false;
+      });
+    }
   } catch {
     setStatus('Language unavailable. Please try again.');
   }
